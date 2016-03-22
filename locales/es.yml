@@ -1,0 +1,104 @@
+es:
+
+# Globales
+  lenguaje-inverso: "English"
+  title-report: "Famsa - Reporte Anual 2015"
+  copyright: "Diseñado y generado por"
+  Inicio: "Inicio"
+  Ir: "Ir"
+  buscando: "¿Qué está buscando?"
+  to-top: "Subir"
+                                                  #Menus
+    #Menu Cifras relevantes
+  cifras-relevantes: Cifras relevantes
+  tu-hogar: "En tu hogar"
+  tu-empresa: "En tu empresa"
+  atencion-clientes: "Atención a Clientes"
+
+    #Menu Nosotros
+  Nosotros: "Nosotros"
+  Historia: "Historia"
+  Perfil: "Perfil"
+  Maxcom-en-numeros: "Pappel en números"
+  Estrategia: "Estrategia"
+  Directivos: "Directivos"
+  Panorama: "Panorama"
+
+    #Menu Gobierno corporativo
+  Gobierno-corporativo: "Gobierno corporativo"
+  Compromiso: "Compromiso"
+  Consejo-de-Administracion: "Consejo de Administración"
+  Comites: "Comités"
+  Codigos-y-estatutos: "Códigos y estatutos"
+  Estructura-accionaria: "Estructura accionaria"
+  Auditor-externo: "Auditor externo"
+
+    #Menu Información financiera
+  Informacion-financiera: "Información financiera"
+  Fundamentales: "Fundamentales"
+  Reportes-trimestrales: "Reportes trimestrales"
+  Conferencias: "Teleconferencias"
+  Reportes-anuales: "Reportes anuales"
+  Comunicados: "Comunicados"
+  Registros-BMV: "Registros BMV"
+  Registros-SEC: "Registros SEC"
+  Calendario-financiero: "Calendario financiero"
+  Preguntas-frecuentes: "Preguntas frecuentes"
+
+    #Menu Información bursátil
+  Informacion-bursatil: "Información bursátil"
+  Cotizacion-de-la-accion: "Cotización de la acción"
+  Informacion-del-Bono: "Información del Bono"
+  Cobertura-de-analistas: "Cobertura de analistas"
+  Multiplos: "Múltiplos"
+  Glosario: "Glosario"
+
+
+                                                  #Sidebar
+
+  Informacion-Financiera: "Información Financiera"
+  Fundamentales-sidebar: "Fundamentales"
+  Reportes-trimestrales-sidebar: "Reportes trimestrales"
+  Informes-anuales: "Informes anuales"
+  Comunicados-sidebar: "Comunicados"
+  Registros-BMV-sidebar: "Registros BMV"
+
+  Documentos-destacados: "Documentos destacados"
+  Reporte-trimestral-3T14: "Reporte trimestral 3T14"
+  Reporte-trimestral-2T14: "Reporte trimestral 2T14"
+  Reporte-anual-2013: "Reporte anual 2013"
+
+
+                                                  #OFFCANVAS MENU
+
+  Contenido-destacado-canvas: "Contenido destacado"
+  Reportes-trimestrales-canvas: "Reportes trimestrales"
+  Reportes-anuales-canvas: "Reportes anuales"
+  Comunicados-canvas: "Comunicados"
+  Preguntas-frecuentes-canvas: "Preguntas frecuentes"
+
+  Redes-Sociales: "Redes Sociales"
+
+
+  Contacto-de-RI: "Contacto de R.I."
+  Gerente-de-relacion-con-Inversionistas: "Gerente de relación con Inversionistas"
+
+  Telefono: "Teléfono"
+
+
+
+                                                  #FOOTER
+
+  Mexico: "Ciudad de México"
+
+
+
+  Boletin-financiero: "Boletín financiero"
+  sucribase: "Suscríbase a nuestro boletín en donde recibirá periódicamente en su e-mail información relacionada a nuestra empresa."
+  ofrecemos: "En Maxcom ofrecemos servicios de Telefonía local, Larga Distancia, Voz IP, Telefonía Celular, Datos, Internet y Televisión, a través de una infraestructura de vanguardia."
+
+
+  Aviso-legal: "Aviso legal"
+  Aviso-de-privacidad: "Aviso de privacidad"
+  Oficinas-corporativas: "Oficinas corporativas"
+  Diseñado-y-generado-por-IRStrat: "Diseñado y generado por IRStrat"
