@@ -65,7 +65,7 @@ end
 #   erb (I18n.locale.to_s + '/vistas/independientes/page-404').to_sym, :layout => ("global/layouts/content").to_sym
 # end
 
-get '/:locale/nosotros' do
-  @titulo = "Cifras Relevantes"
-  #erb :"#{I18n.locale}/vistas/cifras-relevantes", :layout => ("global/layouts/content").to_sym
+get '/:locale/perfil' do
+  @titulo = "Perfil"
+  erb :"#{I18n.locale}/vistas/menu1/perfil", :layout => ("global/layouts/content").to_sym
 end
