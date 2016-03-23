@@ -1,5 +1,22 @@
+/*sidebar*/
 .news_inv{
     padding-left: 15px;
     color: #9AB4BD
+}
+.c-layout-quick-sidebar .c-links > li > a {
+    color: #b1c4d0;
+}
+.c-settings p{
+color:#9AB4BD ;
+}
+/*footer*/
+.socicon .socicon-btn {
+    width: auto;
+    height: auto;
+    padding: 13px;
+    background-color: #2a2e31;
+}
+.socicon-btn.socicon-btn-circle {
+    border-radius: 44px;
 }
 
