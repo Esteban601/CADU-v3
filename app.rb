@@ -64,8 +64,46 @@ end
 #   @titulo = " Error 404"
 #   erb (I18n.locale.to_s + '/vistas/independientes/page-404').to_sym, :layout => ("global/layouts/content").to_sym
 # end
-
+                                                #Menu1
 get '/:locale/perfil' do
   @titulo = "Perfil"
+  @menuNum= "1"
   erb :"#{I18n.locale}/vistas/menu1/perfil", :layout => ("global/layouts/content").to_sym
 end
+
+get '/:locale/directivos' do
+  @titulo = "Directivos"
+  @menuNum= "1"
+  erb :"#{I18n.locale}/vistas/menu1/directivos", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/historia' do
+  @titulo = "Historia"
+  @menuNum= "1"
+  erb :"#{I18n.locale}/vistas/menu1/historia", :layout => ("global/layouts/content").to_sym
+end
+                                                #Menu2
+get '/:locale/codigos-estatutos' do
+  @titulo = "Códigos y Estatutos"
+  @menuNum= "2"
+  erb :"#{I18n.locale}/vistas/menu2/codigos-estatutos", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/comites' do
+  @titulo = "Comités"
+  @menuNum= "2"
+  erb :"#{I18n.locale}/vistas/menu2/comites", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/consejo-administracion' do
+  @titulo = "Consejo de Administración"
+  @menuNum= "2"
+  erb :"#{I18n.locale}/vistas/menu2/consejo-administracion", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/informacion-corporativa' do
+  @titulo = "Información corporativa"
+  @menuNum= "2"
+  erb :"#{I18n.locale}/vistas/menu2/informacion-corporativa", :layout => ("global/layouts/content").to_sym
+end
+
