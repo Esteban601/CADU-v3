@@ -65,6 +65,30 @@ end
 #   erb (I18n.locale.to_s + '/vistas/independientes/page-404').to_sym, :layout => ("global/layouts/content").to_sym
 # end
                                                 #Menu1
+get '/:locale/estrategia' do
+  @titulo = "Estrategia"
+  @menuNum= "1"
+  erb :"#{I18n.locale}/vistas/menu1/estrategia", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/modelo-negocio' do
+  @titulo = "Modelo de negocio"
+  @menuNum= "1"
+  erb :"#{I18n.locale}/vistas/menu1/modelo-negocio", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/cadu-numeros' do
+  @titulo = "Cadu en Números"
+  @menuNum= "1"
+  erb :"#{I18n.locale}/vistas/menu1/cadu-numeros", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/panorama' do
+  @titulo = "Panorama"
+  @menuNum= "1"
+  erb :"#{I18n.locale}/vistas/menu1/panorama", :layout => ("global/layouts/content").to_sym
+end
+
 get '/:locale/perfil' do
   @titulo = "Perfil"
   @menuNum= "1"
@@ -105,5 +129,71 @@ get '/:locale/informacion-corporativa' do
   @titulo = "Información corporativa"
   @menuNum= "2"
   erb :"#{I18n.locale}/vistas/menu2/informacion-corporativa", :layout => ("global/layouts/content").to_sym
+end
+                                                  #Menu3
+get '/:locale/comunicados' do
+  @titulo = "Comunicados"
+  @menuNum= "3"
+  erb :"#{I18n.locale}/vistas/menu3/comunicados", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/fundamentales' do
+  @titulo = "Fundamentales"
+  @menuNum= "3"
+  erb :"#{I18n.locale}/vistas/menu3/fundamentales", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/registros-otc' do
+  @titulo = "Registros OTC"
+  @menuNum= "3"
+  erb :"#{I18n.locale}/vistas/menu3/registros-otc", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/registros-sec' do
+  @titulo = "Registros SEC"
+  @menuNum= "3"
+  erb :"#{I18n.locale}/vistas/menu3/registros-sec", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/reportes-anuales' do
+  @titulo = "Reportes anuales"
+  @menuNum= "3"
+  erb :"#{I18n.locale}/vistas/menu3/reportes-anuales", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/reportes-trimestrales' do
+  @titulo = "Reportes trimestrales"
+  @menuNum= "3"
+  erb :"#{I18n.locale}/vistas/menu3/reportes-trimestrales", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/teleconferencias' do
+  @titulo = "Teleconferencias"
+  @menuNum= "3"
+  erb :"#{I18n.locale}/vistas/menu3/teleconferencias", :layout => ("global/layouts/content").to_sym
+end
+                                                #Menu4
+get '/:locale/analistas' do
+  @titulo = "Analistas"
+  @menuNum= "4"
+  erb :"#{I18n.locale}/vistas/menu4/analistas", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/bono' do
+  @titulo = "Informacion del bono"
+  @menuNum= "4"
+  erb :"#{I18n.locale}/vistas/menu4/bono", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/cotizacion' do
+  @titulo = "Cotización de la acción"
+  @menuNum= "4"
+  erb :"#{I18n.locale}/vistas/menu4/cotización", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/ibursatil' do
+  @titulo = "Información buisátil"
+  @menuNum= "4"
+  erb :"#{I18n.locale}/vistas/menu4/ibursatil", :layout => ("global/layouts/content").to_sym
 end
 

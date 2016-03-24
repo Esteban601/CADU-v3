@@ -43,116 +43,37 @@
                             <a href="javascript:;" class="c-link dropdown-toggle">Inicio
                                 <span class="c-arrow c-toggler"></span>
                             </a>
-                            <!--<div class="dropdown-menu c-menu-type-mega c-menu-type-fullwidth" style="min-width: auto">-->
-                                <!--<div class="row">-->
-                                    <!--<div class="col-md-3">-->
-                                        <!--<ul class="dropdown-menu c-menu-type-inline">-->
-                                            <!--<li>-->
-                                                <!--<h3>Home Samples</h3>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="index.html">Home Version 1</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="home-2.html">Home Version 2</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="home-3.html">Home Version 3</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="home-4.html">Home Version 4</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="home-5.html">Home Version 5</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="home-6.html">Home Version 6</a>-->
-                                            <!--</li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-md-3">-->
-                                        <!--<ul class="dropdown-menu c-menu-type-inline">-->
-                                            <!--<li>-->
-                                                <!--<h3>Home Samples</h3>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="home-7.html">Home Version 7</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="home-8.html">Home Version 8</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="home-9.html">Home Version 9</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="home-10.html">Home Version 10</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="home-11.html">Home Version 11</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="home-12.html">Home Version 12</a>-->
-                                            <!--</li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-md-3">-->
-                                        <!--<ul class="dropdown-menu c-menu-type-inline">-->
-                                            <!--<li>-->
-                                                <!--<h3>Onepage Samples</h3>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="onepage-1.html" target="_blank">Onepage Version 1</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="onepage-2.html" target="_blank">Onepage Version 2</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="onepage-3.html" target="_blank">Onepage Version 3</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="onepage-4.html" target="_blank">Onepage Version 4</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="onepage-5.html" target="_blank">Onepage Version 5</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="onepage-6.html" target="_blank">Onepage Version 6</a>-->
-                                            <!--</li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                    <!--<div class="col-md-3">-->
-                                        <!--<ul class="dropdown-menu c-menu-type-inline">-->
-                                            <!--<li>-->
-                                                <!--<h3>Onepage Samples</h3>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="onepage-7.html" target="_blank">Onepage Version 7</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="onepage-8.html" target="_blank">Onepage Version 8</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="onepage-9.html" target="_blank">Onepage Version 9</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="onepage-10.html" target="_blank">Onepage Version 10</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="onepage-11.html" target="_blank">Onepage Version 11</a>-->
-                                            <!--</li>-->
-                                            <!--<li>-->
-                                                <!--<a href="onepage-12.html" target="_blank">Onepage Version 12</a>-->
-                                            <!--</li>-->
-                                        <!--</ul>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
                         </li>
-                        <li class="c-active c-menu-type-classic">
+                        <li class="c-menu-type-classic">
                             <a href="javascript:;" class="c-link dropdown-toggle">Nosotros
                                 <span class="c-arrow c-toggler"></span>
                             </a>
                             <ul class="dropdown-menu c-menu-type-classic c-pull-left">
+                              <li class="dropdown-submenu">
+                                <a href="<%= "/#{I18n.locale}/perfil"%>">Perfil
+                                  <span class="c-arrow c-toggler"></span>
+                                </a>
+                              </li>
+                              <li class="dropdown-submenu">
+                                <a href="<%= "/#{I18n.locale}/estrategia"%>">Estrategia
+                                  <span class="c-arrow c-toggler"></span>
+                                </a>
+                              </li>
+                              <li class="dropdown-submenu">
+                                <a href="<%= "/#{I18n.locale}/panorama"%>">Panorama
+                                  <span class="c-arrow c-toggler"></span>
+                                </a>
+                              </li>
+                              <li class="dropdown-submenu">
+                                <a href="<%= "/#{I18n.locale}/cadu-numeros"%>">Cadu en números
+                                  <span class="c-arrow c-toggler"></span>
+                                </a>
+                              </li>
+                              <li class="dropdown-submenu">
+                                <a href="<%= "/#{I18n.locale}/modelo-negocio"%>">Modelo de negocio
+                                  <span class="c-arrow c-toggler"></span>
+                                </a>
+                              </li>
                                 <li class="dropdown-submenu">
                                     <a href="<%= "/#{I18n.locale}/historia"%>">Historia
                                         <span class="c-arrow c-toggler"></span>
@@ -165,7 +86,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="c-menu-type-classic">
                             <a href="javascript:;" class="c-link dropdown-toggle">Gobierno corporativo
                                 <span class="c-arrow c-toggler"></span>
                             </a>
@@ -193,79 +114,79 @@
                             </li>
                           </ul>
                         </li>
-                        <li>
+                        <li class="c-menu-type-classic">
                             <a href="javascript:;" class="c-link dropdown-toggle">Información Financiera
                                 <span class="c-arrow c-toggler"></span>
                             </a>
                           <ul class="dropdown-menu c-menu-type-classic c-pull-left">
                             <li class="dropdown-submenu">
-                              <a href="javascript:;">Fundamentales
+                              <a href="<%= "/#{I18n.locale}/fundamentales"%>">Fundamentales
                                 <span class="c-arrow c-toggler"></span>
                               </a>
                             </li>
                             <li class="dropdown-submenu">
-                              <a href="#">Reportes trimestrales
-                                <span class="c-arrow c-toggler"></span>
-                              </a>
-
-                            </li>
-                            <li class="dropdown-submenu">
-                              <a href="javascript:;">Teleconferencias
+                              <a href="<%= "/#{I18n.locale}/reportes-trimestrales"%>">Reportes trimestrales
                                 <span class="c-arrow c-toggler"></span>
                               </a>
 
                             </li>
                             <li class="dropdown-submenu">
-                              <a href="#">Reportes anuales
+                              <a href="<%= "/#{I18n.locale}/teleconferencias"%>">Teleconferencias
                                 <span class="c-arrow c-toggler"></span>
                               </a>
 
                             </li>
                             <li class="dropdown-submenu">
-                              <a href="#">Comunicados
+                              <a href="<%= "/#{I18n.locale}/reportes-anuales"%>">Reportes anuales
                                 <span class="c-arrow c-toggler"></span>
                               </a>
 
                             </li>
                             <li class="dropdown-submenu">
-                              <a href="#">Registros SEC
+                              <a href="<%= "/#{I18n.locale}/comunicados"%>">Comunicados
                                 <span class="c-arrow c-toggler"></span>
                               </a>
 
                             </li>
                             <li class="dropdown-submenu">
-                              <a href="#">Registros OTC
+                              <a href="<%= "/#{I18n.locale}/registros-sec"%>">Registros SEC
+                                <span class="c-arrow c-toggler"></span>
+                              </a>
+
+                            </li>
+                            <li class="dropdown-submenu">
+                              <a href="<%= "/#{I18n.locale}/registros-otc"%>">Registros OTC
                                 <span class="c-arrow c-toggler"></span>
                               </a>
 
                             </li>
                           </ul>
                         </li>
-                        <li>
+                        <li class="c-menu-type-classic">
                             <a href="javascript:;" class="c-link dropdown-toggle">Información Bursátil
                                 <span class="c-arrow c-toggler"></span>
                             </a>
                           <ul class="dropdown-menu c-menu-type-classic c-pull-left">
                             <li class="dropdown-submenu ">
-                              <a href="javascript:;">Cotización de la acción
+                              <a href="<%= "/#{I18n.locale}/cotizacion"%>">Cotización de la acción
                                 <span class="c-arrow c-toggler"></span>
                               </a>
 
                             </li>
                             <li class="dropdown-submenu">
-                              <a href="#">Información del bono
+                              <a href="<%= "/#{I18n.locale}/bono"%>">Información del bono
                                 <span class="c-arrow c-toggler"></span>
                               </a>
 
                             </li>
                             <li class="dropdown-submenu">
-                              <a href="javascript:;">Cobertura de analistas
+                              <a href="<%= "/#{I18n.locale}/analistas"%>">Cobertura de analistas
                                 <span class="c-arrow c-toggler"></span>
                               </a>
 
                             </li>
                             <li class="dropdown-submenu">
-                              <a href="#">Indicadores bursátiles
+                              <a href="<%= "/#{I18n.locale}/ibursatil"%>">Indicadores bursátiles
                                 <span class="c-arrow c-toggler"></span>
                               </a>
 

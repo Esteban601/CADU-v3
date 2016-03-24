@@ -144,7 +144,26 @@
         <!-- END: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
         <!-- BEGIN: PAGE CONTAINER -->
         <div class="c-layout-page">
-          <%= yield %>
+          <!-- BEGIN: LAYOUT/BREADCRUMBS/BREADCRUMBS-1 -->
+          <%= erb :"global/bloques/breadcrumbs" %>
+          <!-- END: LAYOUT/BREADCRUMBS/BREADCRUMBS-1 -->
+          <!-- BEGIN: PAGE CONTENT -->
+          <!-- BEGIN: BLOG LISTING -->
+          <div class="c-content-box c-size-md">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-9">
+                 <%= yield %>
+                </div>
+                <div class="col-md-3">
+                  <%= erb :"global/bloques/sidebar" %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END: BLOG LISTING  -->
+          <!-- END: PAGE CONTENT -->
+        </div>
         </div>
 <!-- END: PAGE CONTAINER -->
         <!-- BEGIN: LAYOUT/FOOTERS/FOOTER-5 -->
