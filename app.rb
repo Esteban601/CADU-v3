@@ -121,6 +121,34 @@ get '/:locale/codigos-estatutos' do
   erb :"#{I18n.locale}/vistas/menu2/codigos-estatutos", :layout => ("global/layouts/content").to_sym
 end
 
+get '/:locale/auditor-externo' do
+  @titulo = "Auditor externo"
+  @menuNum= 2
+  @menuName= "Gobierno corporativo"
+  erb :"#{I18n.locale}/vistas/menu2/auditor-externo", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/estructura-accionaria' do
+  @titulo = "Estrucura Accionaria"
+  @menuNum= 2
+  @menuName= "Gobierno corporativo"
+  erb :"#{I18n.locale}/vistas/menu2/estructura-accionaria", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/estructura-corporativa' do
+  @titulo = "Estrucura Corporativa"
+  @menuNum= 2
+  @menuName= "Gobierno corporativo"
+  erb :"#{I18n.locale}/vistas/menu2/estructura-corporativa", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/practicas' do
+  @titulo = "Mejores prácticas corporativas"
+  @menuNum= 2
+  @menuName= "Gobierno corporativo"
+  erb :"#{I18n.locale}/vistas/menu2/practicas", :layout => ("global/layouts/content").to_sym
+end
+
 get '/:locale/comites' do
   @titulo = "Comités"
   @menuNum= 2
