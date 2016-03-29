@@ -156,6 +156,13 @@ get '/:locale/fundamentales' do
   erb :"#{I18n.locale}/vistas/menu3/fundamentales", :layout => ("global/layouts/content").to_sym
 end
 
+get '/:locale/faqs' do
+  @titulo = "FAQs"
+  @menuNum= 3
+  @menuName= "Información financiera"
+  erb :"#{I18n.locale}/vistas/menu3/faqs", :layout => ("global/layouts/content").to_sym
+end
+
 get '/:locale/registros-otc' do
   @titulo = "Registros OTC"
   @menuNum= 3
@@ -196,6 +203,29 @@ get '/:locale/analistas' do
   @menuNum= 4
   @menuName= "Información Bursátil"
   erb :"#{I18n.locale}/vistas/menu4/analistas", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/acuerdos-asambleas' do
+  @titulo = "Acuerdos y Asambleas"
+  @menuNum= 4
+  @menuName= "Información Bursátil"
+  erb :"#{I18n.locale}/vistas/menu4/acuerdos-asambleas", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/dividendos' do
+  @titulo = "Dividendos"
+  @menuNum= 4
+  @menuName= "Información Bursátil"
+  erb :"#{I18n.locale}/vistas/menu4/dividendos", :layout => ("global/layouts/content").to_sym
+end
+
+
+
+get '/:locale/renta-fija-credito' do
+  @titulo = "Renta Fija y Crédito"
+  @menuNum= 4
+  @menuName= "Información Bursátil"
+  erb :"#{I18n.locale}/vistas/menu4/renta-fija-credito", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/bono' do
