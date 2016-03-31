@@ -19,4 +19,34 @@ color:#9AB4BD ;
 .socicon-btn.socicon-btn-circle {
     border-radius: 44px;
 }
+/*Glosario*/
+
+.glossario {
+    background-color: #EFEFEF;
+    height: 46px;
+}
+
+.gloss-letra {
+    background-color: #6B727C;
+    color: #FFFFFF;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 8px;
+    float: left;
+
+    border: 0px solid #000000;
+    -moz-border-radius: 90px; /*Firefox*/
+    -webkit-border-radius: 90px; /*Safari, Chrome*/
+    border-radius: 90px;
+}
+
+.gloss-letra a {
+    color: #ffffff !important;
+
+}
+
+.letra-tira td {
+    padding: 0 !important;
+}
 

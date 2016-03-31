@@ -198,6 +198,13 @@ get '/:locale/registros-otc' do
   erb :"#{I18n.locale}/vistas/menu3/registros-otc", :layout => ("global/layouts/content").to_sym
 end
 
+get '/:locale/glosario' do
+  @titulo = "Glosario"
+  @menuNum= 3
+  @menuName= "Información financiera"
+  erb :"#{I18n.locale}/vistas/menu3/glosario", :layout => ("global/layouts/content").to_sym
+end
+
 get '/:locale/registros-sec' do
   @titulo = "Registros SEC"
   @menuNum= 3

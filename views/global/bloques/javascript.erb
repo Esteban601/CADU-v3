@@ -88,3 +88,14 @@
                 });
     }); //ready
 </script>
+<!--Glosario scroll-->
+<script type="text/javascript">
+    jQuery(function ($) {
+        $(document).ready(function () {
+            $('a').click(function () {
+                $('html, body').animate({scrollTop: $($.attr(this, 'href')).offset().top - 85}, 1000);
+                return false;
+            });
+        });
+    });
+</script>
