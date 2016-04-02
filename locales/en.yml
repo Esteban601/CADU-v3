@@ -1,13 +1,14 @@
 en:
 
    # Globales
-  lenguaje-inverso: "Español"
+  lenguaje-inverso: "ES"
   title-report: "Famsa - Annual Report 2015"
   copyright: "Copryright 2016 by "
   Ir: "Go"
   Inicio: "Home"
   buscando: "What do you want to find?"
   to-top: "To Top"
+  buscar: "Type to search..."
                                           #Menus
     #Menu Pappel
   tu-hogar: "At home"

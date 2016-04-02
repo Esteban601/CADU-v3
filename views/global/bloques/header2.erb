@@ -29,7 +29,7 @@
                 <!-- END: BRAND -->
                 <!-- BEGIN: QUICK SEARCH -->
                 <form class="c-quick-search" action="#">
-                    <input type="text" name="query" placeholder="Type to search..." value="" class="form-control" autocomplete="off">
+                    <input type="text" name="query" placeholder="<%= I18n.t 'buscar' %>" value="" class="form-control" autocomplete="off">
                     <span class="c-theme-link">&times;</span>
                 </form>
                 <!-- END: QUICK SEARCH -->
@@ -175,18 +175,6 @@
                             </li>
                             <li class="dropdown-submenu">
                               <a href="<%= "/#{I18n.locale}/comunicados"%>">Comunicados
-                                <span class="c-arrow c-toggler"></span>
-                              </a>
-
-                            </li>
-                            <li class="dropdown-submenu">
-                              <a href="<%= "/#{I18n.locale}/registros-sec"%>">Registros SEC
-                                <span class="c-arrow c-toggler"></span>
-                              </a>
-
-                            </li>
-                            <li class="dropdown-submenu">
-                              <a href="<%= "/#{I18n.locale}/registros-otc"%>">Registros OTC
                                 <span class="c-arrow c-toggler"></span>
                               </a>
 

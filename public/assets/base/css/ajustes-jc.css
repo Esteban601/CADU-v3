@@ -49,4 +49,7 @@ color:#9AB4BD ;
 .letra-tira td {
     padding: 0 !important;
 }
-
+/*components*/
+.c-content-title-1 > .c-line-center {
+    background-color: #F04C23;
+}

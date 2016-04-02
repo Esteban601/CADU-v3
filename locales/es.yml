@@ -1,13 +1,14 @@
 es:
 
 # Globales
-  lenguaje-inverso: "English"
+  lenguaje-inverso: "EN"
   title-report: "Famsa - Reporte Anual 2015"
   copyright: "Diseñado y generado por"
   Inicio: "Inicio"
   Ir: "Ir"
   buscando: "¿Qué está buscando?"
   to-top: "Subir"
+  buscar: "Buscar..."
                                                   #Menus
     #Menu Cifras relevantes
   cifras-relevantes: Cifras relevantes

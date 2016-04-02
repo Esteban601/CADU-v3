@@ -1,145 +1,289 @@
-  <!-- BEGIN: CONTENT/BLOG/BLOG-SIDEBAR-1 -->
-  <form action="#" method="post">
-    <div class="input-group">
-      <input type="text" class="form-control c-square c-theme-border" placeholder="Search blog...">
-                                    <span class="input-group-btn">
-                                        <button class="btn c-theme-btn c-theme-border c-btn-square" type="button">Go!</button>
-                                    </span>
-    </div>
-  </form>
-  <div class="c-content-ver-nav">
-    <div class="c-content-title-1 c-theme c-title-md c-margin-t-40">
-      <h3 class="c-font-bold c-font-uppercase">Categories</h3>
-      <div class="c-line-left c-theme-bg"></div>
-    </div>
-    <ul class="c-menu c-arrow-dot1 c-theme">
-      <li>
-        <a href="#">Web Development(2)</a>
-      </li>
-      <li>
-        <a href="#">UX Design(12)</a>
-      </li>
-      <li>
-        <a href="#">Mobile Development(5)</a>
-      </li>
-      <li>
-        <a href="#">Internet Marketing(7)</a>
-      </li>
-      <li>
-        <a href="#">Social Networks(11)</a>
-      </li>
-      <li>
-        <a href="#">Web Design(18)</a>
-      </li>
-    </ul>
+<!-- BEGIN: CONTENT/BLOG/BLOG-SIDEBAR-1 -->
+<form action="#" method="post">
+  <!--<div class="input-group">-->
+  <!--<input type="text" class="form-control c-square c-theme-border" placeholder="Search blog...">-->
+  <!--<span class="input-group-btn">-->
+  <!--<button class="btn c-theme-btn c-theme-border c-btn-square" type="button">Go!</button>-->
+  <!--</span>-->
+  <!--</div>-->
+</form>
+<div class="c-content-ver-nav">
+  <div class="c-content-title-1 c-theme c-title-md c-margin-t-40">
+    <h3 class="c-font-bold c-font-uppercase"><%= @menuName %></h3>
+
+    <div class="c-line-left c-theme-bg"></div>
   </div>
-  <div class="c-content-tab-1 c-theme c-margin-t-30">
-    <div class="nav-justified">
-      <ul class="nav nav-tabs nav-justified">
-        <li class="active">
-          <a href="#blog_recent_posts" data-toggle="tab">Recent Posts</a>
+  <% if @menuNum == 1 %>
+      <ul class="c-menu c-arrow-dot1 c-theme">
+        <li>
+          <a href="<%= "/#{I18n.locale}/perfil" %>">Perfil
+          </a>
         </li>
         <li>
-          <a href="#blog_popular_posts" data-toggle="tab">Popular Posts</a>
+          <a href="<%= "/#{I18n.locale}/estrategia" %>">Estrategia
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/panorama" %>">Panorama
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/cadu-numeros" %>">Cadu en números
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/modelo-negocio" %>">Modelo de negocio
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/historia" %>">Historia
+
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/directivos" %>">Directivos
+
+          </a>
         </li>
       </ul>
-      <div class="tab-content">
-        <div class="tab-pane active" id="blog_recent_posts">
-          <ul class="c-content-recent-posts-1">
-            <li>
-              <div class="c-image">
-                <img src="assets/base/img/content/stock/09.jpg" alt="" class="img-responsive"> </div>
-              <div class="c-post">
-                <a href="" class="c-title"> UX Design Expo 2015... </a>
-                <div class="c-date">27 Jan 2015</div>
-              </div>
-            </li>
-            <li>
-              <div class="c-image">
-                <img src="assets/base/img/content/stock/08.jpg" alt="" class="img-responsive"> </div>
-              <div class="c-post">
-                <a href="" class="c-title"> UX Design Expo 2015... </a>
-                <div class="c-date">27 Jan 2015</div>
-              </div>
-            </li>
-            <li>
-              <div class="c-image">
-                <img src="assets/base/img/content/stock/07.jpg" alt="" class="img-responsive"> </div>
-              <div class="c-post">
-                <a href="" class="c-title"> UX Design Expo 2015... </a>
-                <div class="c-date">27 Jan 2015</div>
-              </div>
-            </li>
-            <li>
-              <div class="c-image">
-                <img src="assets/base/img/content/stock/32.jpg" alt="" class="img-responsive"> </div>
-              <div class="c-post">
-                <a href="" class="c-title"> UX Design Expo 2015... </a>
-                <div class="c-date">27 Jan 2015</div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="tab-pane" id="blog_popular_posts">
-          <ul class="c-content-recent-posts-1">
-            <li>
-              <div class="c-image">
-                <img src="assets/base/img/content/stock/34.jpg" class="img-responsive" alt="" /> </div>
-              <div class="c-post">
-                <a href="" class="c-title"> UX Design Expo 2015... </a>
-                <div class="c-date">27 Jan 2015</div>
-              </div>
-            </li>
-            <li>
-              <div class="c-image">
-                <img src="assets/base/img/content/stock/37.jpg" class="img-responsive" alt="" /> </div>
-              <div class="c-post">
-                <a href="" class="c-title"> UX Design Expo 2015... </a>
-                <div class="c-date">27 Jan 2015</div>
-              </div>
-            </li>
-            <li>
-              <div class="c-image">
-                <img src="assets/base/img/content/stock/32.jpg" class="img-responsive" alt="" /> </div>
-              <div class="c-post">
-                <a href="" class="c-title"> UX Design Expo 2015... </a>
-                <div class="c-date">27 Jan 2015</div>
-              </div>
-            </li>
-            <li>
-              <div class="c-image">
-                <img src="assets/base/img/content/stock/54.jpg" class="img-responsive" alt="" /> </div>
-              <div class="c-post">
-                <a href="" class="c-title"> UX Design Expo 2015... </a>
-                <div class="c-date">27 Jan 2015</div>
-              </div>
-            </li>
-          </ul>
-        </div>
+  <% end %>
+  <% if @menuNum == 2 %>
+      <ul class="c-menu c-arrow-dot1 c-theme">
+        <li>
+          <a href="<%= "/#{I18n.locale}/informacion-corporativa" %>">Información corporativa
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/auditor-externo" %>">Auditor externo
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/estructura-accionaria" %>">Estrucura Accionaria
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/practicas" %>">Mejores prácticas corporativas
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/estructura-corporativa" %>">Estrucura Corporativa
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/consejo-administracion" %>">Consejo de Administración
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/comites" %>">Comités
+
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/codigos-estatutos" %>">Códigos y estatutos
+
+          </a>
+
+        </li>
+      </ul>
+  <% end %>
+  <% if @menuNum == 3 %>
+      <ul class="c-menu c-arrow-dot1 c-theme">
+        <li>
+          <a href="<%= "/#{I18n.locale}/fundamentales" %>">Fundamentales
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/faqs" %>">FAQs
+          </a>
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/reportes-trimestrales" %>">Reportes trimestrales
+          </a>
+
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/glosario" %>">Glosario
+          </a>
+
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/teleconferencias" %>">Teleconferencias
+          </a>
+
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/reportes-anuales" %>">Reportes anuales
+          </a>
+
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/comunicados" %>">Comunicados
+          </a>
+
+        </li>
+      </ul>
+  <% end %>
+  <% if @menuNum == 4 %>
+      <ul class="c-menu c-arrow-dot1 c-theme">
+        <li>
+          <a href="<%= "/#{I18n.locale}/cotizacion" %>">Cotización de la acción
+          </a>
+
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/acuerdos-asambleas" %>">Acuerdos y Asambleas
+          </a>
+
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/dividendos" %>">Dividendos
+
+          </a>
+
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/renta-fija-credito" %>">Renta Fija y Crédito
+          </a>
+
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/bono" %>">Información del bono
+          </a>
+
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/analistas" %>">Cobertura de analistas
+          </a>
+
+        </li>
+        <li>
+          <a href="<%= "/#{I18n.locale}/ibursatil" %>">Indicadores bursátiles
+          </a>
+
+        </li>
+      </ul>
+  <% end %>
+</div>
+<div class="c-content-tab-1 c-theme c-margin-t-30">
+  <div class="c-content-title-1 c-theme c-title-md c-margin-t-40">
+    <h3 class="c-font-bold c-font-uppercase">Documentos destacados</h3>
+
+    <div class="c-line-left c-theme-bg"></div>
+  </div>
+  <div class="nav-justified">
+    <!--<ul class="nav nav-tabs nav-justified">-->
+      <!--<li class="active">-->
+        <!--<a href="/#blog_recent_posts" data-toggle="tab">Recent Posts</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="/#blog_popular_posts" data-toggle="tab">Popular Posts</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+    <div class="tab-content">
+      <div class="tab-pane active" id="blog_recent_posts">
+        <ul class="c-content-recent-posts-1">
+          <li>
+            <div class="c-image">
+              <img src="/assets/base/img/content/stock/09.jpg" alt="" class="img-responsive"></div>
+            <div class="c-post">
+              <a href="" class="c-title">Presentación 4T15 </a>
+
+              <div class="c-date">27 Jan 2015</div>
+            </div>
+          </li>
+          <li>
+            <div class="c-image">
+              <img src="/assets/base/img/content/stock/08.jpg" alt="" class="img-responsive"></div>
+            <div class="c-post">
+              <a href="" class="c-title"> Teleconferencia 4T15 </a>
+
+              <div class="c-date">27 Jan 2015</div>
+            </div>
+          </li>
+          <li>
+            <div class="c-image">
+              <img src="/assets/base/img/content/stock/07.jpg" alt="" class="img-responsive"></div>
+            <div class="c-post">
+              <a href="" class="c-title"> Reporte Anual 2015</a>
+
+              <div class="c-date">27 Jan 2015</div>
+            </div>
+          </li>
+          <li>
+            <div class="c-image">
+              <img src="/assets/base/img/content/stock/32.jpg" alt="" class="img-responsive"></div>
+            <div class="c-post">
+              <a href="" class="c-title">Informe 4T15</a>
+
+              <div class="c-date">27 Jan 2015</div>
+            </div>
+          </li>
+        </ul>
       </div>
+      <!--<div class="tab-pane" id="blog_popular_posts">-->
+        <!--<ul class="c-content-recent-posts-1">-->
+          <!--<li>-->
+            <!--<div class="c-image">-->
+              <!--<img src="assets/base/img/content/stock/34.jpg" class="img-responsive" alt=""/></div>-->
+            <!--<div class="c-post">-->
+              <!--<a href="" class="c-title"> UX Design Expo 2015... </a>-->
+
+              <!--<div class="c-date">27 Jan 2015</div>-->
+            <!--</div>-->
+          <!--</li>-->
+          <!--<li>-->
+            <!--<div class="c-image">-->
+              <!--<img src="assets/base/img/content/stock/37.jpg" class="img-responsive" alt=""/></div>-->
+            <!--<div class="c-post">-->
+              <!--<a href="" class="c-title"> UX Design Expo 2015... </a>-->
+
+              <!--<div class="c-date">27 Jan 2015</div>-->
+            <!--</div>-->
+          <!--</li>-->
+          <!--<li>-->
+            <!--<div class="c-image">-->
+              <!--<img src="assets/base/img/content/stock/32.jpg" class="img-responsive" alt=""/></div>-->
+            <!--<div class="c-post">-->
+              <!--<a href="" class="c-title"> UX Design Expo 2015... </a>-->
+
+              <!--<div class="c-date">27 Jan 2015</div>-->
+            <!--</div>-->
+          <!--</li>-->
+          <!--<li>-->
+            <!--<div class="c-image">-->
+              <!--<img src="assets/base/img/content/stock/54.jpg" class="img-responsive" alt=""/></div>-->
+            <!--<div class="c-post">-->
+              <!--<a href="" class="c-title"> UX Design Expo 2015... </a>-->
+
+              <!--<div class="c-date">27 Jan 2015</div>-->
+            <!--</div>-->
+          <!--</li>-->
+        <!--</ul>-->
+      <!--</div>-->
     </div>
   </div>
-  <div class="c-content-ver-nav">
-    <div class="c-content-title-1 c-theme c-title-md c-margin-t-40">
-      <h3 class="c-font-bold c-font-uppercase">Blogs</h3>
-      <div class="c-line-left c-theme-bg"></div>
-    </div>
-    <ul class="c-menu c-arrow-dot c-theme">
-      <li>
-        <a href="#">Fasion & Arts</a>
-      </li>
-      <li>
-        <a href="#">UX & Web Design</a>
-      </li>
-      <li>
-        <a href="#">Mobile Development</a>
-      </li>
-      <li>
-        <a href="#">Internet Marketing</a>
-      </li>
-      <li>
-        <a href="#">Frontend Development</a>
-      </li>
-    </ul>
-  </div>
-  <!-- END: CONTENT/BLOG/BLOG-SIDEBAR-1 -->
+</div>
+<!--<div class="c-content-ver-nav">-->
+<!--<div class="c-content-title-1 c-theme c-title-md c-margin-t-40">-->
+<!--<h3 class="c-font-bold c-font-uppercase">Blogs</h3>-->
+<!--<div class="c-line-left c-theme-bg"></div>-->
+<!--</div>-->
+<!--<ul class="c-menu c-arrow-dot c-theme">-->
+<!--<li>-->
+<!--<a href="#">Fasion & Arts</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">UX & Web Design</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Mobile Development</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Internet Marketing</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">Frontend Development</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!-- END: CONTENT/BLOG/BLOG-SIDEBAR-1 -->

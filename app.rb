@@ -284,3 +284,22 @@ get '/:locale/ibursatil' do
   erb :"#{I18n.locale}/vistas/menu4/ibursatil", :layout => ("global/layouts/content").to_sym
 end
 
+# HELPER
+
+helpers do
+  # Cambiar idioma
+
+  def change_language
+    if request.path_info=="/"
+      return "/en"
+
+    elsif I18n.locale == :es
+      return request.path_info.sub('es', 'en')
+
+    elsif  I18n.locale == :en
+      return request.path_info.sub('en', 'es')
+
+    end
+  end
+
+end
