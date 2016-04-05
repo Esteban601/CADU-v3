@@ -212,25 +212,11 @@ get '/:locale/registros-sec' do
   erb :"#{I18n.locale}/vistas/menu3/registros-sec", :layout => ("global/layouts/content").to_sym
 end
 
-get '/:locale/reportes-anuales' do
-  @titulo = "Reportes anuales"
+get '/:locale/reportes-financieros' do
+  @titulo = "Reportes financieros"
   @menuNum= 3
   @menuName= "Información financiera"
-  erb :"#{I18n.locale}/vistas/menu3/reportes-anuales", :layout => ("global/layouts/content").to_sym
-end
-
-get '/:locale/reportes-trimestrales' do
-  @titulo = "Reportes trimestrales"
-  @menuNum= 3
-  @menuName= "Información financiera"
-  erb :"#{I18n.locale}/vistas/menu3/reportes-trimestrales", :layout => ("global/layouts/content").to_sym
-end
-
-get '/:locale/teleconferencias' do
-  @titulo = "Teleconferencias"
-  @menuNum= 3
-  @menuName= "Información financiera"
-  erb :"#{I18n.locale}/vistas/menu3/teleconferencias", :layout => ("global/layouts/content").to_sym
+  erb :"#{I18n.locale}/vistas/menu3/reportes-financieros", :layout => ("global/layouts/content").to_sym
 end
                                                 #Menu4
 get '/:locale/analistas' do

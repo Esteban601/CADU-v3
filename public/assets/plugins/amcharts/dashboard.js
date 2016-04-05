@@ -67,7 +67,7 @@ function fillData(precios, ipc, ticker_symbol) {
 function createStockChart() {
     var chart = new AmCharts.AmStockChart();
     chart.dataDateFormat = "YYYY-MM-DD";
-    chart.pathToImages = "/js/amcharts/images/";
+    chart.pathToImages = "/assets/plugins/amcharts/images/";
 
 
     // DATASETS //////////////////////////////////////////
