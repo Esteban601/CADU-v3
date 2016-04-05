@@ -1,9 +1,11 @@
+var colors = ["#B7CEE5","#F04C23","#98ACBF","#333940","#7F2813","#E54921","#CBE5FF","#66737F","#FF5125","#401409",];
 AmCharts.makeChart(
     "vrp", {
         "type": "pie",
         "startDuration": 0,
         "theme": "light",
         "addClassNames": true,
+        "colors":colors,
         "legend":{
             "position":"bottom"
             //"marginRight":100,
@@ -64,6 +66,7 @@ AmCharts.makeChart(
         "startDuration": 0,
         "theme": "light",
         "addClassNames": true,
+        "colors":colors,
         "legend":{
             "position":"bottom"
             //"marginRight":100,

@@ -4,12 +4,14 @@
 window.onload = function() {
     // all of your code goes in here
     // it runs after the DOM is built
+    var colors = ["#B7CEE5","#F04C23","#98ACBF","#333940","#7F2813","#E54921","#CBE5FF","#66737F","#FF5125","#401409",];
     var chart = AmCharts.makeChart(
         "acc", {
             "type": "pie",
             "startDuration": 0,
             "theme": "light",
             "addClassNames": true,
+            "colors":colors,
             "legend":{
                 "position":"bottom"
                 //"marginRight":100,
