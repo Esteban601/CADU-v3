@@ -1,0 +1,53 @@
+    .amChartsButtonSelected
+  {
+     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+     background-color: #43474D;
+     border-style:solid;
+     border-color:#43474D;
+     border-width:1px;
+     color:#FFFFFF;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 1px; 
+    margin-top: 10px;   
+    
+  }
+
+  .amChartsButton
+  {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+     background-color:#EEEEEE;
+     border-style:solid;
+     border-color:#CCCCCC;
+     border-width:1px;
+     color:#000000;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 10px;  
+  }
+
+  .amChartsCompareList
+  {
+     padding-top: 4px;
+     padding-bottom: 4px;
+     border-style:solid;
+     border-color:#CCCCCC;
+     border-width:1px;
+     background-color: #EEEEEE;
+  }
+  .amChartsCompareList div
+{
+   -webkit-box-sizing: initial;
+   box-sizing: initial;
+}
+
+ .amChartsCompareList a:hover
+{
+
+   /*background-color: #369;*/
+     background-color: #297b21;
+   color: #FFF;
+  
+
+}
+
