@@ -68,3 +68,9 @@ color:#9AB4BD ;
     margin-top: -22px;
     height: 400px;
 }
+/*Reportes*/
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
