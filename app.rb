@@ -163,13 +163,13 @@ get '/:locale/consejo-administracion' do
   erb :"#{I18n.locale}/vistas/menu2/consejo-administracion", :layout => ("global/layouts/content").to_sym
 end
 
-get '/:locale/informacion-corporativa' do
-  @titulo = "Información corporativa"
-  @menuNum= 2
-  @menuName= "Gobierno corporativo"
-  erb :"#{I18n.locale}/vistas/menu2/informacion-corporativa", :layout => ("global/layouts/content").to_sym
-end
-                                                  #Menu3
+# get '/:locale/informacion-corporativa' do
+#   @titulo = "Información corporativa"
+#   @menuNum= 2
+#   @menuName= "Gobierno corporativo"
+#   erb :"#{I18n.locale}/vistas/menu2/informacion-corporativa", :layout => ("global/layouts/content").to_sym
+# end
+#                                                   #Menu3
 get '/:locale/comunicados' do
   @titulo = "Comunicados"
   @menuNum= 3
