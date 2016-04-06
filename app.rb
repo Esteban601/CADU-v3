@@ -36,6 +36,31 @@ configure do
 #    set :show_exceptions, :after_handler
 end
 
+#Configuracion de email
+post '/es/boletinsubscripcion' do
+  require 'pony'
+
+  from = "boletin@cadu.com"
+  subject = "Nuevo mensaje de contacto a CADU"
+
+  Pony.mail(
+      :from => from,
+      :to => 'lovera@irstrat.com',
+      :subject => subject,
+      :headers => { 'Content-Type' => 'text/html' },
+      :body => erb(:"global/bloques/mail"),
+      :via => :smtp,
+      :via_options => {
+          :address              => 'smtp.mailgun.org',
+          :port                 => '587',
+          :enable_starttls_auto => true,
+          :user_name            => 'postmaster@irstrat.com',
+          :password             => '5ptmod-dfz40',
+          :authentication       => :plain,
+          :domain               => "irstrat.com"
+      })
+  redirect '/'
+end
 
 # Globales
 

@@ -99,3 +99,40 @@
         });
     });
 </script>
+<!--Validar email-->
+<script type="text/javascript">
+
+    function validaremail(formulario) {
+
+        if (validateEmail(document.formulario.email.value) == false){
+
+            <%= " $('#subscribir').popover({content: 'Dirección email errónea, rectifíquela por favor.'});" if I18n.locale == :es %>
+            <%= " $('#subscribir').popover({content: 'Not a valid e-mail address, please rectify.'});" if I18n.locale == :en %>
+
+            $('#subscribir').popover('show');
+        }
+        else {
+
+            <%= "$('#subscribir').attr('data-content', 'Gracias por subscribirse a nuestras noticias.');" if I18n.locale == :es %>
+            <%= "$('#subscribir').attr('data-content', 'Thanks for subscribing');" if I18n.locale == :en %>
+
+
+
+            $('#subscribir').popover('show');
+
+            setTimeout(continueExecution, 1500);
+        }
+    }
+
+
+    function continueExecution()
+    {
+        document.formulario.submit();
+    }
+
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+</script>
