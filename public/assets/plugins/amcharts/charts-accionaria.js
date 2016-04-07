@@ -13,12 +13,13 @@ window.onload = function() {
             "addClassNames": true,
             "colors":colors,
             "legend":{
-                "position":"bottom"
+                "position":"bottom",
+                "align":"center"
                 //"marginRight":100,
                 //"autoMargins":false
             },
             "innerRadius": "0",
-            "radius": "50%",
+            "radius": "40%",
             "defs": {
                 "filter": [{
                     "id": "shadow",

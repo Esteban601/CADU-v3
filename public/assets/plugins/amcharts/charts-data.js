@@ -12,7 +12,7 @@ AmCharts.makeChart(
             //"autoMargins":false
         },
         "innerRadius": "0",
-        "radius": "50%",
+        "radius": "40%",
         "defs": {
             "filter": [{
                 "id": "shadow",
@@ -73,7 +73,7 @@ AmCharts.makeChart(
             //"autoMargins":false
         },
         "innerRadius": "0",
-        "radius": "50%",
+        "radius": "40%",
         "defs": {
             "filter": [{
                 "id": "shadow",

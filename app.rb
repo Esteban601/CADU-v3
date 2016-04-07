@@ -139,12 +139,12 @@ get '/:locale/historia' do
   erb :"#{I18n.locale}/vistas/menu1/historia", :layout => ("global/layouts/content").to_sym
 end
                                                 #Menu2
-get '/:locale/codigos-estatutos' do
-  @titulo = "Códigos y Estatutos"
-  @menuNum= 2
-  @menuName= "Gobierno corporativo"
-  erb :"#{I18n.locale}/vistas/menu2/codigos-estatutos", :layout => ("global/layouts/content").to_sym
-end
+# get '/:locale/codigos-estatutos' do
+#   @titulo = "Códigos y Estatutos"
+#   @menuNum= 2
+#   @menuName= "Gobierno corporativo"
+#   erb :"#{I18n.locale}/vistas/menu2/codigos-estatutos", :layout => ("global/layouts/content").to_sym
+# end
 
 get '/:locale/auditor-externo' do
   @titulo = "Auditor externo"
