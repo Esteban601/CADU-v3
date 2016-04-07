@@ -274,12 +274,12 @@ get '/:locale/renta-fija-credito' do
   erb :"#{I18n.locale}/vistas/menu4/renta-fija-credito", :layout => ("global/layouts/content").to_sym
 end
 
-get '/:locale/bono' do
-  @titulo = "Informacion del bono"
-  @menuNum= 4
-  @menuName= "Información Bursátil"
-  erb :"#{I18n.locale}/vistas/menu4/bono", :layout => ("global/layouts/content").to_sym
-end
+# get '/:locale/bono' do
+#   @titulo = "Informacion del bono"
+#   @menuNum= 4
+#   @menuName= "Información Bursátil"
+#   erb :"#{I18n.locale}/vistas/menu4/bono", :layout => ("global/layouts/content").to_sym
+# end
 
 get '/:locale/cotizacion' do
   @titulo = "Cotización de la acción"
@@ -288,14 +288,21 @@ get '/:locale/cotizacion' do
   erb :"#{I18n.locale}/vistas/menu4/cotizacion", :layout => ("global/layouts/content").to_sym
 end
 
-get '/:locale/ibursatil' do
-  @titulo = "Información buisátil"
-  @menuNum= 4
-  @menuName= "Información Bursátil"
-  erb :"#{I18n.locale}/vistas/menu4/ibursatil", :layout => ("global/layouts/content").to_sym
-end
+# get '/:locale/ibursatil' do
+#   @titulo = "Información Bursátil"
+#   @menuNum= 4
+#   @menuName= "Información Bursátil"
+#   erb :"#{I18n.locale}/vistas/menu4/ibursatil", :layout => ("global/layouts/content").to_sym
+# end
 
 # HELPER
+
+#Independientes
+get '/:locale/resultados' do
+  @titulo = "Resultados"
+  @menuNum= 0
+  erb :"#{I18n.locale}/vistas/independientes/resultados", :layout => ("global/layouts/content").to_sym
+end
 
 helpers do
   # Cambiar idioma

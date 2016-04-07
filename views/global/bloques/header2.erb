@@ -9,7 +9,7 @@
                     <a href="/" class="c-logo">
                         <img src="/assets/cadu/images/globales/logo.png" alt="CADU" class="c-desktop-logo">
                         <img src="/assets/cadu/images/globales/logo.png" alt="CADU" class="c-desktop-logo-inverse" style="width: 60%; margin-top: -6px;">
-                        <img src="/assets/cadu/images/globales/logo.png" alt="CADU" class="c-mobile-logo"> </a>
+                        <img src="/assets/cadu/images/globales/logo.png" alt="CADU" class="c-mobile-logo" style="width: 10%; margin-top: -6px;"> </a>
                     <button class="c-hor-nav-toggler" type="button" data-target=".c-mega-menu">
                         <span class="c-line"></span>
                         <span class="c-line"></span>
@@ -28,7 +28,7 @@
                 </div>
                 <!-- END: BRAND -->
                 <!-- BEGIN: QUICK SEARCH -->
-                <form class="c-quick-search" action="#">
+                <form class="c-quick-search" action="/es/resultados">
                     <input type="text" name="query" placeholder="<%= I18n.t 'buscar' %>" value="" class="form-control" autocomplete="off">
                     <span class="c-theme-link">&times;</span>
                 </form>
@@ -199,23 +199,17 @@
 
                             </li>
                             <li class="dropdown-submenu">
-                              <a href="<%= "/#{I18n.locale}/bono"%>">Información del bono
-                                <span class="c-arrow c-toggler"></span>
-                              </a>
-
-                            </li>
-                            <li class="dropdown-submenu">
                               <a href="<%= "/#{I18n.locale}/analistas"%>">Cobertura de analistas
                                 <span class="c-arrow c-toggler"></span>
                               </a>
 
                             </li>
-                            <li class="dropdown-submenu">
-                              <a href="<%= "/#{I18n.locale}/ibursatil"%>">Indicadores bursátiles
-                                <span class="c-arrow c-toggler"></span>
-                              </a>
+                            <!--<li class="dropdown-submenu">-->
+                              <!--<a href="<%= "/#{I18n.locale}/ibursatil"%>">Indicadores bursátiles-->
+                                <!--<span class="c-arrow c-toggler"></span>-->
+                              <!--</a>-->
 
-                            </li>
+                            <!--</li>-->
                           </ul>
                         </li>
                         <li class="c-search-toggler-wrapper">
