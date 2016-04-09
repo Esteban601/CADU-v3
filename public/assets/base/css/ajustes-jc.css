@@ -65,7 +65,7 @@ color:#9AB4BD ;
 /*Slider*/
 .c-layout-revo-slider {
     overflow: hidden;
-    margin-top: -22px;
+    /*margin-top: -22px;*/
     height: 400px;
 }
 /*Reportes*/
@@ -83,6 +83,27 @@ color:#9AB4BD ;
     }
     .boletin{
         display: none;
+    }
+    .c-layout-revo-slider {
+        overflow: hidden;
+        margin-top: 0px;
+        height: 400px;
+        width: 100%;
+    }
+    .c-main-title{
+        font-size: 24px !important;
+        margin-left: 209px !important;
+        line-height: 24px !important;
+        top: -143px !important;
+        margin-top: -118px !important;
+    }
+}
+@media screen and (max-width: 400px){
+    .c-main-title{
+        margin-left: 85px !important;
+        font-size: 12px !important;
+        line-height: 14px !important;
+        margin-top: 0px !important;
     }
 }
 
