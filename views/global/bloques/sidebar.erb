@@ -1,12 +1,12 @@
 <!-- BEGIN: CONTENT/BLOG/BLOG-SIDEBAR-1 -->
-<form action="#" method="post">
-  <!--<div class="input-group">-->
-  <!--<input type="text" class="form-control c-square c-theme-border" placeholder="Search blog...">-->
-  <!--<span class="input-group-btn">-->
-  <!--<button class="btn c-theme-btn c-theme-border c-btn-square" type="button">Go!</button>-->
-  <!--</span>-->
-  <!--</div>-->
-</form>
+<!--<form action="#" method="post">-->
+  <!--&lt;!&ndash;<div class="input-group">&ndash;&gt;-->
+  <!--&lt;!&ndash;<input type="text" class="form-control c-square c-theme-border" placeholder="Search blog...">&ndash;&gt;-->
+  <!--&lt;!&ndash;<span class="input-group-btn">&ndash;&gt;-->
+  <!--&lt;!&ndash;<button class="btn c-theme-btn c-theme-border c-btn-square" type="button">Go!</button>&ndash;&gt;-->
+  <!--&lt;!&ndash;</span>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</form>-->
 <% if @menuNum != 0 %>
 <div class="c-content-ver-nav">
   <div class="c-content-title-1 c-theme c-title-md c-margin-t-40">
@@ -51,10 +51,6 @@
   <% if @menuNum == 2 %>
       <ul class="c-menu c-arrow-dot1 c-theme">
         <li>
-          <a href="<%= "/#{I18n.locale}/informacion-corporativa" %>">Información corporativa
-          </a>
-        </li>
-        <li>
           <a href="<%= "/#{I18n.locale}/auditor-externo" %>">Auditor externo
           </a>
         </li>
@@ -79,12 +75,6 @@
 
           </a>
         </li>
-        <li>
-          <a href="<%= "/#{I18n.locale}/codigos-estatutos" %>">Códigos y estatutos
-
-          </a>
-
-        </li>
       </ul>
   <% end %>
   <% if @menuNum == 3 %>
@@ -98,22 +88,13 @@
           </a>
         </li>
         <li>
-          <a href="<%= "/#{I18n.locale}/reportes-trimestrales" %>">Reportes trimestrales
-          </a>
-
-        </li>
-        <li>
           <a href="<%= "/#{I18n.locale}/glosario" %>">Glosario
           </a>
 
         </li>
-        <li>
-          <a href="<%= "/#{I18n.locale}/teleconferencias" %>">Teleconferencias
-          </a>
 
-        </li>
         <li>
-          <a href="<%= "/#{I18n.locale}/reportes-anuales" %>">Reportes anuales
+          <a href="<%= "/#{I18n.locale}/reportes-financieros" %>">Reportes Financieros
           </a>
 
         </li>
@@ -148,20 +129,15 @@
 
         </li>
         <li>
-          <a href="<%= "/#{I18n.locale}/bono" %>">Información del bono
-          </a>
-
-        </li>
-        <li>
           <a href="<%= "/#{I18n.locale}/analistas" %>">Cobertura de analistas
           </a>
 
         </li>
-        <li>
-          <a href="<%= "/#{I18n.locale}/ibursatil" %>">Indicadores bursátiles
-          </a>
+        <!--<li>-->
+          <!--<a href="<%= "/#{I18n.locale}/ibursatil" %>">Indicadores bursátiles-->
+          <!--</a>-->
 
-        </li>
+        <!--</li>-->
       </ul>
   <% end %>
 </div>

@@ -73,4 +73,16 @@ color:#9AB4BD ;
     padding-left: 0;
     list-style: none;
 }
+/*media query*/
+@media screen and (max-width: 1000px){
+    .sidebar{
+        display: none;
+    }
+    .eventos{
+        display: none;
+    }
+    .boletin{
+        display: none;
+    }
+}
 
