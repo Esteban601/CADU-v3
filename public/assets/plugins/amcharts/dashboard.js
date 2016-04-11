@@ -1,6 +1,6 @@
 var mydash = {};
 $.ajax({
-    url: 'http://marktdaten.irstrat.com/historicos/19.json?callback=callback',
+    url: 'http://marktdaten.irstrat.com/historicos/147.json?callback=callback',
     async: false,
     dataType: 'jsonp',
     jsonpCallback: 'jsonCallback',

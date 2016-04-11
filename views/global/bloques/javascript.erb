@@ -136,3 +136,44 @@
     }
 
 </script>
+<script type="text/javascript">
+
+    $.ajax({
+        url:'http://marktdaten.irstrat.com/intra/147.json?callback=callback',
+        async: false,
+        dataType: 'jsonp',
+        jsonpCallback: 'jsonCallback',
+        contentType: "application/json",
+        success: function(json) {
+//            precios = json.precios;
+//            ipc = json.ipc;
+            intradia = json.intradia;
+            ticker_symbol = "FAMSA";
+            Datatabla(intradia);
+//            fillData(precios,ipc,ticker_symbol);
+            //            console.dir(json.sites);
+        }
+
+    });
+
+
+    function Datatabla(intradia){
+        volume = numberWithCommas(intradia["volume"])
+        $('#price-ticker').html("$" + intradia["price"]);
+        $('#change-ticker').html(intradia["change"]);
+        $('#volume-ticker').html(volume);
+
+        $('#range-ticker').html("$" +  intradia["min"]+" - "+ "$" + intradia["max"]);
+
+//        $('#min-ticker').html(intradia["min"]);
+//        $('#max-ticker').html(intradia["max"]);
+
+
+        $('#date-ticker').html(intradia["date"]+", "+intradia["time"]+" EST");
+
+    }
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+</script>

@@ -53,6 +53,9 @@ color:#9AB4BD ;
 .c-content-title-1 > .c-line-center {
     background-color: #F04C23;
 }
+.c-content-box.c-size-md {
+    padding-bottom: 0px;
+}
 /*.c-content-title-3 > p {*/
     /*font-weight: normal !important;*/
 /*}*/
@@ -61,6 +64,10 @@ color:#9AB4BD ;
     font-weight: 100;
     color: #5c6873;
     margin: 15px 0 0 0;
+}
+.c-content-v-center .c-wrapper .c-body {
+    display: table-cell;
+    vertical-align: top;
 }
 /*Slider*/
 .c-layout-revo-slider {
@@ -106,4 +113,9 @@ color:#9AB4BD ;
         margin-top: 0px !important;
     }
 }
+/*ticker*/
+.ticker-data{
+   color: #F04C23
+}
+
 
