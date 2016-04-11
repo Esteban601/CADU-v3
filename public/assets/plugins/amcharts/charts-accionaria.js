@@ -14,7 +14,8 @@ window.onload = function() {
             "colors":colors,
             "legend":{
                 "position":"bottom",
-                "align":"center"
+                "align":"center",
+                "valueText": " [[percents]]%"
                 //"marginRight":100,
                 //"autoMargins":false
             },

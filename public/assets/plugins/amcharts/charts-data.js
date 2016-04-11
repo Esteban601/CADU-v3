@@ -7,7 +7,8 @@ AmCharts.makeChart(
         "addClassNames": true,
         "colors":colors,
         "legend":{
-            "position":"bottom"
+            "position":"bottom",
+            "valueText": " [[percents]]%"
             //"marginRight":100,
             //"autoMargins":false
         },
@@ -68,9 +69,10 @@ AmCharts.makeChart(
         "addClassNames": true,
         "colors":colors,
         "legend":{
-            "position":"bottom"
+            "position":"bottom",
             //"marginRight":100,
             //"autoMargins":false
+            "valueText": " [[percents]]%"
         },
         "innerRadius": "0",
         "radius": "40%",
