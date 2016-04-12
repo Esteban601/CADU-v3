@@ -7,7 +7,7 @@ var legend;
 var selected;
 
 var types = [{
-    type: "Texto error",
+    type: "Deuda Bancaria",
     percent: 58,
     color: "#B7CEE5",
     subs: [
@@ -18,7 +18,7 @@ var types = [{
     ]},
     {
         type: "CADU15",
-        percent: 24,
+        percent: 25,
         color: "#F04C23"
         //subs: [
         //    { type: "Hydro", percent: 15 },
