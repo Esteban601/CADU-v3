@@ -175,3 +175,16 @@ color:#9AB4BD ;
 .espacio30{
       margin-bottom: 30px;
 }
+
+.c-layout-footer-7 .c-prefooter {
+    padding: 41px 0 35px 0;
+}
+
+.c-layout-footer-7 .c-postfooter {
+    padding: 8px 0;
+}
+
+.c-layout-footer-7 .c-line {
+
+    margin: 15px auto;
+}
