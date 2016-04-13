@@ -17,15 +17,17 @@ $.ajax({
 
 });
 function Datatabla(intradia) {
+    volume = numberWithCommas(intradia["volume"])
     $('#table-date').html(intradia["date"] + ", " + intradia["time"] + " EST");
 //  $('#table-time').html(intradia["time"]);
     $('#table-price').html(intradia["price"]);
     $('#table-change').html(intradia["change"]);
     $('#table-range').html(intradia["min"] + " - " + intradia["max"]);
-    $('#table-volume').html(intradia["volume"]);
+    $('#table-volume').html(volume);
     $('#price-ticker').html("$" + intradia["price"]);
     $('#change-ticker').html(intradia["change"]);
 }
+
 
 //filling empty values from non operation
 function fillData(precios, ipc, ticker_symbol) {

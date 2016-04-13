@@ -149,7 +149,7 @@
 //            ipc = json.ipc;
             intradia = json.intradia;
             ticker_symbol = "FAMSA";
-            Datatabla(intradia);
+            Dataticker(intradia);
 //            fillData(precios,ipc,ticker_symbol);
             //            console.dir(json.sites);
         }
@@ -157,7 +157,7 @@
     });
 
 
-    function Datatabla(intradia){
+    function Dataticker(intradia){
         volume = numberWithCommas(intradia["volume"])
         $('#price-ticker').html("$" + intradia["price"]);
         $('#change-ticker').html(intradia["change"]);
