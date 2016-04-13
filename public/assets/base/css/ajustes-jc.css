@@ -99,20 +99,39 @@ color:#9AB4BD ;
     }
     .c-main-title{
         font-size: 24px !important;
-        margin-left: 209px !important;
+        margin-left: 350px !important;
         line-height: 24px !important;
         top: -143px !important;
-        margin-top: -118px !important;
+        margin-top: 0px !important;
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 800px){
     .c-main-title{
-        margin-left: 85px !important;
+        font-size: 22px !important;
+        margin-left: 170px !important;
+        line-height: 24px !important;
+        top: -143px !important;
+        margin-top: 0px !important;
+    }
+}
+@media screen and (max-width: 700px){
+    .c-main-title{
+        margin-left: 100px !important;
         font-size: 12px !important;
         line-height: 14px !important;
         margin-top: 0px !important;
     }
 }
+@media screen and (max-width: 400px){
+    .c-main-title{
+        margin-left: 100px !important;
+        font-size: 11px !important;
+        line-height: 14px !important;
+        margin-top: 0px !important;
+    }
+}
+
+
 /*ticker*/
 .ticker-data{
    color: #F04C23
