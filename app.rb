@@ -32,8 +32,8 @@ before '/:locale/*' do
 end
 
 configure do
-  set :show_exceptions, false
-#    set :show_exceptions, :after_handler
+  # set :show_exceptions, false
+   set :show_exceptions, :after_handler
 end
 
 #Configuracion de email
@@ -302,6 +302,18 @@ get '/:locale/resultados' do
   @titulo = "Resultados"
   @menuNum= 0
   erb :"#{I18n.locale}/vistas/independientes/resultados", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/terminos-condiciones' do
+  @titulo = "Términos y Condiciones"
+  @menuNum= 0
+  erb :"#{I18n.locale}/vistas/independientes/terminos-condiciones", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/bolsa-trabajo' do
+  @titulo = "Bolsa de trabajo"
+  @menuNum= 0
+  erb :"#{I18n.locale}/vistas/independientes/bolsa-trabajo", :layout => ("global/layouts/content").to_sym
 end
 
 helpers do

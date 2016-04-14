@@ -19,7 +19,7 @@ var bars = AmCharts.makeChart(
         "trendLines": [],
         "graphs": [
             {
-                "balloonText": "ROE:[[value]]",
+                "balloonText": "ROE:[[value]]%",
                 "fillAlphas": 0.8,
                 "id": "AmGraph-1",
                 "lineAlpha": 0.2,
@@ -28,7 +28,7 @@ var bars = AmCharts.makeChart(
                 "valueField": "ROE"
             },
             {
-                "balloonText": "UAFIDA:[[value]]",
+                "balloonText": "UAFIDA:[[value]]%",
                 "fillAlphas": 0.8,
                 "id": "AmGraph-2",
                 "lineAlpha": 0.2,
@@ -81,7 +81,7 @@ var bars = AmCharts.makeChart(
                 "UAFIDA": 19.5
             },
             {
-                "year": 2015,
+                "year": "2015*",
                 "ROE": 13.4,
                 "UAFIDA": 21.1
             }
