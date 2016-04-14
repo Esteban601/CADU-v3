@@ -19,6 +19,9 @@ color:#9AB4BD ;
 .socicon-btn.socicon-btn-circle {
     border-radius: 44px;
 }
+.link_e{
+    color: #b1c4d0;
+}
 /*Glosario*/
 
 .glossario {
@@ -56,6 +59,9 @@ color:#9AB4BD ;
 .c-content-box.c-size-md {
     padding-bottom: 0px;
 }
+.c-content-product-1 .row .c-media > img {
+    width: 115%;
+}
 /*.c-content-title-3 > p {*/
     /*font-weight: normal !important;*/
 /*}*/
@@ -80,6 +86,9 @@ color:#9AB4BD ;
     padding-left: 0;
     list-style: none;
 }
+.c-main-title{
+    vertical-align: middle;
+}
 /*media query*/
 @media screen and (max-width: 1000px){
     .sidebar{
@@ -103,6 +112,7 @@ color:#9AB4BD ;
         line-height: 24px !important;
         top: -143px !important;
         margin-top: 0px !important;
+        vertical-align: middle!important;
     }
 }
 @media screen and (max-width: 800px){
@@ -112,6 +122,7 @@ color:#9AB4BD ;
         line-height: 24px !important;
         top: -143px !important;
         margin-top: 0px !important;
+        vertical-align: middle!important;
     }
 }
 @media screen and (max-width: 700px){
@@ -120,6 +131,7 @@ color:#9AB4BD ;
         font-size: 12px !important;
         line-height: 14px !important;
         margin-top: 0px !important;
+        vertical-align: middle!important;
     }
 }
 @media screen and (max-width: 400px){
@@ -128,6 +140,7 @@ color:#9AB4BD ;
         font-size: 11px !important;
         line-height: 14px !important;
         margin-top: 0px !important;
+        vertical-align: middle!important;
     }
 }
 

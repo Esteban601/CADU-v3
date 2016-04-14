@@ -54,16 +54,16 @@
                     </div>
                     <ul class="c-links c-theme-ul">
                       <li>
-                        <a href="#">Nosotros</a>
+                        <a href="<%= "/#{I18n.locale}/perfil"%>">Perfil</a>
                       </li>
                       <li>
-                        <a href="#">Preguntas frecuentes</a>
+                        <a href="<%= "/#{I18n.locale}/bolsa-trabajo"%>">Historia</a>
                       </li>
                       <li>
-                        <a href="#">Bolsa de trabajo</a>
+                        <a href="<%= "/#{I18n.locale}/faqs"%>">Preguntas frecuentes</a>
                       </li>
                       <li>
-                        <a href="#">Términos y condiciones</a>
+                        <a href="<%= "/#{I18n.locale}/fundamentales"%>">Fundamentales</a>
                       </li>
 
                     </ul>
@@ -96,7 +96,7 @@
                         <!--<a href="https://www.facebook.com/CADUinmo/" class="socicon-btn socicon-btn-circle socicon-solid c-font-dark-1 c-theme-on-hover socicon-facebook tooltips" data-original-title="Facebook" data-container="body"></a>-->
                         <a href="https://twitter.com/CADUinmo" class="socicon-btn socicon-btn-circle socicon-solid c-font-dark-1 c-theme-on-hover socicon-twitter tooltips" data-original-title="Twitter" data-container="body"></a>
                         <a href="https://www.linkedin.com/company/1782585" class="socicon-btn socicon-btn-circle socicon-solid c-font-dark-1 c-theme-on-hover tooltips socicon-linkedin" data-original-title="Linkedin" data-container="body"></a>
-                        <a href="mailto:contacto@caducancun.com" class="socicon-btn socicon-btn-circle socicon-solid c-font-dark-1 c-theme-on-hover tooltips socicon-mail" data-original-title="Email" data-container="body"></a>
+                        <a href="mailto:ri@caducancun.com" class="socicon-btn socicon-btn-circle socicon-solid c-font-dark-1 c-theme-on-hover tooltips socicon-mail" data-original-title="Email" data-container="body"></a>
                       </div>
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12">
@@ -109,7 +109,7 @@
                             <br/> Teléfono: (998) 193 1100 <br/>Ext: 1210
                             <!--<br/> Fax: 800 123 3456-->
                             <br/> Email:
-                            <a href="mailto:contacto@caducancun.com">
+                            <a href="mailto:ri@caducancun.com">
                                 <span class="c-theme-color"> ri@caducancun.com</span>
                             </a>
 
@@ -123,7 +123,7 @@
                 <div class="row">
                     <div class="col-md-7">
                         <div class="c-content-title-1 c-title-md">
-                            <h3 class="c-title c-font-uppercase c-font-bold">Sobre CA<span class="c-theme-font">DU</span>
+                            <h3 class="c-title c-font-uppercase c-font-bold">Sobre <span class="c-theme-font">CADU</span>
                             </h3>
                             <div class="c-line-left hide"></div>
                         </div>
@@ -177,8 +177,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 c-col">
-                    <p class="c-copyright c-font-grey">Copyright 2016 CADU |
-                        <span class="c-font-grey-3">Diseñado y generado por IRStrat</span>
+                    <p class="c-copyright c-font-grey">Copyright 2016. Diseñado y generado por <a class="link_e" target="_blank" href="http://www.irstrat.com">IRStrat</a> |
+                        <span class="c-font-grey-3"><a class="link_e" target="_blank" href="<%= "/#{I18n.locale}/terminos-condiciones"%>">Términos y Condiciones</a></span>
                     </p>
                 </div>
             </div>
