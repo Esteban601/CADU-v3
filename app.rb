@@ -41,7 +41,7 @@ post '/es/boletinsubscripcion' do
   require 'pony'
 
   from = "boletin@cadu.com"
-  subject = "Nuevo mensaje de contacto a CADU"
+  subject = "Nuevo subscriptor a lista CADU"
 
   Pony.mail(
       :from => from,
@@ -54,8 +54,8 @@ post '/es/boletinsubscripcion' do
           :address              => 'smtp.mailgun.org',
           :port                 => '587',
           :enable_starttls_auto => true,
-          :user_name            => 'postmaster@irstrat.com',
-          :password             => '5ptmod-dfz40',
+          :user_name            => "postmaster@mail2.irstrat.com",
+          :password             => "7bc234c210b67dc3af75c97c5611685d",
           :authentication       => :plain,
           :domain               => "irstrat.com"
       })
