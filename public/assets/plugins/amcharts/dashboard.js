@@ -177,9 +177,9 @@ function createStockChart() {
     },
         {
             period: "YYYY",
-            count: 3,
+            count: 1,
             selected: true,
-            label: "3 años"
+            label: "1 año"
         }];
     chart.periodSelector = periodSelector;
 

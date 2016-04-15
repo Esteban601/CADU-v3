@@ -170,6 +170,12 @@
 
 
         $('#date-ticker').html(intradia["date"]+", "+intradia["time"]+" EST");
+        if(intradia["change"] > 0){
+            $('#arrow-change').html("▲");
+        }
+        else{
+            $('#arrow-change').html("▼");
+        }
 
     }
 

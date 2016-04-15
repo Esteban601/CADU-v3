@@ -8,10 +8,11 @@ AmCharts.makeChart(
         "colors":colors,
         "legend":{
             "position":"bottom",
-            "valueText": " [[percents]]%"
+            "valueText": " [[value]]%"
             //"marginRight":100,
             //"autoMargins":false
         },
+        "balloonText": "[[value]]%",
         "innerRadius": "0",
         "radius": "40%",
         "defs": {
@@ -72,8 +73,9 @@ AmCharts.makeChart(
             "position":"bottom",
             //"marginRight":100,
             //"autoMargins":false
-            "valueText": " [[percents]]%"
+            "valueText": " [[value]]%"
         },
+        "balloonText": "[[value]]%",
         "innerRadius": "0",
         "radius": "40%",
         "defs": {
