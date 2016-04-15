@@ -21,15 +21,12 @@
                     <button class="c-search-toggler" type="button">
                         <i class="fa fa-search"></i>
                     </button>
-                    <!--<button class="c-cart-toggler" type="button">-->
-                        <!--<i class="icon-handbag"></i>-->
-                        <!--<span class="c-cart-number c-theme-bg">2</span>-->
-                    <!--</button>-->
+
                 </div>
                 <!-- END: BRAND -->
                 <!-- BEGIN: QUICK SEARCH -->
                 <form class="c-quick-search" action="/es/resultados">
-                    <input type="text" name="query" placeholder="<%= I18n.t 'buscar' %>" value="" class="form-control" autocomplete="off">
+                    <input type="text" name="q" placeholder="<%= I18n.t 'buscar' %>" value="" class="form-control" autocomplete="off">
                     <span class="c-theme-link">&times;</span>
                 </form>
                 <!-- END: QUICK SEARCH -->
@@ -91,11 +88,7 @@
                                 <span class="c-arrow c-toggler"></span>
                             </a>
                           <ul class="dropdown-menu c-menu-type-classic c-pull-left">
-                            <!--<li class="dropdown-submenu">-->
-                              <!--<a href="<%= "/#{I18n.locale}/informacion-corporativa"%>">Información corporativa-->
-                                <!--<span class="c-arrow c-toggler"></span>-->
-                              <!--</a>-->
-                            <!--</li>-->
+
                             <li class="dropdown-submenu">
                               <a href="<%= "/#{I18n.locale}/auditor-externo"%>">Auditor externo
                                 <span class="c-arrow c-toggler"></span>
@@ -126,12 +119,7 @@
                                 <span class="c-arrow c-toggler"></span>
                               </a>
                             </li>
-                            <!--<li class="dropdown-submenu">-->
-                              <!--<a href="<%= "/#{I18n.locale}/codigos-estatutos"%>">Códigos y estatutos-->
-                                <!--<span class="c-arrow c-toggler"></span>-->
-                              <!--</a>-->
 
-                            <!--</li>-->
                           </ul>
                         </li>
                         <li class="c-menu-type-classic <%= "c-active" if @menuNum == 3 %>">
@@ -145,7 +133,7 @@
                               </a>
                             </li>
                             <li class="dropdown-submenu">
-                              <a href="<%= "/#{I18n.locale}/faqs"%>" style="text-transform: none">FAQs
+                              <a href="<%= "/#{I18n.locale}/faqs"%>">Preguntas frecuentes
                                 <span class="c-arrow c-toggler"></span>
                               </a>
                             </li>
@@ -204,12 +192,7 @@
                               </a>
 
                             </li>
-                            <!--<li class="dropdown-submenu">-->
-                              <!--<a href="<%= "/#{I18n.locale}/ibursatil"%>">Indicadores bursátiles-->
-                                <!--<span class="c-arrow c-toggler"></span>-->
-                              <!--</a>-->
 
-                            <!--</li>-->
                           </ul>
                         </li>
                         <li class="c-search-toggler-wrapper">
@@ -217,16 +200,7 @@
                                 <i class="fa fa-search"></i>
                             </a>
                         </li>
-                        <!--<li class="c-cart-toggler-wrapper">-->
-                            <!--<a href="#" class="c-btn-icon c-cart-toggler">-->
-                                <!--<i class="icon-handbag c-cart-icon"></i>-->
-                                <!--<span class="c-cart-number c-theme-bg">2</span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="javascript:;" data-toggle="modal" data-target="#login-form" class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm c-btn-border-1x c-btn-white c-btn-circle c-btn-uppercase c-btn-sbold">-->
-                                <!--<i class="icon-user"></i> Sign In</a>-->
-                        <!--</li>-->
+
                         <li class="c-quick-sidebar-toggler-wrapper">
                             <a href="#" class="c-quick-sidebar-toggler">
                                 <span class="c-line"></span>
@@ -240,46 +214,8 @@
                 <!-- END: LAYOUT/HEADERS/MEGA-MENU -->
                 <!-- END: HOR NAV -->
             </div>
-            <!-- BEGIN: LAYOUT/HEADERS/QUICK-CART -->
-            <!-- BEGIN: CART MENU -->
-            <!--<div class="c-cart-menu">-->
-                <!--<div class="c-cart-menu-title">-->
-                    <!--<p class="c-cart-menu-float-l c-font-sbold">2 item(s)</p>-->
-                    <!--<p class="c-cart-menu-float-r c-theme-font c-font-sbold">$79.00</p>-->
-                <!--</div>-->
-                <!--<ul class="c-cart-menu-items">-->
-                    <!--<li>-->
-                        <!--<div class="c-cart-menu-close">-->
-                            <!--<a href="#" class="c-theme-link">×</a>-->
-                        <!--</div>-->
-                        <!--<img src="assets/base/img/content/shop2/24.jpg" />-->
-                        <!--<div class="c-cart-menu-content">-->
-                            <!--<p>1 x-->
-                                <!--<span class="c-item-price c-theme-font">$30</span>-->
-                            <!--</p>-->
-                            <!--<a href="shop-product-details-2.html" class="c-item-name c-font-sbold">Winter Coat</a>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="c-cart-menu-close">-->
-                            <!--<a href="#" class="c-theme-link">×</a>-->
-                        <!--</div>-->
-                        <!--<img src="assets/base/img/content/shop2/12.jpg" />-->
-                        <!--<div class="c-cart-menu-content">-->
-                            <!--<p>1 x-->
-                                <!--<span class="c-item-price c-theme-font">$30</span>-->
-                            <!--</p>-->
-                            <!--<a href="shop-product-details.html" class="c-item-name c-font-sbold">Sports Wear</a>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                <!--</ul>-->
-                <!--<div class="c-cart-menu-footer">-->
-                    <!--<a href="shop-cart.html" class="btn btn-md c-btn c-btn-square c-btn-grey-3 c-font-white c-font-bold c-center c-font-uppercase">View Cart</a>-->
-                    <!--<a href="shop-checkout.html" class="btn btn-md c-btn c-btn-square c-theme-btn c-font-white c-font-bold c-center c-font-uppercase">Checkout</a>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!-- END: CART MENU -->
-            <!-- END: LAYOUT/HEADERS/QUICK-CART -->
+
+
         </div>
     </div>
 </header>

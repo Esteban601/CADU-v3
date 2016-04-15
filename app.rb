@@ -210,7 +210,7 @@ get '/:locale/fundamentales' do
 end
 
 get '/:locale/faqs' do
-  @titulo = "FAQs"
+  @titulo = "Preguntas frecuentes"
   @menuNum= 3
   @menuName= "Información financiera"
   erb :"#{I18n.locale}/vistas/menu3/faqs", :layout => ("global/layouts/content").to_sym
