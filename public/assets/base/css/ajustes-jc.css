@@ -73,6 +73,9 @@ color:#9AB4BD ;
     display: table-cell;
     vertical-align: top;
 }
+.list-is{
+    margin-top: -70px
+}
 /*Slider*/
 .c-layout-revo-slider {
     overflow: hidden;
@@ -88,6 +91,12 @@ color:#9AB4BD ;
     vertical-align: middle;
 }
 /*media query*/
+@media screen and (max-width: 1200px) {
+    .list-is{
+        margin-top: -40px
+    }
+}
+
 @media screen and (max-width: 1000px){
     .sidebar{
         display: none;
@@ -111,6 +120,9 @@ color:#9AB4BD ;
         top: -143px !important;
         margin-top: 0px !important;
         vertical-align: middle!important;
+    }
+    .list-is{
+        margin-top: -40px
     }
 }
 @media screen and (max-width: 800px){
