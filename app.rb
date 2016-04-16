@@ -65,6 +65,7 @@ end
 # Globales
 
 get '/' do
+  @titulo = "Relación con inversionistas"
   @IRmenu = 0
   erb (I18n.locale.to_s + '/vistas/index').to_sym
 end
@@ -75,6 +76,7 @@ get '/en' do
 end
 
 get '/es' do
+  @titulo = "Relación con inversionistas"
   @IRmenu = 0
   erb (I18n.locale.to_s + '/vistas/index').to_sym
 end
@@ -105,7 +107,7 @@ get '/:locale/modelo-negocio' do
 end
 
 get '/:locale/cadu-numeros' do
-  @titulo = "Cadu en Números"
+  @titulo = "Cadu en números"
   @menuNum= 1
   @menuName= "Nosotros"
   erb :"#{I18n.locale}/vistas/menu1/cadu-numeros", :layout => ("global/layouts/content").to_sym
@@ -154,14 +156,14 @@ get '/:locale/auditor-externo' do
 end
 
 get '/:locale/estructura-accionaria' do
-  @titulo = "Estrucura Accionaria"
+  @titulo = "Estrucura accionaria"
   @menuNum= 2
   @menuName= "Gobierno corporativo"
   erb :"#{I18n.locale}/vistas/menu2/estructura-accionaria", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/estructura-corporativa' do
-  @titulo = "Estrucura Corporativa"
+  @titulo = "Estrucura corporativa"
   @menuNum= 2
   @menuName= "Gobierno corporativo"
   erb :"#{I18n.locale}/vistas/menu2/estructura-corporativa", :layout => ("global/layouts/content").to_sym
@@ -182,19 +184,13 @@ get '/:locale/comites' do
 end
 
 get '/:locale/consejo-administracion' do
-  @titulo = "Consejo de Administración"
+  @titulo = "Consejo de administración"
   @menuNum= 2
   @menuName= "Gobierno corporativo"
   erb :"#{I18n.locale}/vistas/menu2/consejo-administracion", :layout => ("global/layouts/content").to_sym
 end
 
-# get '/:locale/informacion-corporativa' do
-#   @titulo = "Información corporativa"
-#   @menuNum= 2
-#   @menuName= "Gobierno corporativo"
-#   erb :"#{I18n.locale}/vistas/menu2/informacion-corporativa", :layout => ("global/layouts/content").to_sym
-# end
-#                                                   #Menu3
+                                                 #Menu3
 get '/:locale/comunicados' do
   @titulo = "Comunicados"
   @menuNum= 3
@@ -216,25 +212,13 @@ get '/:locale/faqs' do
   erb :"#{I18n.locale}/vistas/menu3/faqs", :layout => ("global/layouts/content").to_sym
 end
 
-get '/:locale/registros-otc' do
-  @titulo = "Registros OTC"
-  @menuNum= 3
-  @menuName= "Información financiera"
-  erb :"#{I18n.locale}/vistas/menu3/registros-otc", :layout => ("global/layouts/content").to_sym
-end
+
 
 get '/:locale/glosario' do
   @titulo = "Glosario"
   @menuNum= 3
   @menuName= "Información financiera"
   erb :"#{I18n.locale}/vistas/menu3/glosario", :layout => ("global/layouts/content").to_sym
-end
-
-get '/:locale/registros-sec' do
-  @titulo = "Registros SEC"
-  @menuNum= 3
-  @menuName= "Información financiera"
-  erb :"#{I18n.locale}/vistas/menu3/registros-sec", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/reportes-financieros' do
@@ -274,13 +258,6 @@ get '/:locale/renta-fija-credito' do
   erb :"#{I18n.locale}/vistas/menu4/renta-fija-credito", :layout => ("global/layouts/content").to_sym
 end
 
-# get '/:locale/bono' do
-#   @titulo = "Informacion del bono"
-#   @menuNum= 4
-#   @menuName= "Información Bursátil"
-#   erb :"#{I18n.locale}/vistas/menu4/bono", :layout => ("global/layouts/content").to_sym
-# end
-
 get '/:locale/cotizacion' do
   @titulo = "Cotización de la acción"
   @menuNum= 4
@@ -288,12 +265,6 @@ get '/:locale/cotizacion' do
   erb :"#{I18n.locale}/vistas/menu4/cotizacion", :layout => ("global/layouts/content").to_sym
 end
 
-# get '/:locale/ibursatil' do
-#   @titulo = "Información Bursátil"
-#   @menuNum= 4
-#   @menuName= "Información Bursátil"
-#   erb :"#{I18n.locale}/vistas/menu4/ibursatil", :layout => ("global/layouts/content").to_sym
-# end
 
 # HELPER
 
@@ -303,18 +274,14 @@ get '/:locale/resultados' do
   @menuNum= 0
   erb :"#{I18n.locale}/vistas/independientes/resultados", :layout => ("global/layouts/content").to_sym
 end
+#
+# get '/:locale/terminos-condiciones' do
+#   @titulo = "Términos y Condiciones"
+#   @menuNum= 0
+#   erb :"#{I18n.locale}/vistas/independientes/terminos-condiciones", :layout => ("global/layouts/content").to_sym
+# end
 
-get '/:locale/terminos-condiciones' do
-  @titulo = "Términos y Condiciones"
-  @menuNum= 0
-  erb :"#{I18n.locale}/vistas/independientes/terminos-condiciones", :layout => ("global/layouts/content").to_sym
-end
 
-get '/:locale/bolsa-trabajo' do
-  @titulo = "Bolsa de trabajo"
-  @menuNum= 0
-  erb :"#{I18n.locale}/vistas/independientes/bolsa-trabajo", :layout => ("global/layouts/content").to_sym
-end
 
 helpers do
   # Cambiar idioma
