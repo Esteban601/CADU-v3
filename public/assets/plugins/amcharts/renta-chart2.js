@@ -18,7 +18,7 @@ var types = [{
     ]},
     {
         type: "CADU15",
-        percent: 25,
+        percent: 24,
         color: "#F04C23"
         //subs: [
         //    { type: "Hydro", percent: 15 },
@@ -70,6 +70,7 @@ AmCharts.ready(function() {
     chart.dataProvider = generateChartData();
     chart.titleField = "type";
     chart.valueField = "percent";
+    chart.balloonText= "[[type]]:[[percent]]%";
     //chart.outlineColor = "#FFFFFF";
     //chart.outlineAlpha = 0.8;
     //chart.outlineThickness = 2;
