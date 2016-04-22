@@ -60,6 +60,9 @@ color:#9AB4BD ;
 .c-content-product-1 .row .c-media > img {
     width: 115%;
 }
+.c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page {
+    margin-top: 100px;
+}
 /*.c-content-title-3 > p {*/
     /*font-weight: normal !important;*/
 /*}*/
@@ -82,6 +85,11 @@ color:#9AB4BD ;
     /*margin-top: -22px;*/
     height: 400px;
 }
+/*.slider-1{*/
+    /*margin-top: -22px;*/
+    /*height: 400px;*/
+    /*overflow: hidden;*/
+/*}*/
 /*Reportes*/
 .list-unstyled {
     padding-left: 0;
@@ -89,6 +97,7 @@ color:#9AB4BD ;
 }
 .c-main-title{
     vertical-align: middle;
+    font-size: 34px;
 }
 /*media query*/
 @media screen and (max-width: 1200px) {
@@ -115,42 +124,45 @@ color:#9AB4BD ;
     }
     .c-main-title{
         font-size: 24px !important;
-        margin-left: 350px !important;
-        line-height: 24px !important;
-        top: -143px !important;
-        margin-top: 0px !important;
-        vertical-align: middle!important;
+        /*margin-left: 350px !important;*/
+        /*line-height: 24px !important;*/
+        /*top: -143px !important;*/
+        /*margin-top: 0px !important;*/
+        /*vertical-align: middle!important;*/
     }
     .list-is{
         margin-top: -40px
     }
-}
-@media screen and (max-width: 800px){
-    .c-main-title{
-        font-size: 22px !important;
-        margin-left: 170px !important;
-        line-height: 24px !important;
-        top: -143px !important;
-        margin-top: 0px !important;
-        vertical-align: middle!important;
+    .c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page {
+        margin-top: 0px;
     }
 }
+/*@media screen and (max-width: 800px){*/
+    /*.c-main-title{*/
+        /*font-size: 22px !important;*/
+        /*margin-left: 170px !important;*/
+        /*line-height: 24px !important;*/
+        /*top: -143px !important;*/
+        /*margin-top: 0px !important;*/
+        /*vertical-align: middle!important;*/
+    /*}*/
+/*}*/
 @media screen and (max-width: 700px){
     .c-main-title{
-        margin-left: 100px !important;
-        font-size: 12px !important;
-        line-height: 14px !important;
-        margin-top: 0px !important;
-        vertical-align: middle!important;
+        /*margin-left: 100px !important;*/
+        font-size: 14px !important;
+        /*line-height: 14px !important;*/
+        /*margin-top: 0px !important;*/
+        /*vertical-align: middle!important;*/
     }
 }
 @media screen and (max-width: 400px){
     .c-main-title{
-        margin-left: 100px !important;
+        /*margin-left: 100px !important;*/
         font-size: 11px !important;
-        line-height: 14px !important;
-        margin-top: 0px !important;
-        vertical-align: middle!important;
+        /*line-height: 14px !important;*/
+        /*margin-top: 0px !important;*/
+        /*vertical-align: middle!important;*/
     }
 }
 
