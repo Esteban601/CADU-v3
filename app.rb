@@ -7,6 +7,7 @@ require 'better_errors' if development?
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
+  set :show_exceptions, :after_handler
 end
 
 # Configuracion
@@ -39,10 +40,7 @@ before '/:locale/*' do
   I18n.locale = (params[:locale].eql?('es') || params[:locale].eql?('en')) ? params[:locale] : :es
 end
 
-configure do
-  # set :show_exceptions, false
-   set :show_exceptions, :after_handler
-end
+
 
 #Configuracion de email
 post '/es/boletinsubscripcion' do
