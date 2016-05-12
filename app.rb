@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'i18n'
+require 'raven'
 require 'better_errors' if development?
 
 
@@ -16,7 +17,7 @@ end
 
 # sentry error tracking
 Raven.configure do |config|
-  config.dsn = 'https://f3d18c6c92fa4ac8a5f1993624d2a20c:5fcdef1dbab84f63a26b5560e59061bd@app.getsentry.com/36159'
+  config.dsn = 'https://0e223e3c7c8149b3b0778eb64bb57a01:d1b75e6dc4994541809e383ad55577c8@app.getsentry.com/78146'
 end
 use Raven::Rack
 # end sentry
@@ -280,6 +281,10 @@ get '/:locale/resultados' do
   @titulo = "Resultados"
   @menuNum= 0
   erb :"#{I18n.locale}/vistas/independientes/resultados", :layout => ("global/layouts/content").to_sym
+end
+
+get '/testerror' do
+1/0
 end
 #
 # get '/:locale/terminos-condiciones' do
