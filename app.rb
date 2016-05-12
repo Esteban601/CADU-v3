@@ -14,6 +14,13 @@ configure do
   I18n.load_path = Dir[File.join(settings.root, 'locales', '*.yml')]
 end
 
+# sentry error tracking
+Raven.configure do |config|
+  config.dsn = 'https://f3d18c6c92fa4ac8a5f1993624d2a20c:5fcdef1dbab84f63a26b5560e59061bd@app.getsentry.com/36159'
+end
+use Raven::Rack
+# end sentry
+
 before '/:locale/*' do
    I18n.locale = params[:locale]
 end
@@ -54,8 +61,8 @@ post '/es/boletinsubscripcion' do
           :address              => 'smtp.mailgun.org',
           :port                 => '587',
           :enable_starttls_auto => true,
-          :user_name            => "postmaster@mail2.irstrat.com",
-          :password             => "7bc234c210b67dc3af75c97c5611685d",
+          :user_name            => "postmaster@sandbox37424.mailgun.org",
+          :password             => "7pl8f5goquf8",
           :authentication       => :plain,
           :domain               => "irstrat.com"
       })
