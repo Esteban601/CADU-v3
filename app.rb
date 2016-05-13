@@ -24,7 +24,11 @@ use Raven::Rack
 # end sentry
 
 before '/:locale/*' do
+if params[:locale] == "en"
    I18n.locale = params[:locale]
+ else
+    I18n.locale = :es
+  end
 end
 
 before '/' do
@@ -89,14 +93,15 @@ end
 
 # marcando excepciones
 error do
-  @titulo = " Error 404"
-  erb (I18n.locale.to_s + '/vistas/independientes/page-404').to_sym, :layout => ("global/layouts/content").to_sym
+  status 500
+  @titulo = " Error 500"
+  erb ('es/vistas/independientes/page-404').to_sym, :layout => ("global/layouts/content").to_sym
 end
 #paginas no existentes
 not_found do
   status 404
   @titulo = " Error 404"
-  erb (I18n.locale.to_s + '/vistas/independientes/page-404').to_sym, :layout => ("global/layouts/content").to_sym
+  erb ('es/vistas/independientes/page-404').to_sym, :layout => ("global/layouts/content").to_sym
 end
                                                 #Menu1
 get '/:locale/estrategia' do
