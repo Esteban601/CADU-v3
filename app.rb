@@ -87,16 +87,17 @@ get '/es' do
   erb (I18n.locale.to_s + '/vistas/index').to_sym
 end
 
-# error do
-#   @titulo = " Error 404"
-#   erb (I18n.locale.to_s + '/vistas/independientes/page-404').to_sym, :layout => ("global/layouts/content").to_sym
-# end
-
-# not_found do
-#   # status 404
-#   @titulo = " Error 404"
-#   erb (I18n.locale.to_s + '/vistas/independientes/page-404').to_sym, :layout => ("global/layouts/content").to_sym
-# end
+# marcando excepciones
+error do
+  @titulo = " Error 404"
+  erb (I18n.locale.to_s + '/vistas/independientes/page-404').to_sym, :layout => ("global/layouts/content").to_sym
+end
+#paginas no existentes
+not_found do
+  status 404
+  @titulo = " Error 404"
+  erb (I18n.locale.to_s + '/vistas/independientes/page-404').to_sym, :layout => ("global/layouts/content").to_sym
+end
                                                 #Menu1
 get '/:locale/estrategia' do
   @titulo = "Estrategia"
