@@ -56,6 +56,7 @@ window.onload = function() {
             }],
             "valueField": "data",
             "titleField": "title",
+             "balloonText": "<span style='font-size:10px'>[[title]]: <b>[[data]]%</b></span>", //eliminando valor de ballon
             "labelText": "",
             "export": {
                 "enabled": true
@@ -65,4 +66,3 @@ window.onload = function() {
 
 
 }
-
