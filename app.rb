@@ -204,7 +204,7 @@ end
 
                                                  #Menu3
 get '/:locale/comunicados' do
-  @titulo = "Comunicados"
+  @titulo = "Comunicados y eventos relevantes"
   @menuNum= 3
   @menuName= "Información financiera"
   erb :"#{I18n.locale}/vistas/menu3/comunicados", :layout => ("global/layouts/content").to_sym
