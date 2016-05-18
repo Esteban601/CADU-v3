@@ -13,9 +13,9 @@ end
 before do
 
 @investor_cloud_path ="http://cdn.investorcloud.net/cadu/"
-@gobierno_corporatico_path=""
+@gobierno_corporatico_path="http://cdn.investorcloud.net/cadu/GobiernoCorporativo/"
 @comunicados_path = "http://cdn.investorcloud.net/cadu/Comunicados/"
-@reportes_anuales_path = ""
+@reportes_anuales_path = "http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/"
 @reportes_trimestrales_path = "http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/"
 @registros_bmv_path = ""
 end
@@ -169,7 +169,12 @@ end
 #   @menuName= "Gobierno corporativo"
 #   erb :"#{I18n.locale}/vistas/menu2/codigos-estatutos", :layout => ("global/layouts/content").to_sym
 # end
-
+get '/:locale/informacion-corporativa' do
+  @titulo = "Información corporativa"
+  @menuNum= 2
+  @menuName= "Gobierno corporativo"
+  erb :"#{I18n.locale}/vistas/menu2/informacion-corporativa", :layout => ("global/layouts/content").to_sym
+end
 get '/:locale/auditor-externo' do
   @titulo = "Auditor externo"
   @menuNum= 2

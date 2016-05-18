@@ -11,3 +11,32 @@
     Integrante de Ernst & Young Global, no ha prestado servicios a CADU por conceptos diferentes a Servicios de
     la Auditoría.</p>
 </div>
+
+<% #listado de documentos
+   @documents= [
+           {:titulo => "Dictamen 2015", :date => "2016-04-28", :link => @reportes_anuales_path + "2015-EF-Dictaminados.pdf"},
+           {:titulo => "Carta de independencia y consentimiento de los auditores", :date => "2016-04-11", :link => @gobierno_corporatico_path + "Global/2016-04-11-auditores.pdf"},
+
+
+
+   ]
+%>
+
+<div class="comunicdos">
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="col-md-9">Documento</th>
+      <th class="col-md-3">Fecha</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @documents.each do |document| %>
+      <tr>
+        <td><a target="_blank" href="<%= document[:link] %>"><%= document[:titulo] %></a></td>
+        <td><%= document[:date] %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
