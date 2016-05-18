@@ -1,52 +1,33 @@
+<% #listado de documentos
+   @documents= [
+           {:titulo => "Aviso de derechos", :date => "2016-05-15", :link => @comunicados_path + "2016-05-15-AvisoDividendo.pdf"},
+           {:titulo => "Reenvío informe 4t2015 incluyendo informacion de cobertura de analisis", :date => "2016-05-05", :link => @comunicados_path + "2016-05-05-Reenvio.pdf"},
+           {:titulo => "CADU publica resultados del 1T16", :date => "2016-04-18", :link => @reportes_trimestrales_path + "Informes/2016-1T16.pdf"},
+           {:titulo => "Resumen Fideicomiso de Control", :date => "2016-04-15", :link => @comunicados_path + "2016-04-15-fideicomiso.pdf"},
+           {:titulo => "Retransmisión de Información Financiera 4T15, precisando únicamente que el costo de la deuda es a tasa variable", :date => "2016-03-10", :link => @comunicados_path + "2016-04-15-fideicomiso.pdf"},
+           {:titulo => "CADU publica resultados del 4T15", :date => "2016-02-15", :link => @reportes_trimestrales_path + "Informes/2015-4T15-vf.pdf"},
+           {:titulo => "CADU publica resultados del 3T15", :date => "2015-10-20", :link => @reportes_trimestrales_path + "Informes/2015-3T15.pdf"},
+           {:titulo => "CADU publica resultados del 2T15", :date => "2015-07-20", :link => @reportes_trimestrales_path + "Informes/2015-2T15.pdf"},
+           {:titulo => "CADU publica resultados del 1T15", :date => "2015-04-20", :link => @reportes_trimestrales_path + "Informes/2015-1T15.pdf"},
+
+   ]
+%>
+
 <div class="comunicdos">
   <table class="table">
     <thead>
     <tr>
       <th class="col-md-9">Documento</th>
       <th class="col-md-3">Fecha</th>
-
     </tr>
     </thead>
     <tbody>
+      <% @documents.each do |document| %>
       <tr>
-        <td><a target="_blank" href="http://cdn.investorcloud.net/cadu/Comunicados/2016-05-15-AvisoDividendo.pdf">Aviso de derechos</a></td>
-        <td>15/05/2016</td>
-
+        <td><a target="_blank" href="<%= document[:link] %>"><%= document[:titulo] %></a></td>
+        <td><%= document[:date] %></td>
       </tr>
-      <tr>
-        <td><a target="_blank" href="http://cdn.investorcloud.net/cadu/Comunicados/2016-05-05-Reenvio.pdf">Reenvío informe 4t2015 incluyendo informacion de cobertura de analisis</a></td>
-        <td>05/05/2016</td>
-
-      </tr>
-    <tr>
-      <td><a target="_blank" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Informes/2016-1T16.pdf">CADU publica resultados del 1T16</a></td>
-      <td>18/04/2016</td>
-
-    </tr>
-    <tr>
-      <td><a target="_blank" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Informes/2015-4T15.pdf">CADU publica resultados del 4T15</a></td>
-      <td>15/02/2016</td>
-
-    </tr>
-    <tr>
-      <td><a target="_blank" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Informes/2015-3T15.pdf">CADU publica resultados del 3T15</a></td>
-      <td>20/10/2015</td>
-
-    </tr>
-    <tr>
-      <td><a target="_blank" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Informes/2015-2T15.pdf">CADU publica resultados del 2T15</a></td>
-      <td>20/07/2015</td>
-
-    </tr>
-    <tr>
-      <td><a target="_blank" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Informes/2015-1T15.pdf">CADU publica resultados del 1T15</a></td>
-      <td>20/04/2015</td>
-
-    </tr>
-
-
-
-
+    <% end %>
     </tbody>
   </table>
 </div>

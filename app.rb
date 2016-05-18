@@ -9,6 +9,16 @@ configure :development do
   BetterErrors.application_root = __dir__
   set :show_exceptions, :after_handler
 end
+# Variables globales
+before do
+
+@investor_cloud_path ="http://cdn.investorcloud.net/cadu/"
+@gobierno_corporatico_path=""
+@comunicados_path = "http://cdn.investorcloud.net/cadu/Comunicados/"
+@reportes_anuales_path = ""
+@reportes_trimestrales_path = "http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/"
+@registros_bmv_path = ""
+end
 
 # Configuracion
 configure do
