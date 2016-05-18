@@ -45,14 +45,11 @@ window.onload = function() {
                 }]
             },
             "dataProvider": [{
-                "title": "Familia Vaca Elguero",
-                "data": 59
+                "title": "Grupo de Control",
+                "data": 66.39
             },{
                 "title": "Público inversionista",
-                "data": 34
-            },{
-                "title": "Otros",
-                "data": 7
+                "data": 33.61
             }],
             "valueField": "data",
             "titleField": "title",
