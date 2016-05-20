@@ -8,17 +8,18 @@ var selected;
 
 var types = [{
     type: "Deuda Bancaria",
-    percent: 58,
+    percent: 837,
     color: "#B7CEE5",
     subs: [
-        { type: "Capital de trabajo", percent: 6 },
-        { type: "Puente", percent: 52 },
+        { type: "Capital de trabajo", percent: 50 },
+        { type: "Puente", percent: 786 },
+        { type: "Arrendamiento Financiero", percent: 1 },
 
 
     ]},
     {
         type: "CADU15",
-        percent: 24,
+        percent: 393,
         color: "#F04C23"
         //subs: [
         //    { type: "Hydro", percent: 15 },
@@ -28,7 +29,7 @@ var types = [{
     },
     {
         type: "CADU14",
-        percent: 18,
+        percent: 296,
         color: "#333940"
         //subs: [
         //    { type: "Hydro", percent: 15 },
