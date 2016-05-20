@@ -9,10 +9,13 @@
       </li>
       <li>/</li>
       <li>
-        <a href="page-blog-post.html"><%= @menuName %></a>
+        <a href="#"><%= @menuName %></a>
       </li>
       <li>/</li>
+      
+      <% if   @menuNum != 0 %>
       <li class="c-state_active"><%= @titulo %></li>
+      <% end %>
     </ul>
   </div>
 </div>

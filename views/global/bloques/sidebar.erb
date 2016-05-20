@@ -42,16 +42,13 @@
   <% end %>
   <% if @menuNum == 2 %>
       <ul class="c-menu c-arrow-dot1 c-theme">
-        <li>
-          <a href="<%= "/#{I18n.locale}/informacion-corporativa" %>">Información corporativa
-          </a>
-        </li>
+
         <li>
           <a href="<%= "/#{I18n.locale}/auditor-externo" %>">Auditor externo
           </a>
         </li>
         <li>
-          <a href="<%= "/#{I18n.locale}/estructura-accionaria" %>">Estructura
+          <a href="<%= "/#{I18n.locale}/estructura-accionaria" %>">Estructura Accionaria
           </a>
         </li>
         <li>
@@ -153,6 +150,15 @@
           <li>
 
             <div class="c-post">
+              <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes Anuales' ,'Reporte anual 2015');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2015-Anual.pdf">Reporte
+                Anual 2015</a>
+
+              <div class="c-date">Abr 2015</div>
+            </div>
+          </li>
+          <li>
+
+            <div class="c-post">
               <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes trimestrales' ,'Reporte de resultados 1T16');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Informes/2016-1T16.pdf">Informe
                 1T16</a>
 
@@ -162,10 +168,10 @@
           <li>
 
             <div class="c-post">
-              <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes trimestrales Teleconferencia' ,'Reporte de resultados 4T15');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2015-4T15-CC.mp4">Teleconferencia
-                4T15</a>
+              <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes trimestrales Teleconferencia' ,'Reporte de resultados 4T15');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2016-1T16-CC1.mp3">Teleconferencia
+                1T16</a>
 
-              <div class="c-date">Feb 2016</div>
+              <div class="c-date">Abr 2016</div>
             </div>
           </li>
           <li>
@@ -178,15 +184,7 @@
             </div>
           </li>
 
-          <li>
 
-            <div class="c-post">
-              <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes Anuales' ,'Reporte anual 2015');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2015-Anual.pdf">Reporte
-                Anual 2015</a>
-
-              <div class="c-date">Abr 2015</div>
-            </div>
-          </li>
 
 
         </ul>

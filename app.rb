@@ -292,7 +292,13 @@ get '/:locale/cotizacion' do
   erb :"#{I18n.locale}/vistas/menu4/cotizacion", :layout => ("global/layouts/content").to_sym
 end
 
-
+#Global
+get '/:locale/sala-prensa' do
+  @titulo = "Sala de prensa"
+  @menuNum= 0
+  @menuName= "Sala de prensa"
+  erb :"#{I18n.locale}/vistas/independientes/sala-prensa", :layout => ("global/layouts/content").to_sym
+end
 # HELPER
 
 #Independientes
