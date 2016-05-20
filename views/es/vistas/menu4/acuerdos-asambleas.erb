@@ -61,3 +61,34 @@
   <p>Los accionistas de la Emisora no han celebrado ningún acuerdo o convenio que tenga como fin establecer, limitar u
     otorgar derechos y/o obligaciones que regirán su relación como accionistas de la Emisora</p>
 </div>
+
+</br>
+<% #listado de documentos
+   @documents= [
+     {:titulo => "Resumen de acuerdos de la Asamblea Ordinaria Anual de Accionistas", :date => "2016-04-28", :link => @gobierno_corporatico_path+ "Asambleas/2016-04-28-resumen-asarodan.pdf"},
+     {:titulo => "Acta de Asamblea Ordinaria Anual de Accionistas", :date => "2016-04-28", :link => @gobierno_corporatico_path+ "Asambleas/2016-04-28-asaordan.pdf"},
+     {:titulo => "Convocatoria a Asamble Ordinaria Anual", :date => "2016-04-12", :link => @comunicados_path + "2016-04-12-convocatoriaAOA.pdf"},
+
+
+
+   ]
+%>
+
+<div class="infocorporativa">
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="col-md-9">Documento</th>
+      <th class="col-md-3">Fecha</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @documents.each do |document| %>
+      <tr>
+        <td><a target="_blank" href="<%= document[:link] %>"><%= document[:titulo] %></a></td>
+        <td><%= document[:date] %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
