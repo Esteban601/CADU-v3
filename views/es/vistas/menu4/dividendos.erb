@@ -18,3 +18,31 @@
     motivo.</p>
 
 </div>
+
+<% #listado de documentos
+   @documents= [
+       {:titulo => "Pago de dividendos 25/05/2016", :date => "2016-05-25", :link => @comunicados_path + "2016-05-25-pagodividendo.pdf"}
+
+
+
+   ]
+%>
+
+<div class="infocorporativa">
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="col-md-9">Documento</th>
+      <th class="col-md-3">Fecha</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @documents.each do |document| %>
+      <tr>
+        <td><a target="_blank" href="<%= document[:link] %>"><%= document[:titulo] %></a></td>
+        <td><%= document[:date] %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
