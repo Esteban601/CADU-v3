@@ -1,0 +1,52 @@
+<!--Doctype-->
+<%= erb :"global/bloques/doctype" %>
+<!-- BEGIN HEAD -->
+
+<%= erb :"global/bloques/head" %>
+
+    <body class="c-layout-header-fixed c-layout-header-mobile-fixed c-layout-header-topbar c-layout-header-topbar-collapse">
+        <!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
+        <!-- BEGIN: HEADER -->
+        <%= erb :"global/bloques/header2" %>
+
+
+        <!-- BEGIN: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
+
+        <!-- END: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
+        <!-- BEGIN: PAGE CONTAINER -->
+        <div class="c-layout-page">
+          <!-- BEGIN: LAYOUT/BREADCRUMBS/BREADCRUMBS-1 -->
+
+          <!-- END: LAYOUT/BREADCRUMBS/BREADCRUMBS-1 -->
+          <!-- BEGIN: PAGE CONTENT -->
+          <!-- BEGIN: BLOG LISTING -->
+          <div class="c-content-box c-size-md">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  
+                 <%= yield %>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- END: BLOG LISTING  -->
+          <!-- END: PAGE CONTENT -->
+        </div>
+        </div>
+<!-- END: PAGE CONTAINER -->
+        <!-- BEGIN: LAYOUT/FOOTERS/FOOTER-5 -->
+        <%= erb :"global/bloques/footer2" %>
+        <!-- END: LAYOUT/FOOTERS/FOOTER-5 -->
+        <!-- BEGIN: LAYOUT/FOOTERS/GO2TOP -->
+        <%= erb :"global/bloques/go2top" %>
+        <!-- END: LAYOUT/FOOTERS/GO2TOP -->
+        <!-- BEGIN: LAYOUT/BASE/BOTTOM -->
+        <!-- BEGIN: CORE PLUGINS -->
+<%= erb :"global/bloques/javascript" %>
+        <!-- END: THEME SCRIPTS -->
+        <!-- END: LAYOUT/BASE/BOTTOM -->
+    </body>
+
+</html>

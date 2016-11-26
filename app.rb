@@ -308,6 +308,12 @@ get '/:locale/resultados' do
   erb :"#{I18n.locale}/vistas/independientes/resultados", :layout => ("global/layouts/content").to_sym
 end
 
+get '/:locale/video' do
+  @titulo = "Video corporativo"
+  @menuNum= 0
+  erb :"#{I18n.locale}/vistas/independientes/video", :layout => ("global/layouts/content-full").to_sym
+end
+
 get '/testerror' do
 1/0
 end
