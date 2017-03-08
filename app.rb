@@ -292,6 +292,13 @@ get '/:locale/cotizacion' do
   erb :"#{I18n.locale}/vistas/menu4/cotizacion", :layout => ("global/layouts/content").to_sym
 end
 
+get '/:locale/prospectos' do
+  @titulo = "Prospectos de colocación"
+  @menuNum= 4
+  @menuName= "Información Bursátil"
+  erb :"#{I18n.locale}/vistas/menu4/prospectos", :layout => ("global/layouts/content").to_sym
+end
+
 #Global
 get '/:locale/sala-prensa' do
   @titulo = "Sala de prensa"
