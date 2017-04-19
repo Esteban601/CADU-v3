@@ -84,6 +84,11 @@ var bars = AmCharts.makeChart(
                 "year": "2015*",
                 "ROE": 13.4,
                 "UAFIDA": 21.1
+            },
+            {
+                "year": "2016",
+                "ROE": 16.7,
+                "UAFIDA": 22.5
             }
         ],
         "export": {
