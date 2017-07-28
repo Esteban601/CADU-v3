@@ -1,5 +1,14 @@
 var mydash = {};
-
+$.ajax({
+    url:'http://marktdaten.irstrat.com/intra/147.json?callback=callback',
+    async: false,
+    dataType: 'jsonp',
+    contentType: "application/json",
+    success: function(json) {
+        intradia = json.intradia;
+        Datatabla(intradia);
+    }
+});
 $.ajax({
     url: 'http://marktdaten.irstrat.com/historicos/147.json?callback=callback',
     async: false,
@@ -13,16 +22,7 @@ $.ajax({
         ticker_symbol = "CADUA";
         fillData(precios, ipc, ticker_symbol);
 
-        $.ajax({
-            url:'http://marktdaten.irstrat.com/intra/147.json?callback=callback',
-            async: false,
-            dataType: 'jsonp',
-            contentType: "application/json",
-            success: function(json) {
-                intradia = json.intradia;
-                Datatabla(intradia);
-            }
-        });
+
     }
 
 });
