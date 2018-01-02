@@ -79,7 +79,7 @@ post '/es/boletinsubscripcion' do
           :authentication       => :plain,
           :domain               => "irstrat.com"
       })
-  redirect '/'
+  redirect '/es'
 end
 
 # Globales
