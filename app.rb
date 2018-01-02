@@ -4,6 +4,7 @@ require 'raven'
 require 'better_errors' if development?
 
 
+
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
@@ -59,6 +60,7 @@ end
 #Configuracion de email
 post '/es/boletinsubscripcion' do
   require 'pony'
+  require 'firebase'
 
   from = "boletin@cadu.com"
   subject = "Nuevo subscriptor a lista CADU"
@@ -79,6 +81,18 @@ post '/es/boletinsubscripcion' do
           :authentication       => :plain,
           :domain               => "irstrat.com"
       })
+
+  name = ""
+  email = params[:email]
+  email.each_char do |letra|
+    if letra!="@" && letra!="."
+      name+=letra
+    end
+  end
+  firebase_uri = 'https://iredge.firebaseio.com'
+  @firebase = Firebase::Client.new(firebase_uri)
+  @response =  @firebase.set("listas_distribucion/cadu/suscripcion/#{name}", {:email => email})
+
   redirect '/es'
 end
 
