@@ -89,10 +89,15 @@ post '/es/boletinsubscripcion' do
       name+=letra
     end
   end
+
   firebase_uri = 'https://iredge.firebaseio.com'
   @firebase = Firebase::Client.new(firebase_uri)
-  @response =  @firebase.set("listas_distribucion/cadu/suscripcion/#{name}", {:email => email})
-
+  response =  @firebase.set("listas_distribucion/cadu/suscripcion/#{name}", {:email => email})
+  if response.success? && response.code == 200
+    redirect '/es'
+  else
+    puts "I am sorry an error occurred saving to the database"
+  end
   redirect '/es'
 end
 
