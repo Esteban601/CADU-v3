@@ -3,6 +3,7 @@ gem 'sinatra'
 gem 'i18n'
 gem 'pony'
 gem 'sentry-raven'
+gem 'firebase'
 
 
 group :development do
