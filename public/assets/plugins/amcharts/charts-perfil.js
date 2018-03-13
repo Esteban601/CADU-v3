@@ -28,13 +28,13 @@ var bars = AmCharts.makeChart(
                 "valueField": "ROE"
             },
             {
-                "balloonText": "UAFIDA:[[value]]%",
+                "balloonText": "EBITDA:[[value]]%",
                 "fillAlphas": 0.8,
                 "id": "AmGraph-2",
                 "lineAlpha": 0.2,
-                "title": "UAFIDA",
+                "title": "EBITDA",
                 "type": "column",
-                "valueField": "UAFIDA"
+                "valueField": "EBITDA"
             }
         ],
         "guides": [],
@@ -53,42 +53,47 @@ var bars = AmCharts.makeChart(
             {
                 "year": 2009,
                 "ROE": 28.7,
-                "UAFIDA": 28.0
+                "EBITDA": 28.0
             },
             {
                 "year": 2010,
                 "ROE": 29.5,
-                "UAFIDA": 29.4
+                "EBITDA": 29.4
             },
             {
                 "year": 2011,
                 "ROE": 27.3,
-                "UAFIDA": 27.0
+                "EBITDA": 27.0
             },
             {
                 "year": 2012,
                 "ROE": 28.8,
-                "UAFIDA": 26.3
+                "EBITDA": 26.3
             },
             {
                 "year": 2013,
                 "ROE": 28.1,
-                "UAFIDA": 22.9
+                "EBITDA": 22.9
             },
             {
                 "year": 2014,
                 "ROE": 26.3,
-                "UAFIDA": 19.5
+                "EBITDA": 19.5
             },
             {
                 "year": "2015*",
                 "ROE": 13.4,
-                "UAFIDA": 21.1
+                "EBITDA": 21.1
             },
             {
                 "year": "2016",
                 "ROE": 16.7,
-                "UAFIDA": 22.5
+                "EBITDA": 22.5
+            },
+            {
+                "year": "2017",
+                "ROE": 17.1,
+                "EBITDA": 23.0
             }
         ],
         "export": {
