@@ -83,7 +83,7 @@ var bars = AmCharts.makeChart(
             {
                 "year": "2015*",
                 "ROE": 13.4,
-                "EBITDA": 21.1
+                "EBITDA": 20.9
             },
             {
                 "year": "2016",
@@ -92,8 +92,8 @@ var bars = AmCharts.makeChart(
             },
             {
                 "year": "2017",
-                "ROE": 17.1,
-                "EBITDA": 23.0
+                "ROE": 18.5,
+                "EBITDA": 23.1
             }
         ],
         "export": {
