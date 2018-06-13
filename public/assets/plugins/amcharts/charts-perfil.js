@@ -28,11 +28,11 @@ var bars = AmCharts.makeChart(
                 "valueField": "ROE"
             },
             {
-                "balloonText": "EBITDA:[[value]]%",
+                "balloonText": "Margen EBITDA:[[value]]%",
                 "fillAlphas": 0.8,
                 "id": "AmGraph-2",
                 "lineAlpha": 0.2,
-                "title": "EBITDA",
+                "title": "Margen EBITDA",
                 "type": "column",
                 "valueField": "EBITDA"
             }
@@ -94,6 +94,11 @@ var bars = AmCharts.makeChart(
                 "year": "2017",
                 "ROE": 18.5,
                 "EBITDA": 23.1
+            },
+            {
+                "year": "1T17 UDM",
+                "ROE": 18.4,
+                "EBITDA": 23.0
             }
         ],
         "export": {

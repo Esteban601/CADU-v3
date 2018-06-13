@@ -8,7 +8,7 @@ var selected;
 
 var types = [{
     type: "Deuda Bancaria",
-    percent: 837,
+    percent: 1972,
     color: "#B7CEE5",
     subs: [
         { type: "Capital de trabajo", percent: 50 },
@@ -19,7 +19,7 @@ var types = [{
     ]},
     {
         type: "CADU15",
-        percent: 393,
+        percent: 277,
         color: "#F04C23"
         //subs: [
         //    { type: "Hydro", percent: 15 },
@@ -28,8 +28,8 @@ var types = [{
         //]
     },
     {
-        type: "CADU14",
-        percent: 296,
+        type: "CADU18",
+        percent: 489,
         color: "#333940"
         //subs: [
         //    { type: "Hydro", percent: 15 },
@@ -71,7 +71,7 @@ AmCharts.ready(function() {
     chart.dataProvider = generateChartData();
     chart.titleField = "type";
     chart.valueField = "percent";
-    chart.balloonText= "[[type]]:[[percent]]%";
+    chart.balloonText= "[[type]]: $[[percent]]";
     //chart.outlineColor = "#FFFFFF";
     //chart.outlineAlpha = 0.8;
     //chart.outlineThickness = 2;
