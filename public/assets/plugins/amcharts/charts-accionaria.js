@@ -46,10 +46,10 @@ window.onload = function() {
             },
             "dataProvider": [{
                 "title": "Grupo de Control",
-                "data": 66.39
+                "data": 67.17
             },{
                 "title": "Público inversionista",
-                "data": 33.61
+                "data": 32.83
             }],
             "valueField": "data",
             "titleField": "title",
