@@ -4,7 +4,6 @@ require 'raven'
 require 'better_errors' if development?
 
 
-
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
@@ -188,12 +187,37 @@ end
 #   @menuName= "Gobierno corporativo"
 #   erb :"#{I18n.locale}/vistas/menu2/codigos-estatutos", :layout => ("global/layouts/content").to_sym
 # end
+#
+
+get '/:locale/responsabilidad-social' do
+  @titulo = "Responsabilidad Social"
+  @menuNum= 2
+  @menuName= "Gobierno corporativo"
+  erb :"#{I18n.locale}/vistas/menu2/responsabilidad-social", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/medio-ambiente' do
+  @titulo = "Medio Ambiente"
+  @menuNum= 2
+  @menuName= "Gobierno corporativo"
+  erb :"#{I18n.locale}/vistas/menu2/medio-ambiente", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/informes-sustentables' do
+  @titulo = "Informes Sustentables"
+  @menuNum= 2
+  @menuName= "Gobierno corporativo"
+  erb :"#{I18n.locale}/vistas/menu2/informes-sustentables", :layout => ("global/layouts/content").to_sym
+end
+
+
 get '/:locale/informacion-corporativa' do
   @titulo = "Información corporativa"
   @menuNum= 2
   @menuName= "Gobierno corporativo"
   erb :"#{I18n.locale}/vistas/menu2/informacion-corporativa", :layout => ("global/layouts/content").to_sym
 end
+
 get '/:locale/auditor-externo' do
   @titulo = "Auditor externo"
   @menuNum= 2
@@ -258,8 +282,6 @@ get '/:locale/faqs' do
   erb :"#{I18n.locale}/vistas/menu3/faqs", :layout => ("global/layouts/content").to_sym
 end
 
-
-
 get '/:locale/glosario' do
   @titulo = "Glosario"
   @menuNum= 3
@@ -294,8 +316,6 @@ get '/:locale/dividendos' do
   @menuName= "Información Bursátil"
   erb :"#{I18n.locale}/vistas/menu4/dividendos", :layout => ("global/layouts/content").to_sym
 end
-
-
 
 get '/:locale/renta-fija-credito' do
   @titulo = "Renta Fija y Crédito"
