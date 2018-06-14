@@ -226,7 +226,7 @@ get '/:locale/auditor-externo' do
 end
 
 get '/:locale/estructura' do
-  @titulo = "Estrutcura accionaria"
+  @titulo = "Estructura accionaria"
   @menuNum= 2
   @menuName= "Gobierno corporativo"
   erb :"#{I18n.locale}/vistas/menu2/estructura-accionaria", :layout => ("global/layouts/content").to_sym
