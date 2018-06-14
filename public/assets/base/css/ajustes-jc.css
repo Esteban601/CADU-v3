@@ -275,7 +275,7 @@ color:#9AB4BD ;
 }
 
 
-@media (min-width: 992px){}
+@media (min-width: 992px){
 .c-layout-header .c-navbar .c-mega-menu.c-fonts-uppercase > .nav.navbar-nav > li .dropdown-menu > li > a {
     font-size: 14px;
       color: #A7B2BF;

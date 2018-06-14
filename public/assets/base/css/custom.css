@@ -1,49 +1,10 @@
-.imagecontour {
- padding: 10px;
- border: solid 1px #EFEFEF;
- background-color: #FFFFFF;
- }
+@media (min-width: 992px){
+    .c-layout-header .c-brand {
+        margin: 25px 0 20px 0;
+    }
 
-.effect2
-{
-  position: relative;
-}
-.effect2:before, .effect2:after
-{
-  z-index: -1;
-  position: absolute;
-  content: "";
-  bottom: 15px;
-  left: 10px;
-  width: 50%;
-  top: 80%;
-  max-width:300px;
-  background: #777;
-  box-shadow: 0 15px 10px #777;
-  transform: rotate(-3deg);
-}
-.effect2:after
-{
-  transform: rotate(3deg);
-  right: 10px;
-  left: auto;
-}
-
-/*IRStrat*/
-.c-content-box.c-size-md {
-    padding: 30px 0;
-}
-
-.c-content-blog-post-1 .c-title {
-
-    margin: 3px 0 20px 0;
-}
-
-.c-layout-revo-slider {
-    overflow-x: hidden;
-    margin-top: -22px;
-}
-
-.c-layout-header .c-brand {
-    margin: 16px 0 22px 0;
+    .c-layout-header .c-navbar .c-mega-menu > .nav.navbar-nav > li > .c-link {
+        letter-spacing: 0 !important;
+        padding: 44px 15px 39px 15px;
+    }
 }
