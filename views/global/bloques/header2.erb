@@ -41,24 +41,24 @@
                                 <span class="c-arrow c-toggler"></span>
                             </a>
                         </li>
-                        <li class="c-menu-type-classic <%= "c-active" if @menuNum == 1 %>">
+                        <li class="c-menu-type-classic <%= "c-active" if @menuNum == 1 %> c-toggler">
                             <a href="javascript:;" class="c-link dropdown-toggle">Nosotros
-                                <span class="c-arrow c-toggler"></span>
+                                <span class="c-arrow "></span>
                             </a>
                             <ul class="dropdown-menu c-menu-type-classic c-pull-left">
                               <li class="dropdown-submenu">
-                                <a href="<%= "/#{I18n.locale}/perfil"%>">Perfil
-                                  <span class="c-arrow c-toggler"></span>
+                                <a href="<%= "/#{I18n.locale}/perfil"%>" class="cuba">Perfil
+                                  <span class="c-arrow"></span>
                                 </a>
                               </li>
                               <li class="dropdown-submenu">
                                 <a href="<%= "/#{I18n.locale}/estrategia"%>">Estrategia
-                                  <span class="c-arrow c-toggler"></span>
+                                  <span class="c-arrow"></span>
                                 </a>
                               </li>
                               <li class="dropdown-submenu">
                                 <a href="<%= "/#{I18n.locale}/panorama"%>">Panorama
-                                  <span class="c-arrow c-toggler"></span>
+                                  <span class="c-arrow"></span>
                                 </a>
                               </li>
                               <!-- <li class="dropdown-submenu">
@@ -68,89 +68,89 @@
                               </li> -->
                               <li class="dropdown-submenu">
                                 <a href="<%= "/#{I18n.locale}/modelo-negocio"%>">Modelo de negocio
-                                  <span class="c-arrow c-toggler"></span>
+                                  <span class="c-arrow"></span>
                                 </a>
                               </li>
                                 <li class="dropdown-submenu">
                                     <a href="<%= "/#{I18n.locale}/historia"%>">Historia
-                                        <span class="c-arrow c-toggler"></span>
+                                        <span class="c-arrow"></span>
                                     </a>
                                 </li>
                                 <li class="dropdown-submenu">
                                     <a href="<%= "/#{I18n.locale}/directivos"%>">Directivos
-                                        <span class="c-arrow c-toggler"></span>
+                                        <span class="c-arrow"></span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="c-menu-type-classic <%= "c-active" if @menuNum == 2 %>">
+                        <li class="c-menu-type-classic <%= "c-active" if @menuNum == 2 %> c-toggler">
                             <a href="#" class="c-link dropdown-toggle">Sustentabilidad Corporativa
-                                <span class="c-arrow c-toggler"></span>
+                                <span class="c-arrow"></span>
                             </a>
                           <ul class="dropdown-menu c-menu-type-classic c-pull-left">
-                            <li class="dropdown-submenu">
-                              <a href="javascript:" class="c-link dropdown-toggle">Gobierno Corporativo
-                                <span class="c-arrow c-toggler"></span>
+                            <li class="dropdown-submenu cuba">
+                              <a href="#" class="c-link dropdown-toggle">Gobierno Corporativo
+                                <span class="c-arrow"></span>
                               </a>
                               <ul class="dropdown-menu c-menu-type-classic c-pull-right">
                                 <li class="dropdown-submenu">
-                                  <a href="<%= "/#{I18n.locale}/auditor-externo" %>">Auditor externo
-                                    <span class="c-arrow c-toggler"></span>
+                                  <a href="<%= "/#{I18n.locale}/auditor-externo" %> dame">Auditor externo
+                                    <span class="c-arrow"></span>
                                   </a>
                                 </li>
                                 <li class="dropdown-submenu">
                                   <a href="<%= "/#{I18n.locale}/estructura" %>">Estructura accionaria
-                                    <span class="c-arrow c-toggler"></span>
+                                    <span class="c-arrow"></span>
                                   </a>
                                 </li>
                                 <li class="dropdown-submenu">
                                   <a href="<%= "/#{I18n.locale}/practicas" %>">Mejores prácticas corporativas
-                                    <span class="c-arrow c-toggler"></span>
+                                    <span class="c-arrow"></span>
                                   </a>
                                 </li>
                                 <li class="dropdown-submenu">
                                   <a href="<%= "/#{I18n.locale}/estructura-corporativa" %>">Estructura Corporativa
-                                    <span class="c-arrow c-toggler"></span>
+                                    <span class="c-arrow"></span>
                                   </a>
                                 </li>
                                 <li class="dropdown-submenu">
                                   <a href="<%= "/#{I18n.locale}/consejo-administracion" %>">Consejo de Administración
-                                    <span class="c-arrow c-toggler"></span>
+                                    <span class="c-arrow"></span>
                                   </a>
                                 </li>
                                 <li class="dropdown-submenu">
                                   <a href="<%= "/#{I18n.locale}/comites" %>">Comités
-                                    <span class="c-arrow c-toggler"></span>
+                                    <span class="c-arrow"></span>
                                   </a>
                                 </li>
                                 <li class="dropdown-submenu">
                                   <a href="http://cdn.investorcloud.net/cadu/Comunicados/Estatutos-Corpovael-SAB-de-CV.pdf" target="_blank">Estatutos
                                     Sociales
-                                    <span class="c-arrow c-toggler"></span>
+                                    <span class="c-arrow"></span>
                                   </a>
                                 </li>
                               </ul>
                             </li>
                             <li class="dropdown-submenu">
                               <a href="<%= "/#{I18n.locale}/responsabilidad-social"%>">Responsabilidad Social
-                                <span class="c-arrow c-toggler"></span>
+                                <span class="c-arrow"></span>
                               </a>
                             </li>
                             <li class="dropdown-submenu">
                               <a href="<%= "/#{I18n.locale}/medio-ambiente"%>">Medio Ambiente
-                                <span class="c-arrow c-toggler"></span>
+                                <span class="c-arrow"></span>
                               </a>
                             </li>
                             <li class="dropdown-submenu">
                               <a href="<%= "/#{I18n.locale}/informes-sustentables"%>">Informes Sustentables
-                                <span class="c-arrow c-toggler"></span>
+                                <span class="c-arrow"></span>
                               </a>
                             </li>
                           </ul>
                         </li>
-                        <li class="c-menu-type-classic <%= "c-active" if @menuNum == 3 %>">
+                        <li class="c-menu-type-classic <%= "c-active" if @menuNum == 3 %> c-toggler">
                             <a href="#" class="c-link dropdown-toggle">Información Financiera
-                                <span class="c-arrow c-toggler"></span>
+                                <span class="c-arrow"></span>
                             </a>
                           <ul class="dropdown-menu c-menu-type-classic c-pull-left">
                             <li class="dropdown-submenu">
@@ -183,9 +183,9 @@
                             </li>
                           </ul>
                         </li>
-                        <li class="c-menu-type-classic <%= "c-active" if @menuNum == 4 %>">
+                        <li class="c-menu-type-classic <%= "c-active" if @menuNum == 4 %> c-toggler">
                             <a href="javascript:;" class="c-link dropdown-toggle">Información Bursátil
-                                <span class="c-arrow c-toggler"></span>
+                                <span class="c-arrow"></span>
                             </a>
                           <ul class="dropdown-menu c-menu-type-classic c-pull-left">
                             <li class="dropdown-submenu ">

@@ -1,4 +1,8 @@
-@media (min-width: 992px){
+.c-open-2 {
+    display: block !important;
+}
+
+@media (min-width: 992px) {
     .c-layout-header .c-brand {
         margin: 25px 0 20px 0;
     }
