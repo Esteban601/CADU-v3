@@ -103,7 +103,7 @@ var LayoutMegaMenu = function () {
 		init: function () {
 			$('.c-mega-menu').on('click', '.c-toggler', function (e) {
 				if (App.getViewPort().width < App.getBreakpoint('md')) {
-					e.preventDefault();
+					// e.preventDefault();
 					if ($(this).closest("li").hasClass('c-open')) {
 						$(this).closest("li").removeClass('c-open');
 					} else {

@@ -108,9 +108,10 @@
                         <div class="c-line-left hide"></div>
                         <form name="formulario" action="/es/boletinsubscripcion" method="post">
                             <div class="input-group input-group-lg c-square">
-                                <input  name="email" ata-toggle="popover" data-placement="bottom" id="subscribir" type="text" class="c-input form-control c-square c-theme" placeholder="<%= I18n.t('email-placehoder') %>" />
+                                <input required  name="email" data-toggle="popover" data-placement="bottom" id="subscribir" type="email" class="c-input form-control c-square c-theme" placeholder="<%= I18n.t('email-placehoder') %>" />
                                 <span class="input-group-btn">
-                                    <button class="btn c-theme-btn c-theme-border c-btn-square c-btn-uppercase c-font-16" type="button" onclick="javascript:validaremail(this.form);"><%= I18n.t('Subscribe') %></button>
+                                  <button id="s-submit-btn" class="btn c-theme-btn c-theme-border c-btn-square c-btn-uppercase c-font-16" type="button" ><%= I18n.t('Subscribe') %></button>
+                                  <%= invisible_recaptcha_tags ui: :invisible, callback: 'submitInvisibleRecaptchaForm' %>
                                 </span>
                             </div>
                         </form>

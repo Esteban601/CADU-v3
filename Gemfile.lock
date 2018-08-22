@@ -33,6 +33,8 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    recaptcha (4.11.1)
+      json
     sentry-raven (0.15.5)
       faraday (>= 0.7.6)
     sinatra (1.4.7)
@@ -59,9 +61,10 @@ DEPENDENCIES
   firebase
   i18n
   pony
+  recaptcha
   sentry-raven
   sinatra
   sinatra-contrib
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

@@ -2,6 +2,7 @@ require 'sinatra'
 require 'i18n'
 require 'raven'
 require 'better_errors' if development?
+require 'recaptcha'
 
 
 configure :development do
@@ -12,18 +13,20 @@ end
 # Variables globales
 before do
 
-@investor_cloud_path ="http://cdn.investorcloud.net/cadu/"
-@gobierno_corporatico_path="http://cdn.investorcloud.net/cadu/GobiernoCorporativo/"
-@comunicados_path = "http://cdn.investorcloud.net/cadu/Comunicados/"
-@reportes_anuales_path = "http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/"
-@reportes_trimestrales_path = "http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/"
-@registros_bmv_path = ""
+  @investor_cloud_path ="http://cdn.investorcloud.net/cadu/"
+  @gobierno_corporatico_path="http://cdn.investorcloud.net/cadu/GobiernoCorporativo/"
+  @comunicados_path = "http://cdn.investorcloud.net/cadu/Comunicados/"
+  @reportes_anuales_path = "http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/"
+  @reportes_trimestrales_path = "http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/"
+  @registros_bmv_path = ""
 end
 
 # Configuracion
 configure do
   I18n.enforce_available_locales = false
   I18n.load_path = Dir[File.join(settings.root, 'locales', '*.yml')]
+  set :port, 3000
+  set :bind, '0.0.0.0'
 end
 
 # sentry error tracking
@@ -33,10 +36,18 @@ end
 use Raven::Rack
 # end sentry
 
+Recaptcha.configure do |config|
+  config.site_key = '6LfmbmsUAAAAAP9J2Cb53wkg0FNoo2IK2411DCFY'
+  config.secret_key = '6LfmbmsUAAAAAE-QiwV57pmzOQJWkGcr8yCnZZVm'
+end
+
+include Recaptcha::ClientHelper
+include Recaptcha::Verify
+
 before '/:locale/*' do
-if params[:locale] == "en"
-   I18n.locale = params[:locale]
- else
+  if params[:locale] == "en"
+    I18n.locale = params[:locale]
+  else
     I18n.locale = :es
   end
 end
@@ -55,49 +66,50 @@ before '/:locale/*' do
 end
 
 
-
 #Configuracion de email
 post '/es/boletinsubscripcion' do
   require 'pony'
   require 'firebase'
 
-  from = "boletin@cadu.com"
-  subject = "Nuevo subscriptor a lista CADU"
+  if verify_recaptcha
+    print('************ OK **************')
+    from = "boletin@cadu.com"
+    subject = "Nuevo subscriptor a lista CADU"
+    Pony.mail(
+        :from => from,
+        :to => 'lovera@irstrat.com',
+        :subject => subject,
+        :headers => {'Content-Type' => 'text/html'},
+        :body => erb(:"global/bloques/mail"),
+        :via => :smtp,
+        :via_options => {
+            :address => 'smtp.mailgun.org',
+            :port => '587',
+            :enable_starttls_auto => true,
+            :user_name => "postmaster@sandbox37424.mailgun.org",
+            :password => "7pl8f5goquf8",
+            :authentication => :plain,
+            :domain => "irstrat.com"
+        })
 
-  Pony.mail(
-      :from => from,
-      :to => 'lovera@irstrat.com',
-      :subject => subject,
-      :headers => { 'Content-Type' => 'text/html' },
-      :body => erb(:"global/bloques/mail"),
-      :via => :smtp,
-      :via_options => {
-          :address              => 'smtp.mailgun.org',
-          :port                 => '587',
-          :enable_starttls_auto => true,
-          :user_name            => "postmaster@sandbox37424.mailgun.org",
-          :password             => "7pl8f5goquf8",
-          :authentication       => :plain,
-          :domain               => "irstrat.com"
-      })
+    name = ""
+    email = params[:email]
+    email.each_char do |letra|
+      if letra!="@" && letra!="."
+        name+=letra
+      end
+    end
 
-  name = ""
-  email = params[:email]
-  email.each_char do |letra|
-    if letra!="@" && letra!="."
-      name+=letra
+    firebase_uri = 'https://iredge.firebaseio.com'
+    @firebase = Firebase::Client.new(firebase_uri)
+    response = @firebase.set("listas_distribucion/cadu/suscripcion/#{name}", {:email => email})
+    if response.success? && response.code == 200
+      redirect '/'
+    else
+      puts "I am sorry an error occurred saving to the database"
     end
   end
-
-  firebase_uri = 'https://iredge.firebaseio.com'
-  @firebase = Firebase::Client.new(firebase_uri)
-  response =  @firebase.set("listas_distribucion/cadu/suscripcion/#{name}", {:email => email})
-  if response.success? && response.code == 200
-    redirect '/es'
-  else
-    puts "I am sorry an error occurred saving to the database"
-  end
-  redirect '/es'
+  redirect '/'
 end
 
 # Globales
@@ -131,7 +143,7 @@ not_found do
   @titulo = " Error 404"
   erb ('es/vistas/independientes/page-404').to_sym, :layout => ("global/layouts/content").to_sym
 end
-                                                #Menu1
+#Menu1
 get '/:locale/estrategia' do
   @titulo = "Estrategia"
   @menuNum= 1
@@ -180,7 +192,7 @@ get '/:locale/historia' do
   @menuName= "Nosotros"
   erb :"#{I18n.locale}/vistas/menu1/historia", :layout => ("global/layouts/content").to_sym
 end
-                                                #Menu2
+#Menu2
 # get '/:locale/codigos-estatutos' do
 #   @titulo = "Códigos y Estatutos"
 #   @menuNum= 2
@@ -260,7 +272,7 @@ get '/:locale/consejo-administracion' do
   erb :"#{I18n.locale}/vistas/menu2/consejo-administracion", :layout => ("global/layouts/content").to_sym
 end
 
-                                                 #Menu3
+#Menu3
 get '/:locale/comunicados' do
   @titulo = "Comunicados y eventos relevantes"
   @menuNum= 3
@@ -295,7 +307,7 @@ get '/:locale/reportes-financieros' do
   @menuName= "Información financiera"
   erb :"#{I18n.locale}/vistas/menu3/reportes-financieros", :layout => ("global/layouts/content").to_sym
 end
-                                                #Menu4
+#Menu4
 get '/:locale/analistas' do
   @titulo = "Analistas"
   @menuNum= 4
@@ -361,7 +373,7 @@ get '/:locale/video' do
 end
 
 get '/testerror' do
-1/0
+  1/0
 end
 #
 # get '/:locale/terminos-condiciones' do
@@ -369,7 +381,6 @@ end
 #   @menuNum= 0
 #   erb :"#{I18n.locale}/vistas/independientes/terminos-condiciones", :layout => ("global/layouts/content").to_sym
 # end
-
 
 
 helpers do
@@ -382,7 +393,7 @@ helpers do
     elsif I18n.locale == :es
       return request.path_info.sub('es', 'en')
 
-    elsif  I18n.locale == :en
+    elsif I18n.locale == :en
       return request.path_info.sub('en', 'es')
 
     end
