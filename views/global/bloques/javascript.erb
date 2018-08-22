@@ -79,14 +79,29 @@
 </script>
 <!--Validar email-->
 <script type="text/javascript">
+  
+    document.getElementById('s-submit-btn').addEventListener('click', function (e) {
+    // do some validation
+    if(validateEmail(document.formulario.email.value)) {
+        console.log('click');
+         $('#subscribir').attr('data-content', 'Gracias por subscribirse a nuestras noticias.');
+//          $('#subscribir').attr('data-content', 'Thanks for subscribing');
+
+        $('#subscribir').popover('show');
+
+        setTimeout(continueExecution, 1500);
+
+        // call reCAPTCHA check
+        grecaptcha.execute();
+    }
+  });
 
     function validaremail(formulario) {
 
-        if (validateEmail(document.formulario.email.value) == false){
+        if (validateEmail(document.formulario.email.value)){
 
             <%= " $('#subscribir').popover({content: 'Dirección email errónea, rectifíquela por favor.'});" if I18n.locale == :es %>
             <%= " $('#subscribir').popover({content: 'Not a valid e-mail address, please rectify.'});" if I18n.locale == :en %>
-
             $('#subscribir').popover('show');
         }
         else {
@@ -94,13 +109,15 @@
             <%= "$('#subscribir').attr('data-content', 'Gracias por subscribirse a nuestras noticias.');" if I18n.locale == :es %>
             <%= "$('#subscribir').attr('data-content', 'Thanks for subscribing');" if I18n.locale == :en %>
 
-
-
             $('#subscribir').popover('show');
 
             setTimeout(continueExecution, 1500);
         }
     }
+ function submitInvisibleRecaptchaForm () {
+   document.getElementById("invisible-recaptcha-form").submit();
+   console.log('se envio el captcha');
+  };
 
 
     function continueExecution()

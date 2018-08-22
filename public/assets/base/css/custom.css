@@ -12,3 +12,7 @@
         padding: 44px 15px 39px 15px;
     }
 }
+.grecaptcha-badge {
+    bottom: -500px !important;
+    right: -186px !important;
+}

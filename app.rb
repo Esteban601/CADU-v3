@@ -72,6 +72,7 @@ post '/es/boletinsubscripcion' do
   require 'firebase'
 
   if verify_recaptcha
+    print('************ OK **************')
     from = "boletin@cadu.com"
     subject = "Nuevo subscriptor a lista CADU"
     Pony.mail(
