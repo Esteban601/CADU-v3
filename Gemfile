@@ -4,6 +4,7 @@ gem 'i18n'
 gem 'pony'
 gem 'sentry-raven'
 gem 'firebase'
+gem 'recaptcha'
 
 
 group :development do
