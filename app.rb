@@ -315,6 +315,13 @@ get '/:locale/analistas' do
   erb :"#{I18n.locale}/vistas/menu4/analistas", :layout => ("global/layouts/content").to_sym
 end
 
+get '/:locale/calificaciones' do
+  @titulo = "Calificaciones"
+  @menuNum= 4
+  @menuName= "Información Bursátil"
+  erb :"#{I18n.locale}/vistas/menu4/calificaciones", :layout => ("global/layouts/content").to_sym
+end
+
 get '/:locale/acuerdos-asambleas' do
   @titulo = "Acuerdos y Asambleas"
   @menuNum= 4
