@@ -35,11 +35,11 @@ $('#end_date').datepicker({endDate:date,startDate:fecha_inicio}).on("changeDate"
     date_edate= e.date;
     end_date = e.date.yyyymmdd();
     validarValores();
-    //  $('#start_date').data('datepicker').setEndDate(e.date);
-    //   calcularInversion(cbis,start_date,end_date);
+  //  $('#start_date').data('datepicker').setEndDate(e.date);
+  //   calcularInversion(cbis,start_date,end_date);
 });
 $('#start_date').datepicker({endDate:date,startDate:fecha_inicio}).on("changeDate", function (e) {
-    date_sdate = e.date;
+     date_sdate = e.date;
     start_date = e.date.yyyymmdd();
     validarValores();
     //$('#end_date').data('datepicker').setStartDate(e.date);
