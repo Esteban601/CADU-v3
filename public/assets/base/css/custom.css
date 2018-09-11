@@ -36,3 +36,8 @@
         padding: 44px 15px 39px 15px;
     }
 }
+.grecaptcha-badge, .grecaptcha-logo, .g-recaptcha  {
+    right: -750px !important;
+    position: relative;
+    position: fixed;
+}
