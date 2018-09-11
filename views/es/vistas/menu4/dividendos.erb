@@ -43,7 +43,7 @@
   </table>
 </div>
 <br>
-<div id="panorama" style="width: 100%; height: 400px; background-color: #FFFFFF;"></div>
+<div id="dividen_yield" style="width: 100%; height: 400px; background-color: #FFFFFF;"></div>
 <br>
 <% #listado de documentos
    @documents= [
@@ -82,4 +82,67 @@
 <script type="application/javascript" src="/assets/plugins/amcharts/amcharts.js"></script>
 <script type="application/javascript" src="/assets/plugins/amcharts/serial.js"></script>
 <script type="application/javascript" src="/assets/plugins/amcharts/themes/light.js"></script>
-<script type="application/javascript" src="/assets/plugins/amcharts/panorama.js?v=3"></script>
+<script type="application/javascript">
+    var chart = AmCharts.makeChart("dividen_yield", {
+        "titles": [
+            {
+                "text": "Dividend Yield",
+                "size": 15
+            }
+        ],
+        "theme": "light",
+        "type": "serial",
+        "numberFormatter": {
+            "precision": 2
+        },
+        "colors": ["#ED7D31", "#FFC000"],
+        "dataProvider": [
+            {
+                "year": "2016",
+                "variacion": 3.7
+            }, {
+                "year": "2017",
+                "variacion": 3.7
+            }, {
+                "year": "2018",
+                "variacion": 5.5
+            }
+        ],
+        "valueAxes": [
+            {
+                "id": "v2",
+                "axisAlpha": 0,
+                "gridAlpha": 0.1,
+                "position": "right",
+                "maximum": 6.0,
+                "minimum": 2.0,
+                // "title": "Posición",
+            }],
+        "startDuration": 1,
+        "graphs": [{
+            "lineAlpha": 0.9,
+            "lineThickness": 3,
+            "bullet": "round",
+            "bulletBorderColor": "#fff",
+            "bulletBorderThickness": 2,
+            "bulletBorderAlpha": 1,
+            "valueField": "variacion",
+            "valueAxis": "v2",
+            "labelText": "[[value]]",
+            "title": "Variación anual"
+
+        }],
+        "categoryField": "year",
+        "categoryAxis": {
+            "gridPosition": "start",
+            "gridAlpha": 0,
+        },
+        // "legend": {
+        //     "align": "center",
+        //     "position": "bottom",
+        //     "markerSize": 15,
+        //     "markerType": "circle",
+        //     "textClickEnabled": true
+        // },
+    });
+</script>
