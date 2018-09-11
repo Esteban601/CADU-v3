@@ -1,14 +1,39 @@
 <div id="auditor-externo">
-  <p>La designación de los auditores independientes de la Compañía está a cargo del Consejo de Administración de CADU,
-    especialmente del Comité de Auditoría.</p>
+<p>The financial statements of the years ended December 31, 2017, 2016 and 2015 were reviewed and audited by Mancera, S.C. member of Ernst & Young Global, the Company´s external auditors</p>
+<p>As of today, CADU’s external auditors have never issued any qualified or negative opinion, nor refrained from issuing an opinion on the Company’s financial statements. Furthermore, the Company’s external auditors have provided other services, additional to auditing, such as transfer pricing studies.</p>
+<p>The Company’s external auditors are appointed by the Board of Directors of CADU, specifically the Audit Committee. Since 2007 until the year ended December 31, 2011 the Financial Statements of Corpovael and subsidiaries were audited by CP Marcelino Menendez Jimenez. For the years ended December 31, 2012 and 2013, the financial statements were audited by CPA Claudia Leticia Rizo Navarro and for the years ended December 31, 2014, 2015, 2016 and 2017 the auditor was CPA David Echeverria Alonso.</p>
+<p>To date, Mancera S.C., member of Ernst & Young Global, has provided services other than auditing to the Company.</p>
+</div>
 
-  <p>Los Estados Financieros de la Emisora por los ejercicios terminados al 31 de diciembre de 2013, 2012, y 2011
-    incluidos en este informe anual, han sido revisados y auditados por Galaz, Yamazaki, Ruiz Urquiza, S.C., miembro de
-    Deloitte Touche Tohmatsu Limited, y el ejercicio terminado a diciembre de 2014 fue revisado por Mancera, S.C.
-    Integrante de Ernst & Young Global en 2014, auditores externos de la Compañía.</p>
+<% #listado de documentos
+   @documents= [
+     {:titulo => "2017 Audit Report", :date => "2018-04-06", :link => @reportes_anuales_path + "2017-EF-Dictaminados.pdf"},
+     {:titulo => "Auditor´s independence and consent declaration ", :date => "2018-04-06", :link => @gobierno_corporatico_path + "Global/2018-04-06-auditores.pdf"},
+     {:titulo => "2016 Audit Report", :date => "2017-04-10", :link => @reportes_anuales_path + "2016-EF-Dictaminados.pdf"},
+     {:titulo => "Auditor´s independence and consent declaration", :date => "2017-04-10", :link => @gobierno_corporatico_path + "Global/2017-04-10-auditores.pdf"},
+     {:titulo => "2015 Audit Report", :date => "2016-04-28", :link => @reportes_anuales_path + "2015-EF-Dictaminados.pdf"},
+     {:titulo => "Auditor´s independence and consent declaration", :date => "2016-04-11", :link => @gobierno_corporatico_path + "Global/2016-04-11-auditores.pdf"},
 
-  <p>En los ejercicios que han auditado no han emitido una opinión con salvedad o una opinión negativa, ni se han
-    abstenido de emitir opinión acerca de los Estados Financieros de la Compañía. A la fecha del presente, Mancera, S.C.
-    Integrante de Ernst & Young Global, no ha prestado servicios a la Compañía por conceptos diferentes a Servicios de
-    la Auditoría.</p>
+
+
+   ]
+%>
+
+<div class="comunicdos">
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="col-md-9">Document</th>
+      <th class="col-md-3">Date</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @documents.each do |document| %>
+      <tr>
+        <td><a target="_blank" href="<%= document[:link] %>"><%= document[:titulo] %></a></td>
+        <td><%= document[:date] %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
 </div>
