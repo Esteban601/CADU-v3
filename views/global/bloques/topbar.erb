@@ -31,13 +31,14 @@
     <nav class="c-top-menu c-pull-right">
       <ul class="c-links c-theme-ul">
 
-        <li style="padding: 10px">
+        <li style="padding: 10px 0 10px 10px;">
           <a href="<%= "/#{I18n.locale}/sala-prensa"%>">Sala de prensa</a>
         </li>
+        <li style="padding: 10px 10px 10px 0;">
+          | <a href="<%= change_language%>"><%= I18n.t 'lenguaje_inverso' %></a>
+        </li>
       </ul>
-      <ul class="c-ext c-theme-ul">
 
-      </ul>
     </nav>
     <!-- END: INLINE NAV -->
   </div>
