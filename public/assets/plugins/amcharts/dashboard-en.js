@@ -194,7 +194,7 @@ function createStockChart() {
     // DATA SET SELECTOR
     var dataSetSelector = new AmCharts.DataSetSelector();
     dataSetSelector.position = "left";
-    dataSetSelector.compareText = "Compare to:";
+    dataSetSelector.compareText = "Compared to:";
     dataSetSelector.selectText = "Select:";
 
     chart.dataSetSelector = dataSetSelector;
