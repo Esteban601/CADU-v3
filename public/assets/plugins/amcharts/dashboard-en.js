@@ -11,7 +11,7 @@ $.ajax({
         precios = json.precios;
         ipc = json.ipc;
         intradia = json.intradia;
-        ticker_symbol = "GFAMSAA";
+        ticker_symbol = "CADUA";
         Datatabla(intradia);
         fillData(precios, ipc, ticker_symbol);
         //            console.dir(json.sites);
