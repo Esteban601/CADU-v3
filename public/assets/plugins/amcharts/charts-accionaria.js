@@ -1,6 +1,16 @@
 /**
  * Created by Julio Cesar on 4/5/2016.
  */
+
+if (locale == "es") {
+    var grupo = "Grupo de Control";
+    var publico = "Público inversionista";
+}
+else {
+    var grupo = "Control Group";
+    var publico = "Investing Public";
+
+}
 window.onload = function() {
     // all of your code goes in here
     // it runs after the DOM is built
@@ -16,8 +26,6 @@ window.onload = function() {
                 "position":"bottom",
                 "align":"center",
                 "valueText": " [[percents]]%"
-                //"marginRight":100,
-                //"autoMargins":false
             },
             "innerRadius": "0",
             "radius": "40%",
@@ -45,10 +53,10 @@ window.onload = function() {
                 }]
             },
             "dataProvider": [{
-                "title": "Grupo de Control",
+                "title": grupo,
                 "data": 67.17
             },{
-                "title": "Público inversionista",
+                "title":publico,
                 "data": 32.83
             }],
             "valueField": "data",

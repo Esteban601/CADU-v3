@@ -1,6 +1,16 @@
 /**
  * Created by Julio Cesar on 4/5/2016.
  */
+
+if (locale == "es") {
+    var margen = "Margen EBITDA";
+    var last_p = "2T18 UDM";
+}
+else {
+    var margen = "EBITDA Margin";
+    var last_p = "LTM 2Q18";
+
+}
 var bars = AmCharts.makeChart(
     "per_chart", {
         "type": "serial",
@@ -28,11 +38,11 @@ var bars = AmCharts.makeChart(
                 "valueField": "ROE"
             },
             {
-                "balloonText": "Margen EBITDA:[[value]]%",
+                "balloonText": margen+":[[value]]%",
                 "fillAlphas": 0.8,
                 "id": "AmGraph-2",
                 "lineAlpha": 0.2,
-                "title": "Margen EBITDA",
+                "title": margen,
                 "type": "column",
                 "valueField": "EBITDA"
             }
@@ -96,7 +106,7 @@ var bars = AmCharts.makeChart(
                 "EBITDA": 23.1
             },
             {
-                "year": "2T18 UDM",
+                "year": last_p,
                 "ROE": 19.4,
                 "EBITDA": 22.9
             }
