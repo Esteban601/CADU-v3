@@ -45,10 +45,22 @@
 <script type="application/javascript" src="/assets/plugins/amcharts/serial.js"></script>
 <script type="application/javascript" src="/assets/plugins/amcharts/themes/light.js"></script>
 <script type="application/javascript">
+
+    if (locale == "es") {
+        var titulo = "Monto promedio de crédito infonavit";
+        var monto = "Monto promedio INFONAVIT";
+        var variacion = "Variación anual";
+    }
+    else {
+        var titulo = "Average amount of Infonavit's credit lines";
+        var monto = "Average amount";
+        var variacion = "% Var.";
+
+    }
     var chart = AmCharts.makeChart("panorama_chart", {
         "titles": [
             {
-                "text": "Monto promedio de crédito infonavit",
+                "text": titulo,
                 "size": 15
             }
         ],
@@ -178,7 +190,7 @@
             "valueAxis": "v1",
             "autoGrid": false,
             "labelText": "[[value]]",
-            "title": "Monto promedio INFONAVIT"
+            "title": monto
         }, {
             "lineAlpha": 0.9,
             "lineThickness": 3,
@@ -188,9 +200,9 @@
             "bulletBorderAlpha": 1,
             "valueField": "variacion_v",
             "valueAxis": "v2",
-            "balloonText": "[[variacion]]",
-            "labelText": "[[variacion]]",
-            "title": "Variación anual",
+            "balloonText": "[[variacion]]%",
+            "labelText": "[[variacion]]%",
+            "title": variacion
         }],
         "categoryField": "year",
         "categoryAxis": {

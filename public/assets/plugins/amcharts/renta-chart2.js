@@ -6,13 +6,24 @@ var chart;
 var legend;
 var selected;
 
+if (locale == "es") {
+    var deuda = "Deuda Bancaria";
+    var puente = "Deuda Bancaria";
+    var capital = "Capital de trabajo";
+}
+else {
+    var deuda = "Bank Loans";
+    var puente = "Bridge Loans";
+    var capital = "Working Capital";
+}
+
 var types = [{
-    type: "Deuda Bancaria",
+    type: deuda,
     percent: 2107,
     color: "#B7CEE5",
     subs: [
-        { type: "Capital de trabajo", percent: 614 },
-        { type: "Puente", percent: 1493 },
+        { type: puente, percent: 614 },
+        { type: capital, percent: 1493 },
         { type: "Arrendamiento Financiero", percent: 0 },
 
 
