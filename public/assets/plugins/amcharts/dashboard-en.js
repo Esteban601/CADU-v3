@@ -2,7 +2,7 @@ var mydash = {};
 //var precios = [];
 //var ipc = [];
 $.ajax({
-    url: 'http://marktdaten.herokuapp.com/historicos/19.json?callback=callback',
+    url: 'http://marktdaten.irstrat.com/historicos/147.json?callback=callback',
     async: false,
     dataType: 'jsonp',
     jsonpCallback: 'jsonCallback',
@@ -74,7 +74,7 @@ function fillData(precios, ipc, ticker_symbol) {
 function createStockChart() {
     var chart = new AmCharts.AmStockChart();
     chart.dataDateFormat = "YYYY-MM-DD";
-    chart.pathToImages = "/js/amcharts/images/";
+    chart.pathToImages = "/assets/plugins/amcharts/images/";
 
 
     // DATASETS //////////////////////////////////////////
@@ -171,6 +171,8 @@ function createStockChart() {
     // PERIOD SELECTOR ///////////////////////////////////
     var periodSelector = new AmCharts.PeriodSelector();
     periodSelector.position = "left";
+    periodSelector.fromText = "From:";
+    periodSelector.toText = "To:";
     periodSelector.periods = [{
         period: "MM",
         count: 1,
@@ -192,6 +194,8 @@ function createStockChart() {
     // DATA SET SELECTOR
     var dataSetSelector = new AmCharts.DataSetSelector();
     dataSetSelector.position = "left";
+    dataSetSelector.compareText = "Compare to:";
+    dataSetSelector.selectText = "Select:";
 
     chart.dataSetSelector = dataSetSelector;
 
