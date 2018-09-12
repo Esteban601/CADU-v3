@@ -38,27 +38,27 @@
         <nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-uppercase c-fonts-bold">
           <ul class="nav navbar-nav c-theme-nav">
             <li class="hidden-md">
-              <a href="/" class="c-link dropdown-toggle">Inicio
+              <a href="/" class="c-link dropdown-toggle"><%= I18n.t 'Inicio' %>
                 <span class="c-arrow c-toggler"></span>
               </a>
             </li>
             <li class="c-menu-type-classic <%= "c-active" if @menuNum == 1 %>">
-              <a href="javascript:;" class="c-link dropdown-toggle  c-toggler">Nosotros
+              <a href="javascript:;" class="c-link dropdown-toggle  c-toggler"><%= I18n.t 'Nosotros' %>
                 <span class="c-arrow "></span>
               </a>
               <ul class="dropdown-menu c-menu-type-classic c-pull-left">
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/perfil" %>">Perfil
+                  <a href="<%= "/#{I18n.locale}/perfil" %>"><%= I18n.t 'Perfil' %>
                     <span class="c-arrow"></span>
                   </a>
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/estrategia" %>">Estrategia
+                  <a href="<%= "/#{I18n.locale}/estrategia" %>"><%= I18n.t 'Estrategia' %>
                     <span class="c-arrow"></span>
                   </a>
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/panorama" %>">Panorama
+                  <a href="<%= "/#{I18n.locale}/panorama" %>"><%= I18n.t 'Panorama' %>
                     <span class="c-arrow"></span>
                   </a>
                 </li>
@@ -68,116 +68,115 @@
                                 </a>
                               </li> -->
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/modelo-negocio" %>">Modelo de negocio
+                  <a href="<%= "/#{I18n.locale}/modelo-negocio" %>"><%= I18n.t 'modelo_n' %>
                     <span class="c-arrow"></span>
                   </a>
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/historia" %>">Historia
+                  <a href="<%= "/#{I18n.locale}/historia" %>"><%= I18n.t 'Historia' %>
                     <span class="c-arrow"></span>
                   </a>
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/directivos" %>">Directivos
+                  <a href="<%= "/#{I18n.locale}/directivos" %>"><%= I18n.t 'Directivos' %>
                     <span class="c-arrow"></span>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="c-menu-type-classic <%= "c-active" if @menuNum == 2 %> ">
-              <a href="#" class="c-link dropdown-toggle c-toggler">Sustentabilidad Corporativa
+              <a href="#" class="c-link dropdown-toggle c-toggler"><%= I18n.t 'sustentabilidad' %>
                 <span class="c-arrow"></span>
               </a>
               <ul class="dropdown-menu c-menu-type-classic c-pull-left">
                 <li class="dropdown-submenu ">
-                  <a href="#" class="c-link dropdown-toggle c-toggler">Gobierno Corporativo
+                  <a href="#" class="c-link dropdown-toggle c-toggler"><%= I18n.t 'Gobierno_corporativo' %>
                     <span class="c-arrow"></span>
                   </a>
                   <ul class="dropdown-menu c-menu-type-classic c-pull-right">
                     <li class="dropdown-submenu">
-                      <a href="<%= "/#{I18n.locale}/auditor-externo" %>">Auditor externo
+                      <a href="<%= "/#{I18n.locale}/auditor-externo" %>"><%= I18n.t 'Auditor_externo' %>
                         <span class="c-arrow"></span>
                       </a>
                     </li>
                     <li class="dropdown-submenu">
-                      <a href="<%= "/#{I18n.locale}/estructura" %>">Estructura accionaria
+                      <a href="<%= "/#{I18n.locale}/estructura" %>"><%= I18n.t 'Estructura_accionaria' %>
                         <span class="c-arrow"></span>
                       </a>
                     </li>
                     <li class="dropdown-submenu">
-                      <a href="<%= "/#{I18n.locale}/practicas" %>">Mejores prácticas corporativas
+                      <a href="<%= "/#{I18n.locale}/practicas" %>"><%= I18n.t 'practicas' %>
                         <span class="c-arrow"></span>
                       </a>
                     </li>
                     <li class="dropdown-submenu">
-                      <a href="<%= "/#{I18n.locale}/estructura-corporativa" %>">Estructura Corporativa
+                      <a href="<%= "/#{I18n.locale}/estructura-corporativa" %>"><%= I18n.t 'estructura_c' %>
                         <span class="c-arrow"></span>
                       </a>
                     </li>
                     <li class="dropdown-submenu">
-                      <a href="<%= "/#{I18n.locale}/consejo-administracion" %>">Consejo de Administración
+                      <a href="<%= "/#{I18n.locale}/consejo-administracion" %>"><%= I18n.t 'Consejo_de_Administracion' %>
                         <span class="c-arrow"></span>
                       </a>
                     </li>
                     <li class="dropdown-submenu">
-                      <a href="<%= "/#{I18n.locale}/comites" %>">Comités
+                      <a href="<%= "/#{I18n.locale}/comites" %>"><%= I18n.t 'Comites' %>
                         <span class="c-arrow"></span>
                       </a>
                     </li>
                     <li class="dropdown-submenu">
-                      <a href="http://cdn.investorcloud.net/cadu/Comunicados/Estatutos-Corpovael-SAB-de-CV.pdf" target="_blank">Estatutos
-                        Sociales
+                      <a href="http://cdn.investorcloud.net/cadu/Comunicados/Estatutos-Corpovael-SAB-de-CV.pdf" target="_blank"><%= I18n.t 'estatutos_s' %>
                         <span class="c-arrow"></span>
                       </a>
                     </li>
                   </ul>
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/responsabilidad-social" %>">Responsabilidad Social
+                  <a href="<%= "/#{I18n.locale}/responsabilidad-social" %>"><%= I18n.t 'responsabilidad_s' %>
                     <span class="c-arrow"></span>
                   </a>
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/medio-ambiente" %>">Medio Ambiente
+                  <a href="<%= "/#{I18n.locale}/medio-ambiente" %>"><%= I18n.t 'medio_a' %>
                     <span class="c-arrow"></span>
                   </a>
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/informes-sustentables" %>">Informes Sustentables
+                  <a href="<%= "/#{I18n.locale}/informes-sustentables" %>"><%= I18n.t 'informe_s' %>
                     <span class="c-arrow"></span>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="c-menu-type-classic <%= "c-active" if @menuNum == 3 %> ">
-              <a href="#" class="c-link dropdown-toggle c-toggler">Información Financiera
+              <a href="#" class="c-link dropdown-toggle c-toggler"><%= I18n.t 'Informacion_financiera' %>
                 <span class="c-arrow"></span>
               </a>
               <ul class="dropdown-menu c-menu-type-classic c-pull-left">
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/reportes-financieros" %>">Reportes financieros
+                  <a href="<%= "/#{I18n.locale}/reportes-financieros" %>"><%= I18n.t 'reportes_f' %>
                     <span class="c-arrow c-toggler"></span>
                   </a>
 
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/fundamentales" %>">Fundamentales
+                  <a href="<%= "/#{I18n.locale}/fundamentales" %>"><%= I18n.t 'Fundamentales' %>
                     <span class="c-arrow c-toggler"></span>
                   </a>
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/faqs" %>">Preguntas frecuentes
+                  <a href="<%= "/#{I18n.locale}/faqs" %>"><%= I18n.t 'Preguntas_frecuentes' %>
                     <span class="c-arrow c-toggler"></span>
                   </a>
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/glosario" %>">Glosario
+                  <a href="<%= "/#{I18n.locale}/glosario" %>"><%= I18n.t 'Glosario' %>
                     <span class="c-arrow c-toggler"></span>
                   </a>
 
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/comunicados" %>">Comunicados
+                  <a href="<%= "/#{I18n.locale}/comunicados" %>"><%= I18n.t 'comunicados' %>
                     <span class="c-arrow c-toggler"></span>
                   </a>
 
@@ -185,22 +184,26 @@
               </ul>
             </li>
             <li class="c-menu-type-classic <%= "c-active" if @menuNum == 4 %> ">
-              <a href="javascript:;" class="c-link dropdown-toggle c-toggler">Información Bursátil
+              <a href="javascript:;" class="c-link dropdown-toggle c-toggler"><%= I18n.t 'Informacion_bursatil' %>
                 <span class="c-arrow"></span>
               </a>
               <ul class="dropdown-menu c-menu-type-classic c-pull-left">
                 <li class="dropdown-submenu ">
-                  <a href="<%= "/#{I18n.locale}/cotizacion" %>">Cotización de la acción
+                  <a href="<%= "/#{I18n.locale}/cotizacion" %>"><%= I18n.t 'Cotizacion_de_la_accion' %>
                     <span class="c-arrow c-toggler"></span>
                   </a>
                 </li>
                 <li class="dropdown-submenu ">
-                  <a href="<%= "/#{I18n.locale}/acuerdos-asambleas" %>">Acuerdos y Asambleas
+                  <a href="<%= "/#{I18n.locale}/acuerdos-asambleas" %>"><%= I18n.t 'acuerdos_a' %>
                     <span class="c-arrow c-toggler"></span>
                   </a>
                 </li>
                 <li class="dropdown-submenu ">
-                  <a href="<%= "/#{I18n.locale}/dividendos" %>">Dividendos
+                  <a href="<%= "/#{I18n.locale}/dividendos" %>"><%= I18n.t 'dividendos' %>
+                    <span class="c-arrow c-toggler"></span>
+                  </a>
+                </li> <li class="dropdown-submenu ">
+                  <a href="<%= "/#{I18n.locale}/renta-fija-credito" %>"> <%= I18n.t 'renta_f' %>
                     <span class="c-arrow c-toggler"></span>
                   </a>
                 </li>
@@ -211,17 +214,17 @@
 
                             </li> -->
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/analistas" %>">Cobertura de analistas
+                  <a href="<%= "/#{I18n.locale}/analistas" %>"><%= I18n.t 'Cobertura_de_analistas' %>
                     <span class="c-arrow c-toggler"></span>
                   </a>
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/calificaciones" %>">Calificaciones
+                  <a href="<%= "/#{I18n.locale}/calificaciones" %>"><%= I18n.t 'Calificaciones' %>
                     <span class="c-arrow c-toggler"></span>
                   </a>
                 </li>
                 <li class="dropdown-submenu">
-                  <a href="<%= "/#{I18n.locale}/prospectos" %>">Prospectos
+                  <a href="<%= "/#{I18n.locale}/prospectos" %>"><%= I18n.t 'Prospectos' %>
                     <span class="c-arrow c-toggler"></span>
                   </a>
                 </li>

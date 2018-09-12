@@ -1,88 +1,105 @@
 es:
 
 # Globales
-  lenguaje-inverso: "EN"
-  title-report: "Famsa - Reporte Anual 2015"
+  lenguaje_inverso: "EN"
+  title_report: "Famsa _ Reporte Anual 2015"
   copyright: "Diseñado y generado por"
   Inicio: "Inicio"
   Ir: "Ir"
   buscando: "¿Qué está buscando?"
-  to-top: "Subir"
+  to_top: "Subir"
   buscar: "Buscar..."
                                                   #Menus
+
     #Menu Cifras relevantes
-  cifras-relevantes: Cifras relevantes
-  tu-hogar: "En tu hogar"
-  tu-empresa: "En tu empresa"
-  atencion-clientes: "Atención a Clientes"
+  cifras_relevantes: "Cifras relevantes"
+  tu_hogar: "En tu hogar"
+  tu_empresa: "En tu empresa"
+  atencion_clientes: "Atención a Clientes"
+
+  modelo_n: "Modelo de negocio"
+  sustentabilidad: "Sustentabilidad Corporativa"
+  practicas: "Mejores Prácticas Corporativas"
+  estructura_c: "Estructura Corporativa"
+  estatutos_s: "Estatutos Sociales"
+  responsabilidad_s: "Responsabilidad Social"
+  medio_a: "Medio Ambiente"
+  informe_s: "Sustainability Reports"
+  reportes_f: "Reportes Financieros"
+  comunicados: "Comunicados"
+  acuerdos_a: "Acuerdos y Asambleas"
+  dividendos: "Dividendos"
+  Calificaciones: "Calificaciones"
+  Prospectos: "Prospectos"
+  renta_f: "Renta fija y crédito"
 
     #Menu Nosotros
   Nosotros: "Nosotros"
   Historia: "Historia"
   Perfil: "Perfil"
-  Maxcom-en-numeros: "Pappel en números"
+  Maxcom_en_numeros: "Pappel en números"
   Estrategia: "Estrategia"
   Directivos: "Directivos"
   Panorama: "Panorama"
 
     #Menu Gobierno corporativo
-  Gobierno-corporativo: "Gobierno corporativo"
+  Gobierno_corporativo: "Gobierno corporativo"
   Compromiso: "Compromiso"
-  Consejo-de-Administracion: "Consejo de Administración"
+  Consejo_de_Administracion: "Consejo de Administración"
   Comites: "Comités"
-  Codigos-y-estatutos: "Códigos y estatutos"
-  Estructura-accionaria: "Estructura accionaria"
-  Auditor-externo: "Auditor externo"
+  Codigos_y_estatutos: "Códigos y estatutos"
+  Estructura_accionaria: "Estructura accionaria"
+  Auditor_externo: "Auditor externo"
 
     #Menu Información financiera
-  Informacion-financiera: "Información financiera"
+  Informacion_financiera: "Información financiera"
   Fundamentales: "Fundamentales"
-  Reportes-trimestrales: "Reportes trimestrales"
+  Reportes_trimestrales: "Reportes trimestrales"
   Conferencias: "Teleconferencias"
-  Reportes-anuales: "Reportes anuales"
+  Reportes_anuales: "Reportes anuales"
   Comunicados: "Comunicados"
-  Registros-BMV: "Registros BMV"
-  Registros-SEC: "Registros SEC"
-  Calendario-financiero: "Calendario financiero"
-  Preguntas-frecuentes: "Preguntas frecuentes"
+  Registros_BMV: "Registros BMV"
+  Registros_SEC: "Registros SEC"
+  Calendario_financiero: "Calendario financiero"
+  Preguntas_frecuentes: "Preguntas frecuentes"
 
     #Menu Información bursátil
-  Informacion-bursatil: "Información bursátil"
-  Cotizacion-de-la-accion: "Cotización de la acción"
-  Informacion-del-Bono: "Información del Bono"
-  Cobertura-de-analistas: "Cobertura de analistas"
+  Informacion_bursatil: "Información bursátil"
+  Cotizacion_de_la_accion: "Cotización de la acción"
+  Informacion_del_Bono: "Información del Bono"
+  Cobertura_de_analistas: "Cobertura de analistas"
   Multiplos: "Múltiplos"
   Glosario: "Glosario"
 
 
                                                   #Sidebar
 
-  Informacion-Financiera: "Información Financiera"
-  Fundamentales-sidebar: "Fundamentales"
-  Reportes-trimestrales-sidebar: "Reportes trimestrales"
-  Informes-anuales: "Informes anuales"
-  Comunicados-sidebar: "Comunicados"
-  Registros-BMV-sidebar: "Registros BMV"
+  Informacion_Financiera: "Información Financiera"
+  Fundamentales_sidebar: "Fundamentales"
+  Reportes_trimestrales_sidebar: "Reportes trimestrales"
+  Informes_anuales: "Informes anuales"
+  Comunicados_sidebar: "Comunicados"
+  Registros_BMV_sidebar: "Registros BMV"
 
-  Documentos-destacados: "Documentos destacados"
-  Reporte-trimestral-3T14: "Reporte trimestral 3T14"
-  Reporte-trimestral-2T14: "Reporte trimestral 2T14"
-  Reporte-anual-2013: "Reporte anual 2013"
+  Documentos_destacados: "Documentos destacados"
+  Reporte_trimestral_3T14: "Reporte trimestral 3T14"
+  Reporte_trimestral_2T14: "Reporte trimestral 2T14"
+  Reporte_anual_2013: "Reporte anual 2013"
 
 
                                                   #OFFCANVAS MENU
 
-  Contenido-destacado-canvas: "Contenido destacado"
-  Reportes-trimestrales-canvas: "Reportes trimestrales"
-  Reportes-anuales-canvas: "Reportes anuales"
-  Comunicados-canvas: "Comunicados"
-  Preguntas-frecuentes-canvas: "Preguntas frecuentes"
+  Contenido_destacado_canvas: "Contenido destacado"
+  Reportes_trimestrales_canvas: "Reportes trimestrales"
+  Reportes_anuales_canvas: "Reportes anuales"
+  Comunicados_canvas: "Comunicados"
+  Preguntas_frecuentes_canvas: "Preguntas frecuentes"
 
-  Redes-Sociales: "Redes Sociales"
+  Redes_Sociales: "Redes Sociales"
 
 
-  Contacto-de-RI: "Contacto de R.I."
-  Gerente-de-relacion-con-Inversionistas: "Gerente de relación con Inversionistas"
+  Contacto_de_RI: "Contacto de R.I."
+  Gerente_de_relacion_con_Inversionistas: "Gerente de relación con Inversionistas"
 
   Telefono: "Teléfono"
 
@@ -94,15 +111,15 @@ es:
 
 
 
-  Boletin-financiero: "Boletín financiero"
-  sucribase: "Suscríbase a nuestro boletín en donde recibirá periódicamente en su e-mail información relacionada a nuestra empresa."
+  Boletin_financiero: "Boletín financiero"
+  sucribase: "Suscríbase a nuestro boletín en donde recibirá periódicamente en su e_mail información relacionada a nuestra empresa."
   ofrecemos: "En Maxcom ofrecemos servicios de Telefonía local, Larga Distancia, Voz IP, Telefonía Celular, Datos, Internet y Televisión, a través de una infraestructura de vanguardia."
 
   Subscribe: "Suscribir"
 
-  email-placehoder: "Dirección de correo"
+  email_placehoder: "Dirección de correo"
 
-  Aviso-legal: "Aviso legal"
-  Aviso-de-privacidad: "Aviso de privacidad"
-  Oficinas-corporativas: "Oficinas corporativas"
-  Diseñado-y-generado-por-IRStrat: "Diseñado y generado por IRStrat"
+  Aviso_legal: "Aviso legal"
+  Aviso_de_privacidad: "Aviso de privacidad"
+  Oficinas_corporativas: "Oficinas corporativas"
+  Diseñado_y_generado_por_IRStrat: "Diseñado y generado por IRStrat"
