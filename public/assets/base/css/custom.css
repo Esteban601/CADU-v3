@@ -2,6 +2,30 @@
     display: block !important;
 }
 
+
+.grecaptcha-badge {
+    bottom: -500px !important;
+    right: -186px !important;
+}
+
+.bg-paleta1 {
+    background-color: #F04C23;
+    color: #e1f4fb;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.input-group .form-control-calcualadora {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+
 @media (min-width: 992px) {
     .c-layout-header .c-brand {
         margin: 25px 0 20px 0;
@@ -12,7 +36,8 @@
         padding: 44px 15px 39px 15px;
     }
 }
-.grecaptcha-badge,.g-recaptcha  {
-    bottom: -500px !important;
-    right: -186px !important;
+.grecaptcha-badge, .grecaptcha-logo, .g-recaptcha  {
+    right: -750px !important;
+    position: relative;
+    position: fixed;
 }

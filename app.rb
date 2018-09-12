@@ -25,7 +25,7 @@ end
 configure do
   I18n.enforce_available_locales = false
   I18n.load_path = Dir[File.join(settings.root, 'locales', '*.yml')]
-  set :port, 3000
+  set :port, 3008
   set :bind, '0.0.0.0'
 end
 
@@ -315,6 +315,13 @@ get '/:locale/analistas' do
   erb :"#{I18n.locale}/vistas/menu4/analistas", :layout => ("global/layouts/content").to_sym
 end
 
+get '/:locale/calificaciones' do
+  @titulo = "Calificaciones"
+  @menuNum= 4
+  @menuName= "Información Bursátil"
+  erb :"#{I18n.locale}/vistas/menu4/calificaciones", :layout => ("global/layouts/content").to_sym
+end
+
 get '/:locale/acuerdos-asambleas' do
   @titulo = "Acuerdos y Asambleas"
   @menuNum= 4
@@ -348,6 +355,13 @@ get '/:locale/prospectos' do
   @menuNum= 4
   @menuName= "Información Bursátil"
   erb :"#{I18n.locale}/vistas/menu4/prospectos", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/calculadora' do
+  @titulo = "Calculadora de Rendimientos"
+  @menuNum= 4
+  @menuName= "Información Bursátil"
+  erb :"#{I18n.locale}/vistas/menu4/calculadora", :layout => ("global/layouts/content").to_sym
 end
 
 #Global

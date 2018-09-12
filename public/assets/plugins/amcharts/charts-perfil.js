@@ -96,9 +96,9 @@ var bars = AmCharts.makeChart(
                 "EBITDA": 23.1
             },
             {
-                "year": "1T18 UDM",
+                "year": "2T18 UDM",
                 "ROE": 19.4,
-                "EBITDA": 23.6
+                "EBITDA": 22.9
             }
         ],
         "export": {
