@@ -22,8 +22,8 @@ var types = [{
     percent: 2107,
     color: "#B7CEE5",
     subs: [
-        { type: puente, percent: 614 },
-        { type: capital, percent: 1493 },
+        { type: capital, percent: 614 },
+        { type: puente, percent: 1493 },
         { type: "Arrendamiento Financiero", percent: 0 },
 
 
