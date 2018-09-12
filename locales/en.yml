@@ -1,88 +1,106 @@
 en:
 
    # Globales
-  lenguaje-inverso: "ES"
-  title-report: "Famsa - Annual Report 2015"
+  lenguaje_inverso: "ES"
+  title_report: "Famsa - Annual Report 2015"
   copyright: "Copryright 2016 by "
   Ir: "Go"
   Inicio: "Home"
   buscando: "What do you want to find?"
-  to-top: "To Top"
+  to_top: "To Top"
   buscar: "Type to search..."
                                           #Menus
     #Menu Pappel
-  tu-hogar: "At home"
-  tu-empresa: "In your Company"
-  atencion-clientes: "Customer Service"
+  tu_hogar: "At home"
+  tu_empresa: "In your Company"
+  atencion_clientes: "Customer Service"
+
+  modelo_n: "Business Model"
+  sustentabilidad: "Corporate Sustainability"
+  practicas: "Best Corporate Practices"
+  estructura_c: "Corporate Structure"
+  estatutos_s: "CADU’s Bylaws"
+  responsabilidad_s: "Social Responsability"
+  medio_a: "Environment"
+  informe_s: "Informes Sustentables"
+  reportes_f: "Financial Reports"
+  reportes_f: "Financial Reports"
+  comunicados: "Press Releases and Relevant Events"
+  acuerdos_a: "Shareholders’ Meetings and Resolutions"
+  dividendos: "Dividends"
+  Calificaciones: "Credit Ratings"
+  Prospectos: "Prospectus and Supplements"
+  renta_f: "Fixed Income and Credit"
+
 
     #Menu Cifras Relevantes
-  cifras-relevantes: Cifras relevantes
+  cifras_relevantes: "Cifras relevantes"
   Nosotros: "About us"
   Historia: "History"
   Perfil: "Profile"
-  Maxcom-en-numeros: "Pappel in Numbers"
+  Maxcom_en_numeros: "Pappel in Numbers"
   Estrategia: "Strategy"
-  Directivos: "Management"
-  Panorama: "Backdrop"
+  Directivos: "Management Team"
+  Panorama: "Outlook"
 
     #Menu Gobierno corporativo
-  Gobierno-corporativo: "Corporate Governance"
+  Gobierno_corporativo: "Corporate Governance"
   Compromiso: "Commitment"
-  Consejo-de-Administracion: "Board of Directors"
+  Consejo_de_Administracion: "Board of Directors"
   Comites: "Committees"
-  Codigos-y-estatutos: "Codes and By-laws"
-  Estructura-accionaria: "Shareholder Structure"
-  Auditor-externo: "External Auditor"
+  Codigos_y_estatutos: "Codes and By-laws"
+  Estructura_accionaria: "Shareholder Structure"
+  Auditor_externo: "External Auditor"
 
     #Menu Información financiera
-  Informacion-financiera: "Financial Information"
+  Informacion_financiera: "Financial Information"
   Fundamentales: "Fundamentals"
-  Reportes-trimestrales: "Quarterly Reports"
+  Reportes_trimestrales: "Quarterly Reports"
   Conferencias: "Conference Calls"
-  Reportes-anuales: "Annual Reports"
+  Reportes_anuales: "Annual Reports"
   Comunicados: "Press Releases"
-  Registros-BMV: "BMV Filings"
-  Registros-SEC: "SEC Filings"
-  Calendario-financiero: "Calendar"
-  Preguntas-frecuentes: "FAQs"
+  Registros_BMV: "BMV Filings"
+  Registros_SEC: "SEC Filings"
+  Calendario_financiero: "Calendar"
+  Preguntas_frecuentes: "FAQs"
 
     #Menu Información bursátil
-  Informacion-bursatil: "Stock Information"
-  Cotizacion-de-la-accion: "Stock Quotes"
-  Informacion-del-Bono: "Bonds Issued"
-  Cobertura-de-analistas: "Analysts coverage"
+  Informacion_bursatil: "Stock Information"
+  Cotizacion_de_la_accion: "Stock Quotes"
+  Informacion_del_Bono: "Bonds Issued"
+  Cobertura_de_analistas: "Analysts coverage"
   Multiplos: "Financial Ratios"
   Glosario: "Glossary"
 
 
                                                     #Sidebar
-  Informacion-Financiera: "Financial Information"
-  Fundamentales-sidebar: "Fundamentals"
-  Reportes-trimestrales-sidebar: "Quarterly Earnings"
-  Informes-anuales: "Annual Reports"
-  Comunicados-sidebar: "Press Releases"
-  Registros-BMV-sidebar: "BMV Filings"
+  Informacion_Financiera: "Financial Information"
+  Fundamentales_sidebar: "Fundamentals"
+  Reportes_trimestrales_sidebar: "Quarterly Earnings"
+  Informes_anuales: "Annual Reports"
+  Comunicados_sidebar: "Press Releases"
+  Registros_BMV_sidebar: "BMV Filings"
 
-  Documentos-destacados: "Highlights"
-  Reporte-trimestral-3T14: "3Q14 Earnings Report"
-  Reporte-trimestral-2T14: "2Q14 Earnings Report"
-  Reporte-anual-2013: "2013 Annual Report"
+  Documentos_destacados: "Highlights"
+  Reporte_trimestral_3T14: "3Q14 Earnings Report"
+  Reporte_trimestral_2T14: "2Q14 Earnings Report"
+  Reporte_anual_2013: "2013 Annual Report"
 
 
 
                                                     #OFFCANVAS MENU
 
-  Contenido-destacado-canvas: "Highlights"
-  Reportes-trimestrales-canvas: "Quarterly reports"
-  Reportes-anuales-canvas: "Annual reports"
-  Comunicados-canvas: "Press releases"
-  Preguntas-frecuentes-canvas: "FAQs"
+  Contenido_destacado_canvas: "Highlights"
+  Reportes_trimestrales_canvas: "Quarterly reports"
+  Reportes_anuales_canvas: "Annual reports"
+  Comunicados_canvas: "Press releases"
+  Preguntas_frecuentes_canvas: "FAQs"
 
-  Redes-Sociales: "Social networks"
+  Redes_Sociales: "Social networks"
 
 
-  Contacto-de-RI: "IR Contact"
-  Gerente-de-relacion-con-Inversionistas: "Investor Relations Manager"
+  Contacto_de_RI: "IR Contact"
+  Gerente_de_relacion_con_Inversionistas: "Investor Relations Manager"
 
   Telefono: "Telephone number"
 
@@ -93,14 +111,14 @@ en:
 
 
 
-  Boletin-financiero: "Financial Newsletter"
+  Boletin_financiero: "Financial Newsletter"
   sucribase: "Sign up to our newsletter where you will periodically receive updates and information about our Company "
   ofrecemos: "In Maxcom we offer local and long distance telephone services, Voice over IP, mobile telephony, data, Internet and TV, through a cutting-edge infrastructure."
 
   Subscribe: "Subscribe"
-  email-placehoder: "Your Email Here"
+  email_placehoder: "Your Email Here"
 
-  Aviso-legal: "Disclaimer"
-  Aviso-de-privacidad: "Privacy Notice"
-  Oficinas-corporativas: "Corporate Offices"
-  Diseñado-y-generado-por-IRStrat: "Designed and generated by IRstrat"
+  Aviso_legal: "Disclaimer"
+  Aviso_de_privacidad: "Privacy Notice"
+  Oficinas_corporativas: "Corporate Offices"
+  Diseñado_y_generado_por_IRStrat: "Designed and generated by IRstrat"
