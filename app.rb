@@ -147,42 +147,42 @@ end
 get '/:locale/estrategia' do
   @titulo = I18n.t 'Estrategia'
   @menuNum= 1
-  @menuName= "Nosotros"
+  @menuName= I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/estrategia", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/modelo-negocio' do
   @titulo = I18n.t 'modelo_n'
   @menuNum= 1
-  @menuName= "Nosotros"
+  @menuName= I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/modelo-negocio", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/cadu-numeros' do
   @titulo = "Cadu en números"
   @menuNum= 1
-  @menuName= "Nosotros"
+  @menuName= I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/cadu-numeros", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/panorama' do
   @titulo = I18n.t 'Panorama'
   @menuNum= 1
-  @menuName= "Nosotros"
+  @menuName= I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/panorama", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/perfil' do
   @titulo = I18n.t 'Perfil'
   @menuNum= 1
-  @menuName= "Nosotros"
+  @menuName= I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/perfil", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/directivos' do
   @titulo = I18n.t 'Directivos'
   @menuNum= 1
-  @menuName= "Nosotros"
+  @menuName= I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/directivos", :layout => ("global/layouts/content").to_sym
 end
 
@@ -190,7 +190,7 @@ get '/:locale/historia' do
   @titulo = I18n.t 'Historia'
   @menuNum= 1
   @historia= true
-  @menuName= "Nosotros"
+  @menuName= I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/historia", :layout => ("global/layouts/content").to_sym
 end
 #Menu2
@@ -205,21 +205,21 @@ end
 get '/:locale/responsabilidad-social' do
   @titulo = I18n.t 'responsabilidad_s'
   @menuNum= 2
-  @menuName= "Gobierno corporativo"
+  @menuName= I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/responsabilidad-social", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/medio-ambiente' do
   @titulo = I18n.t 'medio_a'
   @menuNum= 2
-  @menuName= "Gobierno corporativo"
+  @menuName= I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/medio-ambiente", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/informes-sustentables' do
   @titulo = I18n.t 'informe_s'
   @menuNum= 2
-  @menuName= "Gobierno corporativo"
+  @menuName= I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/informes-sustentables", :layout => ("global/layouts/content").to_sym
 end
 
@@ -227,49 +227,49 @@ end
 get '/:locale/informacion-corporativa' do
   @titulo = "Información corporativa"
   @menuNum= 2
-  @menuName= "Gobierno corporativo"
+  @menuName= I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/informacion-corporativa", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/auditor-externo' do
   @titulo = I18n.t 'Auditor_externo'
   @menuNum= 2
-  @menuName= "Gobierno corporativo"
+  @menuName= I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/auditor-externo", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/estructura' do
   @titulo = I18n.t 'Estructura_accionaria'
   @menuNum= 2
-  @menuName= "Gobierno corporativo"
+  @menuName= I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/estructura-accionaria", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/estructura-corporativa' do
   @titulo = I18n.t 'estructura_c'
   @menuNum= 2
-  @menuName= "Gobierno corporativo"
+  @menuName= I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/estructura-corporativa", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/practicas' do
   @titulo = I18n.t 'practicas'
   @menuNum= 2
-  @menuName= "Gobierno corporativo"
+  @menuName= I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/practicas", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/comites' do
   @titulo = I18n.t 'Comites'
   @menuNum= 2
-  @menuName= "Gobierno corporativo"
+  @menuName= I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/comites", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/consejo-administracion' do
   @titulo = I18n.t 'Consejo_de_Administracion'
   @menuNum= 2
-  @menuName= "Gobierno corporativo"
+  @menuName= I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/consejo-administracion", :layout => ("global/layouts/content").to_sym
 end
 
