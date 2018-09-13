@@ -1,0 +1,82 @@
+<% #listado de documentos
+   @documents= [
+       {:titulo => "CADU reportó crecimientos de 18.4% en Utilidad Neta y 10.1% en UAFIDA durante el 2T18", :date => "2018-07-24", :link => @comunicados_path + "2018-07-24-Comunicado-CADU 2T18.pdf"},
+       {:titulo => "CADU anuncia su Conferencia Telefónica de Resultados del Segundo Trimestre de 2018", :date => "2018-07-18", :link => @comunicados_path + "2018-07-18-CADU-Invitación-2T18.pdf"},
+       {:titulo => "Resumen de acuerdos de la Asamblea General Ordinaria de Accionistas", :date => "2018-04-25", :link => @gobierno_corporatico_path+ "Asambleas/2018-04-25-Acuerdos.pdf"},
+       {:titulo => "Fitch Ratifica Calificación de Corpovael en ‘BBB+(mex)’; Perspectiva Estable", :date => "2018-04-24", :link => @comunicados_path + "2018-04-24-Fitch-Ratings.pdf"},
+       {:titulo => "CADU reportó crecimientos de 18.6% en Utilidad Neta y 11.6% en UAFIDA durante el 1T de 2018", :date => "2018-04-17", :link => @comunicados_path + "2018-04-17-Comunicado-1T18.pdf"},
+       {:titulo => "CADU anuncia su Conferencia Telefónica de Resultados del Primer Trimestre de 2018", :date => "2018-04-09", :link => @comunicados_path + "2018-04-09-CADU-Invitación-1T18.pdf"},
+       {:titulo => "Convocatoria a Asamblea Ordinaria Anual", :date => "2018-04-06", :link => @comunicados_path + "2018-04-06-Convocatoria-Asamblea.pdf"},
+       {:titulo => "Verum afirma calificación de ‘A-/M’ a la emisión de Certificados Bursátiles de CADU Inmobiliaria (‘CADU 18’); tras conocer los detalles finales de la transacción", :date => "2018-02-28", :link => @comunicados_path + "2018-02-28-Verum-Calificacion.pdf"},
+       {:titulo => "CADU reportó un crecimiento de 15.9% en utilidad neta y una generación de flujo libre de efectivo de $230 millones en 2017", :date => "2018-02-27", :link => @comunicados_path + "2018-02-27-Comunicado-4T17.pdf"},
+       {:titulo => "CADU realiza emisión de certificado bursátil “CADU 18” por Ps.500 millones en la BMV", :date => "2018-02-21", :link => @comunicados_path + "2018-02-21-Emision_Cebur_CADU_18.pdf"},
+       {:titulo => "CADU anuncia su Conferencia Telefónica de Resultados del Cuarto Trimestre de 2017", :date => "2018-02-08", :link => @comunicados_path + "2018-02-08-Invitación-Teleconferencia-4T17.pdf"},
+       {:titulo => "HR Ratings revisó al alza la calificación de LP, en escala local, de HR BBB+ a HR A-, y modificó la Perspectiva de Positiva a Estable para CADU", :date => "2017-12-05", :link => @comunicados_path + "2017-12-05-calificacion-LP.pdf"},
+       {:titulo => "HR Ratings revisó al alza la calificación de LP, en escala local, de HR A- a HR A, modificando la Perspectiva de Positiva a Estable para la emisión CADU 15 de CADU", :date => "2017-12-05", :link => @comunicados_path + "2017-12-05-calificacion-cadu15.pdf"},
+       {:titulo => "CADU fortalece su oferta de vivienda media-residencial: Inaugura Allure", :date => "2017-11-24", :link => @comunicados_path + "2017-11-24-allure.pdf"},
+       {:titulo => "Verum asigna calificaciones corporativas de ‘A-/M’ y ‘2/M’ a CADU Inmobiliaria", :date => "2017-11-01", :link => @comunicados_path + "2017-11-01-Verum-asigna-calificaciones.pdf"},
+       {:titulo => "En línea con lo proyectado Cadu reporta un crecimiento de 42.1% en utilidad neta y flujo libre de efectivo de Ps.157 millones en el 3T17", :date => "2017-10-24", :link => "https://s3.amazonaws.com/investorcloud/cadu/Comunicados/2017-10-24-Comunicado_3T17.pdf"},
+       {:titulo => "Cadu anuncia su Conferencia Telefónica de Resultados del Tercer Trimestre de 2017", :date => "2017-10-05", :link => @comunicados_path + "2017-10-05-Invitación-Teleconferencia-3T17.pdf"},
+       {:titulo => "Aviso de derechos", :date => "2017-09-07", :link => @comunicados_path + "2017-09-07-AvisoDividendo.pdf"},
+       {:titulo => "Cadu reporta un crecimiento de 27.7% en ingresos por venta de vivienda, 10.2% en ingresos totales y una generación de flujo libre de efectivo de $ 282 millones de pesos en el 2T17", :date => "2017-07-18", :link => @comunicados_path + "2017-07-18-Comunicado_2T17.pdf"},
+       {:titulo => "Cadu realiza amortización de su certificado bursátil “CADU 14”", :date => "2017-07-13", :link => @comunicados_path + "2017-07-13-Comunicado_Certificado_Bursatil.pdf"},
+       {:titulo => "Cadu anuncia su Conferencia Telefónica de Resultados del Segundo Trimestre de 2017", :date => "2017-07-10", :link => @comunicados_path + "2017-07-10-CADU_2T17.pdf"},
+       {:titulo => "CADU aumenta su oferta de vivienda media-residencial: Inaugura York Homes, el primer desarrollo de Long Island.", :date => "2017-06-05", :link => "http://www.bolsamania.com/noticias-actualidad/notasDePrensa/CADU-aumenta-su-oferta-de-vivienda-media-residencial-Inaugura-York-Homes-el-primer-desarrollo-de--ES09088--18a36ceeb2e4593a62369c272554cbdb.html"},
+       {:titulo => "Aviso de derechos", :date => "2017-05-15", :link => @comunicados_path + "2017-05-15-AvisoDividendo.pdf"},
+       {:titulo => "Resumen de acuerdos de la Asamblea General Ordinaria de Accionistas", :date => "2017-04-27", :link => @gobierno_corporatico_path+ "Asambleas/2017-04-27-resumen-asaord.pdf"},
+       {:titulo => "Resumen de acuerdos de la Asamblea General Extraordinaria de Accionistas", :date => "2017-04-27", :link => @gobierno_corporatico_path+ "Asambleas/2017-04-27-resumen-asaextra.pdf"},
+       {:titulo => "Cadu reporta utilidad neta de Ps.90 millones en el primer trimestre de 2017", :date => "2017-04-19", :link => @comunicados_path + "2017-04-19-Comunicado1T17.pdf"},
+       {:titulo => "Convocatoria de Asamblea Ordinaria Anual", :date => "2017-04-10", :link => @comunicados_path + "2017-04-11-Convocatoria-Asamblea-2017.pdf"},
+       {:titulo => "Calendario de publicación de resultados y teleconferencia 1T17", :date => "2017-04-10", :link => @comunicados_path + "2017-04-10-Invitacion-CC-1T17.pdf"},
+       {:titulo => "Cadu reportó en 2016 un Crecimiento en Utilidad Neta de 36.9% al alcanzar $589 millones de pesos", :date => "2017-02-21", :link => @comunicados_path + "2017-02-21-Comunicado4T16.pdf"},
+       {:titulo => "Calendario de publicación de resultados y teleconferencia 4T16", :date => "2017-02-14", :link => @comunicados_path + "2017-02-14-Invitacion-CC-4T16.pdf"},
+       {:titulo => "CADU entre favoritas de Actinver", :date => "2016-12-03", :link => "https://www.actinver.com/static/actpdf/web/viewer.html?file=%2fcs%2fgroups%2fpublic%2fdocuments%2fanalisis%2fdmvy%2fmdc3%2f~edisp%2factinver077676.pdf&utm_source=ACTINVER&utm_medium=CorreoAnalisis&utm_term=Documentos_PDF&utm_content=Documento_PDF&utm_campaign=UA-64533887-1&Lang=Esp"},
+       {:titulo => "CADU reportó un crecimiento en UAFIDA de 15.85% y una Utilidad Neta de Ps.145 mills. (+24.5%) en el 3T16", :date => "2016-10-24", :link => @comunicados_path + "2016-10-24-Comunicado3T16.pdf"},
+       {:titulo => "Calendario de publicación de resultados y teleconferencia 3T16", :date => "2016-10-13", :link => @comunicados_path + "2016-10-13-Invitacion-CC-3T16.pdf"},
+       {:titulo => "Calendario de publicación de resultados y teleconferencia 2T16", :date => "2016-07-15", :link => @comunicados_path + "2016-07-15-Invitacion-CC-2T16.pdf"},
+       {:titulo => "CADU realiza amortización de deuda bursátil", :date => "2016-07-14", :link => @comunicados_path + "2016-07-14-Amortización+CADU+14.pdf"},
+       {:titulo => "CADU realiza pago de dividendos", :date => "2016-06-22", :link => @comunicados_path + "2016-06-22-ComunicadoDividendos.pdf"},
+       {:titulo => "CADU avisa pago de dividendos", :date => "2016-06-10", :link => @comunicados_path + "2016-06-10-ER-AvisoDividendo.pdf"},
+       {:titulo => "Aviso de derechos", :date => "2016-06-10", :link => @comunicados_path + "2016-06-10-AvisoDividendo.pdf"},
+       {:titulo => "CADU realiza pago de dividendos", :date => "2016-05-25", :link => @comunicados_path + "2016-05-25-pagodividendo.pdf"},
+       {:titulo => "Perspectivas favorables para CADU, a mediano plazo (El Economista)", :date => "2016-05-19", :link => "http://eleconomista.com.mx/mercados-estadisticas/2016/05/19/perspectivas-favorables-cadu-mediano-plazo"},
+       {:titulo => "Informe de principales políticas y criterios contables", :date => "2016-05-18", :link => @comunicados_path + "2016-05-18-politicascontables.pdf"},
+       {:titulo => "Aviso de derechos", :date => "2016-05-15", :link => @comunicados_path + "2016-05-15-AvisoDividendo.pdf"},
+       {:titulo => "Reenvío informe 4T15 incluyendo información de cobertura de análisis", :date => "2016-05-05", :link => @comunicados_path + "2016-05-05-Reenvio.pdf"},
+       {:titulo => "Resumen de acuerdos de la Asamblea Ordinaria Anual de Accionistas", :date => "2016-04-28", :link => @gobierno_corporatico_path+ "Asambleas/2016-04-28-resumen-asarodan.pdf"},
+       {:titulo => "Acta de Asamblea Ordinaria Anual de Accionistas", :date => "2016-04-28", :link => @gobierno_corporatico_path+ "Asambleas/2016-04-28-asaordan.pdf"},
+       {:titulo => "Informe del Director General", :date => "2016-04-26", :link => @comunicados_path + "2016-04-26-incoacop.pdf"},
+       {:titulo => "CADU publica resultados del 1T16", :date => "2016-04-18", :link => @reportes_trimestrales_path + "Informes/2016-1T16.pdf"},
+       {:titulo => "Opinión del consejo sobre el contenido del informe del Director General", :date => "2016-04-08", :link => @comunicados_path + "2016-04-08-opconsejo.pdf"},
+       {:titulo => "Informe del Comité de Auditoría y Prácticas Societarias", :date => "2016-04-08", :link => @comunicados_path + "2016-04-08-incoaudi.pdf"},
+       {:titulo => "Resumen Fideicomiso de Control", :date => "2016-04-15", :link => @comunicados_path + "2016-04-15-fideicomiso.pdf"},
+
+       {:titulo => "Convocatoria a Asamble Ordinaria Anual", :date => "2016-04-12", :link => @comunicados_path + "2016-04-12-convocatoriaAOA.pdf"},
+       {:titulo => "Actualización de libros sociales", :date => "2016-04-04", :link => @gobierno_corporatico_path+ "Global/2016-04-04-actualib.pdf"},
+       {:titulo => "Retransmisión de Información Financiera 4T15, precisando únicamente que el costo de la deuda es a tasa variable", :date => "2016-03-10", :link => @comunicados_path + "2016-04-15-fideicomiso.pdf"},
+       {:titulo => "CADU publica resultados del 4T15", :date => "2016-02-15", :link => @reportes_trimestrales_path + "Informes/2015-4T15-vf.pdf"},
+       {:titulo => "CADU publica resultados del 3T15", :date => "2015-10-20", :link => @reportes_trimestrales_path + "Informes/2015-3T15.pdf"},
+       {:titulo => "CADU publica resultados del 2T15", :date => "2015-07-20", :link => @reportes_trimestrales_path + "Informes/2015-2T15.pdf"},
+       {:titulo => "CADU publica resultados del 1T15", :date => "2015-04-20", :link => @reportes_trimestrales_path + "Informes/2015-1T15.pdf"},
+
+   ]
+%>
+
+<div class="comunicados">
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="col-md-9">Documento</th>
+      <th class="col-md-3">Fecha</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @documents.each do |document| %>
+        <tr>
+          <td><a target="_blank" href="<%= document[:link] %>"><%= document[:titulo] %></a></td>
+          <td><%= document[:date] %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
