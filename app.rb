@@ -205,21 +205,21 @@ end
 get '/:locale/responsabilidad-social' do
   @titulo = I18n.t 'responsabilidad_s'
   @menuNum= 2
-  @menuName= I18n.t 'Gobierno_corporativo'
+  @menuName= I18n.t 'sustentabilidad'
   erb :"#{I18n.locale}/vistas/menu2/responsabilidad-social", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/medio-ambiente' do
   @titulo = I18n.t 'medio_a'
   @menuNum= 2
-  @menuName= I18n.t 'Gobierno_corporativo'
+  @menuName= I18n.t 'sustentabilidad'
   erb :"#{I18n.locale}/vistas/menu2/medio-ambiente", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/informes-sustentables' do
   @titulo = I18n.t 'informe_s'
   @menuNum= 2
-  @menuName= I18n.t 'Gobierno_corporativo'
+  @menuName= I18n.t 'sustentabilidad'
   erb :"#{I18n.locale}/vistas/menu2/informes-sustentables", :layout => ("global/layouts/content").to_sym
 end
 
@@ -275,7 +275,7 @@ end
 
 #Menu3
 get '/:locale/comunicados' do
-  @titulo = "Comunicados y eventos relevantes"
+  @titulo = I18n.t 'comunicados'
   @menuNum= 3
   @menuName= I18n.t 'Informacion_financiera'
   erb :"#{I18n.locale}/vistas/menu3/comunicados", :layout => ("global/layouts/content").to_sym
@@ -310,7 +310,7 @@ get '/:locale/reportes-financieros' do
 end
 #Menu4
 get '/:locale/analistas' do
-  @titulo = "Analistas"
+  @titulo = I18n.t 'Cobertura_de_analistas'
   @menuNum= 4
   @menuName= I18n.t 'Informacion_bursatil'
   erb :"#{I18n.locale}/vistas/menu4/analistas", :layout => ("global/layouts/content").to_sym
@@ -352,7 +352,7 @@ get '/:locale/cotizacion' do
 end
 
 get '/:locale/prospectos' do
-  @titulo = "Prospectos de colocación"
+  @titulo = I18n.t 'Prospectos'
   @menuNum= 4
   @menuName= I18n.t 'Informacion_bursatil'
   erb :"#{I18n.locale}/vistas/menu4/prospectos", :layout => ("global/layouts/content").to_sym
