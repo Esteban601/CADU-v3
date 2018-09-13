@@ -189,6 +189,7 @@ end
 get '/:locale/historia' do
   @titulo = I18n.t 'Historia'
   @menuNum= 1
+  @historia= true
   @menuName= "Nosotros"
   erb :"#{I18n.locale}/vistas/menu1/historia", :layout => ("global/layouts/content").to_sym
 end
