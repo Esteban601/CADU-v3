@@ -19,29 +19,22 @@
               <a href="<%= "/#{I18n.locale}/panorama" %>"><%= I18n.t 'Panorama' %>
               </a>
             </li>
-            <!-- <li>
-          <a href="<%= "/#{I18n.locale}/cadu-numeros" %>">Cadu en números
-          </a>
-        </li> -->
             <li>
               <a href="<%= "/#{I18n.locale}/modelo-negocio" %>"><%= I18n.t 'modelo_n' %>
               </a>
             </li>
             <li>
               <a href="<%= "/#{I18n.locale}/historia" %>"><%= I18n.t 'Historia' %>
-
               </a>
             </li>
             <li>
               <a href="<%= "/#{I18n.locale}/directivos" %>"><%= I18n.t 'Directivos' %>
-
               </a>
             </li>
           </ul>
       <% end %>
       <% if @menuNum == 2 %>
           <ul class="c-menu c-arrow-dot1 c-theme">
-
             <li>
               <a href="<%= "/#{I18n.locale}/auditor-externo" %>"><%= I18n.t 'Auditor_externo' %>
               </a>
@@ -59,34 +52,26 @@
               </a>
             </li>
             <li>
-              <a href="<%= "/#{I18n.locale}/consejo-administracion" %>"><%= I18n.t 'Consejo_de_Administracion' %>
-              </a>
+              <a href="<%= "/#{I18n.locale}/consejo-administracion" %>"><%= I18n.t 'Consejo_de_Administracion' %></a>
             </li>
             <li>
-              <a href="<%= "/#{I18n.locale}/comites" %>"><%= I18n.t 'Comites' %>
-
-              </a>
+              <a href="<%= "/#{I18n.locale}/comites" %>"><%= I18n.t 'Comites' %></a>
             </li>
           </ul>
       <% end %>
       <% if @menuNum == 3 %>
           <ul class="c-menu c-arrow-dot1 c-theme">
             <li>
-              <a href="<%= "/#{I18n.locale}/reportes-financieros" %>"><%= I18n.t 'reportes_f' %>
-              </a>
-
+              <a href="<%= "/#{I18n.locale}/reportes-financieros" %>"><%= I18n.t 'reportes_f' %></a>
             </li>
             <li>
-              <a href="<%= "/#{I18n.locale}/fundamentales" %>"><%= I18n.t 'Fundamentales' %>
-              </a>
+              <a href="<%= "/#{I18n.locale}/fundamentales" %>"><%= I18n.t 'Fundamentales' %></a>
             </li>
             <li>
-              <a href="<%= "/#{I18n.locale}/faqs" %>"><%= I18n.t 'Preguntas_frecuentes' %>
-              </a>
+              <a href="<%= "/#{I18n.locale}/faqs" %>"><%= I18n.t 'Preguntas_frecuentes' %></a>
             </li>
             <li>
-              <a href="<%= "/#{I18n.locale}/glosario" %>"><%= I18n.t 'Glosario' %>
-              </a>
+              <a href="<%= "/#{I18n.locale}/glosario" %>"><%= I18n.t 'Glosario' %></a>
 
             </li>
 
@@ -112,31 +97,20 @@
             </li>
             <li>
               <a href="<%= "/#{I18n.locale}/dividendos" %>"><%= I18n.t 'dividendos' %>
-
               </a>
-
             </li>
             <li>
               <a href="<%= "/#{I18n.locale}/renta-fija-credito" %>">Renta fija y crédito
               </a>
-
             </li>
             <li>
               <a href="<%= "/#{I18n.locale}/analistas" %>"><%= I18n.t 'Cobertura_de_analistas' %>
               </a>
-
             </li>
             <li>
               <a href="<%= "/#{I18n.locale}/calificaciones" %>"><%= I18n.t 'Calificaciones' %>
               </a>
-
             </li>
-
-            <!--<li>-->
-            <!--<a href="<%= "/#{I18n.locale}/ibursatil" %>">Indicadores bursátiles-->
-            <!--</a>-->
-
-            <!--</li>-->
           </ul>
       <% end %>
     </div>
@@ -154,69 +128,39 @@
         <ul class="c-content-recent-posts-1">
           <li>
             <div class="c-post">
-              <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes trimestrales' ,'Reporte de resultados 2T18');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Informes/2018-2T18.pdf"><%= I18n.t 'info_2T18' %></a>
-
+              <% if I18n.locale == :es %>
+                  <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes trimestrales' ,'Reporte de resultados 2T18');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Informes/2018-2T18.pdf"><%= I18n.t 'info_2T18' %></a>
+              <% else %>
+                  <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes trimestrales' ,'Reporte de resultados 2T18');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Informes/2018-2T18-en.pdf"><%= I18n.t 'info_2T18' %></a>
+              <% end %>
               <div class="c-date">Jul 2018</div>
             </div>
           </li>
           <li>
             <div class="c-post">
-              <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes trimestrales' ,'Reporte de resultados 1T18');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Informes/2018-1T18.pdf"><%= I18n.t 'info_1T18' %></a>
+              <% if I18n.locale == :es %>
+                  <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes trimestrales' ,'Reporte de resultados 1T18');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Informes/2018-1T18.pdf"><%= I18n.t 'info_1T18' %></a>
+              <% else %>
+                  <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes trimestrales' ,'Reporte de resultados 2T18');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Informes/2018-1T18-en.pdf"><%= I18n.t 'info_2T18' %></a>
+              <% end %>
 
               <div class="c-date"><%= I18n.t 'abr_2018' %></div>
             </div>
           </li>
-
-
-          <!--<li>
-
-            <div class="c-post">
-              <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes trimestrales Teleconferencia' ,'Reporte de resultados 3T16');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2016-3T16-CC.mp3">Teleconferencia
-                2T16</a>
-
-              <div class="c-date">Oct 2016</div>
-            </div>
-          </li>-->
-
-
-          <!--<li>
-
-            <div class="c-post">
-              <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes trimestrales Teleconferencia' ,'Reporte de resultados 2T16');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2016-2T16-CC1.mp3">Teleconferencia
-                2T16</a>
-
-              <div class="c-date">Jul 2016</div>
-            </div>
-          </li>-->
-
           <li>
-
             <div class="c-post">
               <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes Anuales' ,'Reporte anual 2015');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2017-Sustentabilidad.pdf"><%= I18n.t 'reporte_s_2017' %></a>
 
               <div class="c-date">May 2018</div>
             </div>
           </li>
-
           <li>
-
             <div class="c-post">
               <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes Anuales' ,'Reporte anual 2015');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2017-Informe-Anual-vf.pdf"><%= I18n.t 'informe_a_2017' %></a>
 
               <div class="c-date">Jun 2018</div>
             </div>
           </li>
-
-
-          <!--<li>
-
-            <div class="c-post">
-              <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes trimestrales Teleconferencia' ,'Reporte de resultados 1T16');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2016-1T16-CC1.mp3">Teleconferencia
-                1T16</a>
-
-              <div class="c-date">Abr 2016</div>
-            </div>
-          </li>-->
 
         </ul>
       </div>
