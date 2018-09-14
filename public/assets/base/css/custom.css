@@ -2,7 +2,9 @@
     display: block !important;
 }
 
-
+.vertical-a-m{
+    vertical-align: middle !important;
+}
 .grecaptcha-badge {
     bottom: -500px !important;
     right: -186px !important;
