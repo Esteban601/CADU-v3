@@ -367,9 +367,9 @@ end
 
 #Global
 get '/:locale/sala-prensa' do
-  @titulo = "Sala de prensa"
+  @titulo = I18n.t 'Sala'
   @menuNum= 0
-  @menuName= "Sala de prensa"
+  @menuName= I18n.t 'Sala'
   erb :"#{I18n.locale}/vistas/independientes/sala-prensa", :layout => ("global/layouts/content").to_sym
 end
 # HELPER

@@ -8,7 +8,7 @@ if (locale == "es") {
 }
 else {
     var grupo = "Control Group";
-    var publico = "Investing Public";
+    var publico = "Float";
 
 }
 window.onload = function() {
