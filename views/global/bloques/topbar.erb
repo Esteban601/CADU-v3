@@ -19,7 +19,7 @@
           </a>
         </li>
         <li>
-          <a href="<%= "/#{I18n.locale}/sala-prensa"%>">
+          <a href="<%= "/#{I18n.locale}/sala-prensa" %>">
             <i class="fa fa-rss"></i>
           </a>
         </li>
@@ -32,10 +32,16 @@
       <ul class="c-links c-theme-ul">
 
         <li style="padding: 10px 0 10px 10px;">
-          <a href="<%= "/#{I18n.locale}/sala-prensa"%>"><%= I18n.t 'Sala' %></a>
+          <a href="<%= "/#{I18n.locale}/sala-prensa" %>"><%= I18n.t 'Sala' %></a>
         </li>
-       <li style="padding: 10px 10px 10px 0;">
-          | <a href="<%= change_language%>"><%= I18n.t 'lenguaje_inverso' %></a>
+        <li style="padding: 10px 10px 10px 0;">
+          | <a href="<%= change_language %>">
+          <% if I18n.locale == :es %>
+              <img src="/assets/cadu/images/en.png" alt="">
+          <% else %>
+              <img src="/assets/cadu/images/es.png" alt="">
+          <% end %>
+        </a>
         </li>
       </ul>
 
