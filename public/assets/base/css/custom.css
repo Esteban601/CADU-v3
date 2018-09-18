@@ -1,6 +1,9 @@
 .c-open-2 {
     display: block !important;
 }
+.c-content-blog-post-card-1.c-option-2 .c-body {
+    min-height: 118px;
+}
 
 .vertical-a-m{
     vertical-align: middle !important;
