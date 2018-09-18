@@ -274,6 +274,16 @@ color:#9AB4BD ;
 
 }
 
+.margir {
+  margin-left: 145px !important;
+
+}
+
+.margirb {
+  margin-left: 19px !important;
+
+}
+
 
 @media (min-width: 992px){
 .c-layout-header .c-navbar .c-mega-menu.c-fonts-uppercase > .nav.navbar-nav > li .dropdown-menu > li > a {
