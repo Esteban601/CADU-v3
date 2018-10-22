@@ -10,27 +10,29 @@ if (locale == "es") {
     var deuda = "Deuda Bancaria";
     var puente = "Deuda Bancaria";
     var capital = "Capital de trabajo";
+    var arren="Arrendamiento Financiero";
 }
 else {
     var deuda = "Bank Loans";
     var puente = "Bridge Loans";
     var capital = "Working Capital";
+    var arren="Financial Leases";
 }
 
 var types = [{
     type: deuda,
-    percent: 2107,
+    percent: 2483,
     color: "#B7CEE5",
     subs: [
-        { type: capital, percent: 614 },
-        { type: puente, percent: 1493 },
-        { type: "Arrendamiento Financiero", percent: 0 },
+        { type: capital, percent: 443 },
+        { type: puente, percent: 2039 },
+        { type: arren, percent: 1 },
 
 
     ]},
     {
         type: "CADU15",
-        percent: 237,
+        percent: 198,
         color: "#F04C23"
         //subs: [
         //    { type: "Hydro", percent: 15 },
