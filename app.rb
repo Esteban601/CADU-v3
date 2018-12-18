@@ -19,6 +19,7 @@ before do
   @reportes_anuales_path = "http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/"
   @reportes_trimestrales_path = "http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/"
   @registros_bmv_path = ""
+  @presentaciones_path = "http://cdn.investorcloud.net/cadu/Presentaciones/"
 end
 
 # Configuracion
@@ -307,6 +308,12 @@ get '/:locale/reportes-financieros' do
   @menuNum= 3
   @menuName= I18n.t 'Informacion_financiera'
   erb :"#{I18n.locale}/vistas/menu3/reportes-financieros", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/presentaciones' do
+  @titulo = I18n.t 'presentaciones'
+  @menuNum= 3
+  @menuName= I18n.t 'Informacion_financiera'
+  erb :"#{I18n.locale}/vistas/menu3/presentaciones", :layout => ("global/layouts/content").to_sym
 end
 #Menu4
 get '/:locale/analistas' do
