@@ -9,12 +9,14 @@ var selected;
 if (locale == "es") {
     var deuda = "Deuda Bancaria";
     var puente = "Deuda Bancaria";
+    var reserva = "Reserva Territorial";
     var capital = "Capital de trabajo";
     var arren="Arrendamiento Financiero";
 }
 else {
     var deuda = "Bank Loans";
     var puente = "Bridge Loans";
+    var reserva = "Land Bank";
     var capital = "Working Capital";
     var arren="Financial Leases";
 }
@@ -24,15 +26,16 @@ var types = [{
     percent: 2483,
     color: "#B7CEE5",
     subs: [
-        { type: capital, percent: 443 },
-        { type: puente, percent: 2039 },
+        { type: capital, percent: 673 },
+        { type: puente, percent: 2023 },
+        { type: reserva, percent: 14 },
         { type: arren, percent: 1 },
 
 
     ]},
     {
         type: "CADU15",
-        percent: 198,
+        percent: 160,
         color: "#F04C23"
         //subs: [
         //    { type: "Hydro", percent: 15 },
@@ -42,7 +45,7 @@ var types = [{
     },
     {
         type: "CADU18",
-        percent: 490,
+        percent: 500,
         color: "#333940"
         //subs: [
         //    { type: "Hydro", percent: 15 },
