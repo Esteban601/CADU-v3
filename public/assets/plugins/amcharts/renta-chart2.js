@@ -8,7 +8,7 @@ var selected;
 
 if (locale == "es") {
     var deuda = "Deuda Bancaria";
-    var puente = "Deuda Bancaria";
+    var puente = "Créditos Puente";
     var reserva = "Reserva Territorial";
     var capital = "Capital de trabajo";
     var arren="Arrendamiento Financiero";
