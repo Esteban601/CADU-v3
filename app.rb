@@ -87,10 +87,10 @@ post '/es/boletinsubscripcion' do
             :address => 'smtp.mailgun.org',
             :port => '587',
             :enable_starttls_auto => true,
-            :user_name => "postmaster@sandbox37424.mailgun.org",
-            :password => "7pl8f5goquf8",
+            :user_name => "reoki@sandbox37424.mailgun.org",
+            :password => "Katmandu321$",
             :authentication => :plain,
-            :domain => "irstrat.com"
+            :domain => "sandbox37424.mailgun.org"
         })
 
     name = ""
