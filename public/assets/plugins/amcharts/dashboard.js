@@ -1,7 +1,7 @@
 var mydash = {};
 
 $.ajax({
-    url: 'http://marktdaten.irstrat.com/historicos/147.json?callback=callback',
+    url: 'https://marktdaten.irstrat.com/historicos/147.json?callback=callback',
     async: false,
     dataType: 'jsonp',
     jsonpCallback: 'jsonCallback',
@@ -14,7 +14,7 @@ $.ajax({
         fillData(precios, ipc, ticker_symbol);
 
         $.ajax({
-            url:'http://marktdaten.irstrat.com/intra/147.json?callback=callback',
+            url:'https://marktdaten.irstrat.com/intra/147.json?callback=callback',
             async: false,
             dataType: 'jsonp',
             contentType: "application/json",

@@ -90,7 +90,7 @@ function calcularInversion(cbis,sd,ed){
 
     if(cbis!=0&&sd!="0"&&ed!="0") {
         //http://marktdaten.irstrat.com
-        var api_url = "http://marktdaten.irstrat.com/intradate/147.json?date=";
+        var api_url = "https://marktdaten.irstrat.com/intradate/147.json?date=";
         // var api_url = "http://h-kont.herokuapp.com/api/laste/FMTY?date=";
         var start_url = api_url+start_date;
         var end_url = api_url+end_date;

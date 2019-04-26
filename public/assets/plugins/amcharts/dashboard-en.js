@@ -2,7 +2,7 @@ var mydash = {};
 //var precios = [];
 //var ipc = [];
 $.ajax({
-    url: 'http://marktdaten.irstrat.com/historicos/147.json?callback=callback',
+    url: 'https://marktdaten.irstrat.com/historicos/147.json?callback=callback',
     async: false,
     dataType: 'jsonp',
     jsonpCallback: 'jsonCallback',
