@@ -28,6 +28,10 @@
       </tr>
       </thead>
       <tbody>
+        <tr>
+          <td>2019-05-29</td>
+          <td>0.85</td>
+        </tr>
       <tr>
         <td>2018-04-24</td>
         <td>0.75</td>
@@ -48,6 +52,8 @@
     <br>
     <% #listado de documentos
      @documents= [
+         {:titulo => "Dividend payment notice", :date => "2019-05-29", :link => @comunicados_path + "2019-05-29-Aviso-Derechos.pdf"},
+         {:titulo => "Dividend payment notice", :date => "2019-05-29", :link => @comunicados_path + "2019-05-29-Aviso-Derechos-2.pdf"},
          {:titulo => "Dividend payment notice", :date => "2018-08-13", :link => @comunicados_path + "2018-08-13-Aviso-Derechos.pdf"},
          {:titulo => "Dividend payment notice", :date => "2018-05-02", :link => @comunicados_path + "2018-05-02-Aviso-Derechos.pdf"},
          {:titulo => "Dividend payment notice", :date => "2017-09-07", :link => @comunicados_path + "2017-09-07-AvisoDividendo.pdf"},
@@ -107,6 +113,9 @@
               }, {
                   "year": "2018",
                   "variacion": 5.5
+              },{
+                  "year": "2019",
+                  "variacion": 5.7
               }
           ],
           "valueAxes": [
