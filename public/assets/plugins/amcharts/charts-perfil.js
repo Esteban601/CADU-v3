@@ -61,16 +61,6 @@ var bars = AmCharts.makeChart(
         "colors":["#ED7D31","#FFC000"],
         "dataProvider": [
             {
-                "year": 2009,
-                "ROE": 28.7,
-                "EBITDA": 28.0
-            },
-            {
-                "year": 2010,
-                "ROE": 29.5,
-                "EBITDA": 29.4
-            },
-            {
                 "year": 2011,
                 "ROE": 27.3,
                 "EBITDA": 27.0
@@ -92,7 +82,7 @@ var bars = AmCharts.makeChart(
             },
             {
                 "year": "2015*",
-                "ROE": 13.4,
+                "ROE": 13.3,
                 "EBITDA": 20.9
             },
             {
