@@ -23,11 +23,11 @@ else {
 
 var types = [{
     type: deuda,
-    percent: 3036,
+    percent: 2629,
     color: "#B7CEE5",
     subs: [
-        { type: capital, percent: 963 },
-        { type: puente, percent: 2059 },
+        { type: capital, percent: 538 },
+        { type: puente, percent: 2076 },
         { type: reserva, percent: 14 },
         { type: arren, percent: 1 },
 
@@ -35,7 +35,7 @@ var types = [{
     ]},
     {
         type: "CADU15",
-        percent: 120,
+        percent: 80,
         color: "#F04C23"
         //subs: [
         //    { type: "Hydro", percent: 15 },
@@ -45,6 +45,16 @@ var types = [{
     },
     {
         type: "CADU18",
+        percent: 500,
+        color: "#333940"
+        //subs: [
+        //    { type: "Hydro", percent: 15 },
+        //    { type: "Wind", percent: 10 },
+        //    { type: "Other", percent: 5 }
+        //]
+    },
+    {
+        type: "CADU19",
         percent: 500,
         color: "#333940"
         //subs: [
