@@ -2,7 +2,6 @@ require 'sinatra'
 require 'i18n'
 require 'raven'
 require 'better_errors' if development?
-require 'recaptcha'
 
 
 configure :development do
@@ -13,8 +12,8 @@ end
 # Variables globales
 before do
 
-  @investor_cloud_path ="http://cdn.investorcloud.net/cadu/"
-  @gobierno_corporatico_path="http://cdn.investorcloud.net/cadu/GobiernoCorporativo/"
+  @investor_cloud_path = "http://cdn.investorcloud.net/cadu/"
+  @gobierno_corporatico_path = "http://cdn.investorcloud.net/cadu/GobiernoCorporativo/"
   @comunicados_path = "http://cdn.investorcloud.net/cadu/Comunicados/"
   @reportes_anuales_path = "http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/"
   @reportes_trimestrales_path = "http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesTrimestrales/"
@@ -37,14 +36,6 @@ end
 use Raven::Rack
 # end sentry
 
-Recaptcha.configure do |config|
-  config.site_key = '6LfmbmsUAAAAAP9J2Cb53wkg0FNoo2IK2411DCFY'
-  config.secret_key = '6LfmbmsUAAAAAE-QiwV57pmzOQJWkGcr8yCnZZVm'
-end
-
-include Recaptcha::ClientHelper
-include Recaptcha::Verify
-
 before '/:locale/*' do
   if params[:locale] == "en"
     I18n.locale = params[:locale]
@@ -66,52 +57,123 @@ before '/:locale/*' do
   I18n.locale = (params[:locale].eql?('es') || params[:locale].eql?('en')) ? params[:locale] : :es
 end
 
-
-#Configuracion de email
 post '/es/boletinsubscripcion' do
   require 'pony'
-  require 'firebase'
 
-  if verify_recaptcha
-    print('************ OK **************')
-    from = "boletin@cadu.com"
-    subject = "Nuevo subscriptor a lista CADU"
-    Pony.mail(
-        :from => from,
-        :to => 'lovera@irstrat.com',
-        :subject => subject,
-        :headers => {'Content-Type' => 'text/html'},
-        :body => erb(:"global/bloques/mail"),
-        :via => :smtp,
-        :via_options => {
-            :address => 'smtp.mailgun.org',
-            :port => '587',
-            :enable_starttls_auto => true,
-            :user_name => "reoki@sandbox37424.mailgun.org",
-            :password => "Katmandu321$",
-            :authentication => :plain,
-            :domain => "sandbox37424.mailgun.org"
-        })
+  if params[:g_recaptcha_response] != ""
+    require 'firebase'
+    require 'uri'
+    require 'net/https'
+    require 'json'
 
-    name = ""
-    email = params[:email]
-    email.each_char do |letra|
-      if letra!="@" && letra!="."
-        name+=letra
-      end
+    require "net/http"
+    require "uri"
+    uri = URI.parse("https://www.google.com/recaptcha/api/siteverify")
+    # Full control
+    request = Net::HTTP::Post.new(uri.request_uri)
+    request.form_data = {
+        "secret" => "6LcBrscUAAAAAKiL2CCutwlzsVWcimLjf1f4T_a2",
+        "response" => params[:g_recaptcha_response],
+    }
+    res = Net::HTTP.start(
+        uri.host, uri.port,
+        :use_ssl => uri.scheme == 'https',
+        :verify_mode => OpenSSL::SSL::VERIFY_NONE) do |https|
+
+      https.request(request)
     end
 
-    firebase_uri = 'https://iredge.firebaseio.com'
-    @firebase = Firebase::Client.new(firebase_uri)
-    response = @firebase.set("listas_distribucion/cadu/suscripcion/#{name}", {:email => email})
-    if response.success? && response.code == 200
-      redirect '/'
+    verify = JSON.parse(res.body)
+
+    if verify["success"] == true && verify["score"] >= 0.5
+      from = "boletin@cadu.com"
+      subject = "Nuevo subscriptor a lista CADU"
+      Pony.mail(
+          :from => from,
+          :to => 'it@irstrat.com',
+          :subject => subject,
+          :headers => {'Content-Type' => 'text/html'},
+          :body => erb(:"global/bloques/mail"),
+          :via => :smtp,
+          :via_options => {
+              :address => 'smtp.mailgun.org',
+              :port => '587',
+              :enable_starttls_auto => true,
+              :user_name => 'postmaster@sandbox37424.mailgun.org',
+              :password => '7pl8f5goquf8',
+              :authentication => :plain,
+              :domain => "irstrat.com"
+          })
+
+      name = ""
+      email = params[:email]
+      email.each_char do |letra|
+        if letra != "@" && letra != "."
+          name += letra
+        end
+      end
+
+      firebase_uri = 'https://iredge.firebaseio.com'
+      @firebase = Firebase::Client.new(firebase_uri)
+      response = @firebase.set("listas_distribucion/cadu/suscripcion/#{name}", {:email => email})
+      if response.success? && response.code == 200
+        redirect '/'
+      else
+        puts "I am sorry an error occurred saving to the database"
+      end
+
+      redirect "/"
     else
-      puts "I am sorry an error occurred saving to the database"
+      redirect "/"
     end
   end
-  redirect '/'
 end
+
+
+#Configuracion de email
+# post '/es/boletinsubscripcion' do
+#   require 'pony'
+#   require 'firebase'
+#   if verify_recaptcha
+#     print('************ OK **************')
+#     from = "boletin@cadu.com"
+#     subject = "Nuevo subscriptor a lista CADU"
+#     Pony.mail(
+#         :from => from,
+#         :to => 'lovera@irstrat.com',
+#         :subject => subject,
+#         :headers => {'Content-Type' => 'text/html'},
+#         :body => erb(:"global/bloques/mail"),
+#         :via => :smtp,
+#         :via_options => {
+#             :address => 'smtp.mailgun.org',
+#             :port => '587',
+#             :enable_starttls_auto => true,
+#             :user_name => "reoki@sandbox37424.mailgun.org",
+#             :password => "Katmandu321$",
+#             :authentication => :plain,
+#             :domain => "sandbox37424.mailgun.org"
+#         })
+#
+#     name = ""
+#     email = params[:email]
+#     email.each_char do |letra|
+#       if letra != "@" && letra != "."
+#         name += letra
+#       end
+#     end
+#
+#     firebase_uri = 'https://iredge.firebaseio.com'
+#     @firebase = Firebase::Client.new(firebase_uri)
+#     response = @firebase.set("listas_distribucion/cadu/suscripcion/#{name}", {:email => email})
+#     if response.success? && response.code == 200
+#       redirect '/'
+#     else
+#       puts "I am sorry an error occurred saving to the database"
+#     end
+#   end
+#   redirect '/'
+# end
 
 # Globales
 
@@ -147,51 +209,51 @@ end
 #Menu1
 get '/:locale/estrategia' do
   @titulo = I18n.t 'Estrategia'
-  @menuNum= 1
-  @menuName= I18n.t 'Nosotros'
+  @menuNum = 1
+  @menuName = I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/estrategia", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/modelo-negocio' do
   @titulo = I18n.t 'modelo_n'
-  @menuNum= 1
-  @menuName= I18n.t 'Nosotros'
+  @menuNum = 1
+  @menuName = I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/modelo-negocio", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/cadu-numeros' do
   @titulo = "Cadu en números"
-  @menuNum= 1
-  @menuName= I18n.t 'Nosotros'
+  @menuNum = 1
+  @menuName = I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/cadu-numeros", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/panorama' do
   @titulo = I18n.t 'Panorama'
-  @menuNum= 1
-  @menuName= I18n.t 'Nosotros'
+  @menuNum = 1
+  @menuName = I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/panorama", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/perfil' do
   @titulo = I18n.t 'Perfil'
-  @menuNum= 1
-  @menuName= I18n.t 'Nosotros'
+  @menuNum = 1
+  @menuName = I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/perfil", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/directivos' do
   @titulo = I18n.t 'Directivos'
-  @menuNum= 1
-  @menuName= I18n.t 'Nosotros'
+  @menuNum = 1
+  @menuName = I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/directivos", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/historia' do
   @titulo = I18n.t 'Historia'
-  @menuNum= 1
-  @historia= true
-  @menuName= I18n.t 'Nosotros'
+  @menuNum = 1
+  @historia = true
+  @menuName = I18n.t 'Nosotros'
   erb :"#{I18n.locale}/vistas/menu1/historia", :layout => ("global/layouts/content").to_sym
 end
 #Menu2
@@ -205,178 +267,178 @@ end
 
 get '/:locale/responsabilidad-social' do
   @titulo = I18n.t 'responsabilidad_s'
-  @menuNum= 2
-  @menuName= I18n.t 'sustentabilidad'
+  @menuNum = 2
+  @menuName = I18n.t 'sustentabilidad'
   erb :"#{I18n.locale}/vistas/menu2/responsabilidad-social", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/medio-ambiente' do
   @titulo = I18n.t 'medio_a'
-  @menuNum= 2
-  @menuName= I18n.t 'sustentabilidad'
+  @menuNum = 2
+  @menuName = I18n.t 'sustentabilidad'
   erb :"#{I18n.locale}/vistas/menu2/medio-ambiente", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/informes-sustentables' do
   @titulo = I18n.t 'informe_s'
-  @menuNum= 2
-  @menuName= I18n.t 'sustentabilidad'
+  @menuNum = 2
+  @menuName = I18n.t 'sustentabilidad'
   erb :"#{I18n.locale}/vistas/menu2/informes-sustentables", :layout => ("global/layouts/content").to_sym
 end
 
 
 get '/:locale/informacion-corporativa' do
   @titulo = "Información corporativa"
-  @menuNum= 2
-  @menuName= I18n.t 'Gobierno_corporativo'
+  @menuNum = 2
+  @menuName = I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/informacion-corporativa", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/auditor-externo' do
   @titulo = I18n.t 'Auditor_externo'
-  @menuNum= 2
-  @menuName= I18n.t 'Gobierno_corporativo'
+  @menuNum = 2
+  @menuName = I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/auditor-externo", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/estructura' do
   @titulo = I18n.t 'Estructura_accionaria'
-  @menuNum= 2
-  @menuName= I18n.t 'Gobierno_corporativo'
+  @menuNum = 2
+  @menuName = I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/estructura-accionaria", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/estructura-corporativa' do
   @titulo = I18n.t 'estructura_c'
-  @menuNum= 2
-  @menuName= I18n.t 'Gobierno_corporativo'
+  @menuNum = 2
+  @menuName = I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/estructura-corporativa", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/practicas' do
   @titulo = I18n.t 'practicas'
-  @menuNum= 2
-  @menuName= I18n.t 'Gobierno_corporativo'
+  @menuNum = 2
+  @menuName = I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/practicas", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/comites' do
   @titulo = I18n.t 'Comites'
-  @menuNum= 2
-  @menuName= I18n.t 'Gobierno_corporativo'
+  @menuNum = 2
+  @menuName = I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/comites", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/consejo-administracion' do
   @titulo = I18n.t 'Consejo_de_Administracion'
-  @menuNum= 2
-  @menuName= I18n.t 'Gobierno_corporativo'
+  @menuNum = 2
+  @menuName = I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/consejo-administracion", :layout => ("global/layouts/content").to_sym
 end
 
 #Menu3
 get '/:locale/comunicados' do
   @titulo = I18n.t 'comunicados'
-  @menuNum= 3
-  @menuName= I18n.t 'Informacion_financiera'
+  @menuNum = 3
+  @menuName = I18n.t 'Informacion_financiera'
   erb :"#{I18n.locale}/vistas/menu3/comunicados", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/fundamentales' do
   @titulo = I18n.t 'Fundamentales'
-  @menuNum= 3
-  @menuName= I18n.t 'Informacion_financiera'
+  @menuNum = 3
+  @menuName = I18n.t 'Informacion_financiera'
   erb :"#{I18n.locale}/vistas/menu3/fundamentales", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/faqs' do
   @titulo = I18n.t 'Preguntas_frecuentes'
-  @menuNum= 3
-  @menuName= I18n.t 'Informacion_financiera'
+  @menuNum = 3
+  @menuName = I18n.t 'Informacion_financiera'
   erb :"#{I18n.locale}/vistas/menu3/faqs", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/glosario' do
   @titulo = I18n.t 'Glosario'
-  @menuNum= 3
-  @menuName= I18n.t 'Informacion_financiera'
+  @menuNum = 3
+  @menuName = I18n.t 'Informacion_financiera'
   erb :"#{I18n.locale}/vistas/menu3/glosario", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/reportes-financieros' do
   @titulo = I18n.t 'reportes_f'
-  @menuNum= 3
-  @menuName= I18n.t 'Informacion_financiera'
+  @menuNum = 3
+  @menuName = I18n.t 'Informacion_financiera'
   erb :"#{I18n.locale}/vistas/menu3/reportes-financieros", :layout => ("global/layouts/content").to_sym
 end
 get '/:locale/presentaciones' do
   @titulo = I18n.t 'presentaciones'
-  @menuNum= 3
-  @menuName= I18n.t 'Informacion_financiera'
+  @menuNum = 3
+  @menuName = I18n.t 'Informacion_financiera'
   erb :"#{I18n.locale}/vistas/menu3/presentaciones", :layout => ("global/layouts/content").to_sym
 end
 #Menu4
 get '/:locale/analistas' do
   @titulo = I18n.t 'Cobertura_de_analistas'
-  @menuNum= 4
-  @menuName= I18n.t 'Informacion_bursatil'
+  @menuNum = 4
+  @menuName = I18n.t 'Informacion_bursatil'
   erb :"#{I18n.locale}/vistas/menu4/analistas", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/calificaciones' do
   @titulo = I18n.t 'Calificaciones'
-  @menuNum= 4
-  @menuName= I18n.t 'Informacion_bursatil'
+  @menuNum = 4
+  @menuName = I18n.t 'Informacion_bursatil'
   erb :"#{I18n.locale}/vistas/menu4/calificaciones", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/acuerdos-asambleas' do
   @titulo = I18n.t 'acuerdos_a'
-  @menuNum= 4
-  @menuName= I18n.t 'Informacion_bursatil'
+  @menuNum = 4
+  @menuName = I18n.t 'Informacion_bursatil'
   erb :"#{I18n.locale}/vistas/menu4/acuerdos-asambleas", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/dividendos' do
   @titulo = I18n.t 'dividendos'
-  @menuNum= 4
-  @menuName= I18n.t 'Informacion_bursatil'
+  @menuNum = 4
+  @menuName = I18n.t 'Informacion_bursatil'
   erb :"#{I18n.locale}/vistas/menu4/dividendos", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/renta-fija-credito' do
   @titulo = I18n.t 'renta_f'
-  @menuNum= 4
-  @menuName= I18n.t 'Informacion_bursatil'
+  @menuNum = 4
+  @menuName = I18n.t 'Informacion_bursatil'
   erb :"#{I18n.locale}/vistas/menu4/renta-fija-credito", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/cotizacion' do
   @titulo = I18n.t 'Cotizacion_de_la_accion'
-  @menuNum= 4
-  @menuName= I18n.t 'Informacion_bursatil'
+  @menuNum = 4
+  @menuName = I18n.t 'Informacion_bursatil'
   erb :"#{I18n.locale}/vistas/menu4/cotizacion", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/prospectos' do
   @titulo = I18n.t 'Prospectos'
-  @menuNum= 4
-  @menuName= I18n.t 'Informacion_bursatil'
+  @menuNum = 4
+  @menuName = I18n.t 'Informacion_bursatil'
   erb :"#{I18n.locale}/vistas/menu4/prospectos", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/calculadora' do
   @titulo = "Calculadora de Rendimientos"
-  @menuNum= 4
-  @menuName= I18n.t 'Informacion_bursatil'
+  @menuNum = 4
+  @menuName = I18n.t 'Informacion_bursatil'
   erb :"#{I18n.locale}/vistas/menu4/calculadora", :layout => ("global/layouts/content").to_sym
 end
 
 #Global
 get '/:locale/sala-prensa' do
   @titulo = I18n.t 'Sala'
-  @menuNum= 0
-  @menuName= I18n.t 'Sala'
+  @menuNum = 0
+  @menuName = I18n.t 'Sala'
   erb :"#{I18n.locale}/vistas/independientes/sala-prensa", :layout => ("global/layouts/content").to_sym
 end
 # HELPER
@@ -384,18 +446,18 @@ end
 #Independientes
 get '/:locale/resultados' do
   @titulo = "Resultados"
-  @menuNum= 0
+  @menuNum = 0
   erb :"#{I18n.locale}/vistas/independientes/resultados", :layout => ("global/layouts/content").to_sym
 end
 
 get '/:locale/video' do
   @titulo = "Video corporativo"
-  @menuNum= 0
+  @menuNum = 0
   erb :"#{I18n.locale}/vistas/independientes/video", :layout => ("global/layouts/content-full").to_sym
 end
 
 get '/testerror' do
-  1/0
+  1 / 0
 end
 #
 # get '/:locale/terminos-condiciones' do
@@ -409,7 +471,7 @@ helpers do
   # Cambiar idioma
 
   def change_language
-    if request.path_info=="/"
+    if request.path_info == "/"
       return "/en"
 
     elsif I18n.locale == :es

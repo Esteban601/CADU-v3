@@ -81,6 +81,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   better_errors
@@ -93,8 +94,5 @@ DEPENDENCIES
   sinatra
   sinatra-contrib
 
-RUBY VERSION
-   ruby 2.5.7p206
-
 BUNDLED WITH
-   1.16.4
+   2.0.2
