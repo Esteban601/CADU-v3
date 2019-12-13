@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby "2.4.1"
+ruby "2.5.5"
 gem 'sinatra'
 gem 'i18n'
 gem 'pony'
