@@ -81,6 +81,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   better_errors
@@ -97,4 +98,4 @@ RUBY VERSION
    ruby 2.5.7p206
 
 BUNDLED WITH
-   1.16.4
+   1.17.1
