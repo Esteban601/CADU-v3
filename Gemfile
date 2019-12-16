@@ -7,7 +7,6 @@ gem 'sentry-raven'
 gem 'firebase'
 gem 'recaptcha'
 
-
 group :development do
   gem 'better_errors'
   gem 'sinatra-contrib'
