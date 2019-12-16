@@ -5,7 +5,7 @@ gem 'i18n'
 gem 'pony'
 gem 'sentry-raven'
 gem 'firebase'
-#gem 'recaptcha'
+gem 'recaptcha'
 
 group :development do
   gem 'better_errors'

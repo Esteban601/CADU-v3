@@ -1,0 +1,14 @@
+<script src="https://www.google.com/recaptcha/api.js?render=6LcBrscUAAAAAD7dx9HpT2O5pYlJtCQhTHFlZrWf"></script>
+<script !src="">
+    $(document).ready(function () {
+        grecaptcha.ready(function () {
+            // do request for recaptcha token
+            // response is promise with passed token
+            grecaptcha.execute('6LcBrscUAAAAAD7dx9HpT2O5pYlJtCQhTHFlZrWf', {action: 'contacto'})
+                .then(function (token) {
+                    // add token value to form
+                    document.getElementById('g_recaptcha_response').value = token;
+                });
+        });
+    });
+</script>
