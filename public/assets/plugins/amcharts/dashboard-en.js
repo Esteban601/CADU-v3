@@ -1,22 +1,47 @@
 var mydash = {};
 //var precios = [];
 //var ipc = [];
+var loaded = 0;
+var chartData = [];
+var ipcData = [];
+var ticker_symbol = "CADUA";
 $.ajax({
-    url: 'https://marktdaten.irstrat.com/historicos/147.json?callback=callback',
+    dataType: "jsonp",
+    url: "https://hkpy.irstrat.com/intradia/history/11?start=2015-12-04",
+    data: {},
+    jsonpCallback: 'callbackHistory2',
+    success: function (data) {
+        ipcData= data.precios.reverse() ;
+        loaded +=1
+        if(loaded>1){
+            fillData(precios, ipcData, ticker_symbol);
+        }
+    }
+//   var ipcData = data.ipc
+ });
+$.ajax({
+    url: 'https://hkpy.irstrat.com/intradia/history/147?start=2015-12-04',
     async: false,
     dataType: 'jsonp',
     jsonpCallback: 'jsonCallback',
-    contentType: "application/json",
     success: function (json) {
         precios = json.precios;
-        ipc = json.ipc;
-        intradia = json.intradia;
-        ticker_symbol = "CADUA";
-        Datatabla(intradia);
-        fillData(precios, ipc, ticker_symbol);
+        loaded +=1
+        if(loaded>1){
+            fillData(precios, ipcData, ticker_symbol);
+        }
         //            console.dir(json.sites);
     }
 
+});
+$.ajax({
+    url:'https://hkpy.irstrat.com/intradia/147',
+    async: false,
+    dataType: 'jsonp',
+    success: function(json) {
+        intradia = json.intradia;
+        Datatabla(intradia);
+    }
 });
 function Datatabla(intradia) {
     $('#table-date').html(intradia["date"] + ", " + intradia["time"] + " EST");
@@ -44,7 +69,7 @@ function fillData(precios, ipc, ticker_symbol) {
         }
         ;
         return [{"date": n.date, "value": lvva, "volume": lvvo}];
-    });
+    }).reverse();
 
     ipc_fill = $.map(ipc, function (n, i) {
         if (n.value !== null) {
@@ -57,7 +82,7 @@ function fillData(precios, ipc, ticker_symbol) {
         }
         ;
         return [{"date": n.date, "value": lvva, "volume": lvvo}];
-    });
+    }).reverse();
 
     AmCharts.theme = AmCharts.themes.iredge;
     // AmCharts.shortMonthNames=  ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];

@@ -1,30 +1,45 @@
 var mydash = {};
 
+var loaded = 0;
+var chartData = [];
+var ipcData = [];
+var ticker_symbol = "CADUA";
 $.ajax({
-    url: 'https://marktdaten.irstrat.com/historicos/147.json?callback=callback',
-    async: false,
-    dataType: 'jsonp',
+    dataType: "jsonp",
+    url: "https://hkpy.irstrat.com/intradia/history/11?start=2015-12-04",
+    data: {},
+    jsonpCallback: 'callbackHistory2',
+    success: function (data) {
+        ipcData= data.precios ;
+        loaded +=1
+        if(loaded>1){
+            fillData(precios, ipcData, ticker_symbol);
+        }
+    }
+//   var ipcData = data.ipc
+ });
+$.ajax({
+    url: 'https://hkpy.irstrat.com/intradia/history/147?start=2015-12-04',
     jsonpCallback: 'jsonCallback',
-    contentType: "application/json",
+    dataType: "jsonp",
     success: function (json) {
         precios = json.precios;
-        ipc = json.ipc;
-        intradia = json.intradia;
-        ticker_symbol = "CADUA";
-        fillData(precios, ipc, ticker_symbol);
-
-        $.ajax({
-            url:'https://marktdaten.irstrat.com/intra/147.json?callback=callback',
-            async: false,
-            dataType: 'jsonp',
-            contentType: "application/json",
-            success: function(json) {
-                intradia = json.intradia;
-                Datatabla(intradia);
-            }
-        });
+        loaded +=1
+        if(loaded>1){
+            fillData(precios, ipcData, ticker_symbol);
+        }
+        //            console.dir(json.sites);
     }
 
+});
+$.ajax({
+    url:'https://hkpy.irstrat.com/intradia/147',
+    dataType: 'jsonp',
+    jsonpCallback: 'INTRA2',
+    success: function(json) {
+        intradia = json.intradia;
+        Datatabla(intradia);
+    }
 });
 function Datatabla(intradia) {
     volume = numberWithCommas(intradia["volume"])
@@ -51,7 +66,7 @@ function fillData(precios, ipc, ticker_symbol) {
             lvvo = 0
         }
         return [{"date": n.date, "value": lvva, "volume": lvvo}];
-    });
+    }).reverse();
 
     ipc_fill = $.map(ipc, function (n, i) {
         if (n.value !== null) {
@@ -62,7 +77,7 @@ function fillData(precios, ipc, ticker_symbol) {
             lvvo = 0
         }
         return [{"date": n.date, "value": lvva, "volume": lvvo}];
-    });
+    }).reverse();
 
     AmCharts.theme = AmCharts.themes.iredge;
 // AmCharts.shortMonthNames=  ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];

@@ -90,7 +90,7 @@ function calcularInversion(cbis,sd,ed){
 
     if(cbis!=0&&sd!="0"&&ed!="0") {
         //http://marktdaten.irstrat.com
-        var api_url = "https://marktdaten.irstrat.com/intradate/147.json?date=";
+        var api_url = "https://hkpy.irstrat.com/intradia/147?date=";
         // var api_url = "http://h-kont.herokuapp.com/api/laste/FMTY?date=";
         var start_url = api_url+start_date;
         var end_url = api_url+end_date;
@@ -105,7 +105,7 @@ function calcularInversion(cbis,sd,ed){
             data: {},
             success: function (data) {
                 console.log("buscando con AJAX");
-                var cierre_i = data.precios[0].close;
+                var cierre_i = data.intradia.price;
                 var monto = (cierre_i * cbis).toFixed(2);
                 $("#precio_i").html("$"+WithCommas(cierre_i));
                 $("#cantidad_i").html(WithCommas(cbis));

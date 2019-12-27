@@ -133,7 +133,7 @@
 </script>
 <script type="text/javascript">
     $.ajax({
-        url:'https://marktdaten.irstrat.com/intra/147.json?callback=callback',
+        url:'https://hkpy.irstrat.com/intradia/147',
         async: false,
         dataType: 'jsonp',
 //        jsonpCallback: 'jsonCallback',
@@ -164,7 +164,7 @@
 
 
         $('#date-ticker').html(intradia["date"]+", "+intradia["time"]+" EST");
-        if(intradia["change"].indexOf("+") != -1){
+        if(intradia["change"]>=0){
             $('#arrow-change').html("▲");
         }
         else{
