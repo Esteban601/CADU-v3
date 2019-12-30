@@ -43,7 +43,7 @@ $.ajax({
 });
 function Datatabla(intradia) {
     volume = numberWithCommas(intradia["volume"])
-    $('#table-date').html(intradia["date"] + ", " + intradia["time"] + " EST");
+    $('#table-date').html(intradia["date"]);
     $('#table-price').html(intradia["price"]);
     $('#table-change').html(intradia["change"]);
     $('#table-range').html(intradia["min"] + " - " + intradia["max"]);
