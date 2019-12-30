@@ -44,7 +44,7 @@ $.ajax({
     }
 });
 function Datatabla(intradia) {
-    $('#table-date').html(intradia["date"] + ", " + intradia["time"] + " EST");
+    $('#table-date').html(intradia["date"]);
 //    $('#table-time').html(intradia["time"]);
     $('#table-price').html(intradia["price"]);
     $('#table-change').html(intradia["change"]);
