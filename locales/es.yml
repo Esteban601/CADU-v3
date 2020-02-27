@@ -37,6 +37,11 @@ es:
   residuos: "Residuos"
   biodiversidad: "Biodiversidad"
 
+  etica: "Ética"
+  codigo_etica: "Código de Ética"
+  comite_etica: "Comité de Ética"
+  sistema_denuncias: "Sistema de Denuncias"
+  politica_anticorrupcion: "Política anticorrupción"
 
   #Menu Estrategia y Modelo de sustentabilidad
   estrategia_modelo: "Estrategia y Modelo de Sustentabilidad"
