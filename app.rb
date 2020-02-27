@@ -272,13 +272,100 @@ get '/:locale/responsabilidad-social' do
   erb :"#{I18n.locale}/vistas/menu2/responsabilidad-social", :layout => ("global/layouts/content").to_sym
 end
 
+get '/:locale/colaboradores' do
+  @titulo = I18n.t 'colaboradores'
+  @menuNum = 2
+  @menuName = I18n.t 'sustentabilidad'
+  erb :"#{I18n.locale}/vistas/menu2/responsabilidad_social/colaboradores", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/comunidades' do
+  @titulo = I18n.t 'comunidades'
+  @menuNum = 2
+  @menuName = I18n.t 'sustentabilidad'
+  erb :"#{I18n.locale}/vistas/menu2/responsabilidad_social/comunidades", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/valor_social' do
+  @titulo = I18n.t 'valor_social_compartido'
+  @menuNum = 2
+  @menuName = I18n.t 'sustentabilidad'
+  erb :"#{I18n.locale}/vistas/menu2/responsabilidad_social/valor_social", :layout => ("global/layouts/content").to_sym
+end
+
 get '/:locale/medio-ambiente' do
   @titulo = I18n.t 'medio_a'
   @menuNum = 2
   @menuName = I18n.t 'sustentabilidad'
   erb :"#{I18n.locale}/vistas/menu2/medio-ambiente", :layout => ("global/layouts/content").to_sym
 end
+get '/:locale/biodiversidad' do
+  @titulo = I18n.t 'biodiversidad'
+  @menuNum = 2
+  @menuName = I18n.t 'medio_a'
+  erb :"#{I18n.locale}/vistas/menu2/medio_ambiente/biodiversidad", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/construccion_verde' do
+  @titulo = I18n.t 'construccion_verde'
+  @menuNum = 2
+  @menuName = I18n.t 'medio_a'
+  erb :"#{I18n.locale}/vistas/menu2/medio_ambiente/construccion_verde", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/emisiones' do
+  @titulo = I18n.t 'emisiones'
+  @menuNum = 2
+  @menuName = I18n.t 'medio_a'
+  erb :"#{I18n.locale}/vistas/menu2/medio_ambiente/emisiones", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/politica_medio_ambiente' do
+  @titulo = I18n.t 'politica_medio_ambiente'
+  @menuNum = 2
+  @menuName = I18n.t 'medio_a'
+  erb :"#{I18n.locale}/vistas/menu2/medio_ambiente/politica_medio", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/residuos' do
+  @titulo = I18n.t 'residuos'
+  @menuNum = 2
+  @menuName = I18n.t 'medio_a'
+  erb :"#{I18n.locale}/vistas/menu2/medio_ambiente/residuos", :layout => ("global/layouts/content").to_sym
+end
 
+get '/:locale/estrategia_sustentabilidad' do
+  @titulo = I18n.t 'estrategia_sustentabilidad'
+  @menuNum = 2
+  @menuName = I18n.t 'estrategia_modelo'
+  erb :"#{I18n.locale}/vistas/menu2/estrategia_modelo/estrategia_sustentabilidad", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/comite_sustentabilidad' do
+  @titulo = I18n.t 'comite_sustentabilidad'
+  @menuNum = 2
+  @menuName = I18n.t 'estrategia_modelo'
+  erb :"#{I18n.locale}/vistas/menu2/estrategia_modelo/comite", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/estudio_materialidad' do
+  @titulo = I18n.t 'estudio_materialidad'
+  @menuNum = 2
+  @menuName = I18n.t 'estrategia_modelo'
+  erb :"#{I18n.locale}/vistas/menu2/estrategia_modelo/estudio_materialidad", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/objetivos_desarrollo_sostenible' do
+  @titulo = I18n.t 'objetivos_desarrollo_sostenible'
+  @menuNum = 2
+  @menuName = I18n.t 'sustentabilidad'
+  erb :"#{I18n.locale}/vistas/menu2/objetivos_desarrollo", :layout => ("global/layouts/content").to_sym
+end
+
+get '/:locale/reporte_2017' do
+  @titulo = I18n.t 'reporte_2017'
+  @menuNum = 2
+  @menuName = I18n.t 'sustentabilidad'
+  erb :"#{I18n.locale}/vistas/menu2/reporte_2017", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/reporte_2018' do
+  @titulo = I18n.t 'reporte_2018'
+  @menuNum = 2
+  @menuName = I18n.t 'sustentabilidad'
+  erb :"#{I18n.locale}/vistas/menu2/reporte_2018", :layout => ("global/layouts/content").to_sym
+end
 get '/:locale/informes-sustentables' do
   @titulo = I18n.t 'informe_s'
   @menuNum = 2

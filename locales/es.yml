@@ -22,9 +22,36 @@ es:
   practicas: "Código de principios y mejores prácticas de Gobierno Corporativo"
   estructura_c: "Estructura Corporativa"
   estatutos_s: "Documentos de interés"
+
+  #Menu Responsabilidad Social
   responsabilidad_s: "Responsabilidad Social"
+  colaboradores: "Colaboradores"
+  valor_social_compartido: "Valor Social Compartido"
+  comunidades: "Comunidades"
+
+  #Menu Medio Ambiente
   medio_a: "Medio Ambiente"
-  informe_s: "Reportes Sustentables"
+  emisiones: "Emisiones"
+  construccion_verde: "Construcción Verde"
+  politica_medio_ambiente: "Política de medio ambiente"
+  residuos: "Residuos"
+  biodiversidad: "Biodiversidad"
+
+
+  #Menu Estrategia y Modelo de sustentabilidad
+  estrategia_modelo: "Estrategia y Modelo de Sustentabilidad"
+  estrategia_sustentabilidad: "Estrategia de Sustentabilidad"
+  estudio_materialidad: "Estudio de Materialidad"
+  comite_sustentabilidad: "Comité de Sustentabilidad"
+
+  objetivos_desarrollo_sostenible: "Objetivos de Desarrollo Sostenible"
+
+
+  informe_s: "Reportes de Sustentabilidad"
+  reporte_2017: "Reporte de Sustentabilidad 2017"
+  reporte_2018: "Reporte de Sustentabilidad 2018"
+
+
   reportes_f: "Reportes Financieros"
   factsheet: "Factsheet"
   presentaciones: "Presentaciones"
@@ -60,6 +87,8 @@ es:
   Codigos_y_estatutos: "Códigos y estatutos"
   Estructura_accionaria: "Estructura accionaria"
   Auditor_externo: "Auditor externo"
+
+
 
     #Menu Información financiera
   Informacion_financiera: "Información financiera"
