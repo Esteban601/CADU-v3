@@ -4,11 +4,11 @@
 
 if (locale == "es") {
     var margen = "Margen EBITDA";
-    var last_p = "2019";
+    var last_p = "UDM 1T20";
 }
 else {
     var margen = "EBITDA Margin";
-    var last_p = "2019";
+    var last_p = "LTM 1Q20";
 
 }
 var bars = AmCharts.makeChart(
@@ -61,11 +61,6 @@ var bars = AmCharts.makeChart(
         "colors":["#ED7D31","#FFC000"],
         "dataProvider": [
             {
-                "year": 2011,
-                "ROE": 27.3,
-                "EBITDA": 27.0
-            },
-            {
                 "year": 2012,
                 "ROE": 28.8,
                 "EBITDA": 26.3
@@ -101,9 +96,14 @@ var bars = AmCharts.makeChart(
                 "EBITDA": 24.0
             },
             {
-                "year": last_p,
+                "year": "2019",
                 "ROE": 17.10,
                 "EBITDA": 26.40
+            },
+            {
+                "year": last_p,
+                "ROE": 9.40,
+                "EBITDA": 22.74
             }
         ],
         "export": {
