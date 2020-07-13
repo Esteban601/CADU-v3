@@ -97,8 +97,8 @@ var bars = AmCharts.makeChart(
             },
             {
                 "year": "2019",
-                "ROE": 17.10,
-                "EBITDA": 26.40
+                "ROE": 11.40,
+                "EBITDA": 25.20
             },
             {
                 "year": last_p,
