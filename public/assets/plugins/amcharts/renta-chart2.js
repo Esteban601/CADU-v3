@@ -23,11 +23,11 @@ else {
 
 var types = [{
     type: deuda,
-    percent: 2972,
+    percent: 2944,
     color: "#B7CEE5",
     subs: [
-        { type: capital, percent: 751 },
-        { type: puente, percent: 2152 },
+        { type: capital, percent: 735 },
+        { type: puente, percent: 2141 },
         { type: reserva, percent: 68 },
         { type: arren, percent: 1 },
 
@@ -45,7 +45,7 @@ var types = [{
     },
     {
         type: "CADU18",
-        percent: 500,
+        percent: 486,
         color: "#333940"
         //subs: [
         //    { type: "Hydro", percent: 15 },
