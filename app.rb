@@ -8,6 +8,7 @@ configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
   set :show_exceptions, :after_handler
+  set :force_ssl, false
 end
 
 # forcing https
@@ -15,15 +16,13 @@ configure :production do
   set :force_ssl, true
 end
 
-configure :development, :test do
-    set :force_ssl, false
-end
+
 # Variables globales
 before do
 
   if settings.force_ssl
-       redirect request.url.sub(‘http’, ‘https’) unless request.secure?
-   end
+  redirect request.url.sub('http', 'https') unless request.secure?
+  end
 
   @investor_cloud_path = "http://cdn.investorcloud.net/cadu/"
   @gobierno_corporatico_path = "http://cdn.investorcloud.net/cadu/GobiernoCorporativo/"
