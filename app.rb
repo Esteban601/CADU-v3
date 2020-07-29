@@ -29,6 +29,10 @@ configure do
   set :bind, '0.0.0.0'
 end
 
+configure :production do
+    set :force_ssl, true
+  end
+
 # sentry error tracking
 Raven.configure do |config|
   config.dsn = 'https://0e223e3c7c8149b3b0778eb64bb57a01:d1b75e6dc4994541809e383ad55577c8@app.getsentry.com/78146'
