@@ -9,6 +9,11 @@ configure :development do
   BetterErrors.application_root = __dir__
   set :show_exceptions, :after_handler
 end
+
+configure :production do
+  set :host, 'ri.caduinmobiliaria.com'
+  set :force_ssl, true
+end
 # Variables globales
 before do
 
@@ -29,9 +34,6 @@ configure do
   set :bind, '0.0.0.0'
 end
 
-configure :production do
-    set :force_ssl, true
-  end
 
 # sentry error tracking
 Raven.configure do |config|
