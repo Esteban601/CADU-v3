@@ -25,36 +25,36 @@ en:
 
   #PENDIENTES A TRADUCIR
   #Menu Responsabilidad Social
-  colaboradores: "Colaboradores"
-  valor_social_compartido: "Valor Social Compartido"
-  comunidades: "Comunidades"
+  colaboradores: "Associates"
+  valor_social_compartido: "Shared Social Value"
+  comunidades: "Communities"
     #Menu Medio Ambiente
   medio_a: "Environmental"
-  emisiones: "Emisiones"
-  construccion_verde: "Construcción Verde"
-  politica_medio_ambiente: "Política de medio ambiente"
-  residuos: "Residuos"
-  biodiversidad: "Biodiversidad"
-  etica: "Ética"
-  codigo_etica: "Código de Ética"
-  comite_etica: "Comité de Ética"
-  sistema_denuncias: "Sistema de Denuncias"
-  politica_anticorrupcion: "Política anticorrupción"
+  emisiones: "Emissions"
+  construccion_verde: "Green Building"
+  politica_medio_ambiente: "Environmental Policy"
+  residuos: "Waste"
+  biodiversidad: "Biodiversity"
+  etica: "Ethics"
+  codigo_etica: "Code of Ethics"
+  comite_etica: "Ethics Committee"
+  sistema_denuncias: "Report System"
+  politica_anticorrupcion: "Anti-corruption Policy"
 
 
   #PENDIENTES A TRADUCIR
   #Menu Estrategia y Modelo de sustentabilidad
-  estrategia_modelo: "Estrategia y Modelo de Sustentabilidad"
-  estrategia_sustentabilidad: "Estrategia de Sustentabilidad"
-  estudio_materialidad: "Estudio de Materialidad"
-  comite_sustentabilidad: "Comité de Sustentabilidad"
-  objetivos_desarrollo_sostenible: "Objetivos de Desarrollo Sostenible"
+  estrategia_modelo: "Strategy and Sustainability Model"
+  estrategia_sustentabilidad: "Sustainability Strategy"
+  estudio_materialidad: "Materiality Study"
+  comite_sustentabilidad: "Sustainability Committee"
+  objetivos_desarrollo_sostenible: "Sustainable Development Goals"
 
   informe_s: "Sustainability Reports"
   #PENDIENTES A TRADUCIR
-  reporte_2017: "Reporte de Sustentabilidad 2017"
-  reporte_2018: "Reporte de Sustentabilidad 2018"
-  reporte_2019: "Reporte de Sustentabilidad 2019"
+  reporte_2017: "Sustainability Report 2017"
+  reporte_2018: "Sustainability Report 2018"
+  reporte_2019: "Sustainability Report 2019"
 
   reportes_f: "Financial Reports"
   factsheet: "Factsheet"
