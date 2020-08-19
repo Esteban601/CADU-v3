@@ -340,7 +340,30 @@ get '/:locale/residuos' do
   @menuName = I18n.t 'medio_a'
   erb :"#{I18n.locale}/vistas/menu2/medio_ambiente/residuos", :layout => ("global/layouts/content").to_sym
 end
-
+get '/:locale/codigo_etica' do
+  @titulo = I18n.t 'codigo_etica'
+  @menuNum = 2
+  @menuName = I18n.t 'etica'
+  erb :"#{I18n.locale}/vistas/menu2/etica/codigo_etica", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/comite_etica' do
+  @titulo = I18n.t 'comite_etica'
+  @menuNum = 2
+  @menuName = I18n.t 'etica'
+  erb :"#{I18n.locale}/vistas/menu2/etica/comite_etica", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/sistema_denuncias' do
+  @titulo = I18n.t 'sistema_denuncias'
+  @menuNum = 2
+  @menuName = I18n.t 'etica'
+  erb :"#{I18n.locale}/vistas/menu2/etica/sistema_denuncias", :layout => ("global/layouts/content").to_sym
+end
+get '/:locale/politica_anticorrupcion' do
+  @titulo = I18n.t 'politica_anticorrupcion'
+  @menuNum = 2
+  @menuName = I18n.t 'etica'
+  erb :"#{I18n.locale}/vistas/menu2/etica/politica_anticorrupcion", :layout => ("global/layouts/content").to_sym
+end
 get '/:locale/estrategia_sustentabilidad' do
   @titulo = I18n.t 'estrategia_sustentabilidad'
   @menuNum = 2
