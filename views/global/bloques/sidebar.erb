@@ -163,8 +163,13 @@
           </li>
           <li>
             <div class="c-post">
-              <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes Anuales' ,'Reporte anual 2017');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2019-Sustentabilidad.pdf"><%= I18n.t 'reporte_s_2017' %></a>
+              <% if I18n.locale == :es %>
+                <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes Anuales' ,'Reporte anual 2017');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2019-Sustentabilidad.pdf"><%= I18n.t 'reporte_s_2017' %></a>
 
+            <% else %>
+                <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes Anuales' ,'Reporte anual 2017');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2019-Sustentabilidad-en.pdf"><%= I18n.t 'reporte_s_2017' %></a>
+
+            <% end %>
               <div class="c-date">Jun 2020</div>
             </div>
           </li>

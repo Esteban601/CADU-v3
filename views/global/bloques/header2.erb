@@ -260,9 +260,18 @@
 
                     </li>
                     <li class="dropdown-submenu">
-                      <a href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2019-Sustentabilidad.pdf" target="_blank"><%= I18n.t 'reporte_2019' %>
-                        <span class="c-arrow"></span>
-                      </a>
+
+                      <% if I18n.locale == :es %>
+                        <a href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2019-Sustentabilidad.pdf" target="_blank"><%= I18n.t 'reporte_2019' %>
+                          <span class="c-arrow"></span>
+                        </a>
+                      <% else %>
+                        <a href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2019-Sustentabilidad-en.pdf" target="_blank"><%= I18n.t 'reporte_2019' %>
+                          <span class="c-arrow"></span>
+                        </a>
+                      <% end %>
+
+
 
                     </li>
 
