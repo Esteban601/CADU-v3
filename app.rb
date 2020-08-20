@@ -459,6 +459,13 @@ get '/:locale/consejo-administracion' do
   erb :"#{I18n.locale}/vistas/menu2/consejo-administracion", :layout => ("global/layouts/content").to_sym
 end
 
+
+get '/:locale/figuras_destacadas' do
+  @titulo = I18n.t 'figuras_destacadas'
+  @menuNum = 2
+  @menuName = I18n.t 'Gobierno_corporativo'
+  erb :"#{I18n.locale}/vistas/menu2/figuras_destacadas", :layout => ("global/layouts/content").to_sym
+end
 #Menu3
 get '/:locale/comunicados' do
   @titulo = I18n.t 'comunicados'
