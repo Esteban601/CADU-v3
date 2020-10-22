@@ -54,10 +54,10 @@ window.onload = function() {
             },
             "dataProvider": [{
                 "title": grupo,
-                "data": 67.17
+                "data": 67.71
             },{
                 "title":publico,
-                "data": 32.83
+                "data": 32.29
             }],
             "valueField": "data",
             "titleField": "title",
