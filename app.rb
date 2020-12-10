@@ -99,7 +99,7 @@ post '/es/boletinsubscripcion' do
     verify = JSON.parse(res.body)
 
     if verify["success"] == true && verify["score"] >= 0.5
-      from = "boletin@cadu.com"
+      from = "it@irstrat.com"
       subject = "Nuevo subscriptor a lista CADU"
       Pony.mail(
           :from => from,
