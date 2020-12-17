@@ -77,3 +77,9 @@
 .modal-dialog{
     width: 800px;
 }
+button.close{
+    position: absolute;
+    right: 5px;
+    color: white;
+    opacity: 1;
+}
