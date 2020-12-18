@@ -55,6 +55,9 @@
 }
 
 @media (min-width: 992px) {
+    .modal-dialog{
+        width: 800px;
+    }
     .c-layout-header .c-brand {
         margin: 25px 0 20px 0;
     }
@@ -74,9 +77,7 @@
 .et_pb_blurb_position_left .et_pb_blurb_container {
     padding-left: 15px;
 }
-.modal-dialog{
-    width: 800px;
-}
+
 button.close{
     position: absolute;
     right: 5px;

@@ -48,7 +48,6 @@
 <script>
     $("#indexModal").on("shown.bs.modal", alignModal);
 
-    $('#indexModal').modal('show');
     function alignModal(){
         var modalDialog = $(this).find(".modal-dialog");
 
@@ -61,6 +60,8 @@
     $(window).on("resize", function(){
         $(".modal:visible").each(alignModal);
     });
+    $('#indexModal').modal('show');
+    $(".modal:visible").each(alignModal);
     jQuery("#layerslider").layerSlider({
         responsive: false,
         responsiveUnder: 1280,
