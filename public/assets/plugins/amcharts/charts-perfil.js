@@ -4,11 +4,11 @@
 
 if (locale == "es") {
     var margen = "Margen EBITDA";
-    var last_p = "1T21";
+    var last_p = "UDM 1T21";
 }
 else {
     var margen = "EBITDA Margin";
-    var last_p = "1Q21";
+    var last_p = "LTM 1Q21";
 
 }
 var bars = AmCharts.makeChart(
@@ -61,11 +61,6 @@ var bars = AmCharts.makeChart(
         "colors":["#ED7D31","#FFC000"],
         "dataProvider": [
             {
-                "year": 2012,
-                "ROE": 28.8,
-                "EBITDA": 26.3
-            },
-            {
                 "year": 2013,
                 "ROE": 28.1,
                 "EBITDA": 22.9
@@ -108,7 +103,7 @@ var bars = AmCharts.makeChart(
             {
                 "year": last_p,
                 "ROE": 2.50,
-                "EBITDA": 17.7
+                "EBITDA": 14.5
             }
         ],
         "export": {
