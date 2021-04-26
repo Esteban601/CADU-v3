@@ -4,11 +4,11 @@
 
 if (locale == "es") {
     var margen = "Margen EBITDA";
-    var last_p = "UDM 1T21";
+    var last_p = "UDM 1T21**";
 }
 else {
     var margen = "EBITDA Margin";
-    var last_p = "LTM 1Q21";
+    var last_p = "1Q21 LTM**";
 
 }
 var bars = AmCharts.makeChart(
@@ -96,7 +96,7 @@ var bars = AmCharts.makeChart(
                 "EBITDA": 25.20
             },
             {
-                "year": "2020",
+                "year": "2020**",
                 "ROE": 3.00,
                 "EBITDA": 14.5
             },
