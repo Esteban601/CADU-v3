@@ -175,9 +175,13 @@
           </li>
           <li>
             <div class="c-post">
+              <% if I18n.locale == :es %>
+              <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes Anuales' ,'Reporte anual 2017');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2020-Anual-BMV.pdf"><%= I18n.t 'informe_a_2017' %></a>
+              <% else %>
               <a target="_blank" onclick="ga('send', 'event','Inversionistas', 'Reportes Anuales' ,'Reporte anual 2017');" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2020-Anual-BMV.pdf"><%= I18n.t 'informe_a_2017' %></a>
 
-              <div class="c-date">Abr 2021</div>
+              <% end %>
+              <div class="c-date"><%= I18n.t 'jul_2018' %></div>
             </div>
           </li>
 
