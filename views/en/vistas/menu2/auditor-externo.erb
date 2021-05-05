@@ -1,5 +1,5 @@
 <div id="auditor-externo">
-<p>The financial statements of the year ended December 31, 2019 were reviewed and audited by
+<p>The financial statements of the years ended December 31, 2020 and 2019 were reviewed and audited by
   KPMG Cardenas Dosal S. C., the Company's external auditors.
   The financial statements of the years ended December 31, 2018, 2017 and 2016 were reviewed and audited by
   Mancera, S.C., member of Ernst & Young Global.</p>
@@ -9,6 +9,8 @@
 
 <% #listado de documentos
    @documents= [
+     {:titulo => "2020 Audit Report", :date => "2021-05-05", :link => @reportes_anuales_path + "2020-EF-Dictaminados.pdf"},
+     {:titulo => "Auditor's independence and consent declaration", :date => "2021-04-26", :link => @gobierno_corporatico_path + "Global/2021-04-26-auditores.pdf"},
      {:titulo => "2019 Audit Report", :date => "2020-07-02", :link => @reportes_anuales_path + "2019-EF-Dictaminados.pdf"},
      {:titulo => "Auditor's independence and consent declaration ", :date => "2020-06-19", :link => @gobierno_corporatico_path + "Global/2020-06-19-auditores.pdf"},
      {:titulo => "2018 Audit Report", :date => "2019-05-09", :link => @reportes_anuales_path + "2018-EF-Dictaminados.pdf"},

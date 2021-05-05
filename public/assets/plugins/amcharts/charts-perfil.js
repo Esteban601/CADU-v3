@@ -97,8 +97,8 @@ var bars = AmCharts.makeChart(
             },
             {
                 "year": "2020**",
-                "ROE": 3.00,
-                "EBITDA": 14.5
+                "ROE": 2.8,
+                "EBITDA": 14.8
             },
             {
                 "year": last_p,
