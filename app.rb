@@ -99,7 +99,7 @@ post '/es/boletinsubscripcion' do
     verify = JSON.parse(res.body)
 
     if verify["success"] == true && verify["score"] >= 0.5
-      from = "it@irstrat.com"
+      from = "cadu-lista@investorcloud.net"
       subject = "Nuevo subscriptor a lista CADU"
       Pony.mail(
           :from => from,
@@ -112,8 +112,8 @@ post '/es/boletinsubscripcion' do
               :address => 'smtp.mailgun.org',
               :port => '587',
               :enable_starttls_auto => true,
-              :user_name => 'postmaster@sandbox37424.mailgun.org',
-              :password => '7pl8f5goquf8',
+              :user_name => 'it@investorcloud.net',
+              :password => '9022ddda8676191260277c810b69276f-c3d1d1eb-97f857c6',
               :authentication => :plain,
               :domain => "irstrat.com"
           })
