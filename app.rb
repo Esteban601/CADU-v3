@@ -2,7 +2,7 @@ require 'sinatra'
 require 'i18n'
 require 'raven'
 require 'better_errors' if development?
-
+require 'dotenv/load'
 
 configure :development do
   use BetterErrors::Middleware
@@ -112,8 +112,8 @@ post '/es/boletinsubscripcion' do
               :address => 'smtp.mailgun.org',
               :port => '587',
               :enable_starttls_auto => true,
-              :user_name => 'it@investorcloud.net',
-              :password => '9022ddda8676191260277c810b69276f-c3d1d1eb-97f857c6',
+              :user_name => ENV['EMAIL_HOST_USER'],
+              :password => ENV['EMAIL_HOST_PASSWORD'],
               :authentication => :plain,
               :domain => "irstrat.com"
           })
@@ -135,9 +135,9 @@ post '/es/boletinsubscripcion' do
         puts "I am sorry an error occurred saving to the database"
       end
 
-      redirect "/"
+      redirect '/'
     else
-      redirect "/"
+      redirect '/'
     end
   end
 end
