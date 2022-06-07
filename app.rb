@@ -3,7 +3,6 @@ require 'i18n'
 require 'raven'
 require 'better_errors' if development?
 
-
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
@@ -16,12 +15,11 @@ configure :production do
   set :force_ssl, true
 end
 
-
 # Variables globales
 before do
 
   if settings.force_ssl
-  redirect request.url.sub('http', 'https') unless request.secure?
+    redirect request.url.sub('http', 'https') unless request.secure?
   end
 
   @investor_cloud_path = "http://cdn.investorcloud.net/cadu/"
@@ -40,7 +38,6 @@ configure do
   set :port, 3008
   set :bind, '0.0.0.0'
 end
-
 
 # sentry error tracking
 Raven.configure do |config|
@@ -72,6 +69,7 @@ end
 
 post '/es/boletinsubscripcion' do
   require 'pony'
+  require 'dotenv/load'
 
   if params[:g_recaptcha_response] != ""
     require 'firebase'
@@ -85,13 +83,13 @@ post '/es/boletinsubscripcion' do
     # Full control
     request = Net::HTTP::Post.new(uri.request_uri)
     request.form_data = {
-        "secret" => "6LcBrscUAAAAAKiL2CCutwlzsVWcimLjf1f4T_a2",
-        "response" => params[:g_recaptcha_response],
+      "secret" => "6LcBrscUAAAAAKiL2CCutwlzsVWcimLjf1f4T_a2",
+      "response" => params[:g_recaptcha_response],
     }
     res = Net::HTTP.start(
-        uri.host, uri.port,
-        :use_ssl => uri.scheme == 'https',
-        :verify_mode => OpenSSL::SSL::VERIFY_NONE) do |https|
+      uri.host, uri.port,
+      :use_ssl => uri.scheme == 'https',
+      :verify_mode => OpenSSL::SSL::VERIFY_NONE) do |https|
 
       https.request(request)
     end
@@ -102,21 +100,21 @@ post '/es/boletinsubscripcion' do
       from = "cadu-lista@investorcloud.net"
       subject = "Nuevo subscriptor a lista CADU"
       Pony.mail(
-          :from => from,
-          :to => 'it@irstrat.com',
-          :subject => subject,
-          :headers => {'Content-Type' => 'text/html'},
-          :body => erb(:"global/bloques/mail"),
-          :via => :smtp,
-          :via_options => {
-              :address => 'smtp.mailgun.org',
-              :port => '587',
-              :enable_starttls_auto => true,
-              :user_name => 'it@investorcloud.net',
-              :password => '9022ddda8676191260277c810b69276f-c3d1d1eb-97f857c6',
-              :authentication => :plain,
-              :domain => "irstrat.com"
-          })
+        :from => from,
+        :to => 'it@irstrat.com',
+        :subject => subject,
+        :headers => { 'Content-Type' => 'text/html' },
+        :body => erb(:"global/bloques/mail"),
+        :via => :smtp,
+        :via_options => {
+          :address => 'smtp.mailgun.org',
+          :port => '587',
+          :enable_starttls_auto => true,
+          :user_name => ENV['EMAIL_HOST_USER'],
+          :password => ENV['EMAIL_HOST_PASSWORD'],
+          :authentication => :plain,
+          :domain => "investorcloud.net"
+        })
 
       name = ""
       email = params[:email]
@@ -128,7 +126,7 @@ post '/es/boletinsubscripcion' do
 
       firebase_uri = 'https://iredge.firebaseio.com'
       @firebase = Firebase::Client.new(firebase_uri)
-      response = @firebase.set("listas_distribucion/cadu/suscripcion/#{name}", {:email => email})
+      response = @firebase.set("listas_distribucion/cadu/suscripcion/#{name}", { :email => email })
       if response.success? && response.code == 200
         redirect '/'
       else
@@ -141,7 +139,6 @@ post '/es/boletinsubscripcion' do
     end
   end
 end
-
 
 #Configuracion de email
 # post '/es/boletinsubscripcion' do
@@ -409,7 +406,6 @@ get '/:locale/informes-sustentables' do
   erb :"#{I18n.locale}/vistas/menu2/informes-sustentables", :layout => ("global/layouts/content").to_sym
 end
 
-
 get '/:locale/informacion-corporativa' do
   @titulo = "Información corporativa"
   @menuNum = 2
@@ -458,7 +454,6 @@ get '/:locale/consejo-administracion' do
   @menuName = I18n.t 'Gobierno_corporativo'
   erb :"#{I18n.locale}/vistas/menu2/consejo-administracion", :layout => ("global/layouts/content").to_sym
 end
-
 
 get '/:locale/figuras_destacadas' do
   @titulo = I18n.t 'figuras_destacadas'
@@ -595,7 +590,6 @@ end
 #   @menuNum= 0
 #   erb :"#{I18n.locale}/vistas/independientes/terminos-condiciones", :layout => ("global/layouts/content").to_sym
 # end
-
 
 helpers do
   # Cambiar idioma

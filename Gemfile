@@ -6,6 +6,7 @@ gem 'pony'
 gem 'sentry-raven'
 gem 'firebase'
 gem 'recaptcha'
+gem 'dotenv'
 
 group :development do
   gem 'better_errors'

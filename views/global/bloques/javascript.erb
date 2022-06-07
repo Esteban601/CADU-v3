@@ -27,8 +27,7 @@
 <script src="/assets/base/js/components-shop.js" type="text/javascript"></script>
 <script src="/assets/base/js/app.js" type="text/javascript"></script>
 <script>
-    $(document).ready(function()
-    {
+    $(document).ready(function () {
         App.init(); // init core
     });
 </script>
@@ -48,16 +47,17 @@
 <script>
     $("#indexModal").on("shown.bs.modal", alignModal);
 
-    function alignModal(){
+    function alignModal() {
         var modalDialog = $(this).find(".modal-dialog");
 
         // Applying the top margin on modal to align it vertically center
         modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
     }
+
     // Align modal when it is displayed
 
     // Align modal when user resize the window
-    $(window).on("resize", function(){
+    $(window).on("resize", function () {
         $(".modal:visible").each(alignModal);
     });
     $('#indexModal').modal('show');
@@ -71,9 +71,9 @@
         autoPlayVideos: false,
         navStartStop: false,
         navButtons: false,
-        skinsPath : 'assets/plugins/layerslider/skins/',
+        skinsPath: 'assets/plugins/layerslider/skins/',
     });
-    jQuery(function($) {
+    jQuery(function ($) {
         $('#input').keypress(function (e) {
             if (e.which == 13) {
                 $('#search-form').submit();
@@ -97,30 +97,28 @@
 <script type="text/javascript">
 
     document.getElementById('s-submit-btn').addEventListener('click', function (e) {
-    // do some validation
-    if(validateEmail(document.formulario.email.value)) {
-        console.log('click');
-         $('#subscribir').attr('data-content', 'Gracias por subscribirse a nuestras noticias.');
+        // do some validation
+        if (validateEmail(document.formulario.email.value)) {
+            $('#subscribir').attr('data-content', 'Gracias por subscribirse a nuestras noticias.');
 //          $('#subscribir').attr('data-content', 'Thanks for subscribing');
 
-        $('#subscribir').popover('show');
+            $('#subscribir').popover('show');
 
-        setTimeout(continueExecution, 1500);
+            setTimeout(continueExecution, 1500);
 
-        // call reCAPTCHA check
-        grecaptcha.execute();
-    }
-  });
+            // call reCAPTCHA check
+            // grecaptcha.execute();
+        }
+    });
 
     function validaremail(formulario) {
 
-        if (validateEmail(document.formulario.email.value)){
+        if (validateEmail(document.formulario.email.value)) {
 
             <%= " $('#subscribir').popover({content: 'Dirección email errónea, rectifíquela por favor.'});" if I18n.locale == :es %>
             <%= " $('#subscribir').popover({content: 'Not a valid e-mail address, please rectify.'});" if I18n.locale == :en %>
             $('#subscribir').popover('show');
-        }
-        else {
+        } else {
 
             <%= "$('#subscribir').attr('data-content', 'Gracias por subscribirse a nuestras noticias.');" if I18n.locale == :es %>
             <%= "$('#subscribir').attr('data-content', 'Thanks for subscribing');" if I18n.locale == :en %>
@@ -130,14 +128,14 @@
             setTimeout(continueExecution, 1500);
         }
     }
- function submitInvisibleRecaptchaForm () {
-   document.getElementById("invisible-recaptcha-form").submit();
-   console.log('se envio el captcha');
-  };
+
+    function submitInvisibleRecaptchaForm() {
+        document.getElementById("invisible-recaptcha-form").submit();
+        console.log('se envio el captcha');
+    };
 
 
-    function continueExecution()
-    {
+    function continueExecution() {
         document.formulario.submit();
     }
 
@@ -149,12 +147,12 @@
 </script>
 <script type="text/javascript">
     $.ajax({
-        url:'https://hkpy.irstrat.com/intradia/147',
+        url: 'https://hkpy.irstrat.com/intradia/147',
         async: false,
         dataType: 'jsonp',
 //        jsonpCallback: 'jsonCallback',
         contentType: "application/json",
-        success: function(json) {
+        success: function (json) {
 //            precios = json.precios;
 //            ipc = json.ipc;
             intradia = json.intradia;
@@ -167,23 +165,22 @@
     });
 
 
-    function Dataticker(intradia){
+    function Dataticker(intradia) {
         volume = numberWithCommas(intradia["volume"])
         $('#price-ticker').html("$" + intradia["price"]);
         $('#change-ticker').html(intradia["change"]);
         $('#volume-ticker').html(volume);
 
-        $('#range-ticker').html("$" +  intradia["min"]+" - "+ "$" + intradia["max"]);
+        $('#range-ticker').html("$" + intradia["min"] + " - " + "$" + intradia["max"]);
 
 //        $('#min-ticker').html(intradia["min"]);
 //        $('#max-ticker').html(intradia["max"]);
 
 
         $('#date-ticker').html(intradia["date"]);
-        if(intradia["change"]>=0){
+        if (intradia["change"] >= 0) {
             $('#arrow-change').html("▲");
-        }
-        else{
+        } else {
             $('#arrow-change').html("▼");
         }
 
@@ -195,12 +192,19 @@
 </script>
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-45683721-12', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-45683721-12', 'auto');
+    ga('send', 'pageview');
 
 </script>
