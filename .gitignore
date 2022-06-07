@@ -1,5 +1,3 @@
-
-
 *.idea/
 /.idea
 /.idea/*
@@ -9,3 +7,4 @@
 /public/images/lang/*.db
 
 *.icloud
+.env
