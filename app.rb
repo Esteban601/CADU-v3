@@ -2,6 +2,7 @@ require 'sinatra'
 require 'i18n'
 require 'raven'
 require 'better_errors' if development?
+require 'dotenv/load'
 
 configure :development do
   use BetterErrors::Middleware
@@ -83,8 +84,8 @@ post '/es/boletinsubscripcion' do
     # Full control
     request = Net::HTTP::Post.new(uri.request_uri)
     request.form_data = {
-      "secret" => "6LcBrscUAAAAAKiL2CCutwlzsVWcimLjf1f4T_a2",
-      "response" => params[:g_recaptcha_response],
+        "secret" => ENV['RECAPTCHA_SECRET_KEY'],
+        "response" => params[:g_recaptcha_response],
     }
     res = Net::HTTP.start(
       uri.host, uri.port,
@@ -97,24 +98,24 @@ post '/es/boletinsubscripcion' do
     verify = JSON.parse(res.body)
 
     if verify["success"] == true && verify["score"] >= 0.5
-      from = "cadu-lista@investorcloud.net"
+      from = "it@investorcloud.net"
       subject = "Nuevo subscriptor a lista CADU"
       Pony.mail(
-        :from => from,
-        :to => 'it@irstrat.com',
-        :subject => subject,
-        :headers => { 'Content-Type' => 'text/html' },
-        :body => erb(:"global/bloques/mail"),
-        :via => :smtp,
-        :via_options => {
-          :address => 'smtp.mailgun.org',
-          :port => '587',
-          :enable_starttls_auto => true,
-          :user_name => ENV['EMAIL_HOST_USER'],
-          :password => ENV['EMAIL_HOST_PASSWORD'],
-          :authentication => :plain,
-          :domain => "investorcloud.net"
-        })
+          :from => from,
+          :to => 'it@irstrat.com',
+          :subject => subject,
+          :headers => {'Content-Type' => 'text/html'},
+          :body => erb(:"global/bloques/mail"),
+          :via => :smtp,
+          :via_options => {
+              :address => 'smtp.mailgun.org',
+              :port => '587',
+              :enable_starttls_auto => true,
+              :user_name => ENV['EMAIL_HOST_USER'],
+              :password => ENV['EMAIL_HOST_PASSWORD'],
+              :authentication => :plain,
+              :domain => "irstrat.com"
+          })
 
       name = ""
       email = params[:email]
@@ -133,57 +134,12 @@ post '/es/boletinsubscripcion' do
         puts "I am sorry an error occurred saving to the database"
       end
 
-      redirect "/"
+      redirect '/'
     else
-      redirect "/"
+      redirect '/'
     end
   end
 end
-
-#Configuracion de email
-# post '/es/boletinsubscripcion' do
-#   require 'pony'
-#   require 'firebase'
-#   if verify_recaptcha
-#     print('************ OK **************')
-#     from = "boletin@cadu.com"
-#     subject = "Nuevo subscriptor a lista CADU"
-#     Pony.mail(
-#         :from => from,
-#         :to => 'lovera@irstrat.com',
-#         :subject => subject,
-#         :headers => {'Content-Type' => 'text/html'},
-#         :body => erb(:"global/bloques/mail"),
-#         :via => :smtp,
-#         :via_options => {
-#             :address => 'smtp.mailgun.org',
-#             :port => '587',
-#             :enable_starttls_auto => true,
-#             :user_name => "reoki@sandbox37424.mailgun.org",
-#             :password => "Katmandu321$",
-#             :authentication => :plain,
-#             :domain => "sandbox37424.mailgun.org"
-#         })
-#
-#     name = ""
-#     email = params[:email]
-#     email.each_char do |letra|
-#       if letra != "@" && letra != "."
-#         name += letra
-#       end
-#     end
-#
-#     firebase_uri = 'https://iredge.firebaseio.com'
-#     @firebase = Firebase::Client.new(firebase_uri)
-#     response = @firebase.set("listas_distribucion/cadu/suscripcion/#{name}", {:email => email})
-#     if response.success? && response.code == 200
-#       redirect '/'
-#     else
-#       puts "I am sorry an error occurred saving to the database"
-#     end
-#   end
-#   redirect '/'
-# end
 
 # Globales
 
