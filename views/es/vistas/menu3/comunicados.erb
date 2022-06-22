@@ -58,7 +58,14 @@
     <tbody>
       <% @documents.each do |document| %>
       <tr>
-        <td><a target="_blank" href="<%= document[:link] %>"><%= document[:titulo] %></a></td>
+        <td><a target="_blank" href="<%= document[:link] %>"><%= document[:titulo] %></a>
+
+          <% if document[:comunicado_url] != "" %>
+              </br>
+              <i class="fa fa-download"></i>
+              <a href="<%= document[:comunicado_url] %>" target="_blank">Adjunto</a>
+          <% end %>
+        </td>
         <td><%= document[:date] %></td>
       </tr>
     <% end %>
