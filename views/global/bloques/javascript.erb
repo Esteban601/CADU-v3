@@ -146,23 +146,23 @@
 
 </script>
 <script type="text/javascript">
-//     $.ajax({
-//         url: 'https://hkpy.irstrat.com/intradia/147',
-//         async: false,
-//         dataType: 'jsonp',
-// //        jsonpCallback: 'jsonCallback',
-//         contentType: "application/json",
-//         success: function (json) {
-// //            precios = json.precios;
-// //            ipc = json.ipc;
-//             intradia = json.intradia;
-//             ticker_symbol = "CADUA";
-//             Dataticker(intradia);
-// //            fillData(precios,ipc,ticker_symbol);
-//             //            console.dir(json.sites);
-//         }
-//
-//     });
+    $.ajax({
+        url: 'https://hkpy.irstrat.com/intradia/147',
+        async: false,
+        dataType: 'jsonp',
+//        jsonpCallback: 'jsonCallback',
+        contentType: "application/json",
+        success: function (json) {
+//            precios = json.precios;
+//            ipc = json.ipc;
+            intradia = json.intradia;
+            ticker_symbol = "CADUA";
+            Dataticker(intradia);
+//            fillData(precios,ipc,ticker_symbol);
+            //            console.dir(json.sites);
+        }
+
+    });
 
 
     function Dataticker(intradia) {
