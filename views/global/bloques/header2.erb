@@ -286,6 +286,28 @@
                       <% end %>
 
                     </li>
+
+                <li class="dropdown-submenu">
+                  <% if I18n.locale == :es %>
+                    <a style="font-size: 12px !important; margin-top: -10px !important;" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2021-Sustentabilidad.pdf" target="_blank"><%= I18n.t 'reporte_2021' %>
+                      <span class="c-arrow"></span>
+                    </a>
+                  <% else %>
+                    <a style="font-size: 12px !important; margin-top: -10px !important;" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesAnuales/2021-Sustentabilidad.pdf" target="_blank"><%= I18n.t 'reporte_2021' %>
+                      <span class="c-arrow"></span>
+                    </a>
+                  <% end %>
+
+                </li>
+
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="#" class="c-link dropdown-toggle c-toggler"><%= I18n.t 'reporte_bv' %>
+                    <span class="c-arrow"></span>
+                  </a>
+                  <ul class="dropdown-menu c-menu-type-classic c-pull-right" >
+
                     <li class="dropdown-submenu">
                     <a style="font-size: 12px !important; margin-top: -10px !important;" href="http://cdn.investorcloud.net/cadu/InformacionFinanciera/ReportesSustentables/Reporte-Bono-Verde-1Q21-.pdf" target="_blank"><%= I18n.t 'reporte_bono-v-1Q21' %>
                       <span class="c-arrow"></span>
@@ -302,6 +324,7 @@
 
                   </ul>
                 </li>
+
                 <li class="dropdown-submenu">
                   <a href="<%= "/#{I18n.locale}/figuras_destacadas" %>"><%= I18n.t 'figuras_destacadas' %>
                     <span class="c-arrow c-toggler"></span>
