@@ -7,6 +7,7 @@ gem 'sentry-raven'
 gem 'firebase'
 gem 'recaptcha'
 gem 'dotenv'
+gem 'puma'
 
 group :development do
   gem 'better_errors'

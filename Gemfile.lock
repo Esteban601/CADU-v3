@@ -13,6 +13,7 @@ GEM
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
     debug_inspector (0.0.3)
+    dotenv (2.8.1)
     erubi (1.9.0)
     faraday (0.17.1)
       multipart-post (>= 1.2, < 3)
@@ -39,10 +40,13 @@ GEM
     multi_json (1.14.1)
     multipart-post (2.1.1)
     mustermann (1.0.3)
+    nio4r (2.5.8)
     os (1.0.1)
     pony (1.13.1)
       mail (>= 2.0)
     public_suffix (4.0.1)
+    puma (6.0.2)
+      nio4r (~> 2.0)
     rack (2.0.7)
     rack-protection (2.0.7)
       rack
@@ -77,16 +81,15 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  dotenv
   firebase
   i18n
   pony
+  puma
   recaptcha
   sentry-raven
   sinatra
   sinatra-contrib
-
-RUBY VERSION
-   ruby 2.7.2p137
 
 BUNDLED WITH
    2.1.4
