@@ -60,12 +60,7 @@ var bars = AmCharts.makeChart(
         "titles": [],
         "colors":["#ED7D31","#FFC000"],
         "dataProvider": [
-
-            {
-                "year": 2014,
-                "ROE": 26.3,
-                "EBITDA": 19.5
-            },
+        
             {
                 "year": "2015*",
                 "ROE": 13.3,
@@ -100,6 +95,10 @@ var bars = AmCharts.makeChart(
                 "year": "2021**",
                 "ROE": -2.1,
                 "EBITDA": 11.5
+            },{
+                "year": 2022,
+                "ROE": 5.4,
+                "EBITDA": 17.1
             }
         ],
         "export": {
