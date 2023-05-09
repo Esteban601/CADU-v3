@@ -97,8 +97,8 @@ var bars = AmCharts.makeChart(
                 "EBITDA": 11.5
             },{
                 "year": 2022,
-                "ROE": 5.4,
-                "EBITDA": 17.1
+                "ROE": 5.2,
+                "EBITDA": 17.2
             }
         ],
         "export": {
