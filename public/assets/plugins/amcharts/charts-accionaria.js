@@ -5,10 +5,12 @@
 if (locale == "es") {
     var grupo = "Grupo de Control";
     var publico = "Público inversionista";
+    var fondo = "Fondo de Recompra";
 }
 else {
     var grupo = "Control Group";
     var publico = "Float";
+    var fondo = "Buyback Fund";
 
 }
 window.onload = function() {
@@ -57,7 +59,10 @@ window.onload = function() {
                 "data": 71.98
             },{
                 "title":publico,
-                "data": 28.02
+                "data": 27.48
+            },{
+                "title":fondo,
+                "data": 0.54
             }],
             "valueField": "data",
             "titleField": "title",
