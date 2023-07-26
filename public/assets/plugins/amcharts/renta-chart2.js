@@ -23,7 +23,7 @@ else {
 
 var types = [{
     type: deuda,
-    percent: 2266,
+    percent: 1432,
     color: "#B7CEE5",
     subs: [
         { type: capital, percent: 535 },
