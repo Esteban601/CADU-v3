@@ -3,11 +3,12 @@ source 'http://rubygems.org'
 gem 'sinatra'
 gem 'i18n'
 gem 'pony'
-gem 'sentry-raven'
+gem 'sentry-ruby'
 gem 'firebase'
 gem 'recaptcha'
 gem 'dotenv'
 gem 'puma'
+gem 'rackup'
 
 group :development do
   gem 'better_errors'
