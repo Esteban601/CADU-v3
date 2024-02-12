@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'i18n'
-require 'raven'
+#require 'raven'
+require 'sentry-ruby'
 require 'better_errors' if development?
 require 'dotenv/load'
 
@@ -41,11 +42,15 @@ configure do
 end
 
 # sentry error tracking
-Raven.configure do |config|
+#Raven.configure do |config|
+#  config.dsn = 'https://0e223e3c7c8149b3b0778eb64bb57a01:d1b75e6dc4994541809e383ad55577c8@app.getsentry.com/78146'
+#end
+#use Raven::Rack
+# end sentry
+
+Sentry.init do |config|
   config.dsn = 'https://0e223e3c7c8149b3b0778eb64bb57a01:d1b75e6dc4994541809e383ad55577c8@app.getsentry.com/78146'
 end
-use Raven::Rack
-# end sentry
 
 before '/:locale/*' do
   if params[:locale] == "en"
