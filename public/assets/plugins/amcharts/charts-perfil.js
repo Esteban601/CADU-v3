@@ -61,11 +61,7 @@ var bars = AmCharts.makeChart(
         "colors":["#ED7D31","#FFC000"],
         "dataProvider": [
         
-            {
-                "year": "2015*",
-                "ROE": 13.3,
-                "EBITDA": 20.9
-            },
+           
             {
                 "year": "2016",
                 "ROE": 16.7,
@@ -87,18 +83,24 @@ var bars = AmCharts.makeChart(
                 "EBITDA": 25.20
             },
             {
-                "year": "2020**",
+                "year": "2020*",
                 "ROE": 2.8,
                 "EBITDA": 14.8
             },
             {
-                "year": "2021**",
+                "year": "2021*",
                 "ROE": -2.1,
                 "EBITDA": 11.5
-            },{
+            },
+            {
                 "year": 2022,
                 "ROE": 5.2,
                 "EBITDA": 17.2
+            },
+            {
+                "year": 2023,
+                "ROE": 5.7,
+                "EBITDA": 16.5
             }
         ],
         "export": {
