@@ -59,10 +59,10 @@ window.onload = function() {
                 "data": 71.98
             },{
                 "title":publico,
-                "data": 27.48
+                "data": 25.52
             },{
                 "title":fondo,
-                "data": 0.54
+                "data": 2.50
             }],
             "valueField": "data",
             "titleField": "title",
