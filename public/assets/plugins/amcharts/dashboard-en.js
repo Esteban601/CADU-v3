@@ -7,7 +7,8 @@ var ipcData = [];
 var ticker_symbol = "CADUA";
 $.ajax({
     dataType: "jsonp",
-    url: "https://hkpy.irstrat.com/intradia/history/11?start=2015-12-04",
+    // url: "https://hkpy.irstrat.com/intradia/history/11?start=2015-12-04",
+    url: "https://hkpy.investorcloud.net/intradia/history/IPC?start=2021-01-01",
     data: {},
     jsonpCallback: 'callbackHistory2',
     success: function (data) {
@@ -20,7 +21,8 @@ $.ajax({
 //   var ipcData = data.ipc
  });
 $.ajax({
-    url: 'https://hkpy.irstrat.com/intradia/history/147?start=2015-12-04',
+    // url: 'https://hkpy.irstrat.com/intradia/history/147?start=2015-12-04',
+    url: 'https://hkpy.investorcloud.net/intradia/history/CADU?start=2021-01-01',
     async: false,
     dataType: 'jsonp',
     jsonpCallback: 'jsonCallback',
@@ -35,7 +37,8 @@ $.ajax({
 
 });
 $.ajax({
-    url:'https://hkpy.irstrat.com/intradia/147',
+    // url:'https://hkpy.irstrat.com/intradia/147',
+    url: 'https://hkpy.investorcloud.net/intradia/CADU',
     async: false,
     dataType: 'jsonp',
     success: function(json) {

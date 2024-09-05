@@ -90,10 +90,13 @@ function calcularInversion(cbis,sd,ed){
 
     if(cbis!=0&&sd!="0"&&ed!="0") {
         //http://marktdaten.irstrat.com
-        var api_url = "https://hkpy.irstrat.com/intradia/147?date=";
+        // var api_url = "https://hkpy.irstrat.com/intradia/147?date=";
+        var api_url = "https://hkpy.investorcloud.net/intradia/history/CADU";
         // var api_url = "http://h-kont.herokuapp.com/api/laste/FMTY?date=";
-        var start_url = api_url+start_date;
-        var end_url = api_url+end_date;
+        // var start_url = api_url+ start_date;
+        // var end_url = api_url+end_date;
+        var start_url = api_url+ "?start=" +start_date;
+        var end_url = api_url+ "?end="+end_date;
         console.log("comienza");
         var div_recibido = calcularDistribuciones(cbis,sd,ed);
         var difFecha= Math.floor((date_edate - date_sdate)/86400000);
