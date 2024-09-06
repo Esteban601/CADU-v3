@@ -4,11 +4,25 @@ var mydash = {};
 var loaded = 0;
 var chartData = [];
 var ipcData = [];
-var ticker_symbol = "CADUA";
+var ticker_symbol = "CADU";
+
+var url = 'https://hkpy.investorcloud.net/intradia/';
+var history_url = url + 'history/';
+
+var startDate = new Date();
+startDate.setFullYear(startDate.getFullYear() - 3);
+
+var endDate = new Date();
+
+var params = {
+    start: startDate.toISOString().split('T')[0],
+    end: endDate.toISOString().split('T')[0]
+};
 $.ajax({
     dataType: "jsonp",
     // url: "https://hkpy.irstrat.com/intradia/history/11?start=2015-12-04",
-    url: "https://hkpy.investorcloud.net/intradia/history/IPC?start=2021-01-01",
+    // url: "https://hkpy.investorcloud.net/intradia/history/IPC?start=2021-01-01",
+    url: history_url + 'IPC' + '?' + jQuery.param(params),
     data: {},
     jsonpCallback: 'callbackHistory2',
     success: function (data) {
@@ -22,7 +36,8 @@ $.ajax({
  });
 $.ajax({
     // url: 'https://hkpy.irstrat.com/intradia/history/147?start=2015-12-04',
-    url: 'https://hkpy.investorcloud.net/intradia/history/CADU?start=2021-01-01',
+    // url: 'https://hkpy.investorcloud.net/intradia/history/CADU?start=2021-01-01',
+    url: history_url + ticker_symbol + '?' + jQuery.param(params),
     async: false,
     dataType: 'jsonp',
     jsonpCallback: 'jsonCallback',
@@ -38,7 +53,8 @@ $.ajax({
 });
 $.ajax({
     // url:'https://hkpy.irstrat.com/intradia/147',
-    url: 'https://hkpy.investorcloud.net/intradia/CADU',
+    // url: 'https://hkpy.investorcloud.net/intradia/CADU',
+    url: url + ticker_symbol,
     async: false,
     dataType: 'jsonp',
     success: function(json) {
