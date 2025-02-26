@@ -26,9 +26,9 @@ var types = [{
     percent: 1647,
     color: "#B7CEE5",
     subs: [
-        { type: capital, percent: 535 },
-        { type: puente, percent: 897 },
-        { type: reserva, percent: 68 },
+        { type: capital, percent: 581 },
+        { type: puente, percent: 1081 },
+        { type: reserva, percent: 0 },
         { type: arren, percent: 0 },
 
 
