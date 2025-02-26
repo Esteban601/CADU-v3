@@ -101,7 +101,13 @@ var bars = AmCharts.makeChart(
                 "year": 2023,
                 "ROE": 5.7,
                 "EBITDA": 16.5
-            }
+            },
+            {
+                "year": 2024,
+                "ROE": 4.2,
+                "EBITDA": 15.9
+            },
+            
         ],
         "export": {
             "enabled": true
