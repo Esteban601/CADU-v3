@@ -56,11 +56,16 @@ window.onload = function() {
             },
             "dataProvider": [{
                 "title": grupo,
-                "data": 76
+                "data": 75.43
             },{
                 "title":publico,
-                "data": 24
-            }],
+                "data": 22.43
+            },
+            {
+                "title":fondo,
+                "data": 2.15
+            }
+        ],
             "valueField": "data",
             "titleField": "title",
              "balloonText": "<span style='font-size:10px'>[[title]]: <b>[[data]]%</b></span>", //eliminando valor de ballon
