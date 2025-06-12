@@ -280,11 +280,11 @@ get '/:locale/construccion_verde' do
   @menuName = I18n.t 'medio_a'
   erb :"#{I18n.locale}/vistas/menu2/medio_ambiente/construccion_verde", :layout => ("global/layouts/content").to_sym
 end
-get '/:locale/emisiones' do
-  @titulo = I18n.t 'emisiones'
+get '/:locale/indicadores_ambientales' do
+  @titulo = I18n.t 'indicadores_ambientales'
   @menuNum = 2
   @menuName = I18n.t 'medio_a'
-  erb :"#{I18n.locale}/vistas/menu2/medio_ambiente/emisiones", :layout => ("global/layouts/content").to_sym
+  erb :"#{I18n.locale}/vistas/menu2/medio_ambiente/indicadores_ambientales", :layout => ("global/layouts/content").to_sym
 end
 get '/:locale/politica_medio_ambiente' do
   @titulo = I18n.t 'politica_medio_ambiente'
