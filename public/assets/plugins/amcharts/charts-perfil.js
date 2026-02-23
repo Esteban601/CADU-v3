@@ -62,11 +62,7 @@ var bars = AmCharts.makeChart(
         "dataProvider": [
         
            
-            {
-                "year": "2016",
-                "ROE": 16.7,
-                "EBITDA": 22.5
-            },
+            
             {
                 "year": "2017",
                 "ROE": 18.5,
@@ -106,6 +102,11 @@ var bars = AmCharts.makeChart(
                 "year": 2024,
                 "ROE": 4.2,
                 "EBITDA": 15.9
+            },
+            {
+                "year": 2025,
+                "ROE": 7.0,
+                "EBITDA": 15.4
             },
             
         ],
