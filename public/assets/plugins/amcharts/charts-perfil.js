@@ -106,7 +106,7 @@ var bars = AmCharts.makeChart(
             {
                 "year": 2025,
                 "ROE": 7.0,
-                "EBITDA": 15.4
+                "EBITDA": 15.5
             },
             
         ],
