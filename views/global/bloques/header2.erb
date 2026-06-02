@@ -337,6 +337,19 @@
               <% end %>
 
             </li>
+
+            <li class="dropdown-submenu">
+              <% if I18n.locale == :es %>
+                <a style="font-size: 12px !important; margin-top: -10px !important;" href="https://investorcloud.s3.us-east-1.amazonaws.com/cadu/InformacionFinanciera/ReportesAnuales/2025-Sustentabilidad.pdf" target="_blank"><%= I18n.t 'reporte_2025' %>
+                  <span class="c-arrow"></span>
+                </a>
+              <% else %>
+                <a style="font-size: 12px !important; margin-top: -10px !important;" href="https://investorcloud.s3.us-east-1.amazonaws.com/cadu/InformacionFinanciera/ReportesAnuales/2025-Sustentabilidad.pdf" target="_blank"><%= I18n.t 'reporte_2025' %>
+                  <span class="c-arrow"></span>
+                </a>
+              <% end %>
+
+            </li>
                   </ul>
                 </li>
                 <li class="dropdown-submenu">
