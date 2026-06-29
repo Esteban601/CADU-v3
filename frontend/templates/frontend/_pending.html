@@ -1,0 +1,16 @@
+{% extends layout_template %}
+{% comment %}
+Placeholder para páginas internas todavía NO convertidas en este bloque.
+Renderiza el chrome real (header, breadcrumbs, sidebar, footer) heredado del
+layout base, para poder validar el patrón antes de convertir las 131 vistas.
+{% endcomment %}
+{% block content %}
+<div class="c-content-box c-size-md">
+  <h3 class="c-font-uppercase c-font-bold">{{ titulo }}</h3>
+  <p class="c-font-16">
+    Esta sección (<code>{{ slug }}</code>) aún no ha sido convertida de ERB a Django.
+    Solo la portada (home) se migró en este bloque; el resto de las vistas se
+    convertirán después de validar el patrón.
+  </p>
+</div>
+{% endblock %}

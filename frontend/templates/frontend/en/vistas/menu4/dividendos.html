@@ -1,0 +1,149 @@
+{% extends 'layouts/content.html' %}
+{% block content %}
+<div class="dividendos">
+  <p>The distribution of dividends and, when applicable, the amount and payment thereof, is subject to the approval
+    of the Ordinary General Shareholders' Meeting, based on the recommendation of the Company's Board of Directors.
+    In compliance with the applicable legislation, the distribution of retained earnings can only be made after the
+    corresponding financial statements have been duly approved by the Ordinary General Shareholders' Meeting.</p>
+
+  <p>Furthermore, the Company may not distribute profits until the losses incurred in one or more previous years have
+    been reinstated or absorbed through the utilization of other capital line items, or the capital stock have been
+    reduced and a reserve fund is established or maintained.</p>
+
+  <p>CADU's dividend distributions could be adversely affected by the contractual provisions of debt instruments that
+    the Company may subscribe in the future, and depends, in any event, on the capacity of its Subsidiaries to generate
+    profits and pay dividends to the Company.</p>
+
+  <p>Additionally, before distributing profits, 5% of the Company's net income must be allocated annually to the reserve
+    fund, until it equals one fifth of the Company's stock capital (i.e., 20%). The reserve fund must be restored in the
+    same manner when it decreases for any reason.</p>
+
+  <p>The current dividend policy corresponds to an equivalent amount of up to 30% of the net retained earnings for the
+    previous year in which they are paid. It is relevant to note that during 2020, meetings with bondholders
+    were held, in which it was agreed, among other things, not to pay dividends in 2020 and 2021, which was extended to 2022, 2023 and 2024 at subsequent meetings.</p>
+
+    <br>
+    <table class="table">
+      <thead>
+      <tr>
+        <th class="col-md-6">Approval date</th>
+        <th class="col-md-6">Dividend</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2019-04-29</td>
+          <td>0.85</td>
+        </tr>
+      <tr>
+        <td>2018-04-24</td>
+        <td>0.75</td>
+      </tr>
+      <tr>
+        <td>2017-04-27</td>
+        <td>0.66</td>
+      </tr>
+      <tr>
+        <td>2016-04-28</td>
+        <td>0.66</td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+    <br>
+    <div id="dividen_yield" style="width: 100%; height: 400px; background-color: #FFFFFF;"></div>
+    <br>
+    
+
+    <div class="infocorporativa">
+    <table class="table">
+      <thead>
+      <tr>
+        <th class="col-md-9">Document</th>
+        <th class="col-md-3">Date</th>
+      </tr>
+      </thead>
+      <tbody>
+        {% for document in documents %}
+        <tr>
+          <td><a target="_blank" href="{% if document.url %}{{ document.url }}{% elif document.prefix == 'gobierno' %}{{ gobierno_corporatico_path }}{{ document.file }}{% elif document.prefix == 'reportes_trim' %}{{ reportes_trimestrales_path }}{{ document.file }}{% elif document.prefix == 'reportes_anuales' %}{{ reportes_anuales_path }}{{ document.file }}{% elif document.prefix == 'presentaciones' %}{{ presentaciones_path }}{{ document.file }}{% elif document.prefix == 'investor' %}{{ investor_cloud_path }}{{ document.file }}{% else %}{{ comunicados_path }}{{ document.file }}{% endif %}">{{ document.titulo }}</a></td>
+          <td>{{ document.date }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+
+<script type="application/javascript" src="/static/assets/plugins/amcharts/amcharts.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/serial.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/themes/light.js"></script>
+    <script type="application/javascript">
+      var chart = AmCharts.makeChart("dividen_yield", {
+          "titles": [
+              {
+                  "text": "Dividend Yield",
+                  "size": 15
+              }
+          ],
+          "theme": "light",
+          "type": "serial",
+          "numberFormatter": {
+              "precision": 2
+          },
+          "colors": ["#ED7D31", "#FFC000"],
+          "dataProvider": [
+              {
+                  "year": "2016",
+                  "variacion": 3.7
+              }, {
+                  "year": "2017",
+                  "variacion": 3.7
+              }, {
+                  "year": "2018",
+                  "variacion": 5.5
+              },{
+                  "year": "2019",
+                  "variacion": 5.8
+              }
+          ],
+          "valueAxes": [
+              {
+                  "unit": "%",
+                  "unitPosition": "right",
+                  "id": "v2",
+                  "axisAlpha": 0,
+                  "gridAlpha": 0.1,
+                  "position": "left",
+                  "maximum": 6.0,
+                  "minimum": 2.0,
+                  // "title": "Posición",
+              }],
+          "graphs": [{
+              "lineAlpha": 0.9,
+              "lineThickness": 3,
+              "bullet": "round",
+              "bulletBorderColor": "#fff",
+              "bulletBorderThickness": 2,
+              "bulletBorderAlpha": 1,
+              "valueField": "variacion",
+              "valueAxis": "v2",
+              "labelText": "[[value]]%",
+              "title": "Variación anual"
+
+          }],
+          "categoryField": "year",
+          "categoryAxis": {
+              "gridPosition": "start",
+              "gridAlpha": 0,
+          },
+          // "legend": {
+          //     "align": "center",
+          //     "position": "bottom",
+          //     "markerSize": 15,
+          //     "markerType": "circle",
+          //     "textClickEnabled": true
+          // },
+      });
+    </script>
+
+{% endblock %}

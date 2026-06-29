@@ -1,0 +1,309 @@
+{% extends 'layouts/content.html' %}
+{% block content %}
+<div id="renta-fija-credito">
+  <p>CADU ha cumplido con todas las obligaciones convenidas y restricciones vinculadas a la deuda vigente. A continuación presentamos un despliegue gráfico que resume los aspectos más importantes de la
+    deuda de la Compañía:</p>
+  <div style="text-align: center">
+    <!--<img src="/static/assets/cadu/images/content/renta2.png" alt=""/>-->
+    <div id="chartdiv" style="width: 100%; height: 400px;"></div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="4" style="text-align: left">(millones de pesos mexicanos)</th>
+      </tr>
+    <tr>
+      <td colspan="4" style="text-align: center"><b>Deuda Bancaria</b></td>
+    </tr>
+    <tr>
+      <th>Tipo</th>
+      <th>Monto (Mar-26)</th>
+      <th>Monto (Dic-25)</th>
+      <th>Monto (Mar-25)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Créditos Puente</td>
+  <td>$1,048</td>
+      <td>$870</td>
+      <td>$1,360</td>
+    </tr>
+    <tr>
+      <td>Reserva Territorial</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Capital de Trabajo</td>
+ <td>$769</td>
+      <td>$332</td>
+      <td>$566</td>
+    </tr>
+    <tr>
+      <td><b>Total sin costos de apertura de crédito </b></td>
+    <td><b>$1,817</b></td>
+       <td><b>$1,202</b></td>
+      <td><b>$1,926</b></td>
+    </tr>
+    <!--<tr>
+      <td>Arrendamiento Financiero</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>-->
+    <tr>
+      <td>Costos de apertura de crédito</td>
+       <td>(23)</td>
+       <td>(18)</td>
+      <td>(14)</td>
+    </tr>
+    <tr>
+      <td><b>Total Deuda Bancaria </b></td>
+     <td><b>$1,794</b></td>
+      <td><b>$1,184</b></td>
+      <td><b>$1,912</b></td>
+    </tr>
+    <tr>
+      <td colspan="4" style="text-align: center"><b>Certificados Bursátiles (CEBURES)</b></td>
+    </tr>
+    <!--<tr>
+      <td>CADU18</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>-->
+    <!--<tr>
+      <td>CADU19</td>
+      <td>-</td>
+      <td>-</td>
+      <td>$36</td>
+    </tr>-->
+    <tr>
+      <td>CADU20V</td>
+      <td>$502</td>
+      <td>$502</td>
+      <td>$502</td>
+    </tr>
+    <tr>
+      <td><b>Total sin gastos de emisiones por amortizar </b></td>
+      <td><b>$502</b></td>
+      <td><b>$502</b></td>
+      <td><b>$502</b></td>
+    </tr>
+    <tr>
+      <td>Gastos por amortizar</td>
+   <td>(6)</td>
+       <td>(7)</td>
+      <td>(9)</td>
+    </tr>
+    <tr>
+      <td><b>Total Deuda Bursátil</b></td>
+  <td><b>$496</b></td>
+      <td><b>$495</b></td>
+      <td><b>$493</b></td>
+    </tr>
+    <tr>
+      <td><b>Deuda Total sin costos ni gastos</b></td>
+<td><b>$2,319</b></td>
+       <td><b>$1,704</b></td>
+       <td><b>$2,428</b></td>
+    </tr>
+    <tr>
+    <td>Costos de apertura de crédito y gastos de emisiones por amortizar</td>
+  <td>(29)</td>
+      <td>(25)</td>
+    <td>(24)</td>
+  </tr>
+    <tr>
+      <td><b>Deuda total</b></td>
+      <td><b>$2,290</b></td>
+          <td><b>$1,680</b></td>
+      <td><b>$2,405</b></td>
+    </tr>
+
+    </tbody>
+  </table>
+  <!-- <h4 class="c-left c-font-lowercase c-font-sbold">Vencimientos</h4>
+  <div style="text-align: center">
+
+    <div id="vdc" style="width: 100%; height: 400px; background-color: #FFFFFF;"></div>
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th colspan="6" style="text-align: center">
+      </th>
+    </tr>
+    <tr>
+      <th colspan="6" style="text-align: center">(millones de pesos mexicanos)</th>
+    </tr>
+    <tr>
+      <th>Tipo</th>
+      <th>Hasta 1 año</th>
+      <th>Hasta 2 años</th>
+      <th>Hasta 3 años</th>
+      <th>Hasta 4 años</th>
+      <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Instituciones Financieras</td>
+      <td>$170.47</td>
+      <td>$448.60</td>
+      <td>$301.60</td>
+      <td>$ -</td>
+      <td>$920.60</td>
+    </tr>
+    <tr>
+      <td>CEBURES</td>
+      <td>$148.50</td>
+      <td>$223.40</td>
+      <td>$158.00</td>
+      <td>$158.00</td>
+      <td>$688.00</td>
+    </tr>
+    <tr>
+      <td><b>Total </b></td>
+      <td><b>$318.90</b></td>
+      <td><b>$672.00</b></td>
+      <td><b>$459.60</b></td>
+      <td><b>$158.00</b></td>
+      <td><b>$ 1,608.60</b></td>
+    </tr>
+    </tbody>
+  </table> -->
+  <h3 class="c-left c-font-lowercase c-font-sbold">Obligaciones de “Hacer” y de “No Hacer”</h3>
+
+  <p>Todos los créditos que CADU tiene contratados, incluyen una sección que corresponde a “Obligaciones de
+    Hacer” y “Obligaciones de No Hacer”. Dichas obligaciones son genéricas y no se tiene contratado ningún tipo de
+    crédito que incluya obligaciones especiales o diferentes a las que de manera enunciativa, más no limitativa, a
+    continuación se mencionan:</p>
+
+  <h4 class="c-left c-font-lowercase c-font-sbold">Obligaciones de “Hacer”</h4>
+
+  <ul class="c-content-list-1 c-theme c-separator-dot">
+    <li> Invertir el importe del Crédito en la Adquisición del Terreno (créditos para la adquisición de reserva
+      territorial) y/o Invertir el importe del crédito en la construcción de las viviendas (créditos puente).
+    </li>
+    <li> Presentar los avisos de terminación de obra.</li>
+    <li> Contratar los seguros de responsabilidad civil y de daños, desde el inicio de la obra hasta la venta de las
+      viviendas.
+    </li>
+    <li> Cumplir con las disposiciones legales correspondientes.</li>
+    <li> Mantenerse como negocio en marcha.</li>
+    <li> Proporcionar oportunamente la información financiera correspondiente.</li>
+    <li> Cumplir con las obligaciones de pago de capital e intereses pactadas en los contratos.</li>
+  </ul>
+  <h4 class="c-left c-font-lowercase c-font-sbold">Principales Obligaciones de “No Hacer” </h4>
+  <ul class="c-content-list-1 c-theme c-separator-dot">
+    <li> No hipotecar, enajenar o afectar en cualquier forma, temporal o permanentemente, parcial o totalmente, las
+      garantías otorgadas para la contratación de los créditos.
+    </li>
+    <li> No otorgar préstamos ni contratar pasivos que pudieran afectar las condiciones de pago establecidas en la
+      contratación de los créditos.
+    </li>
+    <li> No fusionarse o escindirse con otras empresas.</li>
+    <li> No disminuir el capital social de la Compañía, ni en su porción fija, ni en su porción variable.</li>
+    <li> No decretar ni pagar dividendos si existe algún tipo de incumplimiento en el pago del crédito.</li>
+    <li> No variar el control accionario, ni la administración de la Compañía.</li>
+  </ul>
+  <h3 class="c-left c-font-lowercase c-font-sbold">Créditos Bursátiles</h3>
+  <h4 class="c-left c-font-lowercase c-font-sbold">Certificado Bursátil (CADU12) </h4>
+
+  <p>El 27 de abril de 2012 CADU emitió un certificado bursátil bajo la clave "CADU12" por $300 millones de pesos, con
+    cupón de pago de intereses de TIIE a 28 días + 4 puntos porcentuales y dos amortizaciones del principal, la
+    primera por el 50% el 25 de abril de 2014 y la segunda por el 50% restante en la fecha de vencimiento, que fue el 24
+    de abril de 2015. Los recursos fueron destinados para el financiamiento de nuevos proyectos, adquisición de terrenos
+    y sustitución de pasivos bancarios. </p>
+
+  <p>Para garantizar la emisión, el 12 de abril de 2012 se contrató una garantía bursátil con Nacional Financiera, S. N.
+    C., Institución de Banca de Desarrollo (NAFIN), que cubrió el 48% del saldo insoluto del principal de la emisión y
+    con un costo de 2.9% anual sobre el saldo del importe de la garantía, el cual es pagadero mensualmente. La
+    estructuración de la garantía se realizó mediante la firma de un contrato de crédito por aval y la constitución de
+    un fideicomiso de garantía al que se aportó terrenos con un aforo de 1.5 a 1 sobre el monto garantizado.</p>
+
+  <p>El Certificado Bursátil "CADU12" fue pagado en su totalidad en su fecha de vencimiento legal el 24 de abril de
+    2015.</p>
+  <h4 class="c-left c-font-lowercase c-font-sbold">Certificado Bursátil (CADU14)</h4>
+
+  <p>El 17 de julio de 2014 CADU emitió un certificado bursátil bajo la clave "CADU14" por $300 millones de pesos, con
+    cupón de pago de intereses de TIIE a 28 días + 2.5 puntos porcentuales y dos amortizaciones del principal, la
+    primera por el 50% el 14 de julio de 2016 y la segunda por el 50% restante en la fecha de vencimiento, que fue el 13
+    de julio de 2017. Los recursos fueron destinados para el financiamiento de nuevos proyectos, adquisición de terrenos
+    y la sustitución de pasivos bancarios. </p>
+
+  <p>Para garantizar la emisión, el 10 de Julio de 2014 se contrató una Garantía de Pago Oportuno (GPO) con la Sociedad
+    Hipotecaria Federal, S. N. C., Institución de Banca de Desarrollo (SHF), que cubrió el 50% del saldo insoluto del
+    principal de los Certificados Bursátiles a la fecha de pago, y con un costo de 1% anual sobre el saldo insoluto
+    del principal de los Certificados Bursátiles, el cual es pagadero mensualmente. La estructuración de la garantía se
+    realizó mediante la firma de un Fideicomiso irrevocable de garantía, administración y fuente de pago, para
+    garantizar, en su caso, el pago de intereses o capital de los Certificados Bursátiles. La garantía que se aportó fueron
+    terrenos con un aforo de 1.14 a 1 sobre el monto garantizado.</p>
+
+    <p>El Certificado Bursátil "CADU14" fue pagado en su totalidad en su fecha de vencimiento legal el 13 de julio de 2017.</p>
+  <h4 class="c-left c-font-lowercase c-font-sbold">Certificado Bursátil (CADU15)</h4>
+
+  <p>El 17 de abril de 2015 CADU emitió su tercer certificado bursátil bajo la clave de pizarra "CADU15" por un monto
+    de $400 millones de pesos, con cupón de pago de intereses los días 27 de cada mes a una tasa de TIIE 28 días + 2.9
+    puntos porcentuales y la amortización de principal se hará en 30 pagos mensuales los días 27 de cada mes, sucesivos
+    e iguales por la cantidad de $13.33 millones de pesos. La primera amortización se efectuó en el mes de julio de 2017 y la
+    última se hará en el mes de diciembre de 2019. Los recursos fueron destinados para el financiamiento de nuevos proyectos,
+    adquisición de terrenos y la sustitución de pasivos bancarios.</p>
+
+  <p>El Certificado Bursátil "CADU15" fue pagado en su totalidad en su fecha de vencimiento legal el 27 de diciembre de 2019.</p>
+
+  <h4 class="c-left c-font-lowercase c-font-sbold">Certificado Bursátil (CADU18)</h4>
+
+  <p>El 21 de febrero de 2018 CADU emitió su cuarto certificado bursátil bajo la clave de pizarra "CADU18" por un monto
+  de $500 millones de pesos. Siendo Cebures quirografarios, la tasa que pagarán es TIIE28 + 2.9 pp. y a un plazo de 5 años. </p>
+  <p>Originalmente, la amortización del principal se haría en 34 pagos mensuales con montos iguales de $14 millones de pesos,
+    a partir del 21 de abril de 2020, pero tras la contingencia sanitaria por COVID-19, CADU acordó con los tenedores la prórroga
+    de los pagos de capital por los meses de mayo a diciembre de 2020 (mismos que serán saldados el 21 de febrero de 2023 en la fecha
+    de vencimiento), así como una dispensa en el cumplimiento de los <em>covenants</em> preestablecidos para este instrumento durante los ejercicios
+    sociales 2020, 2021 y 2022; por lo anterior se constituyó un fideicomiso de garantía con la finalidad de respaldar el pago del monto diferido.
+    Los recursos fueron destinados para capital de trabajo y fines corporativos.</p>
+
+    <p>El Certificado Bursátil "CADU18" fue pagado en su totalidad en su fecha de vencimiento legal el 21 de febrero de 2023.</p>
+
+  <h4 class="c-left c-font-lowercase c-font-sbold">Certificado Bursátil (CADU19)</h4>
+
+  <p>El 12 de abril de 2019 CADU emitió su quinto certificado bursátil bajo la clave de pizarra "CADU19" por un monto
+  de $500 millones de pesos. Siendo Cebures con una tasa de TIIE28 + 2.9 pp. y a un plazo de 5 años. </p>
+  <p>La amortización de principal de los Certificados se hará en 13 (trece) pagos
+iguales a $35,714,285.72 (treinta y cinco millones setecientos catorce mil
+doscientos ochenta y cinco pesos 72/100 M.N.) y 1 un pago equivalente a
+$35,714,285.64 (treinta y cinco millones setecientos catorce mil doscientos
+ochenta y cinco pesos 64/100 M.N.), pagaderos mensualmente a partir del 12
+de marzo de 2023. Es importante mencionar que tras la contingencia sanitaria por COVID-19, CADU acordó con los tenedores una dispensa
+en el cumplimiento de los <em>covenants</em> preestablecidos para este instrumento durante los ejercicios sociales 2020, 2021, 2022 y 2023.</p>
+
+<p>El Certificado Bursátil "CADU19" fue pagado en su totalidad en su fecha de vencimiento legal el 12 de abril de 2024.</p>
+
+  <h4 class="c-left c-font-lowercase c-font-sbold">Bono Verde (CADU 20V)</h4>
+
+  <p>El 16 de diciembre de 2020 CADU emitió su primer bono verde bajo la clave de pizarra "CADU 20V"
+    por un monto de $502 millones de pesos, con una tasa fija de 9.13% y a un plazo de 7 años. </p>
+  <p>Este es el primer bono verde del sector vivienda en América Latina con certificación de Climate
+    Bond Initiative (CBI) bajo la modalidad “<em>Low Carbon Buildings</em>”. Para CADU esta es su sexta colocación de deuda
+    y la primera que lista en la Bolsa Institucional de Valores (BIVA). Los recursos netos de esta emisión serán
+    utilizados para refinanciar proyectos de vivienda que cuenten con certificaciones en beneficio del medio ambiente
+    (ECOCASA), fortaleciendo así el posicionamiento de CADU como desarrollador líder en esta modalidad de vivienda y
+    garantizando la reducción de emisiones de gases de efecto invernadero: lo que refleja claramente el compromiso de
+    CADU con el medio ambiente. Es importante mencionar que CADU acordó con los tenedores una dispensa en el cumplimiento de 
+    los covenants preestablecidos para este instrumento durante el ejercicio 2022, 2023 y 2024.</p>
+
+
+
+</div>
+<!-- Amchart Scripts -->
+<script type="application/javascript" src="/static/assets/plugins/amcharts/amcharts.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/serial.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/pie.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/themes/light.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/renta-chart2.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/renta-chart.js"></script>
+
+{% endblock %}

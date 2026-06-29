@@ -8,3 +8,10 @@
 
 *.icloud
 .env
+
+# Django (migración a Python)
+__pycache__/
+*.pyc
+/staticfiles
+.venv
+venv/

@@ -1,0 +1,22 @@
+{% load cadu_i18n %}
+<div class="c-layout-breadcrumbs-1 c-fonts-uppercase c-fonts-bold c-bordered c-bordered-both">
+  <div class="container">
+    <div class="c-page-title c-pull-left">
+      <h3 class="c-font-uppercase c-font-sbold">{{ titulo }}</h3>
+    </div>
+    <ul class="c-page-breadcrumbs c-theme-nav c-pull-right c-fonts-regular">
+      <li>
+        <a href="/{{ request.LANGUAGE_CODE }}">{% t 'Inicio' %}</a>
+      </li>
+      <li>/</li>
+      <li>
+        <a href="#">{{ menu_name }}</a>
+      </li>
+      <li>/</li>
+
+      {% if menu_num != 0 %}
+      <li class="c-state_active">{{ titulo }}</li>
+      {% endif %}
+    </ul>
+  </div>
+</div>

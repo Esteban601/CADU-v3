@@ -1,0 +1,58 @@
+<!--Doctype-->
+{% include 'frontend/bloques/doctype.html' %}
+<!-- BEGIN HEAD -->
+
+{% include 'frontend/bloques/head.html' %}
+
+<body class="c-layout-header-fixed c-layout-header-mobile-fixed c-layout-header-topbar c-layout-header-topbar-collapse">
+<!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
+<!-- BEGIN: HEADER -->
+{% include 'frontend/bloques/header2.html' %}
+
+
+<!-- BEGIN: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
+
+<!-- END: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
+<!-- BEGIN: PAGE CONTAINER -->
+<div class="c-layout-page">
+  <!-- BEGIN: LAYOUT/BREADCRUMBS/BREADCRUMBS-1 -->
+
+  <!-- END: LAYOUT/BREADCRUMBS/BREADCRUMBS-1 -->
+  <!-- BEGIN: PAGE CONTENT -->
+  <!-- BEGIN: BLOG LISTING -->
+  <div class="c-content-box c-size-md">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          {% block content %}{% endblock %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- END: BLOG LISTING  -->
+  <!-- END: PAGE CONTENT -->
+</div>
+</div>
+<!-- END: PAGE CONTAINER -->
+<!-- BEGIN: LAYOUT/FOOTERS/FOOTER-5 -->
+
+{% if request.LANGUAGE_CODE == 'es' %}
+    {% include 'frontend/bloques/footer2.html' %}
+{% else %}
+    {% include 'frontend/bloques/footer2en.html' %}
+{% endif %}
+
+<!-- END: LAYOUT/FOOTERS/FOOTER-5 -->
+<!-- BEGIN: LAYOUT/FOOTERS/GO2TOP -->
+{% include 'frontend/bloques/go2top.html' %}
+<!-- END: LAYOUT/FOOTERS/GO2TOP -->
+<!-- BEGIN: LAYOUT/BASE/BOTTOM -->
+<!-- BEGIN: CORE PLUGINS -->
+{% include 'frontend/bloques/javascript.html' %}
+<!-- END: THEME SCRIPTS -->
+<!-- END: LAYOUT/BASE/BOTTOM -->
+</body>
+
+</html>

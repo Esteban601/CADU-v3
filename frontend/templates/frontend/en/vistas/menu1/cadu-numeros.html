@@ -1,0 +1,30 @@
+{% extends 'layouts/content.html' %}
+{% block content %}
+<div id="cadu-numeros">
+  <div style="text-align: center">
+    <img src="/static/assets/cadu/images/content/numeros.png" alt="" style="width: 80%"/>
+  </div>
+  <h3 class="c-left c-font-lowercase c-font-sbold">
+    Presence
+  </h3>
+  <div style="text-align: center">
+    <img src="/static/assets/cadu/images/content/presencia.png" alt="" style="width: 80%"/>
+  </div>
+  <div class="row">
+    <div class="col-md-6" style="text-align: center">
+      <h3>Housing units by location (2015)</h3>
+      <div id="vrp" style="width: 100%; height: 400px; background-color: #FFFFFF;"></div>
+    </div>
+    <div class="col-md-6" style="text-align: center">
+      <h3>Revenue by location (2015)</h3>
+      <div id="ixp" style="width: 100%; height: 400px; background-color: #FFFFFF;"></div>
+    </div>
+  </div>
+</div>
+<!-- Amchart Scripts -->
+<script type="application/javascript" src="/static/assets/plugins/amcharts/amcharts.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/serial.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/pie.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/themes/light.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/charts-data.js?v=rebrand1"></script>
+{% endblock %}

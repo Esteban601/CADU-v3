@@ -1,0 +1,151 @@
+{% extends 'layouts/content.html' %}
+{% block content %}
+<div class="dividendos">
+  <p>El decreto de dividendos y, en su caso, el monto y pago de los mismos, está sujeto a la aprobación de la Asamblea
+    General Ordinaria de Accionistas, con base en la recomendación de nuestro Consejo de Administración. De conformidad
+    con la legislación aplicable, la distribución de utilidades sólo podrá hacerse después de que hayan sido debidamente
+    aprobados por la Asamblea General de Accionistas los estados financieros que arrojen tales utilidades.</p>
+
+  <p>No podrá hacerse distribución de utilidad alguna, mientras no hayan sido restituidas o absorbidas mediante
+    aplicación de otras partidas del capital, las pérdidas sufridas en uno o varios ejercicios anteriores, o haya sido
+    reducido el capital social y que se establezca o mantenga un fondo de reserva. </p>
+
+  <p>La capacidad de CADU para pagar dividendos podría verse afectada en forma adversa en razón de las disposiciones
+    contenidas en los instrumentos relacionados con la deuda que llegue a contratar en el futuro, y depende, en
+    cualquier caso, de la capacidad de sus Subsidiarias para generar utilidades y pagarle dividendos a la Emisora. </p>
+
+  <p>Además, de las utilidades netas de la Emisora, antes de repartir utilidades, deberá separarse anualmente el 5% para
+    formar un fondo de reserva, hasta que el mismo importe la quinta parte del capital social (es decir, el 20% del
+    capital social). El fondo de reserva deberá ser reconstituido de la misma manera cuando disminuya por cualquier
+    motivo.</p>
+    <p>La política actual de pago de dividendos corresponde a un monto equivalente hasta el 30% de las utilidades netas
+      retenidas del ejercicio anterior al que se pagan. Es importante mencionar que, durante 2020, se llevaron a cabo asambleas
+    con los tenedores de bonos en las que se acordó, entre otras cosas,
+  no pagar dividendos en 2020 y 2021, lo cual se prolongó para 2022, 2023 y 2024 en asambleas posteriores.</p>
+  <br>
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="col-md-6">Fecha de autorización</th>
+      <th class="col-md-6">Dividendo</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2019-04-29</td>
+        <td>0.85</td>
+      </tr>
+    <tr>
+      <td>2018-04-24</td>
+      <td>0.75</td>
+    </tr>
+    <tr>
+      <td>2017-04-27</td>
+      <td>0.66</td>
+    </tr>
+    <tr>
+      <td>2016-04-28</td>
+      <td>0.66</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<div id="dividen_yield" style="width: 100%; height: 400px; background-color: #FFFFFF;"></div>
+<br>
+
+
+<div class="infocorporativa">
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="col-md-9">Documento</th>
+      <th class="col-md-3">Fecha</th>
+    </tr>
+    </thead>
+    <tbody>
+      {% for document in documents %}
+      <tr>
+        <td><a target="_blank" href="{% if document.url %}{{ document.url }}{% elif document.prefix == 'gobierno' %}{{ gobierno_corporatico_path }}{{ document.file }}{% elif document.prefix == 'reportes_trim' %}{{ reportes_trimestrales_path }}{{ document.file }}{% elif document.prefix == 'reportes_anuales' %}{{ reportes_anuales_path }}{{ document.file }}{% elif document.prefix == 'presentaciones' %}{{ presentaciones_path }}{{ document.file }}{% elif document.prefix == 'investor' %}{{ investor_cloud_path }}{{ document.file }}{% else %}{{ comunicados_path }}{{ document.file }}{% endif %}">{{ document.titulo }}</a></td>
+        <td>{{ document.date }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<script type="application/javascript" src="/static/assets/plugins/amcharts/amcharts.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/serial.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/themes/light.js"></script>
+<script type="application/javascript">
+    var chart = AmCharts.makeChart("dividen_yield", {
+        "titles": [
+            {
+                "text": "Dividend Yield",
+                "size": 15
+            }
+        ],
+        "theme": "light",
+        "type": "serial",
+        "numberFormatter": {
+            "precision": 2
+        },
+        "colors": ["#ED7D31", "#FFC000"],
+        "dataProvider": [
+            {
+                "year": "2016",
+                "variacion": 3.7
+            }, {
+                "year": "2017",
+                "variacion": 3.7
+            }, {
+                "year": "2018",
+                "variacion": 5.5
+            },
+            {
+                "year": "2019",
+                "variacion": 5.8
+            }
+        ],
+        "valueAxes": [
+            {
+                "unit": "%",
+                "unitPosition": "right",
+                "id": "v2",
+                "axisAlpha": 0,
+                "gridAlpha": 0.1,
+                "position": "left",
+                "maximum": 6.0,
+                "minimum": 2.0,
+                // "title": "Posición",
+            }],
+        //"startDuration": 1,
+        "graphs": [{
+            "lineAlpha": 0.9,
+            "lineThickness": 3,
+            "bullet": "round",
+            "bulletBorderColor": "#fff",
+            "bulletBorderThickness": 2,
+            "bulletBorderAlpha": 1,
+            "valueField": "variacion",
+            "valueAxis": "v2",
+            "labelText": "[[value]]%",
+            "title": "Variación anual"
+
+        }],
+        "categoryField": "year",
+        "categoryAxis": {
+            "gridPosition": "start",
+            "gridAlpha": 0,
+        },
+        // "legend": {
+        //     "align": "center",
+        //     "position": "bottom",
+        //     "markerSize": 15,
+        //     "markerType": "circle",
+        //     "textClickEnabled": true
+        // },
+    });
+</script>
+
+{% endblock %}

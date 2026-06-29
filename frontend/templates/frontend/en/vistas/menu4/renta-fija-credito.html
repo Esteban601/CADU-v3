@@ -1,0 +1,299 @@
+{% extends 'layouts/content.html' %}
+{% block content %}
+<div id="renta-fija-credito">
+  <p>CADU has fully complied with all agreed obligations and restrictions associated to the Company's current debt.
+    A chart depicting the most important aspects of the Company's debt is presented below:</p>
+  <div style="text-align: center">
+    <!--<img src="/static/assets/cadu/images/content/renta2.png" alt=""/>-->
+    <div id="chartdiv" style="width: 100%; height: 400px;"></div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="4" style="text-align: left">(Millions of MXN)</th>
+      </tr>
+    <tr>
+      <td colspan="4" style="text-align: center"><b>Bank Loans</b></td>
+    </tr>
+    <tr>
+      <th>Type</th>
+      <th>Amount (Mar-26)</th>
+      <th>Amount (Dec-25)</th>
+      <th>Amount (Mar-25)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Bridge Loans</td>
+      <td>$1,048</td>
+      <td>$870</td>
+      <td>$1,360</td>
+    </tr>
+    <tr>
+      <td>Land Bank</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Working capital</td>
+      <td>$769</td>
+      <td>$332</td>
+      <td>$566</td>
+    </tr>
+    <tr>
+    <td><b>Total without loan origination fees</b></td>
+    <td><b>$1,817</b></td>
+       <td><b>$1,202</b></td>
+      <td><b>$1,926</b></td>
+  </tr>
+    <!--<tr>
+      <td>Financial leases</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>-->
+    <tr>
+      <td>Credit opening costs</td>
+       <td>(23)</td>
+       <td>(18)</td>
+      <td>(14)</td>
+    </tr>
+    <tr>
+      <td><b>Total Bank Loans</b></td>
+     <td><b>$1,794</b></td>
+      <td><b>$1,184</b></td>
+      <td><b>$1,912</b></td>
+    </tr>
+    <tr>
+      <td colspan="4" style="text-align: center"><b>Debt Securities - Local Notes (CEBURES)</b></td>
+    </tr>
+    <!--<tr>
+    <td>CADU18</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>-->
+  <tr>
+  <!--<tr>
+      <td>CADU19</td>
+      <td>-</td>
+      <td>-</td>
+      <td>$36</td>
+    </tr>-->
+<tr>
+  <td>CADU20V</td>
+  <td>$502</td>
+  <td>$502</td>
+  <td>$502</td>
+</tr>
+<tr>
+  <td><b>Total without unamortized issuance costs </b></td>
+  <td><b>$502</b></td>
+  <td><b>$502</b></td>
+  <td><b>$502</b></td>
+</tr>
+<tr>
+  <td>Unamortized issuance costs</td>
+   <td>(6)</td>
+       <td>(7)</td>
+      <td>(9)</td>
+  </tr>
+<tr>
+  <td><b>Total Local Notes</b></td>
+  <td><b>$496</b></td>
+      <td><b>$495</b></td>
+      <td><b>$493</b></td>
+</tr>
+<tr>
+  <td><b>Total Debt without loan origination fees and unamortized issuance costs</b></td>
+<td><b>$2,319</b></td>
+       <td><b>$1,704</b></td>
+       <td><b>$2,428</b></td>
+    </tr>
+<tr>
+<td>Credit opening costs and issuance expenses pending amortization</td>
+  <td>(29)</td>
+      <td>(25)</td>
+    <td>(24)</td>
+</tr>
+<tr>
+  <td><b>Total Debt</b></td>
+      <td><b>$2,290</b></td>
+          <td><b>$1,680</b></td>
+      <td><b>$2,405</b></td>
+</tr>
+
+    </tbody>
+  </table>
+  <!-- <h4 class="c-left c-font-lowercase c-font-sbold">Vencimientos</h4>
+  <div style="text-align: center">
+
+    <div id="vdc" style="width: 100%; height: 400px; background-color: #FFFFFF;"></div>
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th colspan="6" style="text-align: center">
+      </th>
+    </tr>
+    <tr>
+      <th colspan="6" style="text-align: center">(millones de pesos mexicanos)</th>
+    </tr>
+    <tr>
+      <th>Tipo</th>
+      <th>Hasta 1 año</th>
+      <th>Hasta 2 años</th>
+      <th>Hasta 3 años</th>
+      <th>Hasta 4 años</th>
+      <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Instituciones Financieras</td>
+      <td>$170.47</td>
+      <td>$448.60</td>
+      <td>$301.60</td>
+      <td>$ -</td>
+      <td>$920.60</td>
+    </tr>
+    <tr>
+      <td>CEBURES</td>
+      <td>$148.50</td>
+      <td>$223.40</td>
+      <td>$158.00</td>
+      <td>$158.00</td>
+      <td>$688.00</td>
+    </tr>
+    <tr>
+      <td><b>Total </b></td>
+      <td><b>$318.90</b></td>
+      <td><b>$672.00</b></td>
+      <td><b>$459.60</b></td>
+      <td><b>$158.00</b></td>
+      <td><b>$ 1,608.60</b></td>
+    </tr>
+    </tbody>
+  </table> -->
+  <h3 class="c-left c-font-lowercase c-font-sbold">Debt Covenants</h3>
+
+  <p>All credit lines subscribed by CADU include a section corresponding to “Positive Covenants” and
+    “Negative Covenants”. Such covenants are generic and the Company, as of today, has not entered into
+    any credit line or facility that includes special or different covenants from those mentioned in the
+    following illustrative but not comprehensive list:</p>
+
+  <h4 class="c-left c-font-lowercase c-font-sbold">Positive or Affirmative Covenants</h4>
+
+  <ul class="c-content-list-1 c-theme c-separator-dot">
+    <li> Use the proceeds of the credit line for the acquisition of land plots (loans for the acquisition of
+      land bank) and/or invest the drawn credit lines in the construction of homes (bridge loans).
+    </li>
+    <li> File the project completion notices.</li>
+    <li> Contract the adequate civil liability and damage to property insurance coverage, from the beginning of
+      the construction activities to the home titling process.
+    </li>
+    <li> Comply with the relevant legal provisions.</li>
+    <li> Continue in business.</li>
+    <li> Providing the corresponding financial information in a timely manner.</li>
+    <li> Fulfill its principal and interest payment obligations agreed on the contracts.</li>
+  </ul>
+  <h4 class="c-left c-font-lowercase c-font-sbold">Negative or Restrictive Covenants</h4>
+  <ul class="c-content-list-1 c-theme c-separator-dot">
+    <li> Do not mortgage, sell or affect in any way, temporarily or permanently, partially or totally, the collateral
+      granted as security for the credit facilities.
+    </li>
+    <li> Do not grant loans or contract liabilities that may affect the payment conditions stablished in the
+      credit agreements.
+    </li>
+    <li> Do not mergers or split-offs.</li>
+    <li> Do not reduce the Company's capital stock, whether its fixed or variable portion.</li>
+    <li> Do not distribute or pay dividends if  the Company default.</li>
+    <li> Do not change the Company's controlling interest nor its management.</li>
+  </ul>
+  <h3 class="c-left c-font-lowercase c-font-sbold">Debt Securities – Local Notes</h3>
+  <h4 class="c-left c-font-lowercase c-font-sbold">Local Note (CADU12) </h4>
+
+  <p>On April 27, 2012 CADU issued a local note for MXN 300 million under the ticker symbol “CADU12”, with a coupon rate
+    of TIIE + 4 pp. and two principal repayments, the first one for 50% on April 25, 2014 and the second one for the
+    remaining 50% on its maturity date, which was April 24, 2015. The resources obtained were used to finance new housing
+    projects, acquire land plots and refinance bank liabilities.</p>
+
+  <p>In order to provide credit enhancement to the issuance, on April 12, 2012, the Company subscribed a secondary guarantee
+    with Nacional Financiera, S. N. C., Institucion de Banca de Desarrollo, covering 48% of the outstanding principal balance
+    of the local notes with an  annual cost of 2.9% on the guaranteed amount, which is payable monthly. The structure of the
+    guarantee was made through the signing of a secured credit agreement and the establishment of a guarantee trust to which
+    land plots were contributed with a commercial value that must be maintained at 1.5x the total amount of the credit line.</p>
+
+  <p>The local notes “CADU12” were fully settled on its legal due date on April 24, 2015.</p>
+  <h4 class="c-left c-font-lowercase c-font-sbold">Local Note (CADU14)</h4>
+
+  <p>On July 17, 2014 CADU issued a local note for MXN 300 million under the ticker symbol “CADU14”, with a coupon rate of
+    TIIE + 2.5 pp. and two principal repayments, the first one for 50% on July 14, 2016 and the second one for the remaining
+    50% on its maturity date, which was July 13, 2017. The resources obtained were used to finance new housing projects,
+    acquire land plots and refinance bank liabilities.</p>
+
+  <p>In order to provide credit enhancement to the issuance, on July 10, 2014, the Company subscribed a Garantia de Pago Oportuno
+    (a secondary payment guarantee, known as GPO by its Spanish acronym) with the Sociedad Hipotecaria Federal, S. N. C.,
+    Institucion de Banca de Desarrollo (Federal Mortgage Society), covering 50% of the outstanding principal balance of the local
+    notes at the payment date, with an annual cost of 1% on the outstanding principal balance of the local notes, which is payable
+    monthly. The structure of the guarantee was carried out through the signing of an irrevocable trust agreement on the management,
+    guarantee and source of payment, in order to guarantee the fulfilment of the local notes' principal and interest payment obligations.
+    The guarantee contributed was a land plot with a commercial value that must be maintained at 1.14 times the total amount of the credit
+    line.</p>
+
+    <p>The local notes “CADU14” were fully settled on its legal due date on July 13, 2017.</p>
+  <h4 class="c-left c-font-lowercase c-font-sbold">Local Note (CADU15)</h4>
+
+  <p>On April 17, 2015 CADU issued its third local note for MXN 400 million under the ticker symbol “CADU15”, with a coupon payment
+    on the 27th of each month at a TIIE + 2.9 pp. rate and the principal repayment will be carried out in 30 monthly installments on
+    the 27th of each month, sequentially and in amounts equal to MXN 13.33 million. The first amortization will be executed on July,
+    2017 and the last one will be settled on December, 2019. The resources obtained were used to finance new housing projects, acquire
+    land plots and refinance bank liabilities.</p>
+
+  <p>The local notes “CADU15” were fully settled on its legal due date on December 27, 2019.</p>
+
+  <h4 class="c-left c-font-lowercase c-font-sbold">Local Note (CADU18)</h4>
+
+  <p>On February 21, 2018 CADU issued its fourth local note for MXN 500 million under the ticker symbol “CADU18”.  Since this is an unsecured
+    emission, the coupon rate on these notes is TIIE + 2.9 pp. for a 5-year term.</p>
+  <p>Initially, the principal repayment would have been made in 34 monthly installments with equal amounts of MXN 14 million, as of April 21, 2020,
+    but as consequence of COVID-19 health contingency, CADU reached an agreement with the bondholders for the extension of the principal payments
+    for the months of May to December 2020 (to be paid on February 21, 2023, the maturity date), as well as a waiver of the pre-established covenants
+    of this instrument for 2020, 2021 and 2022, therefore, in order to contribute to the payment of the deferred amount, a guarantee trust was incepted.
+    The resources obtained were used for working capital and general corporate purposes.</p>
+
+    <p>The local notes “CADU18” were fully settled on its legal due date on February 21, 2023.</p>
+
+    <h4 class="c-left c-font-lowercase c-font-sbold">Local Note (CADU19)</h4>
+
+    <p>On April 12, 2019 CADU issued its fifth local note for MXN 500 million under the ticker symbol “CADU19”.  The coupon rate on these notes is TIIE + 2.9 pp. for a 5-year term.</p>
+    <p>The principal repayment will be made in 14 monthly installments of MXN 36 million, as of March 12, 2023. It is important to note that as consequence of COVID-19
+      health contingency, CADU agreed with its bondholders a waiver of the pre-established covenants of this instrument for 2020, 2021, 2022 and 2023. </p>
+
+      <p>The local notes “CADU19” were fully settled on its legal due date on April 12, 2024.</p>
+
+    <h4 class="c-left c-font-lowercase c-font-sbold">Green Bond (CADU 20V)</h4>
+
+    <p>On December 16, 2020 CADU issued its first green bond, under the ticker symbol "CADU 20V"
+      for an amount of MXN 502 million, on a fixed rate of 9.13% and a 7-year term. </p>
+    <p>It is worth noting that this green bond is the first in the Latin-American housing industry to earn a
+      certification from the Climate Bond Initiative (CBI) under the Low Carbon Buildings criteria. For CADU, this issue represents its sixth debt
+      placement, being the first on the Institutional Stock Exchange (BIVA). The net proceeds from this issue will be allocated in the refinancing of
+      ECOCASA housing projects, which are certified for their benefit to the environment. Through the foregoing, CADU bolsters its position as a leading
+      developer in this type of housing while ensuring the reduction of greenhouse gas emissions, thus clearly attesting its commitment to the environment. 
+      It is important to note that CADU agreed with its bondholders a waiver of the pre-established covenants of this instrument for 2022, 2023 and 2024.</p>
+
+
+
+
+</div>
+<!-- Amchart Scripts -->
+<script type="application/javascript" src="/static/assets/plugins/amcharts/amcharts.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/serial.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/pie.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/themes/light.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/renta-chart2.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/renta-chart.js"></script>
+
+{% endblock %}

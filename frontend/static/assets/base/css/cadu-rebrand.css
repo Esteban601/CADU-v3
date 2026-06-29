@@ -1,0 +1,537 @@
+/* =====================================================================
+   cadu-rebrand.css  — capa de override de marca (CARGA AL FINAL)
+   NO editar CSS compilado. Solo tokens + remapeo + tipografia.
+   ===================================================================== */
+
+/* ---------- PASO 1: tokens de marca ---------- */
+:root {
+  --cadu-naranja: #E45312;   /* reemplaza el naranja viejo #f04c23 */
+  --cadu-olivo:   #473E1B;   /* reemplaza el oscuro/secundario #3f444a */
+}
+
+/* ---------- PASO 3: tipografia Montserrat (sustituye Roboto Condensed) ----------
+   NO se tocan clases de iconos/glyphs (font-awesome, simple-line-icons,
+   socicon, glyphicon) — usan su propia font-family con mayor especificidad. */
+body,
+input, button, select, textarea,
+.c-font-roboto,
+h1, h2, h3, h4, h5, h6,
+.c-font-regular, .c-font-thin, .c-font-bold, .c-font-uppercase {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* ===== overrides desde default.css (theme) ===== */
+/*********************
+THEME COLOR - DEFAULT
+*********************/
+a { color: var(--cadu-olivo); }
+a:active,
+  a:hover,
+  a:focus { color: var(--cadu-naranja); }
+.c-theme-link:focus,
+.c-theme-link:active,
+.c-theme-link:hover { color: var(--cadu-naranja) !important; }
+.c-theme-link:focus > i,
+  .c-theme-link:active > i,
+  .c-theme-link:hover > i { color: var(--cadu-naranja) !important; }
+.c-theme-link.c-active { color: var(--cadu-naranja) !important; }
+.c-theme-link.c-active > i { color: var(--cadu-naranja) !important; }
+.c-theme-nav li:focus > a:not(.btn),
+.c-theme-nav li:active > a:not(.btn),
+.c-theme-nav li:hover > a:not(.btn) { color: var(--cadu-naranja) !important; }
+.c-theme-nav li:focus > .c-quick-sidebar-toggler > .c-line,
+.c-theme-nav li:active > .c-quick-sidebar-toggler > .c-line,
+.c-theme-nav li:hover > .c-quick-sidebar-toggler > .c-line { background: var(--cadu-naranja) !important; }
+.c-theme-nav li.c-active { color: var(--cadu-naranja) !important; }
+.c-theme-nav li.c-active > a:not(.btn) { color: var(--cadu-naranja) !important; }
+.c-theme-nav li.c-active > .c-quick-sidebar-toggler > .c-line { background: var(--cadu-naranja) !important; }
+.c-theme-nav > li > .dropdown-menu.c-menu-type-mega > .nav.nav-tabs > li:hover > a { color: var(--cadu-naranja) !important; }
+.c-theme-nav > li > .dropdown-menu.c-menu-type-mega > .nav.nav-tabs > li.active { border-bottom: 1px solid var(--cadu-naranja) !important; }
+.c-theme-nav > li > .dropdown-menu.c-menu-type-mega > .nav.nav-tabs > li.active > a { color: var(--cadu-naranja) !important; }
+.c-theme-nav.nav.nav-tabs > li:hover > a { color: var(--cadu-naranja) !important; }
+.c-theme-nav.nav.nav-tabs > li.active { border-bottom: 1px solid var(--cadu-naranja) !important; }
+.c-theme-nav.nav.nav-tabs > li.active > a { color: var(--cadu-naranja) !important; }
+.c-theme-ul > li:focus > a:not(.btn),
+.c-theme-ul > li:active > a:not(.btn),
+.c-theme-ul > li:hover > a:not(.btn) { color: var(--cadu-naranja) !important; }
+.c-theme-ul > li:focus > a:not(.btn) > i,
+  .c-theme-ul > li:active > a:not(.btn) > i,
+  .c-theme-ul > li:hover > a:not(.btn) > i { color: var(--cadu-naranja) !important; }
+.c-theme-ul > li:focus > button > .c-line,
+.c-theme-ul > li:active > button > .c-line,
+.c-theme-ul > li:hover > button > .c-line { background: var(--cadu-naranja) !important; }
+.c-theme-ul > li.active,
+.c-theme-ul > li.c-active { color: var(--cadu-naranja) !important; }
+.c-theme-ul > li.active > a:not(.btn),
+  .c-theme-ul > li.c-active > a:not(.btn) { color: var(--cadu-naranja) !important; }
+.c-theme-ul > li.active > a:not(.btn) > i,
+    .c-theme-ul > li.c-active > a:not(.btn) > i { color: var(--cadu-naranja) !important; }
+.c-theme-ul-bg > li { background: var(--cadu-naranja) !important; }
+.c-theme-font,
+.c-theme-color { color: var(--cadu-naranja) !important; }
+.c-theme-font > i,
+  .c-theme-color > i { color: var(--cadu-naranja) !important; }
+.c-theme-bg { background: var(--cadu-naranja) !important; }
+.c-theme-bg.c-theme-darken { background: var(--cadu-naranja) !important; }
+.c-theme-bg-after:after { background: var(--cadu-naranja) !important; }
+.c-theme-bg-before:before { background: var(--cadu-naranja) !important; }
+.c-theme-border-after:after { border-color: var(--cadu-naranja) !important; }
+.c-theme-border-before:before { border-color: var(--cadu-naranja) !important; }
+.c-theme-bg-on-hover:hover { background: var(--cadu-naranja) !important; }
+.c-theme-border { border-color: var(--cadu-naranja) !important; }
+.c-theme-on-hover:hover { color: var(--cadu-naranja) !important; }
+.c-theme-bg-parent-hover:hover .c-theme-bg-on-parent-hover { background: var(--cadu-naranja) !important; }
+.c-theme-border { border-color: var(--cadu-naranja); }
+.c-content-iconlist-1.c-theme > li:hover i { background: var(--cadu-naranja); }
+.c-content-ver-nav .c-menu.c-theme > li:before { color: var(--cadu-naranja); }
+.c-content-ver-nav .c-menu.c-theme.c-arrow-dot > li:before { background: var(--cadu-naranja); }
+.c-content-pagination.c-theme > li:hover > a { border-color: var(--cadu-naranja); background: var(--cadu-naranja); }
+.c-content-pagination.c-theme > li.c-active > span,
+.c-content-pagination.c-theme > li.c-active > a { border-color: var(--cadu-naranja); background: var(--cadu-naranja); }
+.c-theme-btn.btn { background: var(--cadu-naranja); border-color: var(--cadu-naranja); }
+.c-theme-btn.btn.btn-no-focus:focus,
+  .c-theme-btn.btn.btn-no-focus.focus { background: var(--cadu-naranja); border-color: var(--cadu-naranja); }
+.c-theme-btn.btn.btn-no-focus:hover,
+  .c-theme-btn.btn:hover,
+  .c-theme-btn.btn.btn-no-focus:active,
+  .c-theme-btn.btn:active,
+  .c-theme-btn.btn.active,
+  .open > .c-theme-btn.btn.dropdown-toggle { background: var(--cadu-naranja); border-color: var(--cadu-naranja); }
+.c-theme-btn.btn.disabled,
+  .c-theme-btn.btn.disabled:hover,
+  .c-theme-btn.btn.disabled:not(.btn-no-focus):focus,
+  .c-theme-btn.btn.disabled:not(.btn-no-focus).focus,
+  .c-theme-btn.btn.disabled:active,
+  .c-theme-btn.btn.disabled.active,
+  .c-theme-btn.btn[disabled],
+  .c-theme-btn.btn[disabled]:hover,
+  .c-theme-btn.btn[disabled]:not(.btn-no-focus):focus,
+  .c-theme-btn.btn[disabled]:not(.btn-no-focus).focus,
+  .c-theme-btn.btn[disabled]:active,
+  .c-theme-btn.btn[disabled].active,
+  fieldset[disabled] .c-theme-btn.btn,
+  fieldset[disabled] .c-theme-btn.btn:hover,
+  fieldset[disabled] .c-theme-btn.btn:not(.btn-no-focus):focus,
+  fieldset[disabled] .c-theme-btn.btn:not(.btn-no-focus).focus,
+  fieldset[disabled] .c-theme-btn.btn:active,
+  fieldset[disabled] .c-theme-btn.btn.active { background: var(--cadu-naranja); border-color: var(--cadu-naranja); }
+.c-theme-btn.btn .badge { color: var(--cadu-naranja); }
+.c-theme-btn.c-btn-border-1x { border-color: var(--cadu-naranja); color: var(--cadu-naranja); border-color: var(--cadu-naranja); }
+.c-theme-btn.c-btn-border-1x.btn-no-focus:focus,
+  .c-theme-btn.c-btn-border-1x.btn-no-focus.focus { color: var(--cadu-naranja); border-color: var(--cadu-naranja); }
+.c-theme-btn.c-btn-border-1x.btn-no-focus:hover,
+  .c-theme-btn.c-btn-border-1x:hover,
+  .c-theme-btn.c-btn-border-1x.btn-no-focus:active,
+  .c-theme-btn.c-btn-border-1x:active,
+  .c-theme-btn.c-btn-border-1x.active,
+  .open > .c-theme-btn.c-btn-border-1x.dropdown-toggle { background: var(--cadu-naranja); border-color: var(--cadu-naranja); }
+.c-theme-btn.c-btn-border-1x.disabled,
+  .c-theme-btn.c-btn-border-1x.disabled:hover,
+  .c-theme-btn.c-btn-border-1x.disabled:not(.btn-no-focus):focus,
+  .c-theme-btn.c-btn-border-1x.disabled:not(.btn-no-focus).focus,
+  .c-theme-btn.c-btn-border-1x.disabled:active,
+  .c-theme-btn.c-btn-border-1x.disabled.active,
+  .c-theme-btn.c-btn-border-1x[disabled],
+  .c-theme-btn.c-btn-border-1x[disabled]:hover,
+  .c-theme-btn.c-btn-border-1x[disabled]:not(.btn-no-focus):focus,
+  .c-theme-btn.c-btn-border-1x[disabled]:not(.btn-no-focus).focus,
+  .c-theme-btn.c-btn-border-1x[disabled]:active,
+  .c-theme-btn.c-btn-border-1x[disabled].active,
+  fieldset[disabled] .c-theme-btn.c-btn-border-1x,
+  fieldset[disabled] .c-theme-btn.c-btn-border-1x:hover,
+  fieldset[disabled] .c-theme-btn.c-btn-border-1x:not(.btn-no-focus):focus,
+  fieldset[disabled] .c-theme-btn.c-btn-border-1x:not(.btn-no-focus).focus,
+  fieldset[disabled] .c-theme-btn.c-btn-border-1x:active,
+  fieldset[disabled] .c-theme-btn.c-btn-border-1x.active { border-color: var(--cadu-naranja); }
+.c-theme-btn.c-btn-border-1x .badge { background: var(--cadu-naranja); }
+.c-theme-btn.c-btn-border-2x { border-color: var(--cadu-naranja); color: var(--cadu-naranja); border-color: var(--cadu-naranja); }
+.c-theme-btn.c-btn-border-2x.btn-no-focus:focus,
+  .c-theme-btn.c-btn-border-2x.btn-no-focus.focus { color: var(--cadu-naranja); border-color: var(--cadu-naranja); }
+.c-theme-btn.c-btn-border-2x.btn-no-focus:hover,
+  .c-theme-btn.c-btn-border-2x:hover,
+  .c-theme-btn.c-btn-border-2x.btn-no-focus:active,
+  .c-theme-btn.c-btn-border-2x:active,
+  .c-theme-btn.c-btn-border-2x.active,
+  .open > .c-theme-btn.c-btn-border-2x.dropdown-toggle { background: var(--cadu-naranja); border-color: var(--cadu-naranja); }
+.c-theme-btn.c-btn-border-2x.disabled,
+  .c-theme-btn.c-btn-border-2x.disabled:hover,
+  .c-theme-btn.c-btn-border-2x.disabled:not(.btn-no-focus):focus,
+  .c-theme-btn.c-btn-border-2x.disabled:not(.btn-no-focus).focus,
+  .c-theme-btn.c-btn-border-2x.disabled:active,
+  .c-theme-btn.c-btn-border-2x.disabled.active,
+  .c-theme-btn.c-btn-border-2x[disabled],
+  .c-theme-btn.c-btn-border-2x[disabled]:hover,
+  .c-theme-btn.c-btn-border-2x[disabled]:not(.btn-no-focus):focus,
+  .c-theme-btn.c-btn-border-2x[disabled]:not(.btn-no-focus).focus,
+  .c-theme-btn.c-btn-border-2x[disabled]:active,
+  .c-theme-btn.c-btn-border-2x[disabled].active,
+  fieldset[disabled] .c-theme-btn.c-btn-border-2x,
+  fieldset[disabled] .c-theme-btn.c-btn-border-2x:hover,
+  fieldset[disabled] .c-theme-btn.c-btn-border-2x:not(.btn-no-focus):focus,
+  fieldset[disabled] .c-theme-btn.c-btn-border-2x:not(.btn-no-focus).focus,
+  fieldset[disabled] .c-theme-btn.c-btn-border-2x:active,
+  fieldset[disabled] .c-theme-btn.c-btn-border-2x.active { border-color: var(--cadu-naranja); }
+.c-theme-btn.c-btn-border-2x .badge { background: var(--cadu-naranja); }
+.c-theme.form-control:focus,
+.c-theme.form-control:active,
+.c-theme.form-control.active { border-color: var(--cadu-naranja) !important; }
+.c-content-list-1.c-theme.c-separator-dot > li:before,
+.c-content-list-1.c-theme > li:before { background: var(--cadu-naranja); }
+.c-content-tab-1.c-theme .nav > li:hover > a,
+.c-content-tab-1.c-theme .nav > li:focus > a,
+.c-content-tab-1.c-theme .nav > li:active > a,
+.c-content-tab-1.c-theme .nav > li.active > a,
+.c-content-tab-1.c-theme .nav.nav-justified > li:hover > a,
+.c-content-tab-1.c-theme .nav.nav-justified > li:focus > a,
+.c-content-tab-1.c-theme .nav.nav-justified > li:active > a,
+.c-content-tab-1.c-theme .nav.nav-justified > li.active > a { border-bottom-color: var(--cadu-naranja); }
+.c-content-tab-2.c-theme > ul > li.active > a > .c-title,
+.c-content-tab-2.c-theme > ul > li:hover > a > .c-title { color: var(--cadu-naranja); }
+.c-content-tab-5.c-theme .c-nav-tab > li.active > a,
+.c-content-tab-5.c-theme .c-nav-tab > li a:hover { background-color: var(--cadu-naranja); }
+.c-content-tab-5.c-theme .c-nav-tab.c-arrow a:hover:after { border-left-color: var(--cadu-naranja); }
+.c-content-tab-5.c-theme .c-nav-tab.c-arrow .active > a:after { border-left-color: var(--cadu-naranja); }
+.c-content-accordion-1.c-theme .panel > .panel-heading > .panel-title > a { background-color: var(--cadu-naranja); }
+.c-content-accordion-1.c-theme .panel > .panel-heading > .panel-title > a.collapsed:hover,
+    .c-content-accordion-1.c-theme .panel > .panel-heading > .panel-title > a.collapsed:focus { background-color: var(--cadu-naranja); }
+.c-content-accordion-1.c-theme .panel > .panel-collapse > .panel-body { background-color: var(--cadu-naranja); }
+.c-layout-sidebar-menu.c-theme .c-sidebar-menu li.c-active > a { color: var(--cadu-naranja); }
+.c-layout-sidebar-menu.c-theme .c-sidebar-menu li.c-active > a > .c-arrow { color: var(--cadu-naranja); }
+.c-layout-sidebar-menu.c-theme .c-sidebar-menu li .c-dropdown-menu > li:hover > a { color: var(--cadu-naranja); }
+.c-layout-sidebar-menu.c-theme .c-sidebar-menu.c-option-2 > li.c-active > a { background-color: var(--cadu-naranja); }
+.c-content-title-4.c-theme .c-line-strike:before { border-top: 1px solid var(--cadu-naranja); }
+.owl-carousel.c-theme .owl-pagination .owl-page.active span { background: var(--cadu-naranja); }
+.cbp-l-filters-button .cbp-filter-counter,
+.cbp-l-filters-buttonCenter .cbp-filter-counter { background-color: var(--cadu-naranja); }
+.cbp-l-filters-button .cbp-filter-counter:before,
+  .cbp-l-filters-buttonCenter .cbp-filter-counter:before { border-top: 4px solid var(--cadu-naranja); }
+.cbp-l-filters-alignCenter .cbp-filter-item.cbp-filter-item-active,
+.cbp-l-filters-text .cbp-filter-item.cbp-filter-item-active { color: var(--cadu-naranja); }
+.cbp-l-filters-alignCenter .cbp-filter-counter,
+.cbp-l-filters-text .cbp-filter-counter { background: none repeat scroll 0 0 var(--cadu-naranja); }
+.cbp-l-filters-alignCenter .cbp-filter-counter:before,
+  .cbp-l-filters-text .cbp-filter-counter:before { border-top: 4px solid var(--cadu-naranja); }
+.cbp-l-filters-underline .cbp-filter-item.cbp-filter-item-active { border-bottom-color: var(--cadu-naranja); }
+.cbp-l-project-desc-title:before,
+.cbp-l-project-details-title:before { background: var(--cadu-naranja); }
+.tp-bullets.round.c-theme .bullet.selected { background: var(--cadu-naranja); }
+
+/* ===== overrides desde components.css ===== */
+h6 { color: var(--cadu-olivo); }
+h5 { color: var(--cadu-olivo); }
+h4 { color: var(--cadu-olivo); }
+h3 { color: var(--cadu-olivo); }
+h2 { color: var(--cadu-olivo); }
+h1 { color: var(--cadu-olivo); }
+.c-font-title { color: var(--cadu-olivo) !important; }
+.c-layout-header .c-navbar .c-mega-menu.c-mega-menu-light-mobile > .nav.navbar-nav > li > .c-link { color: var(--cadu-olivo); }
+.c-layout-header .c-navbar .c-mega-menu.c-mega-menu-light-mobile > .nav.navbar-nav > li > .c-link:focus,
+      .c-layout-header .c-navbar .c-mega-menu.c-mega-menu-light-mobile > .nav.navbar-nav > li > .c-link:hover { color: var(--cadu-olivo); }
+.c-layout-header .c-navbar .c-mega-menu.c-mega-menu-light-mobile > .nav.navbar-nav > li .dropdown-menu > li > h3 { color: var(--cadu-olivo); }
+.c-layout-sidebar-menu .c-sidebar-menu li .c-dropdown-menu li > a { color: var(--cadu-olivo); }
+.c-layout-sidebar-menu .c-sidebar-menu-toggler .c-title { color: var(--cadu-olivo); }
+.c-content-title-1 > h3 { color: var(--cadu-olivo); }
+.c-content-title-2 > h3 { color: var(--cadu-olivo); }
+.c-content-title-3 > h3 { color: var(--cadu-olivo); }
+.c-content-title-4 > h3 { color: var(--cadu-olivo); }
+.c-content-divider { background: var(--cadu-olivo); }
+.c-content-divider > i { color: var(--cadu-olivo); }
+.c-content-divider > i.icon-dot { background: var(--cadu-olivo); }
+.c-content-divider.c-icon-bg > i { background: var(--cadu-olivo); }
+.c-content-divider.c-divider-sm > .icon-dot { background: var(--cadu-olivo); }
+.c-content-testimonials-1.c-option-2 .c-testimonial > p { color: var(--cadu-olivo); }
+.c-content-testimonial-2 .c-testimonial { color: var(--cadu-olivo); }
+.c-content-bar-1 > h3 { color: var(--cadu-olivo); }
+.c-content-bar-2 .c-content-title-1 > h3 { color: var(--cadu-olivo); }
+.c-content-bar-5 > h3 { color: var(--cadu-olivo); }
+.c-content-media-1 .c-title { color: var(--cadu-olivo); }
+.c-content-pricing-1 > .c-tile-container > .c-tile > .c-price { color: var(--cadu-olivo); }
+.c-content-pricing-1.c-option-2 > .c-tile-container > .c-tile.c-highlight > .c-price { color: var(--cadu-olivo); }
+.c-content-pricing-1.c-option-2 > .c-tile-container > .c-tile.c-highlight > .c-price > sup { color: var(--cadu-olivo); }
+.c-content-product-1 .row .c-body > .c-row > li > h4 { color: var(--cadu-olivo); }
+.c-content-contact-1 > .row .c-body > .c-section > h3 { color: var(--cadu-olivo); }
+.c-content-blog-post-1 .c-title { color: var(--cadu-olivo); }
+.c-content-blog-post-card-1 .c-body .c-title { color: var(--cadu-olivo); }
+.c-content-counter-1 > .row > div > .c-title { color: var(--cadu-olivo); }
+.c-content-feature-1 > h4 { color: var(--cadu-olivo); }
+.c-content-feature-1 > h3 { color: var(--cadu-olivo); }
+.c-content-feature-2 .c-title { color: var(--cadu-olivo); }
+.c-content-feature-6 > .c-list > li > .c-card > h3 { color: var(--cadu-olivo); }
+.c-content-feature-7 h3 { color: var(--cadu-olivo); }
+.c-content-feature-8 h3 { color: var(--cadu-olivo); }
+.c-content-feature-9 h3 { color: var(--cadu-olivo); }
+.c-content-feature-10 h3 { color: var(--cadu-olivo); }
+.c-content-feature-10 i { color: var(--cadu-olivo); }
+.c-content-feature-11 .c-grid > .c-grid-row > li > .c-card > h3 { color: var(--cadu-olivo); }
+.c-content-person-1 .c-body .c-head .c-name { color: var(--cadu-olivo); }
+.c-content-subscribe-form-1.c-subscribe-form-light .c-title { color: var(--cadu-olivo); }
+.c-content-tab-1 .nav > li > a,
+  .c-content-tab-1 .nav.nav-justified > li > a { color: var(--cadu-olivo); }
+.c-content-tile-1 .c-wrapper .c-tile-title { color: var(--cadu-olivo); }
+.c-content-accordion-1 .panel > .panel-heading > .panel-title > a.collapsed { color: var(--cadu-olivo); }
+.c-page-faq-2 .c-content-accordion-1 .panel > .panel-heading > .panel-title > a { color: var(--cadu-olivo); }
+.c-page-faq-2 .c-content-accordion-1 .panel > .panel-heading > .panel-title > a.collapsed { color: var(--cadu-olivo); }
+.c-page-faq-2 .c-content-accordion-1 .panel > .panel-collapse > .panel-body { color: var(--cadu-olivo); }
+
+/* ===== overrides desde custom.css ===== */
+.bg-paleta1 { background-color: var(--cadu-naranja); }
+
+/* ===== overrides desde ajustes-jc.css ===== */
+/*components*/
+.c-content-title-1 > .c-line-center { background-color: var(--cadu-naranja); }
+/*ticker*/
+.ticker-data { color: var(--cadu-naranja); }
+/*ajustes MAX*/
+
+.c-content-tab-4.c-opt-3 > .nav > li.active > a, .c-content-tab-4.c-opt-3 > .nav > li:active > a { background-color: var(--cadu-naranja); }
+.c-content-tab-4.c-opt-3 > .nav > li:nth-child(even).active > a, .c-content-tab-4.c-opt-3 > .nav > li:nth-child(even):active > a { background-color: var(--cadu-naranja); }
+.c-font-naranja { color: var(--cadu-naranja) !important; }
+
+/* =====================================================================
+   HEADER BLANCO — homologación con el sitio comercial
+   navbar blanco · logo full-color · texto oscuro · acentos naranja
+   ===================================================================== */
+
+/* (1)(3) Header BLANCO OPACO en TODAS las franjas (contenedor + topbar + fila de
+   logo + fila de nav), estado normal Y on-scroll. Ningún sub-elemento transparente:
+   .c-navbar y .c-mega-menu traen background:none y dejaban pasar el hero. */
+.c-layout-header.c-layout-header-3,
+.c-layout-header.c-layout-header-3.c-layout-header-dark-mobile,
+.c-layout-header.c-layout-header-3 .c-topbar,
+.c-layout-header.c-layout-header-3 .c-navbar,
+.c-layout-header.c-layout-header-3 .c-navbar-wrapper,
+.c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu,
+.c-page-on-scroll .c-layout-header.c-layout-header-3,
+.c-page-on-scroll .c-layout-header.c-layout-header-3 .c-navbar,
+.c-page-on-scroll .c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu {
+  background: #fff !important;
+}
+/* (3) borde inferior para separar la barra blanca del contenido + z-index por encima */
+.c-layout-header.c-layout-header-3 {
+  border-bottom: 1px solid #ececec !important;
+  z-index: 9995 !important;
+}
+/* (2) Offset del contenido = altura del header de FILA ÚNICA (logo izq + nav der).
+   Fila = 46px (height/line-height del .c-link) · Topbar = 45px · borde 1px.
+   - Home (c-layout-header-6-topbar): topbar visible -> 45 + 46 + 1 = 92px.
+   - Internas (topbar-collapse): topbar oculto -> 46 + 1 = 47px. */
+.c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page {
+  margin-top: 92px !important;
+}
+.c-layout-header-fixed.c-layout-header-topbar-collapse .c-layout-page {
+  margin-top: 47px !important;
+}
+
+/* (2) Texto del menú de nivel superior: blanco -> olivo (reposo), naranja (hover/active) */
+.c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li > .c-link,
+.c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li > .c-btn-icon,
+.c-page-on-scroll .c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li > .c-link {
+  color: var(--cadu-olivo) !important;
+}
+.c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li:hover > .c-link,
+.c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li:focus > .c-link,
+.c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li:active > .c-link,
+.c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li.c-active > .c-link,
+.c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li:hover > .c-btn-icon,
+.c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li > .c-link:hover,
+.c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li > .c-link:focus,
+.c-page-on-scroll .c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li:hover > .c-link {
+  color: var(--cadu-naranja) !important;
+}
+
+/* Ícono de búsqueda + campo de búsqueda: blanco -> oscuro */
+.c-layout-header.c-layout-header-3 .c-quick-search > span,
+.c-layout-header.c-layout-header-3 .c-quick-search > .form-control {
+  color: var(--cadu-olivo) !important;
+}
+.c-layout-header.c-layout-header-3 .c-quick-search > .form-control::-webkit-input-placeholder { color: #9a958a !important; }
+.c-layout-header.c-layout-header-3 .c-quick-search > .form-control::-moz-placeholder { color: #9a958a !important; }
+.c-layout-header.c-layout-header-3 .c-quick-search > .form-control:-ms-input-placeholder { color: #9a958a !important; }
+
+/* Togglers móviles (hamburguesa / topbar / búsqueda): claros -> oscuros sobre blanco */
+.c-layout-header.c-layout-header-dark-mobile .c-brand > .c-hor-nav-toggler { background: transparent !important; }
+.c-layout-header.c-layout-header-dark-mobile .c-brand > .c-hor-nav-toggler > .c-line,
+.c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li > .c-quick-sidebar-toggler > .c-line {
+  background: var(--cadu-olivo) !important;
+}
+.c-layout-header.c-layout-header-dark-mobile .c-brand > .c-topbar-toggler > i,
+.c-layout-header.c-layout-header-dark-mobile .c-brand > .c-search-toggler > i,
+.c-layout-header.c-layout-header-dark-mobile .c-brand > .c-cart-toggler > i {
+  color: var(--cadu-olivo) !important;
+}
+
+/* (4) FIX logo: el SVG no trae width/height intrínsecos -> fijamos altura explícita.
+   40px en fila única (a la izquierda); 30px on-scroll. flex-shrink:0 (no se comprime). */
+.c-layout-header .c-brand .c-logo > img,
+.c-layout-header .c-brand .c-desktop-logo,
+.c-layout-header .c-brand .c-desktop-logo-inverse,
+.c-layout-header .c-brand .c-mobile-logo {
+  height: 40px !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+/* ========== UNA FILA: logo IZQUIERDA + nav DERECHA, sin wrap (≥992px) ==========
+   flex nowrap: logo a la izq (flex-shrink:0), nav empujado a la der (margin-left:auto).
+   ANTI-WRAP: items en una línea (white-space:nowrap), font 13px, padding e interletra
+   reducidos -> los 5 ítems + buscador caben junto al logo. Mobile (<992px) NO se toca. */
+@media (min-width: 992px) {
+  .c-layout-header.c-layout-header-3 .c-navbar .c-navbar-wrapper {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+  }
+  /* logo a la izquierda, no se comprime */
+  .c-layout-header.c-layout-header-3 .c-navbar-wrapper > .c-brand {
+    float: none !important;
+    flex-shrink: 0 !important;
+    width: auto !important;
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* nav empujado a la derecha, en la MISMA fila */
+  .c-layout-header.c-layout-header-3 .c-navbar-wrapper > .c-mega-menu {
+    float: none !important;
+    width: auto !important;
+    margin-left: auto !important;
+    text-align: left !important;
+  }
+  .c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav {
+    float: none !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+  }
+  .c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li {
+    float: none !important;
+  }
+  /* items: UNA LÍNEA (nowrap), compactos. Franja determinista 46px (height/line-height). */
+  .c-layout-header.c-layout-header-3 .c-navbar .c-mega-menu > .nav.navbar-nav > li > .c-link {
+    white-space: nowrap !important;
+    font-size: 13px !important;
+    letter-spacing: 0 !important;
+    min-height: 0 !important;
+    height: 46px !important;
+    line-height: 46px !important;
+    padding: 0 9px !important;
+  }
+}
+/* En header reducido (scroll) achicamos un poco para caber en los 65px */
+.c-page-on-scroll.c-layout-header-fixed .c-layout-header .c-brand .c-desktop-logo-inverse {
+  height: 30px !important;
+}
+
+/* (5) Topbar: texto gris-azulado (#8797ae) -> olivo para contraste sobre blanco */
+.c-layout-header .c-topbar-light .c-top-menu > .c-icons > li > a:not(.btn),
+.c-layout-header .c-topbar-light .c-top-menu > .c-icons > li > a:not(.btn) > i,
+.c-layout-header .c-topbar-light .c-top-menu > .c-links > li > a:not(.btn),
+.c-layout-header .c-topbar-light .c-top-menu > .c-links > li > span {
+  color: var(--cadu-olivo) !important;
+}
+.c-layout-header .c-topbar-light .c-top-menu > .c-icons > li > a:not(.btn):hover,
+.c-layout-header .c-topbar-light .c-top-menu > .c-icons > li > a:not(.btn):hover > i,
+.c-layout-header .c-topbar-light .c-top-menu > .c-links > li > a:not(.btn):hover {
+  color: var(--cadu-naranja) !important;
+}
+
+/* =====================================================================
+   FIX botón "DESCARGAR" y demás c-theme-btn CON BORDE
+   El override .c-theme-btn.btn{background:var(--cadu-naranja)} (autogenerado)
+   rellenó de naranja el fondo de las variantes con borde, que en REPOSO eran
+   transparentes con texto naranja -> texto naranja sobre relleno naranja =
+   invisible. Restauramos el texto blanco en reposo (contrasta con el naranja).
+   El hover queda como está (el theme ya pone color:#fff). Afecta border-1x y -2x.
+   ===================================================================== */
+.c-theme-btn.c-btn-border-1x,
+.c-theme-btn.c-btn-border-2x {
+  color: #fff !important;
+}
+
+/* =====================================================================
+   FOOTER BLANCO — homologación con el comercial (footer hoy oscuro #2e3336)
+   Solo color (no se reestructura contenido). El emblema ahora es full-color
+   (brand/25-Original.svg, olivo+naranja) -> se quitó el filtro brightness/invert.
+   ===================================================================== */
+/* (1) Fondo blanco + hairline superior; barra de copyright (c-bg-dark-2) también blanca */
+.c-layout-footer.c-layout-footer-7 {
+  background-color: #fff !important;
+  border-top: 1px solid #ececec !important;
+}
+.c-layout-footer-7 .c-postfooter,
+.c-layout-footer-7 .c-postfooter.c-bg-dark-2 {
+  background-color: #fff !important;
+}
+/* línea divisoria interna -> clara */
+.c-layout-footer-7 .c-line {
+  background-color: #ececec !important;
+}
+
+/* (3) Encabezados (CORPORATIVO, SALA, REDES, CONTACTO RI, SOBRE CADU, BOLETÍN) -> olivo */
+.c-layout-footer-7 .c-content-title-1 .c-title,
+.c-layout-footer-7 .c-head .c-right .c-title {
+  color: var(--cadu-olivo) !important;
+}
+/* cuerpo / direcciones / texto -> gris oscuro */
+.c-layout-footer-7 .c-body .c-address,
+.c-layout-footer-7 .c-foot .c-text,
+.c-layout-footer-7 .c-body .c-twitter {
+  color: #555555 !important;
+}
+/* links del cuerpo -> gris oscuro, hover naranja */
+.c-layout-footer-7 .c-body .c-links > li > a {
+  color: #555555 !important;
+}
+.c-layout-footer-7 .c-body .c-links > li > a:hover {
+  color: var(--cadu-naranja) !important;
+}
+/* Copyright (c-font-grey era #eee, invisible) -> gris; link en gris, hover naranja */
+.c-layout-footer-7 .c-postfooter .c-copyright,
+.c-layout-footer-7 .c-postfooter .c-copyright.c-font-grey {
+  color: #888888 !important;
+}
+.c-layout-footer-7 .c-postfooter .c-copyright a,
+.c-layout-footer-7 .c-postfooter .c-copyright .link_e {
+  color: #555555 !important;
+}
+.c-layout-footer-7 .c-postfooter .c-copyright a:hover {
+  color: var(--cadu-naranja) !important;
+}
+
+/* (5) Íconos de redes (Facebook, mail) -> olivo, sin relleno oscuro; hover naranja (c-theme-on-hover) */
+.c-layout-footer-7 .socicon .socicon-btn {
+  color: var(--cadu-olivo) !important;
+  background-color: transparent !important;
+  border-color: #d9d9d9 !important;
+}
+
+/* (6) Input del boletín -> blanco con borde claro y texto oscuro (el botón SUSCRIBIR naranja se queda) */
+.c-layout-footer-7 .c-input,
+.c-layout-footer-7 input.c-input {
+  background-color: #fff !important;
+  border-color: #cccccc !important;
+  color: #333333 !important;
+}
+.c-layout-footer-7 .c-input::-webkit-input-placeholder { color: #999999 !important; }
+.c-layout-footer-7 .c-input::-moz-placeholder { color: #999999 !important; }
+.c-layout-footer-7 .c-input:-ms-input-placeholder { color: #999999 !important; }
+
+/* =====================================================================
+   FIX desborde "BUSINESS SEGMENTS" (/en): la etiqueta larga del 4º tab
+   ("AFFORDABLE ENTRY-LEVEL") tenía white-space:nowrap -> en nav-justified
+   ensanchaba su celda y el nav se salía de col-sm-8, encimándose sobre la
+   columna de métricas (col-sm-4). Fix: que el texto ENVUELVA dentro del tab.
+   Aplica a ES y EN (en ES el texto es corto y no cambia). ===================== */
+@media (min-width: 768px) {
+  .c-content-tab-4.c-opt-3 > .nav > li > a {
+    white-space: normal !important;   /* permite envolver dentro de la celda */
+    overflow: visible !important;
+    text-overflow: clip !important;
+    padding: 16px 8px !important;     /* menos padding lateral = más aire para el texto */
+    font-size: 13px !important;       /* etiquetas largas caben en 1-2 líneas */
+    line-height: 1.25 !important;
+    word-break: normal !important;
+  }
+}

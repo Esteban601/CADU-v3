@@ -1,0 +1,123 @@
+<!--Doctype-->
+{% include 'frontend/bloques/doctype.html' %}
+<!-- BEGIN HEAD -->
+
+{% include 'frontend/bloques/head.html' %}
+
+<body class="c-layout-header-fixed c-layout-header-mobile-fixed c-layout-header-topbar c-layout-header-topbar-collapse">
+<!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
+<!-- BEGIN: HEADER -->
+{% include 'frontend/bloques/header2.html' %}
+<!-- END: HEADER -->
+
+<!-- END: CONTENT/USER/SIGNUP-FORM -->
+<!-- BEGIN: CONTENT/USER/LOGIN-FORM -->
+<div class="modal fade c-content-login-form" id="login-form" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content c-square">
+      <div class="modal-header c-no-border">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 class="c-font-24 c-font-sbold">Good Afternoon!</h3>
+        <p>Let's make today a great day!</p>
+        <form>
+          <div class="form-group">
+            <label for="login-email" class="hide">Email</label>
+            <input type="email" class="form-control input-lg c-square" id="login-email" placeholder="Email"></div>
+          <div class="form-group">
+            <label for="login-password" class="hide">Password</label>
+            <input type="password" class="form-control input-lg c-square" id="login-password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <div class="c-checkbox">
+              <input type="checkbox" id="login-rememberme" class="c-check">
+              <label for="login-rememberme" class="c-font-thin c-font-17">
+                <span></span>
+                <span class="check"></span>
+                <span class="box"></span> Remember Me </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Login</button>
+            <a href="javascript:;" data-toggle="modal" data-target="#forget-password-form" data-dismiss="modal" class="c-btn-forgot">Forgot
+              Your Password ?</a>
+          </div>
+          <div class="clearfix">
+            <div class="c-content-divider c-divider-sm c-icon-bg c-bg-grey c-margin-b-20">
+              <span>or signup with</span>
+            </div>
+            <ul class="c-content-list-adjusted">
+              <li>
+                <a class="btn btn-block c-btn-square btn-social btn-twitter">
+                  <i class="fa fa-twitter"></i> Twitter </a>
+              </li>
+              <li>
+                <a class="btn btn-block c-btn-square btn-social btn-facebook">
+                  <i class="fa fa-facebook"></i> Facebook </a>
+              </li>
+              <li>
+                <a class="btn btn-block c-btn-square btn-social btn-google">
+                  <i class="fa fa-google"></i> Google </a>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer c-no-border">
+        <span class="c-text-account">Don't Have An Account Yet ?</span>
+        <a href="javascript:;" data-toggle="modal" data-target="#signup-form" data-dismiss="modal" class="btn c-btn-dark-1 btn c-btn-uppercase c-btn-bold c-btn-slim c-btn-border-2x c-btn-square c-btn-signup">Signup!</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END: CONTENT/USER/LOGIN-FORM -->
+<!-- BEGIN: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
+{% include 'frontend/bloques/extra_sidebar.html' %}
+<!-- END: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
+<!-- BEGIN: PAGE CONTAINER -->
+<div class="c-layout-page">
+  <!-- BEGIN: LAYOUT/BREADCRUMBS/BREADCRUMBS-1 -->
+  {% include 'frontend/bloques/breadcrumbs.html' %}
+  <!-- END: LAYOUT/BREADCRUMBS/BREADCRUMBS-1 -->
+  <!-- BEGIN: PAGE CONTENT -->
+  <!-- BEGIN: BLOG LISTING -->
+  <div class="c-content-box c-size-md">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          {% block content %}{% endblock %}
+        </div>
+        <div class="col-md-3 sidebar">
+          {% include 'frontend/bloques/sidebar.html' %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END: BLOG LISTING  -->
+  <!-- END: PAGE CONTENT -->
+</div>
+<!-- END: PAGE CONTAINER -->
+<!-- BEGIN: LAYOUT/FOOTERS/FOOTER-5 -->
+
+{% if request.LANGUAGE_CODE == 'es' %}
+    {% include 'frontend/bloques/footer2.html' %}
+{% else %}
+    {% include 'frontend/bloques/footer2en.html' %}
+{% endif %}
+
+
+<!-- END: LAYOUT/FOOTERS/FOOTER-5 -->
+<!-- BEGIN: LAYOUT/FOOTERS/GO2TOP -->
+{% include 'frontend/bloques/go2top.html' %}
+<!-- END: LAYOUT/FOOTERS/GO2TOP -->
+<!-- BEGIN: LAYOUT/BASE/BOTTOM -->
+<!-- BEGIN: CORE PLUGINS -->
+{% include 'frontend/bloques/javascript.html' %}
+<!-- END: THEME SCRIPTS -->
+<!-- END: LAYOUT/BASE/BOTTOM -->
+</body>
+
+</html>

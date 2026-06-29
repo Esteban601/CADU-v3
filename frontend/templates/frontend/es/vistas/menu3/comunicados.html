@@ -1,0 +1,28 @@
+{% extends 'layouts/content.html' %}
+{% block content %}
+<div class="comunicados">
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="col-md-9">Documento</th>
+      <th class="col-md-3">Fecha</th>
+    </tr>
+    </thead>
+    <tbody>
+      {% for document in documents %}
+      <tr>
+        <td><a target="_blank" href="{% if document.url %}{{ document.url }}{% elif document.prefix == 'gobierno' %}{{ gobierno_corporatico_path }}{{ document.file }}{% elif document.prefix == 'reportes_trim' %}{{ reportes_trimestrales_path }}{{ document.file }}{% else %}{{ comunicados_path }}{{ document.file }}{% endif %}">{{ document.titulo }}</a>
+
+          {% if document.comunicado_url %}
+              </br>
+              <i class="fa fa-download"></i>
+              <a href="{{ document.comunicado_url }}" target="_blank">Adjunto</a>
+          {% endif %}
+        </td>
+        <td>{{ document.date }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'layouts/content.html' %}
+{% block content %}
+
+
+<div class="presentaciones">
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="col-md-9">Documents</th>
+      <th class="col-md-3">Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for document in documents %}
+        <tr>
+          <td><a target="_blank" href="{% if document.url %}{{ document.url }}{% elif document.prefix == 'gobierno' %}{{ gobierno_corporatico_path }}{{ document.file }}{% elif document.prefix == 'reportes_trim' %}{{ reportes_trimestrales_path }}{{ document.file }}{% elif document.prefix == 'reportes_anuales' %}{{ reportes_anuales_path }}{{ document.file }}{% elif document.prefix == 'presentaciones' %}{{ presentaciones_path }}{{ document.file }}{% elif document.prefix == 'investor' %}{{ investor_cloud_path }}{{ document.file }}{% else %}{{ comunicados_path }}{{ document.file }}{% endif %}">{{ document.titulo }}</a></td>
+          <td>{{ document.date }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

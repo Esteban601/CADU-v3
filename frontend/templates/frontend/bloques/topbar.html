@@ -1,0 +1,46 @@
+{% load cadu_i18n %}
+<div class="c-topbar c-topbar-light c-solid-bg">
+  <div class="container">
+    <!-- BEGIN: INLINE NAV -->
+    <nav class="c-top-menu c-pull-left">
+      <ul class="c-icons c-theme-ul">
+        <li>
+          <a href="mailto:ri@caducancun.com">
+            <i class=" fa fa-envelope-o"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/CADU_INV" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+        <!--<li>
+          <a href="https://www.linkedin.com/company/1782585" target="_blank">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </li>-->
+      </ul>
+    </nav>
+    <!-- END: INLINE NAV -->
+    <!-- BEGIN: INLINE NAV -->
+    <nav class="c-top-menu c-pull-right">
+      <ul class="c-links c-theme-ul">
+
+        <li style="padding: 10px 0 10px 10px;">
+          <a href="/{{ request.LANGUAGE_CODE }}/sala-prensa">{% t 'Sala' %}</a>
+        </li>
+        <li style="padding: 10px 10px 10px 0;">
+          | <a href="{% change_language %}">
+          {% if request.LANGUAGE_CODE == 'es' %}
+              <img src="/static/assets/cadu/images/en.png" alt="">
+          {% else %}
+              <img src="/static/assets/cadu/images/es.png" alt="">
+          {% endif %}
+        </a>
+        </li>
+      </ul>
+
+    </nav>
+    <!-- END: INLINE NAV -->
+  </div>
+</div>

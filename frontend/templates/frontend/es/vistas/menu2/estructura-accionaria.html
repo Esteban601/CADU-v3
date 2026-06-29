@@ -1,0 +1,68 @@
+{% extends 'layouts/content.html' %}
+{% block content %}
+<div id="estructura-accionaria">
+
+  <p>El capital social de CADU se encuentra representado por 303,266,668 acciones ordinarias, nominativas, sin expresión
+    de valor nominal y representativas de la parte fija del capital social. Todas las acciones de CADU se encuentran
+    inscritas ante el Registro Nacional de Valores en una <b>serie única</b>.</p>
+
+  <p>Las acciones de CADU confieren a sus tenedores los mismos derechos plenos de voto y patrimoniales.</p>
+
+  <p>Cada una de las acciones le da derecho a su tenedor a ejercer sus derechos de voto de manera completa y,
+    en particular, a emitir un voto en cualquiera de las Asambleas Generales de Accionistas de la Emisora,
+    ya sean Ordinarias o Extraordinarias.</p>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th colspan="3" style="text-align: center">Tenencia accionaria Corpovael, S.A.B. de C.V. "CADU"
+      </th>
+    </tr>
+
+    <tr>
+      <th>Accionista</th>
+      <th>Acciones</th>
+      <th>%</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Grupo de Control</td>
+      <td>234,482,155</td>
+      <td>77.32%</td>
+    </tr>
+
+    <tr>
+    <td>Fondo de Recompra</td>
+    <td>1,783,949</td>
+    <td>0.59%</td>
+  </tr>
+
+    <tr>
+      <td>Público Inversionista</td>
+      <td>67,000,564</td>
+      <td>22.09%</td>
+    </tr>
+    <tr>
+      <td><b>Total</b></td>
+      <td><b>303,266,668</b></td>
+      <td><b>100%</b></td>
+    </tr>
+    </tbody>
+  </table>
+  <h5>Nota: El total de acciones considera la cancelación de 7,609,000 acciones conforme a lo acordado en la Asamblea de Accionistas de abril de 2025</h5>
+  <div style="text-align: center">
+    <!--<img src="/static/assets/cadu/images/content/accionaria.png" alt=""/>-->
+    <div id="acc" style="width: 100%; height: 400px; background-color: #FFFFFF;"></div>
+
+  </div>
+</div>
+
+<!-- Amchart Scripts -->
+<script type="application/javascript" src="/static/assets/plugins/amcharts/amcharts.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/serial.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/pie.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/themes/light.js"></script>
+<script type="application/javascript" src="/static/assets/plugins/amcharts/charts-accionaria.js?v=rebrand1"></script>
+
+{% endblock %}
