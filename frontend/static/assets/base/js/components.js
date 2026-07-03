@@ -649,35 +649,6 @@ var ContentFancybox = function () {
 }();
 // END: Fancybox
 
-// BEGIN: Twitter
-var ContentTwitter = function () {
-
-	var _initInstances = function () {
-		// init twitter
-		if ($(".twitter-timeline")[0]) {
-			!function (d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-				if (!d.getElementById(id)) {
-					js = d.createElement(s);
-					js.id = id;
-					js.src = p + "://platform.twitter.com/widgets.js";
-					fjs.parentNode.insertBefore(js, fjs);
-				}
-			}(document, "script", "twitter-wjs");
-		}
-	};
-
-	return {
-
-		//main function to initiate the module
-		init: function () {
-			_initInstances();
-		}
-
-	};
-}();
-// END: Twitter
-
 // Main theme initialization
 $(document).ready(function () {
 	// init layout handlers
@@ -698,5 +669,4 @@ $(document).ready(function () {
 	ContentCubeLatestPortfolio.init();
 	ContentCounterUp.init();
 	ContentFancybox.init();
-	ContentTwitter.init();
 });
