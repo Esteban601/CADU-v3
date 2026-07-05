@@ -29,6 +29,10 @@
     </tr>
     </thead>
     <tbody>
+    <tr>
+          <td>2026-04-28</td>
+          <td>0.38</td>
+        </tr>
       <tr>
         <td>2019-04-29</td>
         <td>0.85</td>
@@ -53,6 +57,7 @@
 <br>
 <% #listado de documentos
    @documents= [
+       {:titulo => "Dividend payment notice", :date => "2026-06-08", :link => @comunicados_path + "2026-06-08-Aviso-Derechos.pdf"},    
        {:titulo => "Aviso de derechos", :date => "2019-09-12", :link => @comunicados_path + "2019-09-12-Aviso-Derechos.pdf"},
        {:titulo => "Aviso de derechos", :date => "2019-05-29", :link => @comunicados_path + "2019-05-29-Aviso-Derechos.pdf"},
        {:titulo => "Aviso de derechos", :date => "2018-08-13", :link => @comunicados_path + "2018-08-13-Aviso-Derechos.pdf"},
@@ -107,17 +112,20 @@
         "dataProvider": [
             {
                 "year": "2016",
-                "variacion": 3.7
+                "variacion": 4.6
             }, {
                 "year": "2017",
-                "variacion": 3.7
+                "variacion": 6.5
             }, {
                 "year": "2018",
-                "variacion": 5.5
+                "variacion": 5.0
             },
             {
                 "year": "2019",
-                "variacion": 5.8
+                "variacion": 5.7
+            }, {
+                "year": "2026",
+                "variacion": 5.0
             }
         ],
         "valueAxes": [
@@ -128,7 +136,7 @@
                 "axisAlpha": 0,
                 "gridAlpha": 0.1,
                 "position": "left",
-                "maximum": 6.0,
+                "maximum": 7.0,
                 "minimum": 2.0,
                 // "title": "Posición",
             }],

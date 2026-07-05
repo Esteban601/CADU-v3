@@ -1196,6 +1196,12 @@ DOCUMENTS = {
     },
     "dividendos": {
         "es": [
+             {
+                "titulo": "Aviso de derechos",
+                "date": "2026-06-08",
+                "prefix": "comunicados",
+                "file": "2026-06-08-Aviso-Derechos.pdf"
+            },
             {
                 "titulo": "Aviso de derechos",
                 "date": "2019-09-12",
