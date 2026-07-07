@@ -121,6 +121,9 @@ WHITENOISE_MANIFEST_STRICT = False
 
 # HTTPS forzado solo en producción (réplica del `configure :production` de app.rb).
 SECURE_SSL_REDIRECT = os.getenv("SECURE_SSL_REDIRECT", "False").lower() == "true"
+# Detrás del router de Heroku el TLS se termina antes del dyno; sin esto Django
+# vería la request como HTTP y SECURE_SSL_REDIRECT causaría un bucle infinito.
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Sentry: DSN desde el entorno (NUNCA hardcodeado, a diferencia del Sinatra).
 SENTRY_DSN = os.getenv("SENTRY_DSN")
