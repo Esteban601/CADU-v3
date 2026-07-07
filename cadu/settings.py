@@ -54,7 +54,7 @@ FIREBASE_TOKEN = os.getenv("FIREBASE_TOKEN")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
 
 # Application definition
 # App mínima: solo staticfiles (para WhiteNoise/collectstatic) + la app frontend.
