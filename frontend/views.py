@@ -59,6 +59,11 @@ def page(request, *args, **kwargs):
     # los enlaces con las variables CDN del context processor.
     docs = DOCUMENTS.get(slug, {}).get(lang)
     if docs is not None:
+        # En presentaciones solo se muestra la más reciente; las anteriores se
+        # conservan en data.py pero quedan ocultas. Se elige por fecha (formato
+        # YYYY-MM / YYYY-MM-DD, ordenable lexicográficamente).
+        if slug == "presentaciones" and docs:
+            docs = [max(docs, key=lambda d: d["date"])]
         context["documents"] = docs
 
     template = f"frontend/{lang}/vistas/{route['tpl']}.html"
