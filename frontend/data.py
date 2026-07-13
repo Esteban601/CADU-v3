@@ -1893,6 +1893,12 @@ DOCUMENTS = {
     "sala-prensa": {
         "es": [
             {
+                "titulo": "CADU anuncia su Conferencia Telefónica de Resultados del Segundo Trimestre de 2026",
+                "date": "2026-07-13",
+                "prefix": "comunicados",
+                "file": "2026-07-13-CADU-Invitacion-2T26.pdf"
+            },
+            {
                 "titulo": "Movimientos inusitados en la negociación de los valores representativos del capital social de 'Corpovael', S.A.B. de C.V., serie 'A' (BMV: CADU)",
                 "date": "2026-04-30",
                 "prefix": "comunicados",
@@ -3045,6 +3051,12 @@ DOCUMENTS = {
             }
         ],
         "en": [
+            {
+                "titulo": "CADU announces 2Q26 Conference Call",
+                "date": "2026-07-13",
+                "prefix": "comunicados",
+                "file": "2026-07-13-CADU-Invitacion-2T26-en.pdf"
+            },
             {
                 "titulo": "Unusual movements in the trading of the shares comprising the capital of 'Corpovael', S.A.B. de C.V., series 'A' (BMV: CADU)",
                 "date": "2026-04-30",
