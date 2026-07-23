@@ -75,7 +75,12 @@
   <div class="c-content-box c-size-cero c-bg-dark">
     <div class="container">
       <div class="c-content-bar-3">
-        <div class="row">
+        <style>
+          @media (min-width: 768px) {
+            #home-report-row { display: flex; flex-wrap: wrap; align-items: center; }
+          }
+        </style>
+        <div class="row" id="home-report-row">
           <div class="col-md-8 col-sm-8">
             <div class="c-content-title-1 al1">
               <div class="row">
@@ -129,7 +134,7 @@
               </div> -->
             </div>
           </div>
-          <div class="col-md-4 col-sm-4"><br>
+          <div class="col-md-4 col-sm-4">
             <div class="ticker-fp" id="portada-ticker">
 
               <div id="tikcer-fs-line">
