@@ -1318,6 +1318,12 @@ DOCUMENTS = {
         "es": [
             {
                 "titulo": "Presentación Corporativa",
+                "date": "2026-07",
+                "prefix": "presentaciones",
+                "file": "Presentacion-Corporativa-Jul-2026.pdf"
+            },
+            {
+                "titulo": "Presentación Corporativa",
                 "date": "2026-05",
                 "prefix": "presentaciones",
                 "file": "Presentacion-Corporativa-May-2026-.pdf"
@@ -1360,6 +1366,12 @@ DOCUMENTS = {
             }
         ],
         "en": [
+            {
+                "titulo": "Corporate Presentation",
+                "date": "2026-07",
+                "prefix": "presentaciones",
+                "file": "Presentacion-Corporativa-Jul-2026.pdf"
+            },
             {
                 "titulo": "Corporate Presentation",
                 "date": "2026-05",
