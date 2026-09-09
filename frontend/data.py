@@ -1417,6 +1417,11 @@ DOCUMENTS = {
     "comunicados": {
         "es": [
             {
+                "titulo": "Retransmisión de Información",
+                "date": "2026-09-08",
+                "url": "https://investorcloud.s3.us-east-1.amazonaws.com/cadu/Comunicados/2026-09-08-retransmision.pdf"
+            },
+            {
                 "titulo": "Aviso de Extemporaneidad en la entrega de Informacion: Reporte Anual (Anexo N) por el ejercicio 2018",
                 "date": "2019-05-03",
                 "prefix": "comunicados",
@@ -1658,6 +1663,11 @@ DOCUMENTS = {
             }
         ],
         "en": [
+            {
+                "titulo": "Refiling of Information",
+                "date": "2026-09-08",
+                "url": "https://investorcloud.s3.us-east-1.amazonaws.com/cadu/Comunicados/2026-09-08-retransmision.pdf"
+            },
             {
                 "titulo": "Notification of late filing of 2018 Annual Report (Annex N)",
                 "date": "2019-05-03",
@@ -1902,6 +1912,11 @@ DOCUMENTS = {
     },
     "sala-prensa": {
         "es": [
+            {
+                "titulo": "Retransmisión de Información",
+                "date": "2026-09-08",
+                "url": "https://investorcloud.s3.us-east-1.amazonaws.com/cadu/Comunicados/2026-09-08-retransmision.pdf"
+            },
             {
                 "titulo": "CADU anuncia su Conferencia Telefónica de Resultados del Segundo Trimestre de 2026",
                 "date": "2026-07-13",
@@ -3061,6 +3076,11 @@ DOCUMENTS = {
             }
         ],
         "en": [
+            {
+                "titulo": "Refiling of Information",
+                "date": "2026-09-08",
+                "url": "https://investorcloud.s3.us-east-1.amazonaws.com/cadu/Comunicados/2026-09-08-retransmision.pdf"
+            },
             {
                 "titulo": "CADU announces 2Q26 Conference Call",
                 "date": "2026-07-13",
