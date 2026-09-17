@@ -1198,6 +1198,12 @@ DOCUMENTS = {
         "es": [
              {
                 "titulo": "Aviso de derechos",
+                "date": "2026-08-19",
+                "prefix": "comunicados",
+                "file": "2026-08-19-Aviso-Derechos.pdf"
+            },
+             {
+                "titulo": "Aviso de derechos",
                 "date": "2026-06-08",
                 "prefix": "comunicados",
                 "file": "2026-06-08-Aviso-Derechos.pdf"
@@ -1258,6 +1264,18 @@ DOCUMENTS = {
             }
         ],
         "en": [
+            {
+                "titulo": "Dividend payment notice",
+                "date": "2026-08-19",
+                "prefix": "comunicados",
+                "file": "2026-08-19-Aviso-Derechos.pdf"
+            },
+            {
+                "titulo": "Dividend payment notice",
+                "date": "2026-06-08",
+                "prefix": "comunicados",
+                "file": "2026-06-08-Aviso-Derechos.pdf"
+            },
             {
                 "titulo": "Dividend payment notice",
                 "date": "2019-09-12",
